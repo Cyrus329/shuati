@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#24775f" />
+  <title>专升本｜个人刷题记录中心</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="study.css" />
+  <link rel="stylesheet" href="personal.css" />
+  <link rel="stylesheet" href="desk.css" />
+  <link rel="stylesheet" href="editorial.css" />
+  <link rel="stylesheet" href="option.css" />
+  <link rel="stylesheet" href="methods.css" />
+  <link rel="stylesheet" href="english-lesson.css" />
+<link rel="stylesheet" href="wrong-count.css">
+<link rel="stylesheet" href="daily-new.css">
+<link rel="stylesheet" href="weakness.css">
+  <link rel="stylesheet" href="atelier.css">
+<link rel="stylesheet" href="guided-lessons.css">
+<link rel="stylesheet" href="question-assist.css">
+<link rel="stylesheet" href="question-compare.css">
+<link rel="stylesheet" href="listening-simple.css">
+<link rel="stylesheet" href="listening-vocab.css">
+<link rel="stylesheet" href="listening-focus.css">
+<link rel="stylesheet" href="shadow-practice.css">
+<link rel="stylesheet" href="listening-pronunciation.css">
+<link rel="stylesheet" href="listening-speed.css">
+<link rel="stylesheet" href="listening-route.css">
+</head>
+<body>
+<div class="app-shell">
+  <header class="topbar">
+    <div class="workspace-identity"><p class="eyebrow">PERSONAL WORKSPACE</p><span data-space-title>个人刷题记录中心</span><p id="currentSectionName">每日复习台</p></div>
+    <div class="top-actions"><button type="button" id="openCommand" class="command-trigger" aria-label="搜索题目、考点或操作" aria-haspopup="dialog"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><span>搜索题目、考点或操作</span><kbd id="platformShortcut">Ctrl K</kbd></button>
+      <button class="btn neutral header-backup" type="button" id="exportButton"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v11m-4-4 4 4 4-4M4 15v5h16v-5"/></svg><span>备份</span></button>
+      <button class="btn primary" type="button" id="addButton">＋ 添加题目</button>
+      <details class="utility-menu"><summary aria-label="更多工具"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><circle cx="5" cy="12" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="19" cy="12" r="1.5"/></svg></summary><div class="utility-popover"><span class="eyebrow">WORKSPACE TOOLS</span><button class="btn neutral" id="importButton" type="button">导入 JSON 备份</button><a class="btn neutral" href="新版使用说明.txt" target="_blank">新版使用说明 ↗</a></div></details>
+    </div>
+  </header>
+  <div id="storageStatus" class="storage-status" role="status"><span id="storageMessage">正在读取学习记录…</span><button id="storageExport" type="button" class="mini-link">导出备份</button></div>
+  <nav class="nav-tabs" aria-label="主要功能">
+    <div class="brand">
+      <div class="logo" aria-hidden="true">记</div>
+      <div><p class="eyebrow">MY QUESTION JOURNAL</p><h1>个人刷题记录中心</h1><p class="subtitle">重庆专升本 · 英语 / 高数 / 计算机</p></div>
+    </div>
+    <span class="nav-section-label">我的学习空间</span>
+    <button type="button" class="nav-tab selected" data-view="daily"><span class="nav-icon" aria-hidden="true">＋</span><span class="nav-label">每日新题</span></button>
+    <button type="button" class="nav-tab" data-view="listening"><span class="nav-icon" aria-hidden="true">♫</span><span class="nav-label">听力精听</span></button>
+    <button type="button" class="nav-tab" data-view="home"><span class="nav-icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1z"/></svg></span><span class="nav-label">原题复习</span></button>
+    <button type="button" class="nav-tab" data-view="archive"><span class="nav-icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="3"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></span><span class="nav-label">题目档案</span></button>
+    <button type="button" class="nav-tab" data-view="review"><span class="nav-icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10a8 8 0 1 1 1 7M4 4v6h6"/><path d="M12 7v5l3 2"/></svg></span><span class="nav-label">错题复习</span><span class="nav-number" id="reviewTabCount">0</span></button>
+    <button type="button" class="nav-tab" data-view="completed"><span class="nav-icon" aria-hidden="true">✓</span><span class="nav-label">已完成记录</span><span class="nav-number" id="completedTabCount">0</span></button>
+    <button type="button" class="nav-tab" data-view="stats"><span class="nav-icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20h17M7 16v-5M12 16V5M17 16V8"/></svg></span><span class="nav-label">薄弱点追踪</span></button>
+    <button type="button" class="nav-tab" data-view="personalize"><span class="nav-icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m16 3 5 5-13 13H3v-5zM13 6l5 5M4 4v4M2 6h4"/></svg></span><span class="nav-label">个性化</span></button>
+    <div class="nav-caption"><span class="sidebar-mark">学</span><strong>慢慢来，也会到达。</strong><span>LOCAL LEARNING SPACE</span></div>
+  </nav>
+  <main class="app-content">
+    <div class="comfort-bar" aria-label="阅读设置"><details class="reading-settings"><summary>阅读设置 <span aria-hidden="true">⌄</span></summary><div class="comfort-controls">        <label for="themeSelect">配色 <select id="themeSelect"><option value="day">清新日间</option><option value="care">暖纸护眼</option><option value="night">静谧夜间</option></select></label>
+        <label for="fontSize">题目字号 <select id="fontSize"><option value="16">标准</option><option value="18">舒适</option><option value="20">大字</option><option value="22">特大</option></select></label>
+</div></details><button type="button" class="btn neutral" id="focusToggle" aria-pressed="false">进入专注</button></div>
+    <section class="summary-row" aria-label="学习记录概览">
+      <div class="summary-tile"><span class="tile-label">独立题目数</span><strong id="statTotal">—</strong><span class="tile-detail">同题合并，多次作答保留</span></div>
+      <div class="summary-tile"><span class="tile-label">确定正确 · 已收起</span><strong id="statCorrect">—</strong><span class="tile-detail" id="correctPercent">—</span></div>
+      <div class="summary-tile"><span class="tile-label">错题池 · 含不确定</span><strong id="statWrong">—</strong><span class="tile-detail">蒙对、不会、待核查统一纳入</span></div>
+      <div class="summary-tile"><span class="tile-label">当前待复习</span><strong id="statNeed">—</strong><span class="tile-detail">练会后退出待练，历史仍保留</span></div>
+    </section>
+
+    <section id="libraryView" class="hidden" aria-label="资料工作台"></section>
+    <section id="personalizeView" class="hidden" aria-label="个性化设置"></section>
+    <section id="listeningView" class="hidden" aria-label="听力精听"></section>
+    <section id="newDailyView" class="hidden" aria-label="每日新题"></section>
+    <section id="homeView" class="hidden" aria-label="每日复习台"></section>
+    <section id="practiceView" class="hidden" aria-label="沉浸练习"></section>
+    <section id="questionsView" class="workspace">
+      <aside class="list-panel">
+        <div class="list-panel-head">
+          <div><p class="eyebrow" id="listEyebrow">ARCHIVE</p><h2 id="listHeading">题目目录</h2></div>
+          <div><span class="list-count" id="listCount">0 条</span> <button class="mini-link mobile-list-toggle" id="mobileListToggle" type="button" aria-expanded="true">收起目录</button></div>
+        </div>
+        <div class="filters">
+          <label class="input-row"><span>搜索题目</span><input type="search" id="search" placeholder="题干、编号、知识点、错因" /></label>
+          <div class="filter-grid">
+            <label class="input-row"><span>学科</span><select id="subject"><option value="">全部学科</option></select></label>
+            <label class="input-row"><span>专题</span><select id="topic"><option value="">全部专题</option></select></label>
+          </div>
+          <details class="advanced-filters"><summary>更多筛选 · 掌握 / 错因 / 题型</summary><label class="input-row"><span>当前掌握</span><select id="currentState"><option value="">全部状态</option><option>尚未复练</option><option>仍不会</option><option>不确定</option><option>作答结果未提供</option><option>初次做对</option><option>最近做对</option><option>连续做对</option></select></label><label class="input-row"><span>主要错因</span><select id="errorCause"><option value="">全部错因</option><option>分母或定义域条件遗漏</option><option>区间与端点错误</option><option>复合次序与换元错误</option><option>反函数概念或范围混淆</option><option>奇偶性或周期判断</option><option>公式与计算失误</option><option>审题或输入失误</option><option>没有解题思路</option><option>其他已记录错误</option><option>编码规则与进制运算</option><option>系统组成与软件概念</option><option>Windows操作与文件管理</option><option>基础概念与应用分类</option><option>名词单复数与可数性</option><option>所有格与复合形容词</option><option>代词指代与范围</option><option>冠词与数词</option><option>介词及固定搭配</option><option>词义与词性辨析</option><option>从句结构</option><option>题源多解或判分争议</option></select></label><label class="input-row"><span>难度</span><select id="difficulty"><option value="">全部难度</option><option value="易">易</option><option value="中">中</option><option value="难">难</option></select></label><label class="input-row"><span>历史表现（错优先）</span><select id="status"><option value="">全部状态</option><option value="错误">错题（含不确定 / 不会）</option><option value="正确">正确</option><option value="已完成">已完成 / 未提供对错</option><option value="蒙对">蒙对</option><option value="待核查">有核查问题</option></select></label>
+          <label class="input-row"><span>题型与解法</span><select id="familyType"><option value="">全部题型</option></select></label>
+          <label class="family-show-toggle"><input type="checkbox" id="showCompleted" /> 手动显示正确题原题（不加入日常练习）</label>
+          <p class="fine-note" id="familyNotice"></p>
+          </details><button type="button" id="clearFilters" class="mini-link">清除筛选条件</button>
+        </div>
+        <div id="completedGroups" class="completed-groups hidden"></div><div id="questionList" class="question-list" role="listbox" aria-label="题目列表"></div>
+      </aside>
+      <section id="detail" class="detail-panel" aria-label="题目详情"></section>
+    </section>
+
+    <section id="statsView" class="stats-panel hidden" aria-label="薄弱点追踪">
+      <div class="section-intro"><div><p class="eyebrow">LEARNING ANALYTICS</p><h2>从做题记录里找薄弱知识点</h2><p>基于已收集的实际作答，不会把蒙对记成真正掌握，也不会把平台输入格式错误算成知识性错误。</p></div></div>
+      <div class="report-card" id="familyReport"></div>
+      <div class="stats-columns"><div class="report-card" id="topicReport"></div><div class="report-card" id="errorReport"></div></div>
+      <div class="report-card" id="reviewReport"></div>
+    </section>
+  </main>
+  <footer class="site-footer"><span id="footerLine">v2.53 · 每日新题 · 每小节5道强化+2道巩固 · 让每一次复习都有迹可循</span><span>数据仅保存在这台浏览器 · 请定期导出备份</span></footer>
+</div>
+
+<dialog id="addDialog" class="dialog">
+  <form id="addForm" novalidate>
+    <div class="dialog-header"><div><p class="eyebrow">NEW RECORD</p><h2>手动添加一条题目记录</h2></div><button type="button" class="close-dialog" aria-label="关闭" data-close="addDialog">×</button></div>
+    <div class="dialog-body">
+      <div class="grid-2"><label class="input-row"><span>学科 *</span><select name="subject" required><option value="高等数学">高等数学</option><option value="英语">英语</option><option value="计算机">计算机</option></select></label><label class="input-row"><span>题型</span><select name="type"><option value="单选题">单选题</option><option value="填空题">填空题</option><option value="计算题">计算题</option><option value="其他">其他</option></select></label></div>
+      <div class="grid-2"><label class="input-row"><span>专题 *</span><input name="topic" placeholder="例：函数·定义域与值域" required /></label><label class="input-row"><span>知识点</span><input name="point" placeholder="例：复合函数定义域" /></label></div>
+      <label class="input-row"><span>完整题干 *</span><textarea name="stem" rows="4" required placeholder="尽量保留原题表达式及题号"></textarea></label>
+      <div class="grid-2"><label class="input-row"><span>选项 A</span><input name="A" /></label><label class="input-row"><span>选项 B</span><input name="B" /></label><label class="input-row"><span>选项 C</span><input name="C" /></label><label class="input-row"><span>选项 D</span><input name="D" /></label></div>
+      <div class="grid-2"><label class="input-row"><span>参考答案</span><input name="answer" placeholder="如 B、[0,1]；不确定则留空" /></label><label class="input-row"><span>你的作答</span><input name="ownAnswer" placeholder="如 C；没有可留空" /></label></div>
+      <div class="grid-2"><label class="input-row"><span>难度（按题目本身评估）</span><select name="difficulty"><option value="易">易</option><option value="中" selected>中</option><option value="难">难</option></select></label><label class="input-row"><span>首次状态</span><select name="firstStatus"><option value="待核查">待核查/未判定</option><option value="正确">正确</option><option value="已完成">已完成 / 未提供对错</option><option value="错误">错误/不会</option></select></label><label class="input-row"><span>题源</span><input name="source" placeholder="书名、章节、页码" /></label></div>
+      <label class="input-row"><span>错因 / 学习备注</span><textarea name="memo" rows="2" placeholder="例如：不会设不等式；粗心看错指数"></textarea></label>
+      <p class="fine-note">手动录入适用于文字题。书上带图的题直接发给我，我会把原题图片和结构化内容一起更新到下一批题库。</p>
+    </div>
+    <div class="dialog-actions"><button class="btn neutral" type="button" data-close="addDialog">取消</button><button class="btn primary" type="submit">保存到题目档案</button></div>
+  </form>
+</dialog>
+<dialog id="resourceEditor" class="dialog resource-editor" aria-labelledby="resourceEditorTitle">
+  <form id="resourceForm"><div class="dialog-header"><div><p class="eyebrow">A PAGE OF YOUR OWN</p><h2 id="resourceEditorTitle">新建资料</h2></div><button type="button" class="close-dialog" data-resource-close="resourceEditor" aria-label="关闭编辑器">×</button></div><div class="dialog-body">
+    <label class="input-row"><span>资料名称 *</span><input name="title" required maxlength="100" placeholder="例：容易混淆的代词"></label>
+    <div class="grid-2"><label class="input-row"><span>学科</span><select name="subject"><option>综合</option><option>高等数学</option><option>英语</option><option>计算机</option></select></label><label class="input-row"><span>资料类型</span><select name="kind"><option value="note">个人笔记</option><option value="formula">公式卡</option><option value="vocab">词汇卡</option></select></label></div>
+    <label class="input-row"><span>关联一道题 · 可选</span><select name="questionId"><option value="">暂不关联题目</option></select></label><label class="input-row"><span>标签 · 用逗号分隔</span><input name="tags" maxlength="360" placeholder="例：语法，易混淆，考前看"></label>
+    <label class="input-row"><span>正文 · 只保存文字内容</span><textarea name="content" rows="12" maxlength="100000" placeholder="整理自己的理解、公式或词汇。公式卡支持现有数学排版。"></textarea></label><p class="fine-note" id="resourceEditorError" hidden>尚未保存成功，请重试或导出备份。</p>
+  </div><div class="dialog-actions"><button type="button" class="btn neutral" data-resource-close="resourceEditor">取消</button><button class="btn primary" id="saveResource" type="submit">保存资料</button></div></form>
+</dialog>
+<dialog id="resourceReader" class="dialog resource-reader" aria-labelledby="readerTitle"><div class="reader-close-row"><span class="eyebrow">READ AT YOUR OWN PACE</span><button type="button" class="close-dialog" data-resource-close="resourceReader" aria-label="关闭阅读器">×</button></div><div id="resourceReaderBody"></div></dialog>
+<input type="file" id="resourceTextFile" accept=".txt,.md,text/plain,text/markdown" hidden>
+<dialog id="commandDialog" class="command-dialog" aria-labelledby="commandTitle"><div class="command-head"><span class="sr-only" id="commandTitle">快捷搜索</span><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><input id="commandInput" type="search" role="combobox" aria-autocomplete="list" aria-expanded="true" aria-controls="commandResults" placeholder="搜索题目、考点，或者一项操作…" autocomplete="off"><button type="button" id="closeCommand" aria-label="关闭快捷搜索">Esc</button></div><div class="command-list-label"><span id="commandCount">常用页面与操作</span><span>QUICK FIND</span></div><div id="commandResults" role="listbox" aria-label="搜索结果"></div><div class="command-foot"><span><kbd>↑</kbd><kbd>↓</kbd> 选择</span><span><kbd>↵</kbd> 打开</span><span><kbd>Esc</kbd> 关闭</span></div></dialog>
+<input type="file" id="importFile" accept="application/json,.json" hidden />
+<div id="toast" role="status" aria-live="polite"></div>
+<script src="personal-core.js"></script>
+<script src="comfort.js"></script>
+<script>window.MathJax={tex:{inlineMath:[["\\(","\\)"]],displayMath:[["\\[","\\]"]]},svg:{fontCache:'local'},options:{enableMenu:false}};</script>
+<script src="mathjax/tex-svg.js"></script>
+<script src="data.js"></script>
+<script src="english-lessons.js"></script>
+<script src="lesson-reader.js"></script>
+<script src="english-lesson.js"></script>
+<script src="families.js"></script>
+<script src="math-notation.js"></script>
+<script src="math-lessons.js"></script>
+<script src="math-lesson.js"></script>
+<script src="journal-storage.js"></script>
+<script src="review-policy.js"></script>
+<script src="correct-methods.js"></script>
+<script src="wrong-count.js"></script>
+<script src="study-core.js"></script>
+<script src="option-core.js"></script>
+<script src="option-ui.js"></script>
+<script src="question-assist.js"></script>
+<script src="compare-core.js"></script>
+<script src="question-compare.js"></script>
+<script src="study-ui.js"></script>
+<script src="library.js"></script>
+<script src="personalize.js"></script>
+<script src="desk-core.js"></script>
+<script src="desk.js"></script>
+<script src="completion-core.js"></script>
+<script src="confirmed-progress.js"></script>
+<script src="daily-question-bank.js"></script>
+<script src="weakness-core.js"></script>
+<script src="daily-new-core.js"></script>
+<script src="weakness-ui.js"></script>
+<script src="daily-new-ui.js"></script>
+<script src="listening-data.js"></script>
+<script src="listening-core.js"></script>
+<script src="listening-vocab-data.js"></script>
+<script src="listening-vocab-core.js"></script>
+<script src="listening-vocab-ui.js"></script>
+<script src="exercise-vocab-ui.js"></script>
+<script src="phonology-core.js"></script>
+<script src="phonology-lexicon.js"></script>
+<script src="phonology-ui.js"></script>
+<script src="listening-speed.js"></script>
+<script src="shadow-practice.js"></script>
+<script src="listening-route-core.js"></script>
+<script src="listening-route-data.js"></script>
+<script src="listening-route-ui.js"></script>
+<script src="listening-simple.js"></script>
+<script src="app.js"></script>
+</body></html>

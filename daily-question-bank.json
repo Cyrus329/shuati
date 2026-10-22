@@ -1,0 +1,3353 @@
+{
+  "format": "cqzsb-daily-bank-v1",
+  "version": "2.37",
+  "count": 105,
+  "records": [
+    {
+      "id": "CQZSB-DAILY-MATH-001",
+      "subject": "高等数学",
+      "section": "当前已学内容",
+      "skillTag": "定义域",
+      "topic": "函数",
+      "point": "根式与分母共同限制",
+      "type": "单选题",
+      "stem": "函数 f(x)=√(7−2x)/(x−1) 的定义域是（ ）。",
+      "options": {
+        "A": "(−∞,7/2]",
+        "B": "(−∞,1)∪(1,7/2]",
+        "C": "[1,7/2]",
+        "D": "(1,7/2)"
+      },
+      "verifiedAnswer": "B",
+      "analysis": "根式要求7−2x≥0，故x≤7/2；分母要求x≠1；交集为(−∞,1)∪(1,7/2]。",
+      "mathLesson": {
+        "method": "先分别列限制，再取交集。",
+        "steps": [
+          "根式要求7−2x≥0，故x≤7/2",
+          "分母要求x≠1",
+          "交集为(−∞,1)∪(1,7/2]"
+        ],
+        "conclusion": "选B：(−∞,1)∪(1,7/2]",
+        "pitfall": "根号允许等于0，分母不允许等于0。",
+        "caveat": ""
+      }
+    },
+    {
+      "id": "CQZSB-DAILY-MATH-002",
+      "subject": "高等数学",
+      "section": "当前已学内容",
+      "skillTag": "定义域",
+      "topic": "函数",
+      "point": "对数真数与分母限制",
+      "type": "单选题",
+      "stem": "函数 f(x)=ln(x+4)/(x+1) 的定义域是（ ）。",
+      "options": {
+        "A": "[−4,+∞)",
+        "B": "(−4,+∞)",
+        "C": "(−4,−1)∪(−1,+∞)",
+        "D": "(−∞,−4)"
+      },
+      "verifiedAnswer": "C",
+      "analysis": "对数要求x+4>0，即x>−4；分母要求x≠−1；所以需从(−4,+∞)去掉−1。",
+      "mathLesson": {
+        "method": "对数真数取正并排除分母零点。",
+        "steps": [
+          "对数要求x+4>0，即x>−4",
+          "分母要求x≠−1",
+          "所以需从(−4,+∞)去掉−1"
+        ],
+        "conclusion": "选C：(−4,−1)∪(−1,+∞)",
+        "pitfall": "对数真数必须严格大于0。",
+        "caveat": ""
+      }
+    },
+    {
+      "id": "CQZSB-DAILY-MATH-003",
+      "subject": "高等数学",
+      "section": "当前已学内容",
+      "skillTag": "定义域",
+      "topic": "函数",
+      "point": "反正弦自变量范围",
+      "type": "单选题",
+      "stem": "函数 f(x)=arcsin((x−2)/3) 的定义域是（ ）。",
+      "options": {
+        "A": "[−1,5]",
+        "B": "(−1,5)",
+        "C": "[−3,3]",
+        "D": "[2,5]"
+      },
+      "verifiedAnswer": "A",
+      "analysis": "反正弦要求−1≤(x−2)/3≤1；乘3加2得−1≤x≤5。",
+      "mathLesson": {
+        "method": "把反正弦内部式限制在[−1,1]。",
+        "steps": [
+          "反正弦要求−1≤(x−2)/3≤1",
+          "乘3加2得−1≤x≤5"
+        ],
+        "conclusion": "选A：[−1,5]",
+        "pitfall": "反正弦的两个端点都可以取。",
+        "caveat": ""
+      }
+    },
+    {
+      "id": "CQZSB-DAILY-MATH-004",
+      "subject": "高等数学",
+      "section": "当前已学内容",
+      "skillTag": "定义域",
+      "topic": "函数",
+      "point": "对数作分母",
+      "type": "单选题",
+      "stem": "函数 f(x)=1/ln(5−x) 的定义域是（ ）。",
+      "options": {
+        "A": "(−∞,5)",
+        "B": "(−∞,4)∪(4,5]",
+        "C": "(4,5)",
+        "D": "(−∞,4)∪(4,5)"
+      },
+      "verifiedAnswer": "D",
+      "analysis": "真数5−x>0，得x<5；分母ln(5−x)≠0，得5−x≠1，即x≠4。",
+      "mathLesson": {
+        "method": "先保对数有意义，再保分母非零。",
+        "steps": [
+          "真数5−x>0，得x<5",
+          "分母ln(5−x)≠0，得5−x≠1，即x≠4"
+        ],
+        "conclusion": "选D：(−∞,4)∪(4,5)",
+        "pitfall": "分母是对数时还要排除对数等于0。",
+        "caveat": ""
+      }
+    },
+    {
+      "id": "CQZSB-DAILY-MATH-005",
+      "subject": "高等数学",
+      "section": "当前已学内容",
+      "skillTag": "定义域",
+      "topic": "函数",
+      "point": "根式作分母",
+      "type": "单选题",
+      "stem": "函数 f(x)=1/√(3x+6) 的定义域是（ ）。",
+      "options": {
+        "A": "[−2,+∞)",
+        "B": "(−2,+∞)",
+        "C": "(−∞,−2)",
+        "D": "R"
+      },
+      "verifiedAnswer": "B",
+      "analysis": "根式有意义要求3x+6≥0；它又是分母，因此3x+6>0；解得x>−2。",
+      "mathLesson": {
+        "method": "合并根式和分母限制为严格正。",
+        "steps": [
+          "根式有意义要求3x+6≥0",
+          "它又是分母，因此3x+6>0",
+          "解得x>−2"
+        ],
+        "conclusion": "选B：(−2,+∞)",
+        "pitfall": "根式在分母时不能取根号内等于0的点。",
+        "caveat": ""
+      }
+    },
+    {
+      "id": "CQZSB-DAILY-MATH-006",
+      "subject": "高等数学",
+      "section": "当前已学内容",
+      "skillTag": "定义域",
+      "topic": "函数",
+      "point": "两个根式限制交集",
+      "type": "单选题",
+      "stem": "函数 f(x)=√(x+3)+√(6−x) 的定义域是（ ）。",
+      "options": {
+        "A": "(−3,6)",
+        "B": "(−∞,6]",
+        "C": "[−3,6]",
+        "D": "[−3,+∞)"
+      },
+      "verifiedAnswer": "C",
+      "analysis": "第一个根式要求x≥−3；第二个根式要求x≤6；取交集得[−3,6]。",
+      "mathLesson": {
+        "method": "分别列不等式后取交集。",
+        "steps": [
+          "第一个根式要求x≥−3",
+          "第二个根式要求x≤6",
+          "取交集得[−3,6]"
+        ],
+        "conclusion": "选C：[−3,6]",
+        "pitfall": "两个限制要同时成立。",
+        "caveat": ""
+      }
+    },
+    {
+      "id": "CQZSB-DAILY-MATH-007",
+      "subject": "高等数学",
+      "section": "当前已学内容",
+      "skillTag": "定义域",
+      "topic": "函数",
+      "point": "含根式的对数真数",
+      "type": "单选题",
+      "stem": "函数 f(x)=ln(√(x+2)−2) 的定义域是（ ）。",
+      "options": {
+        "A": "(2,+∞)",
+        "B": "[2,+∞)",
+        "C": "[−2,+∞)",
+        "D": "(−2,2)"
+      },
+      "verifiedAnswer": "A",
+      "analysis": "对数真数要求√(x+2)−2>0；因此√(x+2)>2，平方得x>2；x>2已保证根式有意义。",
+      "mathLesson": {
+        "method": "从最外层对数的严格正条件向内解。",
+        "steps": [
+          "对数真数要求√(x+2)−2>0",
+          "因此√(x+2)>2，平方得x>2",
+          "x>2已保证根式有意义"
+        ],
+        "conclusion": "选A：(2,+∞)",
+        "pitfall": "真数不能为0，所以x=2应排除。",
+        "caveat": ""
+      }
+    },
+    {
+      "id": "CQZSB-DAILY-MATH-008",
+      "subject": "高等数学",
+      "section": "当前已学内容",
+      "skillTag": "解析式与复合",
+      "topic": "函数",
+      "point": "代换还原解析式",
+      "type": "单选题",
+      "stem": "已知 f(3x−2)=6x+5，则 f(x)=（ ）。",
+      "options": {
+        "A": "3x+7",
+        "B": "2x+5",
+        "C": "6x+9",
+        "D": "2x+9"
+      },
+      "verifiedAnswer": "D",
+      "analysis": "令t=3x−2，则x=(t+2)/3；代入得f(t)=2(t+2)+5=2t+9。",
+      "mathLesson": {
+        "method": "设整体为新变量并反解旧变量。",
+        "steps": [
+          "令t=3x−2，则x=(t+2)/3",
+          "代入得f(t)=2(t+2)+5=2t+9"
+        ],
+        "conclusion": "选D：2x+9",
+        "pitfall": "不能直接把3x−2替换成x而不调整右边。",
+        "caveat": ""
+      }
+    },
+    {
+      "id": "CQZSB-DAILY-MATH-009",
+      "subject": "高等数学",
+      "section": "当前已学内容",
+      "skillTag": "解析式与复合",
+      "topic": "函数",
+      "point": "平方整体代换",
+      "type": "单选题",
+      "stem": "已知 f(x+2)=x²−3x，则 f(1)=（ ）。",
+      "options": {
+        "A": "−2",
+        "B": "4",
+        "C": "−4",
+        "D": "2"
+      },
+      "verifiedAnswer": "B",
+      "analysis": "令x+2=1，得x=−1；f(1)=(−1)²−3(−1)=4。",
+      "mathLesson": {
+        "method": "先令给定输入等于目标输入。",
+        "steps": [
+          "令x+2=1，得x=−1",
+          "f(1)=(−1)²−3(−1)=4"
+        ],
+        "conclusion": "选B：4",
+        "pitfall": "函数输入是x+2，不是x。",
+        "caveat": ""
+      }
+    },
+    {
+      "id": "CQZSB-DAILY-MATH-010",
+      "subject": "高等数学",
+      "section": "当前已学内容",
+      "skillTag": "解析式与复合",
+      "topic": "函数",
+      "point": "有理式代换",
+      "type": "单选题",
+      "stem": "已知 f(1/x)=4x−3（x≠0），则 f(x)=（ ）。",
+      "options": {
+        "A": "4x−3",
+        "B": "1/(4x−3)",
+        "C": "4/x−3",
+        "D": "4/(x−3)"
+      },
+      "verifiedAnswer": "C",
+      "analysis": "令t=1/x，则x=1/t且t≠0；f(t)=4/t−3，故f(x)=4/x−3。",
+      "mathLesson": {
+        "method": "利用倒数代换还原解析式。",
+        "steps": [
+          "令t=1/x，则x=1/t且t≠0",
+          "f(t)=4/t−3，故f(x)=4/x−3"
+        ],
+        "conclusion": "选C：4/x−3",
+        "pitfall": "代换后的变量仍不能取0。",
+        "caveat": ""
+      }
+    },
+    {
+      "id": "CQZSB-DAILY-MATH-011",
+      "subject": "高等数学",
+      "section": "当前已学内容",
+      "skillTag": "解析式与复合",
+      "topic": "函数",
+      "point": "复合函数计算",
+      "type": "单选题",
+      "stem": "设 f(x)=x²+2，g(x)=3x−1，则 f(g(2))=（ ）。",
+      "options": {
+        "A": "27",
+        "B": "17",
+        "C": "29",
+        "D": "26"
+      },
+      "verifiedAnswer": "A",
+      "analysis": "先算g(2)=3×2−1=5；再算f(5)=5²+2=27。",
+      "mathLesson": {
+        "method": "先内函数后外函数。",
+        "steps": [
+          "先算g(2)=3×2−1=5",
+          "再算f(5)=5²+2=27"
+        ],
+        "conclusion": "选A：27",
+        "pitfall": "复合顺序从括号内向外。",
+        "caveat": ""
+      }
+    },
+    {
+      "id": "CQZSB-DAILY-MATH-012",
+      "subject": "高等数学",
+      "section": "当前已学内容",
+      "skillTag": "解析式与复合",
+      "topic": "函数",
+      "point": "复合解析式",
+      "type": "单选题",
+      "stem": "设 f(x)=2x+3，g(x)=x²−4，则 g(f(x))=（ ）。",
+      "options": {
+        "A": "2x²−5",
+        "B": "4x²+5",
+        "C": "4x²+12x+13",
+        "D": "4x²+12x+5"
+      },
+      "verifiedAnswer": "D",
+      "analysis": "把f(x)整体代入g的自变量；g(f(x))=(2x+3)²−4=4x²+12x+5。",
+      "mathLesson": {
+        "method": "把内函数整体加括号代入。",
+        "steps": [
+          "把f(x)整体代入g的自变量",
+          "g(f(x))=(2x+3)²−4=4x²+12x+5"
+        ],
+        "conclusion": "选D：4x²+12x+5",
+        "pitfall": "平方展开不能漏掉交叉项12x。",
+        "caveat": ""
+      }
+    },
+    {
+      "id": "CQZSB-DAILY-MATH-013",
+      "subject": "高等数学",
+      "section": "当前已学内容",
+      "skillTag": "解析式与复合",
+      "topic": "函数",
+      "point": "分段函数两次代入",
+      "type": "单选题",
+      "stem": "设 f(x)=x+4（x<0），f(x)=2x−1（x≥0），则 f(f(−2))=（ ）。",
+      "options": {
+        "A": "1",
+        "B": "3",
+        "C": "5",
+        "D": "−1"
+      },
+      "verifiedAnswer": "B",
+      "analysis": "−2<0，所以f(−2)=−2+4=2；2≥0，所以f(2)=2×2−1=3。",
+      "mathLesson": {
+        "method": "每次代入都重新判断输入所在区间。",
+        "steps": [
+          "−2<0，所以f(−2)=−2+4=2",
+          "2≥0，所以f(2)=2×2−1=3"
+        ],
+        "conclusion": "选B：3",
+        "pitfall": "第二次分段根据第一次结果2选择。",
+        "caveat": ""
+      }
+    },
+    {
+      "id": "CQZSB-DAILY-MATH-014",
+      "subject": "高等数学",
+      "section": "当前已学内容",
+      "skillTag": "解析式与复合",
+      "topic": "函数",
+      "point": "由复合定义域求区间",
+      "type": "单选题",
+      "stem": "f(u)=√(u−2)，g(x)=5−x，则 f(g(x)) 的定义域为（ ）。",
+      "options": {
+        "A": "[3,+∞)",
+        "B": "(−∞,5]",
+        "C": "(−∞,3]",
+        "D": "R"
+      },
+      "verifiedAnswer": "C",
+      "analysis": "f(g(x))=√(5−x−2)=√(3−x)；要求3−x≥0，得x≤3。",
+      "mathLesson": {
+        "method": "写出复合式再检查根式。",
+        "steps": [
+          "f(g(x))=√(5−x−2)=√(3−x)",
+          "要求3−x≥0，得x≤3"
+        ],
+        "conclusion": "选C：(−∞,3]",
+        "pitfall": "外函数的限制要施加在整个g(x)上。",
+        "caveat": ""
+      }
+    },
+    {
+      "id": "CQZSB-DAILY-MATH-015",
+      "subject": "高等数学",
+      "section": "当前已学内容",
+      "skillTag": "奇偶与性质",
+      "topic": "函数",
+      "point": "奇偶性判定",
+      "type": "单选题",
+      "stem": "函数 f(x)=x³−5x 的奇偶性为（ ）。",
+      "options": {
+        "A": "奇函数",
+        "B": "偶函数",
+        "C": "既奇又偶",
+        "D": "非奇非偶"
+      },
+      "verifiedAnswer": "A",
+      "analysis": "定义域R关于原点对称；f(−x)=−x³+5x=−f(x)；且f并非恒为0，所以不是偶函数。",
+      "mathLesson": {
+        "method": "比较f(−x)与f(x)、−f(x)。",
+        "steps": [
+          "定义域R关于原点对称",
+          "f(−x)=−x³+5x=−f(x)",
+          "且f并非恒为0，所以不是偶函数"
+        ],
+        "conclusion": "选A：奇函数",
+        "pitfall": "验证奇函数需要定义域对称。",
+        "caveat": ""
+      }
+    },
+    {
+      "id": "CQZSB-DAILY-MATH-016",
+      "subject": "高等数学",
+      "section": "当前已学内容",
+      "skillTag": "奇偶与性质",
+      "topic": "函数",
+      "point": "绝对值函数奇偶性",
+      "type": "单选题",
+      "stem": "函数 f(x)=|x|+x² 的奇偶性为（ ）。",
+      "options": {
+        "A": "奇函数",
+        "B": "非奇非偶",
+        "C": "既奇又偶",
+        "D": "偶函数"
+      },
+      "verifiedAnswer": "D",
+      "analysis": "定义域R关于原点对称；f(−x)=|−x|+(−x)²=|x|+x²=f(x)；如f(1)=2，故并非奇函数。",
+      "mathLesson": {
+        "method": "直接计算f(−x)。",
+        "steps": [
+          "定义域R关于原点对称",
+          "f(−x)=|−x|+(−x)²=|x|+x²=f(x)",
+          "如f(1)=2，故并非奇函数"
+        ],
+        "conclusion": "选D：偶函数",
+        "pitfall": "绝对值变号后数值不变。",
+        "caveat": ""
+      }
+    },
+    {
+      "id": "CQZSB-DAILY-MATH-017",
+      "subject": "高等数学",
+      "section": "当前已学内容",
+      "skillTag": "奇偶与性质",
+      "topic": "函数",
+      "point": "非对称定义域",
+      "type": "单选题",
+      "stem": "函数 f(x)=x²，x∈[−2,3]，其奇偶性为（ ）。",
+      "options": {
+        "A": "偶函数",
+        "B": "非奇非偶",
+        "C": "奇函数",
+        "D": "既奇又偶"
+      },
+      "verifiedAnswer": "B",
+      "analysis": "定义域包含3却不包含−3；定义域不关于原点对称，因此既不是奇函数也不是偶函数。",
+      "mathLesson": {
+        "method": "先检查定义域，再检查解析式。",
+        "steps": [
+          "定义域包含3却不包含−3",
+          "定义域不关于原点对称，因此既不是奇函数也不是偶函数"
+        ],
+        "conclusion": "选B：非奇非偶",
+        "pitfall": "只看解析式x²会忽略给定定义域。",
+        "caveat": ""
+      }
+    },
+    {
+      "id": "CQZSB-DAILY-MATH-018",
+      "subject": "高等数学",
+      "section": "当前已学内容",
+      "skillTag": "奇偶与性质",
+      "topic": "函数",
+      "point": "由奇性求函数值",
+      "type": "单选题",
+      "stem": "已知f是奇函数且f(4)=−7，则 f(−4)=（ ）。",
+      "options": {
+        "A": "−7",
+        "B": "4",
+        "C": "7",
+        "D": "−4"
+      },
+      "verifiedAnswer": "C",
+      "analysis": "奇函数满足f(−x)=−f(x)；f(−4)=−f(4)=7。",
+      "mathLesson": {
+        "method": "使用奇函数等式。",
+        "steps": [
+          "奇函数满足f(−x)=−f(x)",
+          "f(−4)=−f(4)=7"
+        ],
+        "conclusion": "选C：7",
+        "pitfall": "奇函数相反输入对应相反输出。",
+        "caveat": ""
+      }
+    },
+    {
+      "id": "CQZSB-DAILY-MATH-019",
+      "subject": "高等数学",
+      "section": "当前已学内容",
+      "skillTag": "奇偶与性质",
+      "topic": "函数",
+      "point": "由偶性代换",
+      "type": "单选题",
+      "stem": "已知f是偶函数且f(−3)=8，则 f(3)+f(−3)=（ ）。",
+      "options": {
+        "A": "16",
+        "B": "0",
+        "C": "8",
+        "D": "−16"
+      },
+      "verifiedAnswer": "A",
+      "analysis": "偶函数满足f(3)=f(−3)=8；两项之和为8+8=16。",
+      "mathLesson": {
+        "method": "先用偶性确定另一个函数值。",
+        "steps": [
+          "偶函数满足f(3)=f(−3)=8",
+          "两项之和为8+8=16"
+        ],
+        "conclusion": "选A：16",
+        "pitfall": "偶函数相反输入对应相同输出。",
+        "caveat": ""
+      }
+    },
+    {
+      "id": "CQZSB-DAILY-MATH-020",
+      "subject": "高等数学",
+      "section": "当前已学内容",
+      "skillTag": "奇偶与性质",
+      "topic": "函数",
+      "point": "二次函数区间单调性",
+      "type": "单选题",
+      "stem": "函数 f(x)=(x−2)² 在下列哪个区间上单调递增（ ）。",
+      "options": {
+        "A": "(−∞,2]",
+        "B": "[0,2]",
+        "C": "[−1,1]",
+        "D": "[2,+∞)"
+      },
+      "verifiedAnswer": "D",
+      "analysis": "抛物线开口向上，对称轴为x=2；对称轴右侧随x增大，(x−2)²增大；故在[2,+∞)单调递增。",
+      "mathLesson": {
+        "method": "利用二次函数顶点和开口方向。",
+        "steps": [
+          "抛物线开口向上，对称轴为x=2",
+          "对称轴右侧随x增大，(x−2)²增大",
+          "故在[2,+∞)单调递增"
+        ],
+        "conclusion": "选D：[2,+∞)",
+        "pitfall": "开口向上的抛物线在轴左侧递减。",
+        "caveat": ""
+      }
+    },
+    {
+      "id": "CQZSB-DAILY-MATH-021",
+      "subject": "高等数学",
+      "section": "当前已学内容",
+      "skillTag": "奇偶与性质",
+      "topic": "函数",
+      "point": "对数函数单调性",
+      "type": "单选题",
+      "stem": "函数 f(x)=log₂(x+3) 在其定义域上的单调性为（ ）。",
+      "options": {
+        "A": "单调递减",
+        "B": "单调递增",
+        "C": "先增后减",
+        "D": "先减后增"
+      },
+      "verifiedAnswer": "B",
+      "analysis": "定义域为x>−3；底数2>1，对数函数随真数增大而增大；x+3随x增大而增大，故f单调递增。",
+      "mathLesson": {
+        "method": "同时判断对数底数和内部一次式的变化。",
+        "steps": [
+          "定义域为x>−3",
+          "底数2>1，对数函数随真数增大而增大",
+          "x+3随x增大而增大，故f单调递增"
+        ],
+        "conclusion": "选B：单调递增",
+        "pitfall": "底数大于1时对数函数递增。",
+        "caveat": ""
+      }
+    },
+    {
+      "id": "CQZSB-DAILY-MATH-022",
+      "subject": "高等数学",
+      "section": "当前已学内容",
+      "skillTag": "反函数",
+      "topic": "函数",
+      "point": "一次函数反函数",
+      "type": "单选题",
+      "stem": "函数 f(x)=4x−7 的反函数是（ ）。",
+      "options": {
+        "A": "(x−7)/4",
+        "B": "4x+7",
+        "C": "(x+7)/4",
+        "D": "1/(4x−7)"
+      },
+      "verifiedAnswer": "C",
+      "analysis": "设y=4x−7，解得x=(y+7)/4；交换变量名得到f⁻¹(x)=(x+7)/4。",
+      "mathLesson": {
+        "method": "先解出原自变量，再交换变量名。",
+        "steps": [
+          "设y=4x−7，解得x=(y+7)/4",
+          "交换变量名得到f⁻¹(x)=(x+7)/4"
+        ],
+        "conclusion": "选C：(x+7)/4",
+        "pitfall": "反函数不是函数值的倒数。",
+        "caveat": ""
+      }
+    },
+    {
+      "id": "CQZSB-DAILY-MATH-023",
+      "subject": "高等数学",
+      "section": "当前已学内容",
+      "skillTag": "反函数",
+      "topic": "函数",
+      "point": "限制区间的平方函数",
+      "type": "单选题",
+      "stem": "函数 f(x)=(x+1)²，x≥−1，其反函数是（ ）。",
+      "options": {
+        "A": "√x−1（x≥0）",
+        "B": "−√x−1（x≥0）",
+        "C": "√(x−1)（x≥1）",
+        "D": "√x+1（x≥0）"
+      },
+      "verifiedAnswer": "A",
+      "analysis": "原函数值域为[0,+∞)；由y=(x+1)²及x+1≥0得x=√y−1；故反函数为√x−1，定义域x≥0。",
+      "mathLesson": {
+        "method": "先确认平方项符号再开方。",
+        "steps": [
+          "原函数值域为[0,+∞)",
+          "由y=(x+1)²及x+1≥0得x=√y−1",
+          "故反函数为√x−1，定义域x≥0"
+        ],
+        "conclusion": "选A：√x−1（x≥0）",
+        "pitfall": "取正根由原函数的定义域决定。",
+        "caveat": ""
+      }
+    },
+    {
+      "id": "CQZSB-DAILY-MATH-024",
+      "subject": "高等数学",
+      "section": "当前已学内容",
+      "skillTag": "反函数",
+      "topic": "函数",
+      "point": "指数函数反函数",
+      "type": "单选题",
+      "stem": "函数 f(x)=3^(x−2) 的反函数是（ ）。",
+      "options": {
+        "A": "3^(x+2)",
+        "B": "log₃(x−2)",
+        "C": "log₃x−2",
+        "D": "log₃x+2（x>0）"
+      },
+      "verifiedAnswer": "D",
+      "analysis": "设y=3^(x−2)，则log₃y=x−2；解得x=log₃y+2，且y>0；交换变量名得log₃x+2，x>0。",
+      "mathLesson": {
+        "method": "指数等式两边取同底对数。",
+        "steps": [
+          "设y=3^(x−2)，则log₃y=x−2",
+          "解得x=log₃y+2，且y>0",
+          "交换变量名得log₃x+2，x>0"
+        ],
+        "conclusion": "选D：log₃x+2（x>0）",
+        "pitfall": "反函数定义域等于原函数值域(0,+∞)。",
+        "caveat": ""
+      }
+    },
+    {
+      "id": "CQZSB-DAILY-MATH-025",
+      "subject": "高等数学",
+      "section": "当前已学内容",
+      "skillTag": "反函数",
+      "topic": "函数",
+      "point": "对数函数反函数",
+      "type": "单选题",
+      "stem": "函数 f(x)=ln(x+5) 的反函数为（ ）。",
+      "options": {
+        "A": "e^x+5",
+        "B": "e^x−5",
+        "C": "ln(x−5)",
+        "D": "e^(x−5)"
+      },
+      "verifiedAnswer": "B",
+      "analysis": "设y=ln(x+5)，得e^y=x+5；解得x=e^y−5；交换变量名得到e^x−5。",
+      "mathLesson": {
+        "method": "将对数式转为指数式再解未知量。",
+        "steps": [
+          "设y=ln(x+5)，得e^y=x+5",
+          "解得x=e^y−5",
+          "交换变量名得到e^x−5"
+        ],
+        "conclusion": "选B：e^x−5",
+        "pitfall": "平移量移项时要改变符号。",
+        "caveat": ""
+      }
+    },
+    {
+      "id": "CQZSB-DAILY-MATH-026",
+      "subject": "高等数学",
+      "section": "当前已学内容",
+      "skillTag": "反函数",
+      "topic": "函数",
+      "point": "负半轴平方函数反函数",
+      "type": "单选题",
+      "stem": "函数 f(x)=x²−3，x≤0，其反函数为（ ）。",
+      "options": {
+        "A": "√(x+3)（x≥−3）",
+        "B": "−√(x−3)（x≥3）",
+        "C": "−√(x+3)（x≥−3）",
+        "D": "−√x−3（x≥0）"
+      },
+      "verifiedAnswer": "C",
+      "analysis": "原函数值域为[−3,+∞)；y=x²−3得x²=y+3；由x≤0取负根，得反函数−√(x+3)。",
+      "mathLesson": {
+        "method": "先求值域，再依据原定义域选择平方根符号。",
+        "steps": [
+          "原函数值域为[−3,+∞)",
+          "y=x²−3得x²=y+3",
+          "由x≤0取负根，得反函数−√(x+3)"
+        ],
+        "conclusion": "选C：−√(x+3)（x≥−3）",
+        "pitfall": "原变量非正，所以必须取负平方根。",
+        "caveat": ""
+      }
+    },
+    {
+      "id": "CQZSB-DAILY-MATH-027",
+      "subject": "高等数学",
+      "section": "当前已学内容",
+      "skillTag": "反函数",
+      "topic": "函数",
+      "point": "由函数值读取反函数值",
+      "type": "单选题",
+      "stem": "已知f在定义域上可逆，且f(−5)=9，则 f⁻¹(9)=（ ）。",
+      "options": {
+        "A": "−5",
+        "B": "5",
+        "C": "1/9",
+        "D": "−9"
+      },
+      "verifiedAnswer": "A",
+      "analysis": "f把输入−5映射为9；反函数将9映射回−5。",
+      "mathLesson": {
+        "method": "把f(a)=b改写为f⁻¹(b)=a。",
+        "steps": [
+          "f把输入−5映射为9",
+          "反函数将9映射回−5"
+        ],
+        "conclusion": "选A：−5",
+        "pitfall": "反函数把输入输出交换，不是求倒数。",
+        "caveat": ""
+      }
+    },
+    {
+      "id": "CQZSB-DAILY-MATH-028",
+      "subject": "高等数学",
+      "section": "当前已学内容",
+      "skillTag": "反函数",
+      "topic": "函数",
+      "point": "分式函数反解",
+      "type": "单选题",
+      "stem": "函数 f(x)=(2x+1)/(x−3)（x≠3）的反函数为（ ）。",
+      "options": {
+        "A": "(3x−1)/(x−2)（x≠2）",
+        "B": "(x−3)/(2x+1)（x≠−1/2）",
+        "C": "(3x+1)/(2−x)（x≠2）",
+        "D": "(3x+1)/(x−2)（x≠2）"
+      },
+      "verifiedAnswer": "D",
+      "analysis": "设y=(2x+1)/(x−3)，则yx−3y=2x+1；整理得x(y−2)=3y+1，故x=(3y+1)/(y−2)；y=2无法取得，故反函数定义域为x≠2。",
+      "mathLesson": {
+        "method": "交叉相乘并把含原自变量的项集中。",
+        "steps": [
+          "设y=(2x+1)/(x−3)，则yx−3y=2x+1",
+          "整理得x(y−2)=3y+1，故x=(3y+1)/(y−2)",
+          "y=2无法取得，故反函数定义域为x≠2"
+        ],
+        "conclusion": "选D：(3x+1)/(x−2)（x≠2）",
+        "pitfall": "交叉相乘后移项要保留正确符号。",
+        "caveat": ""
+      }
+    },
+    {
+      "id": "CQZSB-DAILY-MATH-029",
+      "subject": "高等数学",
+      "section": "当前已学内容",
+      "skillTag": "参数与值域",
+      "topic": "函数",
+      "point": "二次函数最小值",
+      "type": "单选题",
+      "stem": "函数 f(x)=x²−6x+13 在R上的值域是（ ）。",
+      "options": {
+        "A": "[3,+∞)",
+        "B": "[4,+∞)",
+        "C": "(4,+∞)",
+        "D": "R"
+      },
+      "verifiedAnswer": "B",
+      "analysis": "配方得f(x)=(x−3)²+4；平方项最小为0，在x=3取到；故值域为[4,+∞)。",
+      "mathLesson": {
+        "method": "通过配方求二次函数最小值。",
+        "steps": [
+          "配方得f(x)=(x−3)²+4",
+          "平方项最小为0，在x=3取到",
+          "故值域为[4,+∞)"
+        ],
+        "conclusion": "选B：[4,+∞)",
+        "pitfall": "最小值可取到，左端点用闭括号。",
+        "caveat": ""
+      }
+    },
+    {
+      "id": "CQZSB-DAILY-MATH-030",
+      "subject": "高等数学",
+      "section": "当前已学内容",
+      "skillTag": "参数与值域",
+      "topic": "函数",
+      "point": "有界区间上的二次函数值域",
+      "type": "单选题",
+      "stem": "函数 f(x)=(x−1)²，x∈[−2,2]，其值域为（ ）。",
+      "options": {
+        "A": "[1,9]",
+        "B": "[0,4]",
+        "C": "[0,9]",
+        "D": "(0,9)"
+      },
+      "verifiedAnswer": "C",
+      "analysis": "顶点x=1在给定区间内，最小值为0；端点函数值为f(−2)=9、f(2)=1；最大值为9，故值域[0,9]。",
+      "mathLesson": {
+        "method": "先看顶点，再比较区间端点。",
+        "steps": [
+          "顶点x=1在给定区间内，最小值为0",
+          "端点函数值为f(−2)=9、f(2)=1",
+          "最大值为9，故值域[0,9]"
+        ],
+        "conclusion": "选C：[0,9]",
+        "pitfall": "最大值要比较两端点，不能只看右端点。",
+        "caveat": ""
+      }
+    },
+    {
+      "id": "CQZSB-DAILY-MATH-031",
+      "subject": "高等数学",
+      "section": "当前已学内容",
+      "skillTag": "参数与值域",
+      "topic": "函数",
+      "point": "二次式恒非负参数",
+      "type": "单选题",
+      "stem": "若x²+8x+a≥0对所有实数x恒成立，则a的范围是（ ）。",
+      "options": {
+        "A": "a≥16",
+        "B": "a>16",
+        "C": "a≤16",
+        "D": "a≥−16"
+      },
+      "verifiedAnswer": "A",
+      "analysis": "配方x²+8x+a=(x+4)²+a−16；最小值在x=−4处为a−16；恒非负要求a−16≥0，即a≥16。",
+      "mathLesson": {
+        "method": "把恒成立问题转为最小值非负。",
+        "steps": [
+          "配方x²+8x+a=(x+4)²+a−16",
+          "最小值在x=−4处为a−16",
+          "恒非负要求a−16≥0，即a≥16"
+        ],
+        "conclusion": "选A：a≥16",
+        "pitfall": "恒非负允许最小值等于0。",
+        "caveat": ""
+      }
+    },
+    {
+      "id": "CQZSB-DAILY-MATH-032",
+      "subject": "高等数学",
+      "section": "当前已学内容",
+      "skillTag": "参数与值域",
+      "topic": "函数",
+      "point": "绝对值函数值域",
+      "type": "单选题",
+      "stem": "函数 f(x)=|2x−6|+5 在R上的值域为（ ）。",
+      "options": {
+        "A": "(5,+∞)",
+        "B": "[−5,+∞)",
+        "C": "R",
+        "D": "[5,+∞)"
+      },
+      "verifiedAnswer": "D",
+      "analysis": "|2x−6|≥0；当x=3时绝对值为0，f(3)=5；绝对值可取任意非负数，故值域[5,+∞)。",
+      "mathLesson": {
+        "method": "利用绝对值非负性并检查等号条件。",
+        "steps": [
+          "|2x−6|≥0",
+          "当x=3时绝对值为0，f(3)=5",
+          "绝对值可取任意非负数，故值域[5,+∞)"
+        ],
+        "conclusion": "选D：[5,+∞)",
+        "pitfall": "绝对值可等于0，因此5能取到。",
+        "caveat": ""
+      }
+    },
+    {
+      "id": "CQZSB-DAILY-MATH-033",
+      "subject": "高等数学",
+      "section": "当前已学内容",
+      "skillTag": "参数与值域",
+      "topic": "函数",
+      "point": "根式复合值域",
+      "type": "单选题",
+      "stem": "函数 f(x)=√(9−x²) 的值域是（ ）。",
+      "options": {
+        "A": "[−3,3]",
+        "B": "[0,3]",
+        "C": "(0,3]",
+        "D": "[0,9]"
+      },
+      "verifiedAnswer": "B",
+      "analysis": "定义域条件为−3≤x≤3；在该区间内0≤9−x²≤9；开平方得0≤f(x)≤3，端点值均能取到。",
+      "mathLesson": {
+        "method": "先求根号内范围，再取平方根。",
+        "steps": [
+          "定义域条件为−3≤x≤3",
+          "在该区间内0≤9−x²≤9",
+          "开平方得0≤f(x)≤3，端点值均能取到"
+        ],
+        "conclusion": "选B：[0,3]",
+        "pitfall": "根号输出非负，最大值需要再开平方。",
+        "caveat": ""
+      }
+    },
+    {
+      "id": "CQZSB-DAILY-MATH-034",
+      "subject": "高等数学",
+      "section": "当前已学内容",
+      "skillTag": "参数与值域",
+      "topic": "函数",
+      "point": "指数平移值域",
+      "type": "单选题",
+      "stem": "函数 f(x)=2^x−6 在R上的值域是（ ）。",
+      "options": {
+        "A": "[−6,+∞)",
+        "B": "R",
+        "C": "(−6,+∞)",
+        "D": "(0,+∞)"
+      },
+      "verifiedAnswer": "C",
+      "analysis": "对任意实数x，2^x>0且能取任意正数；整体减6后取任意大于−6的数；故值域为(−6,+∞)。",
+      "mathLesson": {
+        "method": "将指数函数基本值域整体平移。",
+        "steps": [
+          "对任意实数x，2^x>0且能取任意正数",
+          "整体减6后取任意大于−6的数",
+          "故值域为(−6,+∞)"
+        ],
+        "conclusion": "选C：(−6,+∞)",
+        "pitfall": "指数函数不能取0，所以平移后的−6仍取不到。",
+        "caveat": ""
+      }
+    },
+    {
+      "id": "CQZSB-DAILY-MATH-035",
+      "subject": "高等数学",
+      "section": "当前已学内容",
+      "skillTag": "参数与值域",
+      "topic": "函数",
+      "point": "有界区间一次式恒非负",
+      "type": "单选题",
+      "stem": "若ax+5≥0对每个x∈[−2,3]都成立，则a的范围为（ ）。",
+      "options": {
+        "A": "[−5/3,5/2]",
+        "B": "[−5/2,5/3]",
+        "C": "[−5/3,+∞)",
+        "D": "(−∞,5/2]"
+      },
+      "verifiedAnswer": "A",
+      "analysis": "一次函数在闭区间上的最小值出现在端点；两端要求−2a+5≥0及3a+5≥0；分别得a≤5/2和a≥−5/3，交集为[−5/3,5/2]。",
+      "mathLesson": {
+        "method": "将区间内恒非负转成两端点非负。",
+        "steps": [
+          "一次函数在闭区间上的最小值出现在端点",
+          "两端要求−2a+5≥0及3a+5≥0",
+          "分别得a≤5/2和a≥−5/3，交集为[−5/3,5/2]"
+        ],
+        "conclusion": "选A：[−5/3,5/2]",
+        "pitfall": "两个端点条件必须同时满足，不能只检查一个。",
+        "caveat": ""
+      }
+    },
+    {
+      "id": "CQZSB-DAILY-ENG-001",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "可数与数量",
+      "topic": "名词",
+      "point": "不可数名词information不能直接加复数词尾",
+      "type": "单选题",
+      "stem": "The notice contains three useful pieces of ____ about the training course.",
+      "options": {
+        "A": "information",
+        "B": "informations",
+        "C": "an information",
+        "D": "many information"
+      },
+      "verifiedAnswer": "A",
+      "analysis": "A项正确。information是不可数名词，计数用a piece of information；三条用three pieces of information。",
+      "englishLesson": {
+        "translation": "这则通知包含三条有关培训课程的有用信息。",
+        "answerExplanation": "information是不可数名词，计数用a piece of information；三条用three pieces of information。",
+        "optionAnalysis": {
+          "A": {
+            "meaning": "信息（不可数）",
+            "reason": "正确：three pieces of用来计量不可数的information。"
+          },
+          "B": {
+            "meaning": "错误的复数形式",
+            "reason": "information表示信息时不可数，不加-s。"
+          },
+          "C": {
+            "meaning": "一条信息（错误形式）",
+            "reason": "information不能直接用an计数；pieces of后也不放an。"
+          },
+          "D": {
+            "meaning": "许多信息（错误形式）",
+            "reason": "many不能修饰不可数的information，且不能接在pieces of后。"
+          }
+        },
+        "steps": [
+          "先定位考点：不可数名词information不能直接加复数词尾。",
+          "information是不可数名词，计数用a piece of information；三条用three pieces of information。",
+          "将正确项放回原句，检查结构和句意。"
+        ],
+        "memoryTip": "数信息，要数piece。",
+        "caveat": "",
+        "references": []
+      }
+    },
+    {
+      "id": "CQZSB-DAILY-ENG-002",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "可数与数量",
+      "topic": "名词",
+      "point": "many修饰可数名词复数",
+      "type": "单选题",
+      "stem": "How ____ chairs do we need for the meeting? There will be twenty guests.",
+      "options": {
+        "A": "much",
+        "B": "many",
+        "C": "little",
+        "D": "a little"
+      },
+      "verifiedAnswer": "B",
+      "analysis": "B项正确。chairs是可数名词复数，问数量用how many chairs。",
+      "englishLesson": {
+        "translation": "会议需要多少把椅子？届时会有二十位客人。",
+        "answerExplanation": "chairs是可数名词复数，问数量用how many chairs。",
+        "optionAnalysis": {
+          "A": {
+            "meaning": "多少（修饰不可数名词）",
+            "reason": "chairs是可数复数，不能用much。"
+          },
+          "B": {
+            "meaning": "多少（修饰可数名词复数）",
+            "reason": "正确：how many后接chairs。"
+          },
+          "C": {
+            "meaning": "少量的；几乎没有的",
+            "reason": "little修饰不可数名词，how little也不对应chairs。"
+          },
+          "D": {
+            "meaning": "一点（修饰不可数名词）",
+            "reason": "不能组成how a little chairs，且chairs可数。"
+          }
+        },
+        "steps": [
+          "先定位考点：many修饰可数名词复数。",
+          "chairs是可数名词复数，问数量用how many chairs。",
+          "将正确项放回原句，检查结构和句意。"
+        ],
+        "memoryTip": "可数复数问how many，不可数问how much。",
+        "caveat": "",
+        "references": []
+      }
+    },
+    {
+      "id": "CQZSB-DAILY-ENG-003",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "可数与数量",
+      "topic": "名词",
+      "point": "a little修饰不可数名词表示一点",
+      "type": "单选题",
+      "stem": "We still have ____ milk, enough for one cup of coffee.",
+      "options": {
+        "A": "few",
+        "B": "a few",
+        "C": "a little",
+        "D": "many"
+      },
+      "verifiedAnswer": "C",
+      "analysis": "C项正确。milk是不可数名词，四个选项中只有a little能修饰milk，表示还有一点牛奶。",
+      "englishLesson": {
+        "translation": "我们还剩一点牛奶，够冲一杯咖啡。",
+        "answerExplanation": "milk是不可数名词，四个选项中只有a little能修饰milk，表示还有一点牛奶。",
+        "optionAnalysis": {
+          "A": {
+            "meaning": "几乎没有（修饰可数复数）",
+            "reason": "milk不可数，不能用few。"
+          },
+          "B": {
+            "meaning": "几个（修饰可数复数）",
+            "reason": "milk不可数，不能用a few。"
+          },
+          "C": {
+            "meaning": "一点（修饰不可数名词）",
+            "reason": "正确：a little可以修饰不可数名词milk，表示还剩一点牛奶。"
+          },
+          "D": {
+            "meaning": "许多（修饰可数名词复数）",
+            "reason": "many只能修饰可数名词复数，不能修饰milk。"
+          }
+        },
+        "steps": [
+          "先定位考点：a little修饰不可数名词表示一点。",
+          "milk是不可数名词，四个选项中只有a little能修饰milk，表示还有一点牛奶。",
+          "将正确项放回原句，检查结构和句意。"
+        ],
+        "memoryTip": "a little加不可数名词，a few加可数复数。",
+        "caveat": "",
+        "references": []
+      }
+    },
+    {
+      "id": "CQZSB-DAILY-ENG-004",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "可数与数量",
+      "topic": "名词",
+      "point": "child的不规则复数children",
+      "type": "单选题",
+      "stem": "The playground is closed to adults today; only ____ under twelve may enter.",
+      "options": {
+        "A": "child",
+        "B": "childs",
+        "C": "child's",
+        "D": "children"
+      },
+      "verifiedAnswer": "D",
+      "analysis": "D项正确。主语泛指十二岁以下的孩子，需要child的复数children。",
+      "englishLesson": {
+        "translation": "今天游乐场不对成年人开放；只有十二岁以下的孩子可以进入。",
+        "answerExplanation": "主语泛指十二岁以下的孩子，需要child的复数children。",
+        "optionAnalysis": {
+          "A": {
+            "meaning": "孩子（单数）",
+            "reason": "这里泛指十二岁以下的孩子，裸单数可数名词不能这样使用。"
+          },
+          "B": {
+            "meaning": "错误的复数形式",
+            "reason": "child的复数不是childs。"
+          },
+          "C": {
+            "meaning": "孩子的（单数所有格）",
+            "reason": "所有格后缺少被修饰名词，也不表示孩子复数。"
+          },
+          "D": {
+            "meaning": "孩子们",
+            "reason": "正确：children是不规则复数，符合泛指多个孩子。"
+          }
+        },
+        "steps": [
+          "先定位考点：child的不规则复数children。",
+          "主语泛指十二岁以下的孩子，需要child的复数children。",
+          "将正确项放回原句，检查结构和句意。"
+        ],
+        "memoryTip": "child变children，不能直接加-s。",
+        "caveat": "",
+        "references": []
+      }
+    },
+    {
+      "id": "CQZSB-DAILY-ENG-005",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "可数与数量",
+      "topic": "名词",
+      "point": "复合名词中woman随中心词一起变复数",
+      "type": "单选题",
+      "stem": "Two ____ from the city hospital will give us a health talk.",
+      "options": {
+        "A": "women doctors",
+        "B": "woman doctors",
+        "C": "women doctor",
+        "D": "woman doctor"
+      },
+      "verifiedAnswer": "A",
+      "analysis": "A项正确。woman doctor的复数是women doctors，两个名词都变复数。",
+      "englishLesson": {
+        "translation": "来自市医院的两位女医生将给我们做一场健康讲座。",
+        "answerExplanation": "woman doctor的复数是women doctors，两个名词都变复数。",
+        "optionAnalysis": {
+          "A": {
+            "meaning": "女医生们",
+            "reason": "正确：woman和doctor都变为复数。"
+          },
+          "B": {
+            "meaning": "错误的女医生复数形式",
+            "reason": "woman修饰职业名词，整体变复数时woman也变women。"
+          },
+          "C": {
+            "meaning": "错误的女医生复数形式",
+            "reason": "two后中心词doctor也必须用复数doctors。"
+          },
+          "D": {
+            "meaning": "一位女医生",
+            "reason": "单数形式不能接在two后。"
+          }
+        },
+        "steps": [
+          "先定位考点：复合名词中woman随中心词一起变复数。",
+          "woman doctor的复数是women doctors，两个名词都变复数。",
+          "将正确项放回原句，检查结构和句意。"
+        ],
+        "memoryTip": "man、woman修饰职业名词时，复数两头变。",
+        "caveat": "",
+        "references": []
+      }
+    },
+    {
+      "id": "CQZSB-DAILY-ENG-006",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "可数与数量",
+      "topic": "名词",
+      "point": "how much询问不可数名词数量",
+      "type": "单选题",
+      "stem": "How ____ water should I add to this soup?",
+      "options": {
+        "A": "many",
+        "B": "much",
+        "C": "a few",
+        "D": "few"
+      },
+      "verifiedAnswer": "B",
+      "analysis": "B项正确。water表示水时不可数，询问数量用how much。",
+      "englishLesson": {
+        "translation": "我应该往这汤里加多少水？",
+        "answerExplanation": "water表示水时不可数，询问数量用how much。",
+        "optionAnalysis": {
+          "A": {
+            "meaning": "多少（可数）",
+            "reason": "water不可数，不能用many。"
+          },
+          "B": {
+            "meaning": "多少（不可数）",
+            "reason": "正确：how much water询问水量。"
+          },
+          "C": {
+            "meaning": "几个",
+            "reason": "不能修饰water，也不能组成how a few water。"
+          },
+          "D": {
+            "meaning": "几乎没有几个",
+            "reason": "修饰可数复数，不能接water。"
+          }
+        },
+        "steps": [
+          "先定位考点：how much询问不可数名词数量。",
+          "water表示水时不可数，询问数量用how much。",
+          "将正确项放回原句，检查结构和句意。"
+        ],
+        "memoryTip": "水、牛奶等液体通常用much问量。",
+        "caveat": "",
+        "references": []
+      }
+    },
+    {
+      "id": "CQZSB-DAILY-ENG-007",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "可数与数量",
+      "topic": "名词",
+      "point": "every后接单数可数名词",
+      "type": "单选题",
+      "stem": "Every ____ in this building has a smoke alarm.",
+      "options": {
+        "A": "rooms",
+        "B": "roomes",
+        "C": "room",
+        "D": "rooms'"
+      },
+      "verifiedAnswer": "C",
+      "analysis": "C项正确。every后接单数可数名词，every room作主语时谓语用has。",
+      "englishLesson": {
+        "translation": "这栋楼的每个房间都装有烟雾报警器。",
+        "answerExplanation": "every后接单数可数名词，every room作主语时谓语用has。",
+        "optionAnalysis": {
+          "A": {
+            "meaning": "房间们（复数）",
+            "reason": "every不能直接修饰复数rooms。"
+          },
+          "B": {
+            "meaning": "错误的复数拼写",
+            "reason": "room的复数为rooms，且every后要求单数。"
+          },
+          "C": {
+            "meaning": "房间（单数）",
+            "reason": "正确：every room表示每个房间。"
+          },
+          "D": {
+            "meaning": "房间们的",
+            "reason": "此处需要房间作中心名词，不需要所有格。"
+          }
+        },
+        "steps": [
+          "先定位考点：every后接单数可数名词。",
+          "every后接单数可数名词，every room作主语时谓语用has。",
+          "将正确项放回原句，检查结构和句意。"
+        ],
+        "memoryTip": "every加单数，谓语也用单数。",
+        "caveat": "",
+        "references": []
+      }
+    },
+    {
+      "id": "CQZSB-DAILY-ENG-008",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "所有格",
+      "topic": "名词所有格",
+      "point": "单数人名所有格加撇号s",
+      "type": "单选题",
+      "stem": "This is ____ notebook. Her name, Linda, is written on the first page.",
+      "options": {
+        "A": "Linda",
+        "B": "Lindas",
+        "C": "Lindas'",
+        "D": "Linda's"
+      },
+      "verifiedAnswer": "D",
+      "analysis": "D项正确。notebook属于一个叫Linda的人，用Linda’s notebook。",
+      "englishLesson": {
+        "translation": "这是琳达的笔记本。第一页写着她的名字——琳达。",
+        "answerExplanation": "notebook属于一个叫Linda的人，用Linda’s notebook。",
+        "optionAnalysis": {
+          "A": {
+            "meaning": "琳达（人名原形）",
+            "reason": "此处需表达琳达的，原形不能直接作本句的物主限定语。"
+          },
+          "B": {
+            "meaning": "错误的人名复数形式",
+            "reason": "没有所有格撇号，不能表示琳达的。"
+          },
+          "C": {
+            "meaning": "多个Lindas的（形式）",
+            "reason": "题目仅有一名叫Linda的人，不是复数人名的所属关系。"
+          },
+          "D": {
+            "meaning": "琳达的",
+            "reason": "正确：单数人名加’s表示所属。"
+          }
+        },
+        "steps": [
+          "先定位考点：单数人名所有格加撇号s。",
+          "notebook属于一个叫Linda的人，用Linda’s notebook。",
+          "将正确项放回原句，检查结构和句意。"
+        ],
+        "memoryTip": "单数名词所有格通常加’s。",
+        "caveat": "",
+        "references": []
+      }
+    },
+    {
+      "id": "CQZSB-DAILY-ENG-009",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "所有格",
+      "topic": "名词所有格",
+      "point": "以s结尾的复数名词所有格只加撇号",
+      "type": "单选题",
+      "stem": "请选择复数名词 teachers 的规范所有格形式填空：The club has six teachers. This lounge is for all six of them, so it is the ____ lounge.",
+      "options": {
+        "A": "teachers'",
+        "B": "teacher's",
+        "C": "teachers",
+        "D": "teacher"
+      },
+      "verifiedAnswer": "A",
+      "analysis": "A项正确。题干明确为六位老师的休息室；teachers的所有格为teachers’。",
+      "englishLesson": {
+        "translation": "本题要求填写复数名词teachers的规范所有格。俱乐部有六位老师。这间休息室供他们六人使用，所以它是老师们的休息室。",
+        "answerExplanation": "题干明确为六位老师的休息室；teachers的所有格为teachers’。",
+        "optionAnalysis": {
+          "A": {
+            "meaning": "老师们的",
+            "reason": "正确：teachers是以s结尾的复数，所有格只加撇号。"
+          },
+          "B": {
+            "meaning": "一位老师的",
+            "reason": "只表示单数老师，不对应all six。"
+          },
+          "C": {
+            "meaning": "老师们",
+            "reason": "teachers只是复数原形，不是题目明确要求的规范所有格。"
+          },
+          "D": {
+            "meaning": "老师（单数原形）",
+            "reason": "teacher是单数原形，不是复数名词teachers的所有格。"
+          }
+        },
+        "steps": [
+          "先定位考点：以s结尾的复数名词所有格只加撇号。",
+          "题干明确为六位老师的休息室；teachers的所有格为teachers’。",
+          "将正确项放回原句，检查结构和句意。"
+        ],
+        "memoryTip": "复数已有s，所有格只添撇号。",
+        "caveat": "",
+        "references": []
+      }
+    },
+    {
+      "id": "CQZSB-DAILY-ENG-010",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "所有格",
+      "topic": "名词所有格",
+      "point": "不以s结尾的复数名词所有格加撇号s",
+      "type": "单选题",
+      "stem": "The library has a reading room for children. A sign on the door says “____ Reading Room”.",
+      "options": {
+        "A": "Childrens'",
+        "B": "Children's",
+        "C": "Child's",
+        "D": "Childrens"
+      },
+      "verifiedAnswer": "B",
+      "analysis": "B项正确。children是复数且词尾不是s，其所有格为children’s。",
+      "englishLesson": {
+        "translation": "图书馆有一间儿童阅览室。门上的标牌写着“儿童阅览室”。",
+        "answerExplanation": "children是复数且词尾不是s，其所有格为children’s。",
+        "optionAnalysis": {
+          "A": {
+            "meaning": "错误的所有格形式",
+            "reason": "children本身已是复数，不能再加s后加撇号。"
+          },
+          "B": {
+            "meaning": "孩子们的",
+            "reason": "正确：不以s结尾的复数children加’s。"
+          },
+          "C": {
+            "meaning": "一个孩子的",
+            "reason": "题干为面向children的阅览室，不是一个孩子的。"
+          },
+          "D": {
+            "meaning": "错误的复数形式",
+            "reason": "children不能再加s，且此处需要所属限定。"
+          }
+        },
+        "steps": [
+          "先定位考点：不以s结尾的复数名词所有格加撇号s。",
+          "children是复数且词尾不是s，其所有格为children’s。",
+          "将正确项放回原句，检查结构和句意。"
+        ],
+        "memoryTip": "children、men、women的所有格都加’s。",
+        "caveat": "",
+        "references": []
+      }
+    },
+    {
+      "id": "CQZSB-DAILY-ENG-011",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "所有格",
+      "topic": "名词所有格",
+      "point": "两人共同所有仅在后一人名后加所有格",
+      "type": "单选题",
+      "stem": "Mia and Leo share one tent. This is ____ only tent.",
+      "options": {
+        "A": "Mia's and Leo's",
+        "B": "Mia and Leo",
+        "C": "Mia and Leo's",
+        "D": "Mias and Leos'"
+      },
+      "verifiedAnswer": "C",
+      "analysis": "C项正确。share one tent明确共同所有，用Mia and Leo’s。",
+      "englishLesson": {
+        "translation": "米娅和利奥共用一顶帐篷。这是他们唯一的帐篷。",
+        "answerExplanation": "share one tent明确共同所有，用Mia and Leo’s。",
+        "optionAnalysis": {
+          "A": {
+            "meaning": "米娅和利奥各自的",
+            "reason": "分别加’s通常表示分别所有，与share one tent不符。"
+          },
+          "B": {
+            "meaning": "米娅和利奥",
+            "reason": "本题须用所有格修饰only tent。"
+          },
+          "C": {
+            "meaning": "米娅和利奥共同的",
+            "reason": "正确：共用一顶帐篷，只在Leo后加’s。"
+          },
+          "D": {
+            "meaning": "错误的所有格形式",
+            "reason": "把人名错误变复数，不能表达这两人的共同所有。"
+          }
+        },
+        "steps": [
+          "先定位考点：两人共同所有仅在后一人名后加所有格。",
+          "share one tent明确共同所有，用Mia and Leo’s。",
+          "将正确项放回原句，检查结构和句意。"
+        ],
+        "memoryTip": "共同所有，最后一个名字加’s。",
+        "caveat": "",
+        "references": []
+      }
+    },
+    {
+      "id": "CQZSB-DAILY-ENG-012",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "所有格",
+      "topic": "名词所有格",
+      "point": "分别所有时两个人名各加所有格",
+      "type": "单选题",
+      "stem": "Eva owns a red bicycle, and Nina owns a blue one. ____ bicycles are parked outside.",
+      "options": {
+        "A": "Eva and Nina",
+        "B": "Eva and Nina's",
+        "C": "Evas and Ninas'",
+        "D": "Eva's and Nina's"
+      },
+      "verifiedAnswer": "D",
+      "analysis": "D项正确。题干明确每人各有一辆，分别所有用Eva’s and Nina’s bicycles。",
+      "englishLesson": {
+        "translation": "伊娃有一辆红色自行车，妮娜有一辆蓝色自行车。她们各自的自行车都停在外面。",
+        "answerExplanation": "题干明确每人各有一辆，分别所有用Eva’s and Nina’s bicycles。",
+        "optionAnalysis": {
+          "A": {
+            "meaning": "伊娃和妮娜",
+            "reason": "需要用所有格说明自行车归谁所有。"
+          },
+          "B": {
+            "meaning": "伊娃和妮娜共同的",
+            "reason": "此形式表示共同所有；题干明确各自拥有不同自行车。"
+          },
+          "C": {
+            "meaning": "错误的所有格形式",
+            "reason": "不应把两个单数人名变为复数来表示各自所有。"
+          },
+          "D": {
+            "meaning": "伊娃的和妮娜的（分别所有）",
+            "reason": "正确：各自一辆，两个名字分别加’s。"
+          }
+        },
+        "steps": [
+          "先定位考点：分别所有时两个人名各加所有格。",
+          "题干明确每人各有一辆，分别所有用Eva’s and Nina’s bicycles。",
+          "将正确项放回原句，检查结构和句意。"
+        ],
+        "memoryTip": "各自拥有，各自加’s。",
+        "caveat": "",
+        "references": []
+      }
+    },
+    {
+      "id": "CQZSB-DAILY-ENG-013",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "所有格",
+      "topic": "名词所有格",
+      "point": "时间名词的所有格",
+      "type": "单选题",
+      "stem": "Our office is closed today. We will discuss the problem at ____ meeting.",
+      "options": {
+        "A": "tomorrow's",
+        "B": "tomorrows'",
+        "C": "tomorrows",
+        "D": "tomorrow's of"
+      },
+      "verifiedAnswer": "A",
+      "analysis": "A项正确。时间名词tomorrow可以加’s修饰meeting，构成tomorrow’s meeting。",
+      "englishLesson": {
+        "translation": "办公室今天不办公。我们将在明天的会议上讨论这个问题。",
+        "answerExplanation": "时间名词tomorrow可以加’s修饰meeting，构成tomorrow’s meeting。",
+        "optionAnalysis": {
+          "A": {
+            "meaning": "明天的",
+            "reason": "正确：tomorrow’s meeting表示明天的会议。"
+          },
+          "B": {
+            "meaning": "错误的所有格形式",
+            "reason": "tomorrow此处不是以s结尾的复数。"
+          },
+          "C": {
+            "meaning": "错误的形式",
+            "reason": "不能以无撇号的tomorrows表示明天的。"
+          },
+          "D": {
+            "meaning": "错误搭配",
+            "reason": "不能在tomorrow’s后再加of来修饰meeting。"
+          }
+        },
+        "steps": [
+          "先定位考点：时间名词的所有格。",
+          "时间名词tomorrow可以加’s修饰meeting，构成tomorrow’s meeting。",
+          "将正确项放回原句，检查结构和句意。"
+        ],
+        "memoryTip": "表示时间也可用’s：today’s、tomorrow’s。",
+        "caveat": "",
+        "references": []
+      }
+    },
+    {
+      "id": "CQZSB-DAILY-ENG-014",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "所有格",
+      "topic": "名词所有格",
+      "point": "名词性物主代词用于双重所有格",
+      "type": "单选题",
+      "stem": "I met a friend of ____ at the station. You introduced him to me last year.",
+      "options": {
+        "A": "you",
+        "B": "yours",
+        "C": "your",
+        "D": "yourself"
+      },
+      "verifiedAnswer": "B",
+      "analysis": "B项正确。a friend of yours是双重所有格，yours独立表示“你的朋友”这一所属范围。",
+      "englishLesson": {
+        "translation": "我在车站遇见了你的一位朋友。去年你把他介绍给了我。",
+        "answerExplanation": "a friend of yours是双重所有格，yours独立表示“你的朋友”这一所属范围。",
+        "optionAnalysis": {
+          "A": {
+            "meaning": "你（主格或宾格）",
+            "reason": "a friend of后表示你的朋友之一，要用名词性物主代词。"
+          },
+          "B": {
+            "meaning": "你的（名词性物主代词）",
+            "reason": "正确：a friend of yours表示你的一位朋友。"
+          },
+          "C": {
+            "meaning": "你的（形容词性物主代词）",
+            "reason": "your后必须接名词，不能单独处于此处。"
+          },
+          "D": {
+            "meaning": "你自己",
+            "reason": "反身代词不表达“你的朋友之一”的所属关系。"
+          }
+        },
+        "steps": [
+          "先定位考点：名词性物主代词用于双重所有格。",
+          "a friend of yours是双重所有格，yours独立表示“你的朋友”这一所属范围。",
+          "将正确项放回原句，检查结构和句意。"
+        ],
+        "memoryTip": "of后说某人的一个朋友，可用mine、yours、hers。",
+        "caveat": "",
+        "references": []
+      }
+    },
+    {
+      "id": "CQZSB-DAILY-ENG-015",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "代词",
+      "topic": "人称代词",
+      "point": "介词后使用人称代词宾格",
+      "type": "单选题",
+      "stem": "Mr. Green asked Tom and me to wait. Then he gave the tickets to ____.",
+      "options": {
+        "A": "we",
+        "B": "our",
+        "C": "us",
+        "D": "ours"
+      },
+      "verifiedAnswer": "C",
+      "analysis": "C项正确。介词to后需宾语，Tom and me对应宾格us。",
+      "englishLesson": {
+        "translation": "格林先生让汤姆和我等着。随后他把票给了我们。",
+        "answerExplanation": "介词to后需宾语，Tom and me对应宾格us。",
+        "optionAnalysis": {
+          "A": {
+            "meaning": "我们（主格）",
+            "reason": "介词to后不能用主格we。"
+          },
+          "B": {
+            "meaning": "我们的（形容词性物主代词）",
+            "reason": "后面没有名词，且本句需要接受票的人。"
+          },
+          "C": {
+            "meaning": "我们（宾格）",
+            "reason": "正确：to后用宾格us，指Tom和我。"
+          },
+          "D": {
+            "meaning": "我们的（名词性物主代词）",
+            "reason": "ours表示所属物，不能指收到票的我们。"
+          }
+        },
+        "steps": [
+          "先定位考点：介词后使用人称代词宾格。",
+          "介词to后需宾语，Tom and me对应宾格us。",
+          "将正确项放回原句，检查结构和句意。"
+        ],
+        "memoryTip": "介词后用宾格：to us、for him。",
+        "caveat": "",
+        "references": []
+      }
+    },
+    {
+      "id": "CQZSB-DAILY-ENG-016",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "代词",
+      "topic": "物主代词",
+      "point": "形容词性物主代词后接名词",
+      "type": "单选题",
+      "stem": "Lucy forgot to bring ____ student card, so she could not enter the library.",
+      "options": {
+        "A": "she",
+        "B": "hers",
+        "C": "herself",
+        "D": "her"
+      },
+      "verifiedAnswer": "D",
+      "analysis": "D项正确。空格后有名词student card，应用形容词性物主代词her。",
+      "englishLesson": {
+        "translation": "露西忘了带她的学生证，所以无法进入图书馆。",
+        "answerExplanation": "空格后有名词student card，应用形容词性物主代词her。",
+        "optionAnalysis": {
+          "A": {
+            "meaning": "她（主格）",
+            "reason": "主格不能直接作student card的物主限定语。"
+          },
+          "B": {
+            "meaning": "她的（名词性物主代词）",
+            "reason": "hers独立使用，不能再接student card。"
+          },
+          "C": {
+            "meaning": "她自己",
+            "reason": "反身代词不能直接表示她的学生证。"
+          },
+          "D": {
+            "meaning": "她的；她（宾格）",
+            "reason": "正确：在student card前，her作形容词性物主代词。"
+          }
+        },
+        "steps": [
+          "先定位考点：形容词性物主代词后接名词。",
+          "空格后有名词student card，应用形容词性物主代词her。",
+          "将正确项放回原句，检查结构和句意。"
+        ],
+        "memoryTip": "有名词用her，无名词用hers。",
+        "caveat": "",
+        "references": []
+      }
+    },
+    {
+      "id": "CQZSB-DAILY-ENG-017",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "代词",
+      "topic": "反身代词",
+      "point": "主语与宾语指同一人用反身代词",
+      "type": "单选题",
+      "stem": "While shaving alone this morning, Peter accidentally cut ____ on the chin.",
+      "options": {
+        "A": "himself",
+        "B": "him",
+        "C": "his",
+        "D": "he"
+      },
+      "verifiedAnswer": "A",
+      "analysis": "A项正确。Peter既是动作执行者又是承受者，宾语用反身代词himself。",
+      "englishLesson": {
+        "translation": "今天早上彼得独自刮胡子时，不小心割伤了自己的下巴。",
+        "answerExplanation": "Peter既是动作执行者又是承受者，宾语用反身代词himself。",
+        "optionAnalysis": {
+          "A": {
+            "meaning": "他自己",
+            "reason": "正确：受伤的是主语Peter本人。"
+          },
+          "B": {
+            "meaning": "他（宾格）",
+            "reason": "普通宾格him通常指另一个男性，不能表达本句Peter割伤自己。"
+          },
+          "C": {
+            "meaning": "他的",
+            "reason": "不能在此作表示受伤者的宾语。"
+          },
+          "D": {
+            "meaning": "他（主格）",
+            "reason": "cut后需宾语，不能用主格he。"
+          }
+        },
+        "steps": [
+          "先定位考点：主语与宾语指同一人用反身代词。",
+          "Peter既是动作执行者又是承受者，宾语用反身代词himself。",
+          "将正确项放回原句，检查结构和句意。"
+        ],
+        "memoryTip": "自己对自己做动作，用反身代词。",
+        "caveat": "",
+        "references": []
+      }
+    },
+    {
+      "id": "CQZSB-DAILY-ENG-018",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "代词",
+      "topic": "不定代词",
+      "point": "neither表示两者都不",
+      "type": "单选题",
+      "stem": "The two keys are both too large for this lock. ____ of them fits.",
+      "options": {
+        "A": "Either",
+        "B": "Neither",
+        "C": "Both",
+        "D": "All"
+      },
+      "verifiedAnswer": "B",
+      "analysis": "B项正确。范围是two keys，且两把均不适合，用neither of them。",
+      "englishLesson": {
+        "translation": "这两把钥匙对这把锁来说都太大了。它们哪一把都不合适。",
+        "answerExplanation": "范围是two keys，且两把均不适合，用neither of them。",
+        "optionAnalysis": {
+          "A": {
+            "meaning": "两者中的任意一个",
+            "reason": "与两把都太大、都不合适矛盾。"
+          },
+          "B": {
+            "meaning": "两者都不",
+            "reason": "正确：两把钥匙都不合适。"
+          },
+          "C": {
+            "meaning": "两者都",
+            "reason": "语义相反，且both作主语通常配复数谓语。"
+          },
+          "D": {
+            "meaning": "所有；全部",
+            "reason": "语义上表示全部，与都不合适矛盾，通常也不用于明确的两者。"
+          }
+        },
+        "steps": [
+          "先定位考点：neither表示两者都不。",
+          "范围是two keys，且两把均不适合，用neither of them。",
+          "将正确项放回原句，检查结构和句意。"
+        ],
+        "memoryTip": "两者都不neither；两者任一either。",
+        "caveat": "",
+        "references": []
+      }
+    },
+    {
+      "id": "CQZSB-DAILY-ENG-019",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "代词",
+      "topic": "不定代词",
+      "point": "both表示两者都",
+      "type": "单选题",
+      "stem": "My parents each have a driving licence. ____ of them can drive.",
+      "options": {
+        "A": "Neither",
+        "B": "None",
+        "C": "Both",
+        "D": "Every"
+      },
+      "verifiedAnswer": "C",
+      "analysis": "C项正确。parents指父母两人，each说明两人都具备条件，用both of them。",
+      "englishLesson": {
+        "translation": "我的父母各自都有驾驶证。他们两人都会开车。",
+        "answerExplanation": "parents指父母两人，each说明两人都具备条件，用both of them。",
+        "optionAnalysis": {
+          "A": {
+            "meaning": "两者都不",
+            "reason": "与each have a driving licence及can drive的肯定陈述不符。"
+          },
+          "B": {
+            "meaning": "一个也没有",
+            "reason": "表示没有任何人，违背双亲都能开的含义。"
+          },
+          "C": {
+            "meaning": "两者都",
+            "reason": "正确：指父母两人都能驾驶。"
+          },
+          "D": {
+            "meaning": "每个",
+            "reason": "every不能单独接of them，应使用every one of them。"
+          }
+        },
+        "steps": [
+          "先定位考点：both表示两者都。",
+          "parents指父母两人，each说明两人都具备条件，用both of them。",
+          "将正确项放回原句，检查结构和句意。"
+        ],
+        "memoryTip": "both of加复数代词，表示两者都。",
+        "caveat": "",
+        "references": []
+      }
+    },
+    {
+      "id": "CQZSB-DAILY-ENG-020",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "代词",
+      "topic": "不定代词",
+      "point": "nothing表示没有任何东西",
+      "type": "单选题",
+      "stem": "I opened the gift box, but it was completely empty. There was ____ inside.",
+      "options": {
+        "A": "something",
+        "B": "everything",
+        "C": "anything",
+        "D": "nothing"
+      },
+      "verifiedAnswer": "D",
+      "analysis": "D项正确。completely empty明确里面没有东西，用nothing。",
+      "englishLesson": {
+        "translation": "我打开礼品盒，但盒子完全是空的。里面什么都没有。",
+        "answerExplanation": "completely empty明确里面没有东西，用nothing。",
+        "optionAnalysis": {
+          "A": {
+            "meaning": "某物；某事",
+            "reason": "表示里面有东西，与completely empty矛盾。"
+          },
+          "B": {
+            "meaning": "所有东西",
+            "reason": "表示东西全在里面，与空盒子矛盾。"
+          },
+          "C": {
+            "meaning": "任何东西",
+            "reason": "本句为普通肯定陈述，anything不表示没有东西。"
+          },
+          "D": {
+            "meaning": "没有任何东西",
+            "reason": "正确：与盒子完全空着一致。"
+          }
+        },
+        "steps": [
+          "先定位考点：nothing表示没有任何东西。",
+          "completely empty明确里面没有东西，用nothing。",
+          "将正确项放回原句，检查结构和句意。"
+        ],
+        "memoryTip": "nothing本身含否定，不再加not。",
+        "caveat": "",
+        "references": []
+      }
+    },
+    {
+      "id": "CQZSB-DAILY-ENG-021",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "代词",
+      "topic": "代词替代",
+      "point": "one替代同类单数可数名词",
+      "type": "单选题",
+      "stem": "This cup is cracked. Please give me a new ____.",
+      "options": {
+        "A": "one",
+        "B": "ones",
+        "C": "them",
+        "D": "its"
+      },
+      "verifiedAnswer": "A",
+      "analysis": "A项正确。空格代替前面提到的单数可数名词cup，用a new one。",
+      "englishLesson": {
+        "translation": "这个杯子裂了。请给我一个新的。",
+        "answerExplanation": "空格代替前面提到的单数可数名词cup，用a new one。",
+        "optionAnalysis": {
+          "A": {
+            "meaning": "一个（代替同类单数可数名词）",
+            "reason": "正确：a new one代替a new cup。"
+          },
+          "B": {
+            "meaning": "一些（复数替代词）",
+            "reason": "前有a，不能用复数ones。"
+          },
+          "C": {
+            "meaning": "它们（宾格）",
+            "reason": "不能接在a new后，也不对应单数杯子。"
+          },
+          "D": {
+            "meaning": "它的",
+            "reason": "是形容词性物主代词，不能代替cup接在a new后。"
+          }
+        },
+        "steps": [
+          "先定位考点：one替代同类单数可数名词。",
+          "空格代替前面提到的单数可数名词cup，用a new one。",
+          "将正确项放回原句，检查结构和句意。"
+        ],
+        "memoryTip": "a new one表示同类中的另一个新的。",
+        "caveat": "",
+        "references": []
+      }
+    },
+    {
+      "id": "CQZSB-DAILY-ENG-022",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "冠词",
+      "topic": "冠词",
+      "point": "a或an取决于词首发音",
+      "type": "单选题",
+      "stem": "Sofia carried ____ umbrella because heavy rain was expected.",
+      "options": {
+        "A": "a",
+        "B": "an",
+        "C": "these",
+        "D": "any umbrellas"
+      },
+      "verifiedAnswer": "B",
+      "analysis": "B项正确。umbrella是单数可数名词，首次泛指一把，且首音为元音，用an。",
+      "englishLesson": {
+        "translation": "因为预计会下大雨，索菲娅带了一把伞。",
+        "answerExplanation": "umbrella是单数可数名词，首次泛指一把，且首音为元音，用an。",
+        "optionAnalysis": {
+          "A": {
+            "meaning": "一个（辅音音素前）",
+            "reason": "umbrella以元音音素开头，不能用a。"
+          },
+          "B": {
+            "meaning": "一个（元音音素前）",
+            "reason": "正确：第一次提到一把伞，用an umbrella。"
+          },
+          "C": {
+            "meaning": "这些",
+            "reason": "these只能直接限定复数名词，umbrella是单数。"
+          },
+          "D": {
+            "meaning": "任何雨伞（复数短语）",
+            "reason": "空格后已有umbrella，填入后名词重复，结构错误。"
+          }
+        },
+        "steps": [
+          "先定位考点：a或an取决于词首发音。",
+          "umbrella是单数可数名词，首次泛指一把，且首音为元音，用an。",
+          "将正确项放回原句，检查结构和句意。"
+        ],
+        "memoryTip": "看发音，不看字母：an umbrella。",
+        "caveat": "",
+        "references": []
+      }
+    },
+    {
+      "id": "CQZSB-DAILY-ENG-023",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "冠词",
+      "topic": "冠词",
+      "point": "university首音为辅音用a",
+      "type": "单选题",
+      "stem": "My cousin hopes to study at ____ university near the sea.",
+      "options": {
+        "A": "an",
+        "B": "these",
+        "C": "a",
+        "D": "several"
+      },
+      "verifiedAnswer": "C",
+      "analysis": "C项正确。这里泛指一所大学；university虽以字母u开头，但首音是辅音/j/，用a。",
+      "englishLesson": {
+        "translation": "我的表弟希望在海边的一所大学学习。",
+        "answerExplanation": "这里泛指一所大学；university虽以字母u开头，但首音是辅音/j/，用a。",
+        "optionAnalysis": {
+          "A": {
+            "meaning": "一个（元音音素前）",
+            "reason": "university首音为/j/，不是元音音素。"
+          },
+          "B": {
+            "meaning": "这些",
+            "reason": "university是单数，不能接在these后。"
+          },
+          "C": {
+            "meaning": "一所（辅音音素前）",
+            "reason": "正确：university以辅音音素/j/开头，用a。"
+          },
+          "D": {
+            "meaning": "几个",
+            "reason": "several后需复数universities。"
+          }
+        },
+        "steps": [
+          "先定位考点：university首音为辅音用a。",
+          "这里泛指一所大学；university虽以字母u开头，但首音是辅音/j/，用a。",
+          "将正确项放回原句，检查结构和句意。"
+        ],
+        "memoryTip": "a university：u的开头发音像“you”。",
+        "caveat": "",
+        "references": []
+      }
+    },
+    {
+      "id": "CQZSB-DAILY-ENG-024",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "冠词",
+      "topic": "冠词",
+      "point": "hour的h不发音而用an",
+      "type": "单选题",
+      "stem": "The repair took exactly ____ hour, from 2:00 to 3:00.",
+      "options": {
+        "A": "a",
+        "B": "two",
+        "C": "many",
+        "D": "an"
+      },
+      "verifiedAnswer": "D",
+      "analysis": "D项正确。hour以元音音素开头，且2点到3点为一小时，用an hour。",
+      "englishLesson": {
+        "translation": "维修正好花了一小时，从两点到三点。",
+        "answerExplanation": "hour以元音音素开头，且2点到3点为一小时，用an hour。",
+        "optionAnalysis": {
+          "A": {
+            "meaning": "一（辅音音素前）",
+            "reason": "hour的h不发音，首音是元音，不能用a。"
+          },
+          "B": {
+            "meaning": "二",
+            "reason": "与单数hour以及2点到3点的一小时均不符。"
+          },
+          "C": {
+            "meaning": "许多",
+            "reason": "many后要求复数名词，也与一小时的时长不符。"
+          },
+          "D": {
+            "meaning": "一（元音音素前）",
+            "reason": "正确：an hour表示一小时。"
+          }
+        },
+        "steps": [
+          "先定位考点：hour的h不发音而用an。",
+          "hour以元音音素开头，且2点到3点为一小时，用an hour。",
+          "将正确项放回原句，检查结构和句意。"
+        ],
+        "memoryTip": "hour的h不发音：an hour。",
+        "caveat": "",
+        "references": []
+      }
+    },
+    {
+      "id": "CQZSB-DAILY-ENG-025",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "冠词",
+      "topic": "冠词",
+      "point": "再次提及同一对象用the",
+      "type": "单选题",
+      "stem": "A dog followed me home yesterday. ____ dog is now sleeping by my door.",
+      "options": {
+        "A": "The",
+        "B": "An",
+        "C": "These",
+        "D": "Some dogs"
+      },
+      "verifiedAnswer": "A",
+      "analysis": "A项正确。dog第一次出现用a，再次提到同一只狗用the。",
+      "englishLesson": {
+        "translation": "昨天有一只狗跟着我回家。那只狗现在正睡在我门边。",
+        "answerExplanation": "dog第一次出现用a，再次提到同一只狗用the。",
+        "optionAnalysis": {
+          "A": {
+            "meaning": "这只；那只（定冠词）",
+            "reason": "正确：第二句特指前一句的那只狗。"
+          },
+          "B": {
+            "meaning": "一只（元音音素前）",
+            "reason": "dog以辅音音素开头，不能用an。"
+          },
+          "C": {
+            "meaning": "这些",
+            "reason": "不能修饰单数dog。"
+          },
+          "D": {
+            "meaning": "一些狗",
+            "reason": "填入后形成some dogs dog，名词重复且不合句法。"
+          }
+        },
+        "steps": [
+          "先定位考点：再次提及同一对象用the。",
+          "dog第一次出现用a，再次提到同一只狗用the。",
+          "将正确项放回原句，检查结构和句意。"
+        ],
+        "memoryTip": "第一次a/an，再提同一个用the。",
+        "caveat": "",
+        "references": []
+      }
+    },
+    {
+      "id": "CQZSB-DAILY-ENG-026",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "冠词",
+      "topic": "冠词",
+      "point": "序数词前通常使用定冠词",
+      "type": "单选题",
+      "stem": "There are five floors in our office building. My desk is on ____ third floor.",
+      "options": {
+        "A": "a",
+        "B": "the",
+        "C": "an",
+        "D": "these"
+      },
+      "verifiedAnswer": "B",
+      "analysis": "B项正确。表示楼层次序时用on the third floor，序数词third前用the。",
+      "englishLesson": {
+        "translation": "我们的办公楼有五层。我的办公桌在三楼。",
+        "answerExplanation": "表示楼层次序时用on the third floor，序数词third前用the。",
+        "optionAnalysis": {
+          "A": {
+            "meaning": "一个（不定冠词）",
+            "reason": "这里指楼层序列中的第三层，用the third floor。"
+          },
+          "B": {
+            "meaning": "这个；那个（定冠词）",
+            "reason": "正确：序数词third前用the限定具体楼层。"
+          },
+          "C": {
+            "meaning": "一个（元音音素前）",
+            "reason": "third首音是辅音，不能用an，且本句需定冠词。"
+          },
+          "D": {
+            "meaning": "这些",
+            "reason": "floor为单数，不能受these限定。"
+          }
+        },
+        "steps": [
+          "先定位考点：序数词前通常使用定冠词。",
+          "表示楼层次序时用on the third floor，序数词third前用the。",
+          "将正确项放回原句，检查结构和句意。"
+        ],
+        "memoryTip": "第几层：on the +序数词+floor。",
+        "caveat": "",
+        "references": []
+      }
+    },
+    {
+      "id": "CQZSB-DAILY-ENG-027",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "冠词",
+      "topic": "冠词",
+      "point": "play加球类运动时使用零冠词",
+      "type": "单选题",
+      "stem": "After class, we often play ____ basketball on the school court.（∅表示不填）",
+      "options": {
+        "A": "a",
+        "B": "an",
+        "C": "∅",
+        "D": "the"
+      },
+      "verifiedAnswer": "C",
+      "analysis": "C项正确。play后接球类运动名称basketball表示从事运动，通常不加冠词。",
+      "englishLesson": {
+        "translation": "下课后，我们常在学校球场打篮球。",
+        "answerExplanation": "play后接球类运动名称basketball表示从事运动，通常不加冠词。",
+        "optionAnalysis": {
+          "A": {
+            "meaning": "一个（不定冠词）",
+            "reason": "play basketball表示打篮球，不用a。"
+          },
+          "B": {
+            "meaning": "一个（不定冠词）",
+            "reason": "basketball首音非元音，而且运动名称前不用不定冠词。"
+          },
+          "C": {
+            "meaning": "零冠词；不填",
+            "reason": "正确：play basketball是打篮球的固定表达。"
+          },
+          "D": {
+            "meaning": "定冠词",
+            "reason": "这里泛指从事篮球运动，不是特指某个球，运动名前不用the。"
+          }
+        },
+        "steps": [
+          "先定位考点：play加球类运动时使用零冠词。",
+          "play后接球类运动名称basketball表示从事运动，通常不加冠词。",
+          "将正确项放回原句，检查结构和句意。"
+        ],
+        "memoryTip": "打球play basketball，运动名前不加冠词。",
+        "caveat": "",
+        "references": []
+      }
+    },
+    {
+      "id": "CQZSB-DAILY-ENG-028",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "冠词",
+      "topic": "冠词",
+      "point": "by加交通方式时使用零冠词",
+      "type": "单选题",
+      "stem": "The village has a railway station, so we decided to go there by ____ train.（∅表示不填）",
+      "options": {
+        "A": "a",
+        "B": "an",
+        "C": "the",
+        "D": "∅"
+      },
+      "verifiedAnswer": "D",
+      "analysis": "D项正确。by train表示交通方式，train前不用冠词。",
+      "englishLesson": {
+        "translation": "这个村子有火车站，所以我们决定乘火车去那里。",
+        "answerExplanation": "by train表示交通方式，train前不用冠词。",
+        "optionAnalysis": {
+          "A": {
+            "meaning": "一列（不定冠词）",
+            "reason": "表示乘火车的方式时用by train，不用by a train。"
+          },
+          "B": {
+            "meaning": "一列（不定冠词）",
+            "reason": "train首音为辅音，且by加交通方式不加冠词。"
+          },
+          "C": {
+            "meaning": "这列；那列",
+            "reason": "本句表达出行方式，不是对某列列车作位置说明，应用by train。"
+          },
+          "D": {
+            "meaning": "零冠词；不填",
+            "reason": "正确：by train表示乘火车。"
+          }
+        },
+        "steps": [
+          "先定位考点：by加交通方式时使用零冠词。",
+          "by train表示交通方式，train前不用冠词。",
+          "将正确项放回原句，检查结构和句意。"
+        ],
+        "memoryTip": "by bus/train/plane，交通方式用零冠词。",
+        "caveat": "",
+        "references": []
+      }
+    },
+    {
+      "id": "CQZSB-DAILY-ENG-029",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "词义搭配",
+      "topic": "名词词义",
+      "point": "receipt表示购物付款凭证",
+      "type": "单选题",
+      "stem": "The cashier gave me a ____ showing the items I bought and the total amount I paid.",
+      "options": {
+        "A": "receipt",
+        "B": "recipe",
+        "C": "passport",
+        "D": "timetable"
+      },
+      "verifiedAnswer": "A",
+      "analysis": "A项正确。cashier、items I bought和amount I paid共同限定为购物收据receipt。",
+      "englishLesson": {
+        "translation": "收银员给了我一张收据，上面列出了我买的物品和支付的总金额。",
+        "answerExplanation": "cashier、items I bought和amount I paid共同限定为购物收据receipt。",
+        "optionAnalysis": {
+          "A": {
+            "meaning": "购物收据",
+            "reason": "正确：列明所购物品和已付总额的是购物收据。"
+          },
+          "B": {
+            "meaning": "食谱；烹饪方法",
+            "reason": "食谱说明如何做菜，不是购物付款凭证。"
+          },
+          "C": {
+            "meaning": "护照",
+            "reason": "护照用于证明身份和国籍，不列购物付款明细。"
+          },
+          "D": {
+            "meaning": "时刻表；课程表",
+            "reason": "时刻表列时间安排，不记录购物支付明细。"
+          }
+        },
+        "steps": [
+          "先定位考点：receipt表示购物付款凭证。",
+          "cashier、items I bought和amount I paid共同限定为购物收据receipt。",
+          "将正确项放回原句，检查结构和句意。"
+        ],
+        "memoryTip": "receipt是收据，recipe是食谱。",
+        "caveat": "",
+        "references": []
+      }
+    },
+    {
+      "id": "CQZSB-DAILY-ENG-030",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "词义搭配",
+      "topic": "名词词义",
+      "point": "thermometer表示测温仪器",
+      "type": "单选题",
+      "stem": "The nurse used a ____ to check whether the patient had a fever.",
+      "options": {
+        "A": "ruler",
+        "B": "thermometer",
+        "C": "dictionary",
+        "D": "calendar"
+      },
+      "verifiedAnswer": "B",
+      "analysis": "B项正确。check whether the patient had a fever要求测量体温，仪器为thermometer。",
+      "englishLesson": {
+        "translation": "护士用体温计检查病人是否发烧。",
+        "answerExplanation": "check whether the patient had a fever要求测量体温，仪器为thermometer。",
+        "optionAnalysis": {
+          "A": {
+            "meaning": "尺子",
+            "reason": "尺子测长度，不能测体温判断发热。"
+          },
+          "B": {
+            "meaning": "温度计；体温计",
+            "reason": "正确：体温计用于测量体温。"
+          },
+          "C": {
+            "meaning": "词典",
+            "reason": "词典查词义，不测量体温。"
+          },
+          "D": {
+            "meaning": "日历",
+            "reason": "日历查日期，不测量体温。"
+          }
+        },
+        "steps": [
+          "先定位考点：thermometer表示测温仪器。",
+          "check whether the patient had a fever要求测量体温，仪器为thermometer。",
+          "将正确项放回原句，检查结构和句意。"
+        ],
+        "memoryTip": "thermometer测温度，fever提示体温。",
+        "caveat": "",
+        "references": []
+      }
+    },
+    {
+      "id": "CQZSB-DAILY-ENG-031",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "词义搭配",
+      "topic": "名词词义",
+      "point": "borrower指借入物品的人",
+      "type": "单选题",
+      "stem": "I lent my bicycle to Kevin, and he promised to return it tomorrow. In this situation, Kevin is the ____.",
+      "options": {
+        "A": "seller",
+        "B": "owner",
+        "C": "borrower",
+        "D": "buyer"
+      },
+      "verifiedAnswer": "C",
+      "analysis": "C项正确。I lent my bicycle to Kevin表示我借出、Kevin借入，因此Kevin是borrower。",
+      "englishLesson": {
+        "translation": "我把自行车借给了凯文，他答应明天归还。在这种情况下，凯文是借用者。",
+        "answerExplanation": "I lent my bicycle to Kevin表示我借出、Kevin借入，因此Kevin是borrower。",
+        "optionAnalysis": {
+          "A": {
+            "meaning": "卖方",
+            "reason": "题目是借用后归还，没有出售行为。"
+          },
+          "B": {
+            "meaning": "所有者",
+            "reason": "自行车属于说话人，Kevin只是借用。"
+          },
+          "C": {
+            "meaning": "借用者；借入者",
+            "reason": "正确：Kevin借入自行车并承诺归还。"
+          },
+          "D": {
+            "meaning": "买方",
+            "reason": "没有购买或支付行为，Kevin不是买方。"
+          }
+        },
+        "steps": [
+          "先定位考点：borrower指借入物品的人。",
+          "I lent my bicycle to Kevin表示我借出、Kevin借入，因此Kevin是borrower。",
+          "将正确项放回原句，检查结构和句意。"
+        ],
+        "memoryTip": "lend借出去，borrow借进来，borrower是借入者。",
+        "caveat": "",
+        "references": []
+      }
+    },
+    {
+      "id": "CQZSB-DAILY-ENG-032",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "词义搭配",
+      "topic": "名词词义",
+      "point": "destination表示行程目的地",
+      "type": "单选题",
+      "stem": "Our train leaves Chongqing tonight and arrives in Kunming tomorrow. Kunming is our final ____.",
+      "options": {
+        "A": "departure",
+        "B": "luggage",
+        "C": "passenger",
+        "D": "destination"
+      },
+      "verifiedAnswer": "D",
+      "analysis": "D项正确。leaves Chongqing与arrives in Kunming明确昆明为终点，final destination表示最终目的地。",
+      "englishLesson": {
+        "translation": "我们的火车今晚离开重庆，明天到达昆明。昆明是我们的最终目的地。",
+        "answerExplanation": "leaves Chongqing与arrives in Kunming明确昆明为终点，final destination表示最终目的地。",
+        "optionAnalysis": {
+          "A": {
+            "meaning": "离开；出发",
+            "reason": "昆明是到达的地方，不是出发这一动作。"
+          },
+          "B": {
+            "meaning": "行李",
+            "reason": "昆明是城市，不能是行李。"
+          },
+          "C": {
+            "meaning": "乘客",
+            "reason": "昆明是城市，不能是乘客。"
+          },
+          "D": {
+            "meaning": "目的地",
+            "reason": "正确：行程最终到达的城市是目的地。"
+          }
+        },
+        "steps": [
+          "先定位考点：destination表示行程目的地。",
+          "leaves Chongqing与arrives in Kunming明确昆明为终点，final destination表示最终目的地。",
+          "将正确项放回原句，检查结构和句意。"
+        ],
+        "memoryTip": "arrive到达的终点，就是destination。",
+        "caveat": "",
+        "references": []
+      }
+    },
+    {
+      "id": "CQZSB-DAILY-ENG-033",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "词义搭配",
+      "topic": "名词词义",
+      "point": "permission表示许可",
+      "type": "单选题",
+      "stem": "Visitors must get the manager’s ____ before entering this private laboratory; without it, entry is forbidden.",
+      "options": {
+        "A": "permission",
+        "B": "temperature",
+        "C": "distance",
+        "D": "furniture"
+      },
+      "verifiedAnswer": "A",
+      "analysis": "A项正确。without it, entry is forbidden明确空格是允许进入的授权，get someone’s permission表示得到某人的许可。",
+      "englishLesson": {
+        "translation": "访客进入这间私人实验室之前必须得到经理许可；没有许可，禁止进入。",
+        "answerExplanation": "without it, entry is forbidden明确空格是允许进入的授权，get someone’s permission表示得到某人的许可。",
+        "optionAnalysis": {
+          "A": {
+            "meaning": "许可；允许",
+            "reason": "正确：进入前须得到经理的许可，without it进一步明确。"
+          },
+          "B": {
+            "meaning": "温度",
+            "reason": "得到经理的温度不能表示获准进入。"
+          },
+          "C": {
+            "meaning": "距离",
+            "reason": "得到经理的距离不表示进入许可。"
+          },
+          "D": {
+            "meaning": "家具",
+            "reason": "家具不表示准许进入，也不符合get the manager’s ... before entering的逻辑。"
+          }
+        },
+        "steps": [
+          "先定位考点：permission表示许可。",
+          "without it, entry is forbidden明确空格是允许进入的授权，get someone’s permission表示得到某人的许可。",
+          "将正确项放回原句，检查结构和句意。"
+        ],
+        "memoryTip": "get permission获得许可，without permission未经许可。",
+        "caveat": "",
+        "references": []
+      }
+    },
+    {
+      "id": "CQZSB-DAILY-ENG-034",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "词义搭配",
+      "topic": "形容词词义",
+      "point": "vacant表示座位空着无人占用",
+      "type": "单选题",
+      "stem": "Every seat in the first row was taken, but one seat in the second row was ____, so I sat there.",
+      "options": {
+        "A": "occupied",
+        "B": "vacant",
+        "C": "absent",
+        "D": "asleep"
+      },
+      "verifiedAnswer": "B",
+      "analysis": "B项正确。前半句taken表示被占用，but与so I sat there说明后面的座位无人占用，用vacant。",
+      "englishLesson": {
+        "translation": "第一排的座位都有人坐，但第二排有一个空座，所以我坐在了那里。",
+        "answerExplanation": "前半句taken表示被占用，but与so I sat there说明后面的座位无人占用，用vacant。",
+        "optionAnalysis": {
+          "A": {
+            "meaning": "已被占用的",
+            "reason": "与so I sat there及前面的转折不符。"
+          },
+          "B": {
+            "meaning": "空着的；未被占用的",
+            "reason": "正确：座位空着，所以说话人能坐下。"
+          },
+          "C": {
+            "meaning": "缺席的；不在场的",
+            "reason": "通常描述人缺席，不能表示座位无人占用。"
+          },
+          "D": {
+            "meaning": "睡着的",
+            "reason": "座位不会睡觉，不能表示空座。"
+          }
+        },
+        "steps": [
+          "先定位考点：vacant表示座位空着无人占用。",
+          "前半句taken表示被占用，but与so I sat there说明后面的座位无人占用，用vacant。",
+          "将正确项放回原句，检查结构和句意。"
+        ],
+        "memoryTip": "vacant seat空座；occupied seat有人坐的座位。",
+        "caveat": "",
+        "references": []
+      }
+    },
+    {
+      "id": "CQZSB-DAILY-ENG-035",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "词义搭配",
+      "topic": "基本搭配",
+      "point": "pay attention to表示注意",
+      "type": "单选题",
+      "stem": "The safety instructions are important. Please pay ____ to them before using the machine.",
+      "options": {
+        "A": "vacation",
+        "B": "invitation",
+        "C": "attention",
+        "D": "population"
+      },
+      "verifiedAnswer": "C",
+      "analysis": "C项正确。pay attention to是固定搭配，表示注意、留心，符合阅读安全说明的语境。",
+      "englishLesson": {
+        "translation": "安全说明很重要。使用机器前请注意这些说明。",
+        "answerExplanation": "pay attention to是固定搭配，表示注意、留心，符合阅读安全说明的语境。",
+        "optionAnalysis": {
+          "A": {
+            "meaning": "假期",
+            "reason": "pay vacation to不是表示注意的搭配。"
+          },
+          "B": {
+            "meaning": "邀请",
+            "reason": "pay invitation to不是此处所需的搭配；邀请也不符合安全说明语境。"
+          },
+          "C": {
+            "meaning": "注意；专心",
+            "reason": "正确：pay attention to表示注意。"
+          },
+          "D": {
+            "meaning": "人口",
+            "reason": "pay population to没有此处所需的搭配意义。"
+          }
+        },
+        "steps": [
+          "先定位考点：pay attention to表示注意。",
+          "pay attention to是固定搭配，表示注意、留心，符合阅读安全说明的语境。",
+          "将正确项放回原句，检查结构和句意。"
+        ],
+        "memoryTip": "pay attention to +名词/代词，表示注意。",
+        "caveat": "",
+        "references": []
+      }
+    },
+    {
+      "id": "CQZSB-DAILY-COMP-001",
+      "subject": "计算机",
+      "section": "当前已学内容",
+      "skillTag": "数制与编码",
+      "topic": "数制与编码",
+      "point": "二进制转十进制",
+      "type": "单选题",
+      "stem": "二进制数(101101)₂对应的十进制数是（ ）。",
+      "options": {
+        "A": "43",
+        "B": "44",
+        "C": "45",
+        "D": "46"
+      },
+      "verifiedAnswer": "C",
+      "analysis": "按位权展开：1×32+0×16+1×8+1×4+0×2+1×1=45，故选C。二进制从右向左的位权依次为1、2、4、8、16、32，不能把各位直接相加，也不能漏掉最低位的1。",
+      "questionNote": ""
+    },
+    {
+      "id": "CQZSB-DAILY-COMP-002",
+      "subject": "计算机",
+      "section": "当前已学内容",
+      "skillTag": "数制与编码",
+      "topic": "数制与编码",
+      "point": "十进制转十六进制",
+      "type": "单选题",
+      "stem": "十进制整数94转换为十六进制数，结果是（ ）。",
+      "options": {
+        "A": "5E",
+        "B": "5D",
+        "C": "6E",
+        "D": "E5"
+      },
+      "verifiedAnswer": "A",
+      "analysis": "94÷16=5余14，十六进制用E表示14，因此结果为5E。可反算5×16+14=94。5D对应93，6E对应110；E5把商和余数颠倒，对应229。整数转换时余数应从后往前读取。",
+      "questionNote": ""
+    },
+    {
+      "id": "CQZSB-DAILY-COMP-003",
+      "subject": "计算机",
+      "section": "当前已学内容",
+      "skillTag": "数制与编码",
+      "topic": "数制与编码",
+      "point": "二进制加法",
+      "type": "单选题",
+      "stem": "二进制加法(1011)₂+(0110)₂的结果是（ ）。",
+      "options": {
+        "A": "10001",
+        "B": "1111",
+        "C": "10000",
+        "D": "11001"
+      },
+      "verifiedAnswer": "A",
+      "analysis": "1011₂为11，0110₂为6，相加得17，对应10001₂，故选A。逐位相加时遵循逢二进一，1+1得到本位0并向高位进1。不能沿用十进制写法，也不能忽略从低位传来的进位。",
+      "questionNote": ""
+    },
+    {
+      "id": "CQZSB-DAILY-COMP-004",
+      "subject": "计算机",
+      "section": "当前已学内容",
+      "skillTag": "数制与编码",
+      "topic": "数制与编码",
+      "point": "补码表示负整数",
+      "type": "单选题",
+      "stem": "用8位二进制补码表示十进制整数−18，结果是（ ）。",
+      "options": {
+        "A": "10010010",
+        "B": "11101101",
+        "C": "00010010",
+        "D": "11101110"
+      },
+      "verifiedAnswer": "D",
+      "analysis": "+18的8位二进制为00010010；各位取反得到11101101，再加1得到11101110，故选D。A是−18的原码，B是其反码，C是+18的表示。负数补码必须在约定的位数内进行取反加1。",
+      "questionNote": ""
+    },
+    {
+      "id": "CQZSB-DAILY-COMP-005",
+      "subject": "计算机",
+      "section": "当前已学内容",
+      "skillTag": "数制与编码",
+      "topic": "数制与编码",
+      "point": "无符号数表示范围",
+      "type": "单选题",
+      "stem": "使用6位二进制表示无符号整数时，能够表示的最大十进制整数是（ ）。",
+      "options": {
+        "A": "32",
+        "B": "63",
+        "C": "64",
+        "D": "127"
+      },
+      "verifiedAnswer": "B",
+      "analysis": "6位无符号二进制共有2⁶=64种组合，从000000到111111对应0至63，因此最大值为2⁶−1=63。64是可表示数值的个数，不是最大值；127需要7位。题目已限定无符号数，不需预留符号位。",
+      "questionNote": ""
+    },
+    {
+      "id": "CQZSB-DAILY-COMP-006",
+      "subject": "计算机",
+      "section": "当前已学内容",
+      "skillTag": "数制与编码",
+      "topic": "数制与编码",
+      "point": "存储容量换算",
+      "type": "单选题",
+      "stem": "约定1 KiB=1024 B、1 B=8 bit。一个恰好占3 KiB的文件包含多少bit？",
+      "options": {
+        "A": "3072",
+        "B": "6144",
+        "C": "24576",
+        "D": "24000"
+      },
+      "verifiedAnswer": "C",
+      "analysis": "先换算字节：3×1024=3072 B，再换算比特：3072×8=24576 bit，故选C。3072只是字节数；24000使用了1000进位，不符合题设。做容量题应先统一单位，特别区分大写B与小写bit。",
+      "questionNote": ""
+    },
+    {
+      "id": "CQZSB-DAILY-COMP-007",
+      "subject": "计算机",
+      "section": "当前已学内容",
+      "skillTag": "数制与编码",
+      "topic": "数制与编码",
+      "point": "ASCII编码顺序",
+      "type": "单选题",
+      "stem": "已知标准ASCII中数字字符0至9的编码连续递增。若字符“2”的十进制编码为50，则字符“7”的编码为（ ）。",
+      "options": {
+        "A": "53",
+        "B": "55",
+        "C": "57",
+        "D": "59"
+      },
+      "verifiedAnswer": "B",
+      "analysis": "从字符2到字符7相差5个位置，因此编码为50+5=55，故选B。这里计算的是数字字符的编码，不是数值7本身；也不能直接把字符7写成十进制编码57。题干已给出起点与连续性，可直接求差。",
+      "questionNote": ""
+    },
+    {
+      "id": "CQZSB-DAILY-COMP-008",
+      "subject": "计算机",
+      "section": "当前已学内容",
+      "skillTag": "计算机基础",
+      "topic": "计算机基础知识",
+      "point": "存储程序原理",
+      "type": "单选题",
+      "stem": "一台计算机把待执行的指令和处理所需的数据预先放入存储器，再按指令工作。这主要体现了（ ）。",
+      "options": {
+        "A": "存储程序思想",
+        "B": "只用十进制运算",
+        "C": "所有任务必须人工逐步操作",
+        "D": "程序与数据都不能保存"
+      },
+      "verifiedAnswer": "A",
+      "analysis": "存储程序思想要求将程序和数据预先存入存储器，计算机再取出指令并执行，故选A。计算机自动运行并不意味着每一步都由人手动控制；B把原理误写为十进制，D则与题干给出的存储过程直接矛盾。",
+      "questionNote": ""
+    },
+    {
+      "id": "CQZSB-DAILY-COMP-009",
+      "subject": "计算机",
+      "section": "当前已学内容",
+      "skillTag": "计算机基础",
+      "topic": "计算机基础知识",
+      "point": "计算机应用领域",
+      "type": "单选题",
+      "stem": "研究人员用计算机对桥梁受力建立数学模型并进行大量数值运算，这项工作主要属于（ ）。",
+      "options": {
+        "A": "文字排版",
+        "B": "科学计算",
+        "C": "设备销售",
+        "D": "文件归档"
+      },
+      "verifiedAnswer": "B",
+      "analysis": "桥梁受力建模与大量数值运算的重点是求解科学、工程中的数学问题，属于科学计算，故选B。文字排版着重文档版面，文件归档着重资料保存管理，设备销售属于经营活动，都不符合题干的核心任务。",
+      "questionNote": ""
+    },
+    {
+      "id": "CQZSB-DAILY-COMP-010",
+      "subject": "计算机",
+      "section": "当前已学内容",
+      "skillTag": "计算机基础",
+      "topic": "计算机基础知识",
+      "point": "计算机辅助设计",
+      "type": "单选题",
+      "stem": "设计师利用计算机绘制零件结构图并修改尺寸，这项应用通常称为（ ）。",
+      "options": {
+        "A": "CAI",
+        "B": "CAM",
+        "C": "CAD",
+        "D": "CPU"
+      },
+      "verifiedAnswer": "C",
+      "analysis": "CAD是计算机辅助设计，适用于产品、零件和工程图样的设计，故选C。CAI指计算机辅助教学，CAM指计算机辅助制造，CPU是中央处理器的缩写。应根据“设计图样和尺寸”识别任务，而非只看到计算机就选硬件名词。",
+      "questionNote": ""
+    },
+    {
+      "id": "CQZSB-DAILY-COMP-011",
+      "subject": "计算机",
+      "section": "当前已学内容",
+      "skillTag": "计算机基础",
+      "topic": "计算机基础知识",
+      "point": "数据与信息",
+      "type": "单选题",
+      "stem": "温度传感器记录“18、19、21”，工作人员结合日期和地点判断某教室正在升温。对此理解正确的是（ ）。",
+      "options": {
+        "A": "数字本身已包含全部背景",
+        "B": "信息只能用文字表达",
+        "C": "数据无法经过处理",
+        "D": "结合背景解释数据可以获得信息"
+      },
+      "verifiedAnswer": "D",
+      "analysis": "传感器记录的数值是数据；结合日期、地点及变化关系，可以从中获得教室升温的信息，故选D。数据的含义需要具体背景，信息也可用图像、声音等表达。数据能够被整理和处理，C否认了基本的数据处理过程。",
+      "questionNote": ""
+    },
+    {
+      "id": "CQZSB-DAILY-COMP-012",
+      "subject": "计算机",
+      "section": "当前已学内容",
+      "skillTag": "计算机基础",
+      "topic": "计算机基础知识",
+      "point": "计算机分类依据",
+      "type": "单选题",
+      "stem": "把计算机分为通用计算机和专用计算机，采用的分类依据是（ ）。",
+      "options": {
+        "A": "机器颜色",
+        "B": "用途",
+        "C": "显示器尺寸",
+        "D": "生产地点"
+      },
+      "verifiedAnswer": "B",
+      "analysis": "通用与专用强调用途范围：通用计算机适合多类任务，专用计算机围绕特定任务设计，故选B。外壳颜色、显示器尺寸和生产地点都不能决定设备适合的任务范围。分类题应先看类别名称实际反映了哪一属性。",
+      "questionNote": ""
+    },
+    {
+      "id": "CQZSB-DAILY-COMP-013",
+      "subject": "计算机",
+      "section": "当前已学内容",
+      "skillTag": "计算机基础",
+      "topic": "计算机基础知识",
+      "point": "计算机的逻辑判断能力",
+      "type": "单选题",
+      "stem": "程序比较两位同学的成绩，并据比较结果显示较高分。这主要使用了计算机的（ ）。",
+      "options": {
+        "A": "逻辑判断能力",
+        "B": "凭空创造数据的能力",
+        "C": "不需要程序的能力",
+        "D": "只能进行加法的特点"
+      },
+      "verifiedAnswer": "A",
+      "analysis": "程序先比较大小，再按结果选择输出，体现逻辑判断能力，故选A。计算机需依据程序和输入工作，不能凭空获得真实成绩；其运算也不限于加法。逻辑判断是根据给定条件作选择，并不等同于人类凭直觉作判断。",
+      "questionNote": ""
+    },
+    {
+      "id": "CQZSB-DAILY-COMP-014",
+      "subject": "计算机",
+      "section": "当前已学内容",
+      "skillTag": "计算机基础",
+      "topic": "计算机基础知识",
+      "point": "自动运行的条件",
+      "type": "单选题",
+      "stem": "某批处理程序启动后，按预定步骤依次完成100份数据的处理。其自动运行主要依靠（ ）。",
+      "options": {
+        "A": "操作者逐条口头指挥",
+        "B": "不断更换显示器",
+        "C": "预先编制并执行的程序",
+        "D": "每处理一份都重新组装硬件"
+      },
+      "verifiedAnswer": "C",
+      "analysis": "计算机依照预先编制的程序执行指令，可以连续完成重复任务，故选C。启动后仍可能需要输入或处理异常，但正常的自动流程不依赖操作者逐步指挥，更不需要反复更换显示器或重新组装硬件。",
+      "questionNote": ""
+    },
+    {
+      "id": "CQZSB-DAILY-COMP-015",
+      "subject": "计算机",
+      "section": "当前已学内容",
+      "skillTag": "系统组成",
+      "topic": "计算机系统组成",
+      "point": "硬件与软件区分",
+      "type": "单选题",
+      "stem": "下列对象中，属于计算机软件的是（ ）。",
+      "options": {
+        "A": "键盘",
+        "B": "固态硬盘",
+        "C": "中央处理器",
+        "D": "操作系统"
+      },
+      "verifiedAnswer": "D",
+      "analysis": "操作系统由程序及相关组成部分构成，属于软件，故选D。键盘是输入设备，固态硬盘是存储设备，中央处理器是执行运算和控制的硬件。区分时应看对象是可物理接触的设备，还是控制计算机完成任务的程序系统。",
+      "questionNote": ""
+    },
+    {
+      "id": "CQZSB-DAILY-COMP-016",
+      "subject": "计算机",
+      "section": "当前已学内容",
+      "skillTag": "系统组成",
+      "topic": "计算机系统组成",
+      "point": "CPU的基本组成",
+      "type": "单选题",
+      "stem": "在通常介绍的计算机基本组成中，CPU主要由哪两部分组成？",
+      "options": {
+        "A": "运算器和控制器",
+        "B": "鼠标和键盘",
+        "C": "内存和显示器",
+        "D": "硬盘和打印机"
+      },
+      "verifiedAnswer": "A",
+      "analysis": "CPU主要由运算器和控制器组成：运算器处理算术与逻辑运算，控制器协调指令执行，故选A。鼠标、键盘是输入设备；显示器与打印机是输出设备；内存和硬盘属于存储系统，不能将主机内的设备都当成CPU。",
+      "questionNote": ""
+    },
+    {
+      "id": "CQZSB-DAILY-COMP-017",
+      "subject": "计算机",
+      "section": "当前已学内容",
+      "skillTag": "系统组成",
+      "topic": "计算机系统组成",
+      "point": "RAM的数据易失性",
+      "type": "单选题",
+      "stem": "某段尚未保存到外存的数据只存在于普通RAM中。突然断电后，该数据通常会（ ）。",
+      "options": {
+        "A": "自动写入键盘",
+        "B": "继续永久保存在RAM中",
+        "C": "丢失",
+        "D": "自动变成只读数据"
+      },
+      "verifiedAnswer": "C",
+      "analysis": "普通RAM依靠供电维持数据，具有易失性，断电后其中数据通常丢失，故选C。内存中的修改必须通过保存等操作写入非易失存储设备，才能在断电后保留；不会因断电自动转移到键盘或变成只读数据。",
+      "questionNote": ""
+    },
+    {
+      "id": "CQZSB-DAILY-COMP-018",
+      "subject": "计算机",
+      "section": "当前已学内容",
+      "skillTag": "系统组成",
+      "topic": "计算机系统组成",
+      "point": "输入与输出设备",
+      "type": "单选题",
+      "stem": "将纸质手绘图转换为计算机中的图像文件，最适合使用的设备是（ ）。",
+      "options": {
+        "A": "音箱",
+        "B": "扫描仪",
+        "C": "打印机",
+        "D": "投影仪"
+      },
+      "verifiedAnswer": "B",
+      "analysis": "扫描仪读取纸面图像并转换为计算机可处理的数据，属于输入设备，故选B。打印机把电子内容输出到纸上，方向相反；音箱输出声音，投影仪输出画面。判断输入输出要以信息进入还是离开计算机为准。",
+      "questionNote": ""
+    },
+    {
+      "id": "CQZSB-DAILY-COMP-019",
+      "subject": "计算机",
+      "section": "当前已学内容",
+      "skillTag": "系统组成",
+      "topic": "计算机系统组成",
+      "point": "操作系统的资源管理",
+      "type": "单选题",
+      "stem": "多个程序同时运行时，需要分配CPU时间和内存空间。主要负责这些资源管理工作的是（ ）。",
+      "options": {
+        "A": "操作系统",
+        "B": "显示器",
+        "C": "绘图文件",
+        "D": "键盘外壳"
+      },
+      "verifiedAnswer": "A",
+      "analysis": "操作系统负责管理CPU、内存、设备与文件等资源，协调程序运行，故选A。显示器和键盘外壳是硬件部件，绘图文件是被处理的数据，都不能承担系统级资源分配。应用程序通常借助操作系统获得所需资源。",
+      "questionNote": ""
+    },
+    {
+      "id": "CQZSB-DAILY-COMP-020",
+      "subject": "计算机",
+      "section": "当前已学内容",
+      "skillTag": "系统组成",
+      "topic": "计算机系统组成",
+      "point": "系统软件与应用软件",
+      "type": "单选题",
+      "stem": "下列软件中，主要用于用户完成具体绘画任务、属于应用软件的是（ ）。",
+      "options": {
+        "A": "设备驱动程序",
+        "B": "操作系统内核",
+        "C": "内存管理程序",
+        "D": "绘画程序"
+      },
+      "verifiedAnswer": "D",
+      "analysis": "绘画程序直接帮助用户绘图，属于应用软件，故选D。操作系统内核、内存管理程序承担系统管理工作，驱动程序帮助系统控制设备，均属于系统软件范畴。区分关键是面向具体使用任务还是支撑和管理系统运行。",
+      "questionNote": ""
+    },
+    {
+      "id": "CQZSB-DAILY-COMP-021",
+      "subject": "计算机",
+      "section": "当前已学内容",
+      "skillTag": "系统组成",
+      "topic": "计算机系统组成",
+      "point": "内存与外存的作用",
+      "type": "单选题",
+      "stem": "编辑文档时，将文档保存到固态硬盘，主要是为了（ ）。",
+      "options": {
+        "A": "使显示器代替CPU计算",
+        "B": "让数据在正常断电后仍可保留",
+        "C": "让所有数据都变成程序",
+        "D": "使RAM永久不丢失数据"
+      },
+      "verifiedAnswer": "B",
+      "analysis": "固态硬盘是非易失存储设备，保存操作把文档写入其中，使文件在正常断电后仍可保留，故选B。保存并不会改变RAM本身的易失性，也不会让数据变成程序。显示器负责呈现画面，不能替代CPU执行计算。",
+      "questionNote": ""
+    },
+    {
+      "id": "CQZSB-DAILY-COMP-022",
+      "subject": "计算机",
+      "section": "当前已学内容",
+      "skillTag": "Windows操作",
+      "topic": "Windows操作系统",
+      "point": "复制与移动",
+      "type": "单选题",
+      "stem": "在Windows文件管理中，用户对某文件执行“复制”，再到另一文件夹执行“粘贴”，操作成功且无同名冲突时，结果是（ ）。",
+      "options": {
+        "A": "原文件被删除",
+        "B": "原文件夹被重命名",
+        "C": "目标文件夹得到副本，原文件保留",
+        "D": "文件内容自动清空"
+      },
+      "verifiedAnswer": "C",
+      "analysis": "复制加粘贴会在目标位置建立文件副本，原位置的文件仍保留，故选C。移动通常可用剪切加粘贴完成，成功后文件转移到目标位置。复制操作本身不要求重命名原文件夹，也不会自动清空文件内容。",
+      "questionNote": ""
+    },
+    {
+      "id": "CQZSB-DAILY-COMP-023",
+      "subject": "计算机",
+      "section": "当前已学内容",
+      "skillTag": "Windows操作",
+      "topic": "Windows操作系统",
+      "point": "文件名与扩展名",
+      "type": "单选题",
+      "stem": "Windows中，一个文件名为“课堂记录.txt”。其中“.txt”通常用于表示（ ）。",
+      "options": {
+        "A": "文件类型的标识",
+        "B": "文件已经损坏",
+        "C": "文件大小为txt字节",
+        "D": "文件只能存放在桌面"
+      },
+      "verifiedAnswer": "A",
+      "analysis": "扩展名通常用于标识文件类型，并帮助系统选择关联程序，故选A。它不直接表示大小、损坏状态或保存位置。文件夹中是否显示扩展名受设置影响；隐藏扩展名也不等于文件没有扩展名或文件类型发生改变。",
+      "questionNote": ""
+    },
+    {
+      "id": "CQZSB-DAILY-COMP-024",
+      "subject": "计算机",
+      "section": "当前已学内容",
+      "skillTag": "Windows操作",
+      "topic": "Windows操作系统",
+      "point": "文件与文件夹命名",
+      "type": "单选题",
+      "stem": "在Windows 7的同一个文件夹内，已有文件“练习.txt”。不改变该文件的前提下，再新建一个文件时，下列名称中可以使用的是（ ）。",
+      "options": {
+        "A": "练习.txt",
+        "B": "练习.TXT",
+        "C": "练习?.txt",
+        "D": "练习2.txt"
+      },
+      "verifiedAnswer": "D",
+      "analysis": "在Windows 7通常使用的文件命名规则下，同一文件夹内不能有名称相同的两个文件，大小写也不能用于区分，所以A、B均冲突；问号是文件名禁用字符，C不可用。“练习2.txt”既无冲突也无禁用字符，故选D。",
+      "questionNote": ""
+    },
+    {
+      "id": "CQZSB-DAILY-COMP-025",
+      "subject": "计算机",
+      "section": "当前已学内容",
+      "skillTag": "Windows操作",
+      "topic": "Windows操作系统",
+      "point": "快捷方式与原对象",
+      "type": "单选题",
+      "stem": "Windows桌面上某文档的快捷方式指向另一个文件夹中的原文档。只删除这个快捷方式，通常会（ ）。",
+      "options": {
+        "A": "同时删除原文档",
+        "B": "保留原文档",
+        "C": "清空原文档内容",
+        "D": "卸载打开文档的程序"
+      },
+      "verifiedAnswer": "B",
+      "analysis": "快捷方式保存的是指向原对象的关联信息。只删除快捷方式，通常只是移除这个入口，原文档仍在原位置，故选B。删除原文档才会影响文档本体；删除入口也不会清空文档内容，更不会卸载用于打开文档的程序。",
+      "questionNote": ""
+    },
+    {
+      "id": "CQZSB-DAILY-COMP-026",
+      "subject": "计算机",
+      "section": "当前已学内容",
+      "skillTag": "Windows操作",
+      "topic": "Windows操作系统",
+      "point": "窗口最小化",
+      "type": "单选题",
+      "stem": "在Windows中，用户单击应用窗口的“最小化”按钮后，通常发生的是（ ）。",
+      "options": {
+        "A": "应用程序立即被卸载",
+        "B": "文档自动另存为新文件",
+        "C": "窗口暂时不占据桌面工作区，程序仍可运行",
+        "D": "所有未保存内容必然丢失"
+      },
+      "verifiedAnswer": "C",
+      "analysis": "最小化使窗口暂时从桌面工作区收起，应用程序通常仍在运行，之后可以恢复窗口，故选C。最小化不同于关闭、卸载，也不等于保存。未保存内容不会仅因窗口最小化就必然丢失，是否保存仍需按应用程序要求操作。",
+      "questionNote": ""
+    },
+    {
+      "id": "CQZSB-DAILY-COMP-027",
+      "subject": "计算机",
+      "section": "当前已学内容",
+      "skillTag": "Windows操作",
+      "topic": "Windows操作系统",
+      "point": "剪贴板基本操作",
+      "type": "单选题",
+      "stem": "在Windows文本编辑中，先选中文字并按Ctrl+C，再把插入点移到另一位置按Ctrl+V，通常实现（ ）。",
+      "options": {
+        "A": "复制选中文字到新位置",
+        "B": "将选中文字永久删除",
+        "C": "关闭当前程序",
+        "D": "把整个硬盘复制一遍"
+      },
+      "verifiedAnswer": "A",
+      "analysis": "Ctrl+C把选中的文字复制到剪贴板，Ctrl+V将剪贴板内容粘贴到插入点处，故选A。原文字仍保留；若要移动文字，通常使用Ctrl+X再粘贴。快捷键处理的是当前选中对象及相关内容，不会因此复制整个硬盘。",
+      "questionNote": ""
+    },
+    {
+      "id": "CQZSB-DAILY-COMP-028",
+      "subject": "计算机",
+      "section": "当前已学内容",
+      "skillTag": "Windows操作",
+      "topic": "Windows操作系统",
+      "point": "绝对路径识别",
+      "type": "单选题",
+      "stem": "Windows中文件的完整路径为D:\\学习\\计算机\\笔记.txt。该文件直接所在的文件夹是（ ）。",
+      "options": {
+        "A": "D盘根目录",
+        "B": "学习",
+        "C": "笔记.txt",
+        "D": "计算机"
+      },
+      "verifiedAnswer": "D",
+      "analysis": "路径从左到右依次表示盘符、文件夹层级和文件名。“笔记.txt”前紧邻的文件夹是“计算机”，故选D。“学习”是上一级文件夹，D盘根目录是更高层位置，“笔记.txt”则是文件名，不能作为该文件的所在文件夹。",
+      "questionNote": ""
+    },
+    {
+      "id": "CQZSB-DAILY-COMP-029",
+      "subject": "计算机",
+      "section": "当前已学内容",
+      "skillTag": "计算思维",
+      "topic": "计算思维",
+      "point": "抽象",
+      "type": "单选题",
+      "stem": "为设计图书借阅记录，只保留书号、借阅者编号和归还日期，暂不记录书架颜色。这主要体现（ ）。",
+      "options": {
+        "A": "穷举全部物理属性",
+        "B": "抽象",
+        "C": "随机猜测",
+        "D": "增加无关细节"
+      },
+      "verifiedAnswer": "B",
+      "analysis": "抽象是根据解决问题的目标，保留关键属性并忽略无关细节。借阅记录关心书、借阅者与归还时间，书架颜色通常无关，故选B。抽象不是随意删掉重要信息，也不是随机猜测；是否保留属性应由任务需求决定。",
+      "questionNote": ""
+    },
+    {
+      "id": "CQZSB-DAILY-COMP-030",
+      "subject": "计算机",
+      "section": "当前已学内容",
+      "skillTag": "计算思维",
+      "topic": "计算思维",
+      "point": "问题分解",
+      "type": "单选题",
+      "stem": "把“组织一次班级活动”拆成统计人数、确定预算、安排场地和通知同学等子任务，这种处理主要体现（ ）。",
+      "options": {
+        "A": "问题分解",
+        "B": "数制转换",
+        "C": "隐藏所有需求",
+        "D": "删除全部约束"
+      },
+      "verifiedAnswer": "A",
+      "analysis": "问题分解把较复杂的任务拆成更容易理解、处理和检查的子任务，故选A。分解后仍需考虑各任务之间的联系和先后次序，不是把需求或约束丢掉。题干没有对数字表示方式进行转换，因此与数制转换无关。",
+      "questionNote": ""
+    },
+    {
+      "id": "CQZSB-DAILY-COMP-031",
+      "subject": "计算机",
+      "section": "当前已学内容",
+      "skillTag": "计算思维",
+      "topic": "计算思维",
+      "point": "自动化",
+      "type": "单选题",
+      "stem": "老师已经明确成绩统计规则，接着编写程序，让计算机对每次导入的成绩按同一规则统计。这主要体现（ ）。",
+      "options": {
+        "A": "取消一切规则",
+        "B": "必须手工重复运算",
+        "C": "将明确步骤交给机器执行的自动化",
+        "D": "仅改变数据颜色"
+      },
+      "verifiedAnswer": "C",
+      "analysis": "自动化是把明确、可执行的处理过程交由机器按程序完成，故选C。程序依据既定规则处理每次输入，减少手工重复工作，但规则仍需正确设计；自动执行不保证规则天然正确，也不只是改变显示颜色。",
+      "questionNote": ""
+    },
+    {
+      "id": "CQZSB-DAILY-COMP-032",
+      "subject": "计算机",
+      "section": "当前已学内容",
+      "skillTag": "计算思维",
+      "topic": "计算思维",
+      "point": "算法步骤的确定性",
+      "type": "单选题",
+      "stem": "下面哪一种描述最适合作为可执行算法中的明确步骤？",
+      "options": {
+        "A": "处理到你感觉差不多为止",
+        "B": "随意选择一个满意的结果",
+        "C": "尽快完成若干运算",
+        "D": "令总分等于语文分数与数学分数之和"
+      },
+      "verifiedAnswer": "D",
+      "analysis": "D明确给出了参与运算的数据、运算方式以及结果去向，执行者可据此操作。其余说法中的“感觉差不多”“满意”“尽快”和“若干”缺少明确标准，容易产生不同执行方式。算法步骤应清楚、无歧义并能实际执行。",
+      "questionNote": ""
+    },
+    {
+      "id": "CQZSB-DAILY-COMP-033",
+      "subject": "计算机",
+      "section": "当前已学内容",
+      "skillTag": "计算思维",
+      "topic": "计算思维",
+      "point": "顺序与条件选择",
+      "type": "单选题",
+      "stem": "优惠规则为：金额达到100元减10元，否则不减。某次金额为96元，严格按此规则，应支付（ ）。",
+      "options": {
+        "A": "86元",
+        "B": "90元",
+        "C": "96元",
+        "D": "100元"
+      },
+      "verifiedAnswer": "C",
+      "analysis": "96小于100，不满足优惠条件，因此进入“不减”的分支，应支付96元，故选C。86元把减10元错误地应用于未达门槛的情况。条件选择必须先判断条件真伪，再执行对应分支，不能把所有分支都执行。",
+      "questionNote": ""
+    },
+    {
+      "id": "CQZSB-DAILY-COMP-034",
+      "subject": "计算机",
+      "section": "当前已学内容",
+      "skillTag": "计算思维",
+      "topic": "计算思维",
+      "point": "算法执行跟踪",
+      "type": "单选题",
+      "stem": "执行以下步骤：令x=3；连续重复3次“令x=x+2”；最后输出x。输出值是（ ）。",
+      "options": {
+        "A": "5",
+        "B": "9",
+        "C": "8",
+        "D": "11"
+      },
+      "verifiedAnswer": "B",
+      "analysis": "初始x为3，每次在当前值上加2，三次更新依次得到5、7、9，因此输出9，故选B。5只执行了一次，11多执行了一次。跟踪循环时要分别记录初始状态、循环次数与每次更新后的值，避免把初始赋值算作一次循环。",
+      "questionNote": ""
+    },
+    {
+      "id": "CQZSB-DAILY-COMP-035",
+      "subject": "计算机",
+      "section": "当前已学内容",
+      "skillTag": "计算思维",
+      "topic": "计算思维",
+      "point": "递归与终止条件",
+      "type": "单选题",
+      "stem": "用递归定义非负整数阶乘：F(0)=1；n>0时F(n)=n×F(n−1)。其中F(0)=1主要起什么作用？",
+      "options": {
+        "A": "作为终止递归的基本情形",
+        "B": "要求所有结果都等于0",
+        "C": "使递归永远继续",
+        "D": "把乘法改为加法"
+      },
+      "verifiedAnswer": "A",
+      "analysis": "F(0)=1给出了不再继续调用自身的基本情形，使输入非负整数时沿n−1逐步递减后能够结束递归，故选A。它不是让所有结果为0，也没有改变乘法规则。递归通常需同时明确基本情形和向基本情形推进的步骤。",
+      "questionNote": ""
+    }
+  ]
+}

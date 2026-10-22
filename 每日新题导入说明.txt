@@ -1,0 +1,19 @@
+每日新题 JSON 题包
+
+入口：每日新题→导入新题包。页面顶部原“导入JSON”也识别此格式。
+
+顶层：{"format":"cqzsb-daily-bank-v1","records":[题目对象,...]}
+完整格式可参考同文件夹daily-question-bank.json，它包含已经内置的105道题；再次导入不会重复加入。
+
+每题必填：
+id：全库唯一且稳定的英文字母/数字/连字符/下划线编号，建议包含续包日期，如CQZSB-DAILY-MATH-20261025-001；同编号不得换内容。
+subject：高等数学 / 英语 / 计算机。
+section：实际学过的小节名称。当前旧题统一“当前已学内容”，以后学新小节再使用新名称；新小节题包会单独每天安排7道。
+skillTag：用于关联原错题的类型。数学：定义域、解析式与复合、奇偶与性质、反函数、参数与值域；英语：可数与数量、所有格、代词、冠词、词义搭配；计算机：数制与编码、计算机基础、系统组成、Windows操作、计算思维。
+topic、point：专题及具体考点；type：单选题；stem：完整题干；options：A/B/C/D四个不重复选项；verifiedAnswer：唯一正确字母；analysis：具体解析。
+
+数学还需mathLesson：method、steps（2–5条具体推导）、conclusion、pitfall、caveat（无争议可空）。
+英语还需englishLesson：translation、answerExplanation、optionAnalysis（A/B/C/D每项含meaning与reason）、steps（2–5条）、memoryTip、caveat、references（可为空数组）。
+
+题干、答案和讲解必须人工或可靠工具核对，单选必须唯一，不使用遮挡题和多解题强行判错。每学科每小节至少7道不同内容的新题才能安排一组；仅换编号或打乱选项不算新题。新题包导入不改今天已固定的题目，会在后续日期安排中使用。
+整个题包先校验再保存，无效题包不部分写入；重复导入不重复添加。题量不足不拿旧题顶替。

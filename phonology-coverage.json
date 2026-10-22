@@ -1,0 +1,8546 @@
+{
+  "verification": "pending-audio",
+  "sentences": 47,
+  "words": 449,
+  "boundaries": 402,
+  "hints": 246,
+  "missing": [],
+  "audits": [
+    {
+      "sentenceId": "A1-1",
+      "tokens": [
+        {
+          "word": "You",
+          "key": "you",
+          "start": 3,
+          "end": 6
+        },
+        {
+          "word": "look",
+          "key": "look",
+          "start": 7,
+          "end": 11
+        },
+        {
+          "word": "so",
+          "key": "so",
+          "start": 12,
+          "end": 14
+        },
+        {
+          "word": "busy",
+          "key": "busy",
+          "start": 15,
+          "end": 19
+        },
+        {
+          "word": "these",
+          "key": "these",
+          "start": 20,
+          "end": 25
+        },
+        {
+          "word": "days",
+          "key": "days",
+          "start": 26,
+          "end": 30
+        },
+        {
+          "word": "What",
+          "key": "what",
+          "start": 32,
+          "end": 36
+        },
+        {
+          "word": "are",
+          "key": "are",
+          "start": 37,
+          "end": 40
+        },
+        {
+          "word": "you",
+          "key": "you",
+          "start": 41,
+          "end": 44
+        },
+        {
+          "word": "working",
+          "key": "working",
+          "start": 45,
+          "end": 52
+        },
+        {
+          "word": "on",
+          "key": "on",
+          "start": 53,
+          "end": 55
+        }
+      ],
+      "hints": [
+        {
+          "id": "A1-1:7:弱读候选",
+          "kind": "弱读候选",
+          "indices": [
+            7
+          ],
+          "phrase": "are",
+          "text": "这个功能词在非重读位置常被弱化；若用于强调、对比或位于停顿前，读法可能不同。请回听原音核对。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "A1-1:1-2:不完全爆破候选",
+          "kind": "不完全爆破候选",
+          "indices": [
+            1,
+            2
+          ],
+          "phrase": "look so",
+          "text": "前词以爆破音结尾、后词以辅音开头，前面的爆破可能很轻或不完全释放；不能把词尾直接当作不存在。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "A1-1:6-7:连读候选",
+          "kind": "连读候选",
+          "indices": [
+            6,
+            7
+          ],
+          "phrase": "What‿are",
+          "text": "前词的词尾辅音接后词的词首元音，可能紧密衔接；不必等两个词之间出现明显停顿。文字不能证明原音确实连读。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "A1-1:9-10:连读候选",
+          "kind": "连读候选",
+          "indices": [
+            9,
+            10
+          ],
+          "phrase": "working‿on",
+          "text": "前词的词尾辅音接后词的词首元音，可能紧密衔接；不必等两个词之间出现明显停顿。文字不能证明原音确实连读。",
+          "status": "pending-audio"
+        }
+      ],
+      "boundaries": [
+        {
+          "left": 0,
+          "right": 1,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 1,
+          "right": 2,
+          "status": "checked-text",
+          "kinds": [
+            "不完全爆破候选"
+          ]
+        },
+        {
+          "left": 2,
+          "right": 3,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 3,
+          "right": 4,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 4,
+          "right": 5,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 5,
+          "right": 6,
+          "status": "punctuation-boundary",
+          "kinds": []
+        },
+        {
+          "left": 6,
+          "right": 7,
+          "status": "checked-text",
+          "kinds": [
+            "连读候选"
+          ]
+        },
+        {
+          "left": 7,
+          "right": 8,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 8,
+          "right": 9,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 9,
+          "right": 10,
+          "status": "checked-text",
+          "kinds": [
+            "连读候选"
+          ]
+        }
+      ],
+      "missing": [],
+      "verification": "pending-audio"
+    },
+    {
+      "sentenceId": "A1-2",
+      "tokens": [
+        {
+          "word": "I’m",
+          "key": "i'm",
+          "start": 3,
+          "end": 6
+        },
+        {
+          "word": "busy",
+          "key": "busy",
+          "start": 7,
+          "end": 11
+        },
+        {
+          "word": "finishing",
+          "key": "finishing",
+          "start": 12,
+          "end": 21
+        },
+        {
+          "word": "my",
+          "key": "my",
+          "start": 22,
+          "end": 24
+        },
+        {
+          "word": "market",
+          "key": "market",
+          "start": 25,
+          "end": 31
+        },
+        {
+          "word": "investigation",
+          "key": "investigation",
+          "start": 32,
+          "end": 45
+        },
+        {
+          "word": "report",
+          "key": "report",
+          "start": 46,
+          "end": 52
+        },
+        {
+          "word": "for",
+          "key": "for",
+          "start": 53,
+          "end": 56
+        },
+        {
+          "word": "the",
+          "key": "the",
+          "start": 57,
+          "end": 60
+        },
+        {
+          "word": "new",
+          "key": "new",
+          "start": 61,
+          "end": 64
+        },
+        {
+          "word": "project",
+          "key": "project",
+          "start": 65,
+          "end": 72
+        }
+      ],
+      "hints": [
+        {
+          "id": "A1-2:7:弱读候选",
+          "kind": "弱读候选",
+          "indices": [
+            7
+          ],
+          "phrase": "for",
+          "text": "这个功能词在非重读位置常被弱化；若用于强调、对比或位于停顿前，读法可能不同。请回听原音核对。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "A1-2:8:弱读候选",
+          "kind": "弱读候选",
+          "indices": [
+            8
+          ],
+          "phrase": "the",
+          "text": "这个功能词在非重读位置常被弱化；若用于强调、对比或位于停顿前，读法可能不同。请回听原音核对。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "A1-2:4-5:连读候选",
+          "kind": "连读候选",
+          "indices": [
+            4,
+            5
+          ],
+          "phrase": "market‿investigation",
+          "text": "前词的词尾辅音接后词的词首元音，可能紧密衔接；不必等两个词之间出现明显停顿。文字不能证明原音确实连读。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "A1-2:6-7:不完全爆破候选",
+          "kind": "不完全爆破候选",
+          "indices": [
+            6,
+            7
+          ],
+          "phrase": "report for",
+          "text": "前词以爆破音结尾、后词以辅音开头，前面的爆破可能很轻或不完全释放；不能把词尾直接当作不存在。",
+          "status": "pending-audio"
+        }
+      ],
+      "boundaries": [
+        {
+          "left": 0,
+          "right": 1,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 1,
+          "right": 2,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 2,
+          "right": 3,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 3,
+          "right": 4,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 4,
+          "right": 5,
+          "status": "checked-text",
+          "kinds": [
+            "连读候选"
+          ]
+        },
+        {
+          "left": 5,
+          "right": 6,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 6,
+          "right": 7,
+          "status": "checked-text",
+          "kinds": [
+            "不完全爆破候选"
+          ]
+        },
+        {
+          "left": 7,
+          "right": 8,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 8,
+          "right": 9,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 9,
+          "right": 10,
+          "status": "checked-text",
+          "kinds": []
+        }
+      ],
+      "missing": [],
+      "verification": "pending-audio"
+    },
+    {
+      "sentenceId": "A1-3",
+      "tokens": [
+        {
+          "word": "What",
+          "key": "what",
+          "start": 10,
+          "end": 14
+        },
+        {
+          "word": "is",
+          "key": "is",
+          "start": 15,
+          "end": 17
+        },
+        {
+          "word": "the",
+          "key": "the",
+          "start": 18,
+          "end": 21
+        },
+        {
+          "word": "man",
+          "key": "man",
+          "start": 22,
+          "end": 25
+        },
+        {
+          "word": "busy",
+          "key": "busy",
+          "start": 26,
+          "end": 30
+        },
+        {
+          "word": "with",
+          "key": "with",
+          "start": 31,
+          "end": 35
+        }
+      ],
+      "hints": [
+        {
+          "id": "A1-3:2:弱读候选",
+          "kind": "弱读候选",
+          "indices": [
+            2
+          ],
+          "phrase": "the",
+          "text": "这个功能词在非重读位置常被弱化；若用于强调、对比或位于停顿前，读法可能不同。请回听原音核对。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "A1-3:0-1:连读候选",
+          "kind": "连读候选",
+          "indices": [
+            0,
+            1
+          ],
+          "phrase": "What‿is",
+          "text": "前词的词尾辅音接后词的词首元音，可能紧密衔接；不必等两个词之间出现明显停顿。文字不能证明原音确实连读。",
+          "status": "pending-audio"
+        }
+      ],
+      "boundaries": [
+        {
+          "left": 0,
+          "right": 1,
+          "status": "checked-text",
+          "kinds": [
+            "连读候选"
+          ]
+        },
+        {
+          "left": 1,
+          "right": 2,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 2,
+          "right": 3,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 3,
+          "right": 4,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 4,
+          "right": 5,
+          "status": "checked-text",
+          "kinds": []
+        }
+      ],
+      "missing": [],
+      "verification": "pending-audio"
+    },
+    {
+      "sentenceId": "A2-1",
+      "tokens": [
+        {
+          "word": "Why",
+          "key": "why",
+          "start": 3,
+          "end": 6
+        },
+        {
+          "word": "hasn’t",
+          "key": "hasn't",
+          "start": 7,
+          "end": 13
+        },
+        {
+          "word": "Mr",
+          "key": "mr",
+          "start": 14,
+          "end": 16
+        },
+        {
+          "word": "Brown",
+          "key": "brown",
+          "start": 18,
+          "end": 23
+        },
+        {
+          "word": "shown",
+          "key": "shown",
+          "start": 24,
+          "end": 29
+        },
+        {
+          "word": "up",
+          "key": "up",
+          "start": 30,
+          "end": 32
+        },
+        {
+          "word": "for",
+          "key": "for",
+          "start": 33,
+          "end": 36
+        },
+        {
+          "word": "our",
+          "key": "our",
+          "start": 37,
+          "end": 40
+        },
+        {
+          "word": "discussion",
+          "key": "discussion",
+          "start": 41,
+          "end": 51
+        }
+      ],
+      "hints": [
+        {
+          "id": "A2-1:6:弱读候选",
+          "kind": "弱读候选",
+          "indices": [
+            6
+          ],
+          "phrase": "for",
+          "text": "这个功能词在非重读位置常被弱化；若用于强调、对比或位于停顿前，读法可能不同。请回听原音核对。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "A2-1:7:弱读候选",
+          "kind": "弱读候选",
+          "indices": [
+            7
+          ],
+          "phrase": "our",
+          "text": "这个功能词在非重读位置常被弱化；若用于强调、对比或位于停顿前，读法可能不同。请回听原音核对。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "A2-1:1-2:不完全爆破候选",
+          "kind": "不完全爆破候选",
+          "indices": [
+            1,
+            2
+          ],
+          "phrase": "hasn’t Mr",
+          "text": "前词以爆破音结尾、后词以辅音开头，前面的爆破可能很轻或不完全释放；不能把词尾直接当作不存在。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "A2-1:4-5:连读候选",
+          "kind": "连读候选",
+          "indices": [
+            4,
+            5
+          ],
+          "phrase": "shown‿up",
+          "text": "前词的词尾辅音接后词的词首元音，可能紧密衔接；不必等两个词之间出现明显停顿。文字不能证明原音确实连读。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "A2-1:5-6:不完全爆破候选",
+          "kind": "不完全爆破候选",
+          "indices": [
+            5,
+            6
+          ],
+          "phrase": "up for",
+          "text": "前词以爆破音结尾、后词以辅音开头，前面的爆破可能很轻或不完全释放；不能把词尾直接当作不存在。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "A2-1:6-7:连读候选",
+          "kind": "连读候选",
+          "indices": [
+            6,
+            7
+          ],
+          "phrase": "for‿our",
+          "text": "前词的词尾辅音接后词的词首元音，可能紧密衔接；不必等两个词之间出现明显停顿。文字不能证明原音确实连读。 词典存在不同读音，是否适用取决于本句实际发音。",
+          "status": "pending-audio"
+        }
+      ],
+      "boundaries": [
+        {
+          "left": 0,
+          "right": 1,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 1,
+          "right": 2,
+          "status": "checked-text",
+          "kinds": [
+            "不完全爆破候选"
+          ]
+        },
+        {
+          "left": 2,
+          "right": 3,
+          "status": "punctuation-boundary",
+          "kinds": []
+        },
+        {
+          "left": 3,
+          "right": 4,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 4,
+          "right": 5,
+          "status": "checked-text",
+          "kinds": [
+            "连读候选"
+          ]
+        },
+        {
+          "left": 5,
+          "right": 6,
+          "status": "checked-text",
+          "kinds": [
+            "不完全爆破候选"
+          ]
+        },
+        {
+          "left": 6,
+          "right": 7,
+          "status": "checked-text",
+          "kinds": [
+            "连读候选"
+          ]
+        },
+        {
+          "left": 7,
+          "right": 8,
+          "status": "checked-text",
+          "kinds": []
+        }
+      ],
+      "missing": [],
+      "verification": "pending-audio"
+    },
+    {
+      "sentenceId": "A2-2",
+      "tokens": [
+        {
+          "word": "He",
+          "key": "he",
+          "start": 3,
+          "end": 5
+        },
+        {
+          "word": "called",
+          "key": "called",
+          "start": 6,
+          "end": 12
+        },
+        {
+          "word": "me",
+          "key": "me",
+          "start": 13,
+          "end": 15
+        },
+        {
+          "word": "just",
+          "key": "just",
+          "start": 16,
+          "end": 20
+        },
+        {
+          "word": "now",
+          "key": "now",
+          "start": 21,
+          "end": 24
+        },
+        {
+          "word": "He",
+          "key": "he",
+          "start": 26,
+          "end": 28
+        },
+        {
+          "word": "has",
+          "key": "has",
+          "start": 29,
+          "end": 32
+        },
+        {
+          "word": "to",
+          "key": "to",
+          "start": 33,
+          "end": 35
+        },
+        {
+          "word": "join",
+          "key": "join",
+          "start": 36,
+          "end": 40
+        },
+        {
+          "word": "an",
+          "key": "an",
+          "start": 41,
+          "end": 43
+        },
+        {
+          "word": "urgent",
+          "key": "urgent",
+          "start": 44,
+          "end": 50
+        },
+        {
+          "word": "meeting",
+          "key": "meeting",
+          "start": 51,
+          "end": 58
+        },
+        {
+          "word": "and",
+          "key": "and",
+          "start": 59,
+          "end": 62
+        },
+        {
+          "word": "cannot",
+          "key": "cannot",
+          "start": 63,
+          "end": 69
+        },
+        {
+          "word": "come",
+          "key": "come",
+          "start": 70,
+          "end": 74
+        }
+      ],
+      "hints": [
+        {
+          "id": "A2-2:0:弱读候选",
+          "kind": "弱读候选",
+          "indices": [
+            0
+          ],
+          "phrase": "He",
+          "text": "这个功能词在非重读位置常被弱化；若用于强调、对比或位于停顿前，读法可能不同。请回听原音核对。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "A2-2:5:弱读候选",
+          "kind": "弱读候选",
+          "indices": [
+            5
+          ],
+          "phrase": "He",
+          "text": "这个功能词在非重读位置常被弱化；若用于强调、对比或位于停顿前，读法可能不同。请回听原音核对。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "A2-2:6:弱读候选",
+          "kind": "弱读候选",
+          "indices": [
+            6
+          ],
+          "phrase": "has",
+          "text": "这个功能词在非重读位置常被弱化；若用于强调、对比或位于停顿前，读法可能不同。请回听原音核对。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "A2-2:7:弱读候选",
+          "kind": "弱读候选",
+          "indices": [
+            7
+          ],
+          "phrase": "to",
+          "text": "这个功能词在非重读位置常被弱化；若用于强调、对比或位于停顿前，读法可能不同。请回听原音核对。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "A2-2:9:弱读候选",
+          "kind": "弱读候选",
+          "indices": [
+            9
+          ],
+          "phrase": "an",
+          "text": "这个功能词在非重读位置常被弱化；若用于强调、对比或位于停顿前，读法可能不同。请回听原音核对。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "A2-2:12:弱读候选",
+          "kind": "弱读候选",
+          "indices": [
+            12
+          ],
+          "phrase": "and",
+          "text": "这个功能词在非重读位置常被弱化；若用于强调、对比或位于停顿前，读法可能不同。请回听原音核对。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "A2-2:1-2:不完全爆破候选",
+          "kind": "不完全爆破候选",
+          "indices": [
+            1,
+            2
+          ],
+          "phrase": "called me",
+          "text": "前词以爆破音结尾、后词以辅音开头，前面的爆破可能很轻或不完全释放；不能把词尾直接当作不存在。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "A2-2:3-4:不完全爆破候选",
+          "kind": "不完全爆破候选",
+          "indices": [
+            3,
+            4
+          ],
+          "phrase": "just now",
+          "text": "前词以爆破音结尾、后词以辅音开头，前面的爆破可能很轻或不完全释放；不能把词尾直接当作不存在。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "A2-2:8-9:连读候选",
+          "kind": "连读候选",
+          "indices": [
+            8,
+            9
+          ],
+          "phrase": "join‿an",
+          "text": "前词的词尾辅音接后词的词首元音，可能紧密衔接；不必等两个词之间出现明显停顿。文字不能证明原音确实连读。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "A2-2:9-10:连读候选",
+          "kind": "连读候选",
+          "indices": [
+            9,
+            10
+          ],
+          "phrase": "an‿urgent",
+          "text": "前词的词尾辅音接后词的词首元音，可能紧密衔接；不必等两个词之间出现明显停顿。文字不能证明原音确实连读。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "A2-2:10-11:不完全爆破候选",
+          "kind": "不完全爆破候选",
+          "indices": [
+            10,
+            11
+          ],
+          "phrase": "urgent meeting",
+          "text": "前词以爆破音结尾、后词以辅音开头，前面的爆破可能很轻或不完全释放；不能把词尾直接当作不存在。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "A2-2:11-12:连读候选",
+          "kind": "连读候选",
+          "indices": [
+            11,
+            12
+          ],
+          "phrase": "meeting‿and",
+          "text": "前词的词尾辅音接后词的词首元音，可能紧密衔接；不必等两个词之间出现明显停顿。文字不能证明原音确实连读。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "A2-2:12-13:不完全爆破候选",
+          "kind": "不完全爆破候选",
+          "indices": [
+            12,
+            13
+          ],
+          "phrase": "and cannot",
+          "text": "前词以爆破音结尾、后词以辅音开头，前面的爆破可能很轻或不完全释放；不能把词尾直接当作不存在。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "A2-2:13-14:不完全爆破候选",
+          "kind": "不完全爆破候选",
+          "indices": [
+            13,
+            14
+          ],
+          "phrase": "cannot come",
+          "text": "前词以爆破音结尾、后词以辅音开头，前面的爆破可能很轻或不完全释放；不能把词尾直接当作不存在。",
+          "status": "pending-audio"
+        }
+      ],
+      "boundaries": [
+        {
+          "left": 0,
+          "right": 1,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 1,
+          "right": 2,
+          "status": "checked-text",
+          "kinds": [
+            "不完全爆破候选"
+          ]
+        },
+        {
+          "left": 2,
+          "right": 3,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 3,
+          "right": 4,
+          "status": "checked-text",
+          "kinds": [
+            "不完全爆破候选"
+          ]
+        },
+        {
+          "left": 4,
+          "right": 5,
+          "status": "punctuation-boundary",
+          "kinds": []
+        },
+        {
+          "left": 5,
+          "right": 6,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 6,
+          "right": 7,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 7,
+          "right": 8,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 8,
+          "right": 9,
+          "status": "checked-text",
+          "kinds": [
+            "连读候选"
+          ]
+        },
+        {
+          "left": 9,
+          "right": 10,
+          "status": "checked-text",
+          "kinds": [
+            "连读候选"
+          ]
+        },
+        {
+          "left": 10,
+          "right": 11,
+          "status": "checked-text",
+          "kinds": [
+            "不完全爆破候选"
+          ]
+        },
+        {
+          "left": 11,
+          "right": 12,
+          "status": "checked-text",
+          "kinds": [
+            "连读候选"
+          ]
+        },
+        {
+          "left": 12,
+          "right": 13,
+          "status": "checked-text",
+          "kinds": [
+            "不完全爆破候选"
+          ]
+        },
+        {
+          "left": 13,
+          "right": 14,
+          "status": "checked-text",
+          "kinds": [
+            "不完全爆破候选"
+          ]
+        }
+      ],
+      "missing": [],
+      "verification": "pending-audio"
+    },
+    {
+      "sentenceId": "A2-3",
+      "tokens": [
+        {
+          "word": "Why",
+          "key": "why",
+          "start": 10,
+          "end": 13
+        },
+        {
+          "word": "can’t",
+          "key": "can't",
+          "start": 14,
+          "end": 19
+        },
+        {
+          "word": "Mr",
+          "key": "mr",
+          "start": 20,
+          "end": 22
+        },
+        {
+          "word": "Brown",
+          "key": "brown",
+          "start": 24,
+          "end": 29
+        },
+        {
+          "word": "attend",
+          "key": "attend",
+          "start": 30,
+          "end": 36
+        },
+        {
+          "word": "the",
+          "key": "the",
+          "start": 37,
+          "end": 40
+        },
+        {
+          "word": "discussion",
+          "key": "discussion",
+          "start": 41,
+          "end": 51
+        }
+      ],
+      "hints": [
+        {
+          "id": "A2-3:5:弱读候选",
+          "kind": "弱读候选",
+          "indices": [
+            5
+          ],
+          "phrase": "the",
+          "text": "这个功能词在非重读位置常被弱化；若用于强调、对比或位于停顿前，读法可能不同。请回听原音核对。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "A2-3:1-2:不完全爆破候选",
+          "kind": "不完全爆破候选",
+          "indices": [
+            1,
+            2
+          ],
+          "phrase": "can’t Mr",
+          "text": "前词以爆破音结尾、后词以辅音开头，前面的爆破可能很轻或不完全释放；不能把词尾直接当作不存在。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "A2-3:3-4:连读候选",
+          "kind": "连读候选",
+          "indices": [
+            3,
+            4
+          ],
+          "phrase": "Brown‿attend",
+          "text": "前词的词尾辅音接后词的词首元音，可能紧密衔接；不必等两个词之间出现明显停顿。文字不能证明原音确实连读。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "A2-3:4-5:不完全爆破候选",
+          "kind": "不完全爆破候选",
+          "indices": [
+            4,
+            5
+          ],
+          "phrase": "attend the",
+          "text": "前词以爆破音结尾、后词以辅音开头，前面的爆破可能很轻或不完全释放；不能把词尾直接当作不存在。",
+          "status": "pending-audio"
+        }
+      ],
+      "boundaries": [
+        {
+          "left": 0,
+          "right": 1,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 1,
+          "right": 2,
+          "status": "checked-text",
+          "kinds": [
+            "不完全爆破候选"
+          ]
+        },
+        {
+          "left": 2,
+          "right": 3,
+          "status": "punctuation-boundary",
+          "kinds": []
+        },
+        {
+          "left": 3,
+          "right": 4,
+          "status": "checked-text",
+          "kinds": [
+            "连读候选"
+          ]
+        },
+        {
+          "left": 4,
+          "right": 5,
+          "status": "checked-text",
+          "kinds": [
+            "不完全爆破候选"
+          ]
+        },
+        {
+          "left": 5,
+          "right": 6,
+          "status": "checked-text",
+          "kinds": []
+        }
+      ],
+      "missing": [],
+      "verification": "pending-audio"
+    },
+    {
+      "sentenceId": "A3-1",
+      "tokens": [
+        {
+          "word": "Hello",
+          "key": "hello",
+          "start": 3,
+          "end": 8
+        },
+        {
+          "word": "I’d",
+          "key": "i'd",
+          "start": 10,
+          "end": 13
+        },
+        {
+          "word": "like",
+          "key": "like",
+          "start": 14,
+          "end": 18
+        },
+        {
+          "word": "to",
+          "key": "to",
+          "start": 19,
+          "end": 21
+        },
+        {
+          "word": "reserve",
+          "key": "reserve",
+          "start": 22,
+          "end": 29
+        },
+        {
+          "word": "a",
+          "key": "a",
+          "start": 30,
+          "end": 31
+        },
+        {
+          "word": "meeting",
+          "key": "meeting",
+          "start": 32,
+          "end": 39
+        },
+        {
+          "word": "room",
+          "key": "room",
+          "start": 40,
+          "end": 44
+        },
+        {
+          "word": "for",
+          "key": "for",
+          "start": 45,
+          "end": 48
+        },
+        {
+          "word": "our",
+          "key": "our",
+          "start": 49,
+          "end": 52
+        },
+        {
+          "word": "team",
+          "key": "team",
+          "start": 53,
+          "end": 57
+        },
+        {
+          "word": "discussion",
+          "key": "discussion",
+          "start": 58,
+          "end": 68
+        },
+        {
+          "word": "next",
+          "key": "next",
+          "start": 69,
+          "end": 73
+        },
+        {
+          "word": "Wednesday",
+          "key": "wednesday",
+          "start": 74,
+          "end": 83
+        }
+      ],
+      "hints": [
+        {
+          "id": "A3-1:3:弱读候选",
+          "kind": "弱读候选",
+          "indices": [
+            3
+          ],
+          "phrase": "to",
+          "text": "这个功能词在非重读位置常被弱化；若用于强调、对比或位于停顿前，读法可能不同。请回听原音核对。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "A3-1:5:弱读候选",
+          "kind": "弱读候选",
+          "indices": [
+            5
+          ],
+          "phrase": "a",
+          "text": "这个功能词在非重读位置常被弱化；若用于强调、对比或位于停顿前，读法可能不同。请回听原音核对。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "A3-1:8:弱读候选",
+          "kind": "弱读候选",
+          "indices": [
+            8
+          ],
+          "phrase": "for",
+          "text": "这个功能词在非重读位置常被弱化；若用于强调、对比或位于停顿前，读法可能不同。请回听原音核对。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "A3-1:9:弱读候选",
+          "kind": "弱读候选",
+          "indices": [
+            9
+          ],
+          "phrase": "our",
+          "text": "这个功能词在非重读位置常被弱化；若用于强调、对比或位于停顿前，读法可能不同。请回听原音核对。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "A3-1:1-2:不完全爆破候选",
+          "kind": "不完全爆破候选",
+          "indices": [
+            1,
+            2
+          ],
+          "phrase": "I’d like",
+          "text": "前词以爆破音结尾、后词以辅音开头，前面的爆破可能很轻或不完全释放；不能把词尾直接当作不存在。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "A3-1:2-3:不完全爆破候选",
+          "kind": "不完全爆破候选",
+          "indices": [
+            2,
+            3
+          ],
+          "phrase": "like to",
+          "text": "前词以爆破音结尾、后词以辅音开头，前面的爆破可能很轻或不完全释放；不能把词尾直接当作不存在。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "A3-1:4-5:连读候选",
+          "kind": "连读候选",
+          "indices": [
+            4,
+            5
+          ],
+          "phrase": "reserve‿a",
+          "text": "前词的词尾辅音接后词的词首元音，可能紧密衔接；不必等两个词之间出现明显停顿。文字不能证明原音确实连读。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "A3-1:8-9:连读候选",
+          "kind": "连读候选",
+          "indices": [
+            8,
+            9
+          ],
+          "phrase": "for‿our",
+          "text": "前词的词尾辅音接后词的词首元音，可能紧密衔接；不必等两个词之间出现明显停顿。文字不能证明原音确实连读。 词典存在不同读音，是否适用取决于本句实际发音。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "A3-1:11-12:辅音衔接候选",
+          "kind": "辅音衔接候选",
+          "indices": [
+            11,
+            12
+          ],
+          "phrase": "discussion next",
+          "text": "相邻两个词的边界辅音相同，可能连成较长的一次衔接；不等于一定省掉一个词或一个音。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "A3-1:12-13:不完全爆破候选",
+          "kind": "不完全爆破候选",
+          "indices": [
+            12,
+            13
+          ],
+          "phrase": "next Wednesday",
+          "text": "前词以爆破音结尾、后词以辅音开头，前面的爆破可能很轻或不完全释放；不能把词尾直接当作不存在。 词典存在不同读音，是否适用取决于本句实际发音。",
+          "status": "pending-audio"
+        }
+      ],
+      "boundaries": [
+        {
+          "left": 0,
+          "right": 1,
+          "status": "punctuation-boundary",
+          "kinds": []
+        },
+        {
+          "left": 1,
+          "right": 2,
+          "status": "checked-text",
+          "kinds": [
+            "不完全爆破候选"
+          ]
+        },
+        {
+          "left": 2,
+          "right": 3,
+          "status": "checked-text",
+          "kinds": [
+            "不完全爆破候选"
+          ]
+        },
+        {
+          "left": 3,
+          "right": 4,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 4,
+          "right": 5,
+          "status": "checked-text",
+          "kinds": [
+            "连读候选"
+          ]
+        },
+        {
+          "left": 5,
+          "right": 6,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 6,
+          "right": 7,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 7,
+          "right": 8,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 8,
+          "right": 9,
+          "status": "checked-text",
+          "kinds": [
+            "连读候选"
+          ]
+        },
+        {
+          "left": 9,
+          "right": 10,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 10,
+          "right": 11,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 11,
+          "right": 12,
+          "status": "checked-text",
+          "kinds": [
+            "辅音衔接候选"
+          ]
+        },
+        {
+          "left": 12,
+          "right": 13,
+          "status": "checked-text",
+          "kinds": [
+            "不完全爆破候选"
+          ]
+        }
+      ],
+      "missing": [],
+      "verification": "pending-audio"
+    },
+    {
+      "sentenceId": "A3-2",
+      "tokens": [
+        {
+          "word": "Let",
+          "key": "let",
+          "start": 3,
+          "end": 6
+        },
+        {
+          "word": "me",
+          "key": "me",
+          "start": 7,
+          "end": 9
+        },
+        {
+          "word": "check",
+          "key": "check",
+          "start": 10,
+          "end": 15
+        },
+        {
+          "word": "our",
+          "key": "our",
+          "start": 16,
+          "end": 19
+        },
+        {
+          "word": "room",
+          "key": "room",
+          "start": 20,
+          "end": 24
+        },
+        {
+          "word": "availability",
+          "key": "availability",
+          "start": 25,
+          "end": 37
+        },
+        {
+          "word": "for",
+          "key": "for",
+          "start": 38,
+          "end": 41
+        },
+        {
+          "word": "you",
+          "key": "you",
+          "start": 42,
+          "end": 45
+        }
+      ],
+      "hints": [
+        {
+          "id": "A3-2:3:弱读候选",
+          "kind": "弱读候选",
+          "indices": [
+            3
+          ],
+          "phrase": "our",
+          "text": "这个功能词在非重读位置常被弱化；若用于强调、对比或位于停顿前，读法可能不同。请回听原音核对。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "A3-2:6:弱读候选",
+          "kind": "弱读候选",
+          "indices": [
+            6
+          ],
+          "phrase": "for",
+          "text": "这个功能词在非重读位置常被弱化；若用于强调、对比或位于停顿前，读法可能不同。请回听原音核对。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "A3-2:0-1:不完全爆破候选",
+          "kind": "不完全爆破候选",
+          "indices": [
+            0,
+            1
+          ],
+          "phrase": "Let me",
+          "text": "前词以爆破音结尾、后词以辅音开头，前面的爆破可能很轻或不完全释放；不能把词尾直接当作不存在。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "A3-2:2-3:连读候选",
+          "kind": "连读候选",
+          "indices": [
+            2,
+            3
+          ],
+          "phrase": "check‿our",
+          "text": "前词的词尾辅音接后词的词首元音，可能紧密衔接；不必等两个词之间出现明显停顿。文字不能证明原音确实连读。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "A3-2:3-4:辅音衔接候选",
+          "kind": "辅音衔接候选",
+          "indices": [
+            3,
+            4
+          ],
+          "phrase": "our room",
+          "text": "相邻两个词的边界辅音相同，可能连成较长的一次衔接；不等于一定省掉一个词或一个音。 词典存在不同读音，是否适用取决于本句实际发音。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "A3-2:4-5:连读候选",
+          "kind": "连读候选",
+          "indices": [
+            4,
+            5
+          ],
+          "phrase": "room‿availability",
+          "text": "前词的词尾辅音接后词的词首元音，可能紧密衔接；不必等两个词之间出现明显停顿。文字不能证明原音确实连读。",
+          "status": "pending-audio"
+        }
+      ],
+      "boundaries": [
+        {
+          "left": 0,
+          "right": 1,
+          "status": "checked-text",
+          "kinds": [
+            "不完全爆破候选"
+          ]
+        },
+        {
+          "left": 1,
+          "right": 2,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 2,
+          "right": 3,
+          "status": "checked-text",
+          "kinds": [
+            "连读候选"
+          ]
+        },
+        {
+          "left": 3,
+          "right": 4,
+          "status": "checked-text",
+          "kinds": [
+            "辅音衔接候选"
+          ]
+        },
+        {
+          "left": 4,
+          "right": 5,
+          "status": "checked-text",
+          "kinds": [
+            "连读候选"
+          ]
+        },
+        {
+          "left": 5,
+          "right": 6,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 6,
+          "right": 7,
+          "status": "checked-text",
+          "kinds": []
+        }
+      ],
+      "missing": [],
+      "verification": "pending-audio"
+    },
+    {
+      "sentenceId": "A3-3",
+      "tokens": [
+        {
+          "word": "What",
+          "key": "what",
+          "start": 10,
+          "end": 14
+        },
+        {
+          "word": "does",
+          "key": "does",
+          "start": 15,
+          "end": 19
+        },
+        {
+          "word": "the",
+          "key": "the",
+          "start": 20,
+          "end": 23
+        },
+        {
+          "word": "man",
+          "key": "man",
+          "start": 24,
+          "end": 27
+        },
+        {
+          "word": "want",
+          "key": "want",
+          "start": 28,
+          "end": 32
+        },
+        {
+          "word": "to",
+          "key": "to",
+          "start": 33,
+          "end": 35
+        },
+        {
+          "word": "do",
+          "key": "do",
+          "start": 36,
+          "end": 38
+        }
+      ],
+      "hints": [
+        {
+          "id": "A3-3:1:弱读候选",
+          "kind": "弱读候选",
+          "indices": [
+            1
+          ],
+          "phrase": "does",
+          "text": "这个功能词在非重读位置常被弱化；若用于强调、对比或位于停顿前，读法可能不同。请回听原音核对。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "A3-3:2:弱读候选",
+          "kind": "弱读候选",
+          "indices": [
+            2
+          ],
+          "phrase": "the",
+          "text": "这个功能词在非重读位置常被弱化；若用于强调、对比或位于停顿前，读法可能不同。请回听原音核对。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "A3-3:5:弱读候选",
+          "kind": "弱读候选",
+          "indices": [
+            5
+          ],
+          "phrase": "to",
+          "text": "这个功能词在非重读位置常被弱化；若用于强调、对比或位于停顿前，读法可能不同。请回听原音核对。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "A3-3:6:弱读候选",
+          "kind": "弱读候选",
+          "indices": [
+            6
+          ],
+          "phrase": "do",
+          "text": "这个功能词在非重读位置常被弱化；若用于强调、对比或位于停顿前，读法可能不同。请回听原音核对。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "A3-3:0-1:不完全爆破候选",
+          "kind": "不完全爆破候选",
+          "indices": [
+            0,
+            1
+          ],
+          "phrase": "What does",
+          "text": "前词以爆破音结尾、后词以辅音开头，前面的爆破可能很轻或不完全释放；不能把词尾直接当作不存在。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "A3-3:4-5:辅音衔接候选",
+          "kind": "辅音衔接候选",
+          "indices": [
+            4,
+            5
+          ],
+          "phrase": "want to",
+          "text": "相邻两个词的边界辅音相同，可能连成较长的一次衔接；不等于一定省掉一个词或一个音。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "A3-3:4-5:不完全爆破候选",
+          "kind": "不完全爆破候选",
+          "indices": [
+            4,
+            5
+          ],
+          "phrase": "want to",
+          "text": "前词以爆破音结尾、后词以辅音开头，前面的爆破可能很轻或不完全释放；不能把词尾直接当作不存在。",
+          "status": "pending-audio"
+        }
+      ],
+      "boundaries": [
+        {
+          "left": 0,
+          "right": 1,
+          "status": "checked-text",
+          "kinds": [
+            "不完全爆破候选"
+          ]
+        },
+        {
+          "left": 1,
+          "right": 2,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 2,
+          "right": 3,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 3,
+          "right": 4,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 4,
+          "right": 5,
+          "status": "checked-text",
+          "kinds": [
+            "辅音衔接候选",
+            "不完全爆破候选"
+          ]
+        },
+        {
+          "left": 5,
+          "right": 6,
+          "status": "checked-text",
+          "kinds": []
+        }
+      ],
+      "missing": [],
+      "verification": "pending-audio"
+    },
+    {
+      "sentenceId": "A4-1",
+      "tokens": [
+        {
+          "word": "What’s",
+          "key": "what's",
+          "start": 3,
+          "end": 9
+        },
+        {
+          "word": "Amy’s",
+          "key": "amy's",
+          "start": 10,
+          "end": 15
+        },
+        {
+          "word": "new",
+          "key": "new",
+          "start": 16,
+          "end": 19
+        },
+        {
+          "word": "job",
+          "key": "job",
+          "start": 20,
+          "end": 23
+        },
+        {
+          "word": "after",
+          "key": "after",
+          "start": 24,
+          "end": 29
+        },
+        {
+          "word": "she",
+          "key": "she",
+          "start": 30,
+          "end": 33
+        },
+        {
+          "word": "changed",
+          "key": "changed",
+          "start": 34,
+          "end": 41
+        },
+        {
+          "word": "work",
+          "key": "work",
+          "start": 42,
+          "end": 46
+        }
+      ],
+      "hints": [
+        {
+          "id": "A4-1:0-1:连读候选",
+          "kind": "连读候选",
+          "indices": [
+            0,
+            1
+          ],
+          "phrase": "What’s‿Amy’s",
+          "text": "前词的词尾辅音接后词的词首元音，可能紧密衔接；不必等两个词之间出现明显停顿。文字不能证明原音确实连读。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "A4-1:3-4:连读候选",
+          "kind": "连读候选",
+          "indices": [
+            3,
+            4
+          ],
+          "phrase": "job‿after",
+          "text": "前词的词尾辅音接后词的词首元音，可能紧密衔接；不必等两个词之间出现明显停顿。文字不能证明原音确实连读。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "A4-1:6-7:不完全爆破候选",
+          "kind": "不完全爆破候选",
+          "indices": [
+            6,
+            7
+          ],
+          "phrase": "changed work",
+          "text": "前词以爆破音结尾、后词以辅音开头，前面的爆破可能很轻或不完全释放；不能把词尾直接当作不存在。",
+          "status": "pending-audio"
+        }
+      ],
+      "boundaries": [
+        {
+          "left": 0,
+          "right": 1,
+          "status": "checked-text",
+          "kinds": [
+            "连读候选"
+          ]
+        },
+        {
+          "left": 1,
+          "right": 2,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 2,
+          "right": 3,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 3,
+          "right": 4,
+          "status": "checked-text",
+          "kinds": [
+            "连读候选"
+          ]
+        },
+        {
+          "left": 4,
+          "right": 5,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 5,
+          "right": 6,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 6,
+          "right": 7,
+          "status": "checked-text",
+          "kinds": [
+            "不完全爆破候选"
+          ]
+        }
+      ],
+      "missing": [],
+      "verification": "pending-audio"
+    },
+    {
+      "sentenceId": "A4-2",
+      "tokens": [
+        {
+          "word": "She",
+          "key": "she",
+          "start": 3,
+          "end": 6
+        },
+        {
+          "word": "works",
+          "key": "works",
+          "start": 7,
+          "end": 12
+        },
+        {
+          "word": "as",
+          "key": "as",
+          "start": 13,
+          "end": 15
+        },
+        {
+          "word": "a",
+          "key": "a",
+          "start": 16,
+          "end": 17
+        },
+        {
+          "word": "market",
+          "key": "market",
+          "start": 18,
+          "end": 24
+        },
+        {
+          "word": "researcher",
+          "key": "researcher",
+          "start": 25,
+          "end": 35
+        },
+        {
+          "word": "and",
+          "key": "and",
+          "start": 36,
+          "end": 39
+        },
+        {
+          "word": "collects",
+          "key": "collects",
+          "start": 40,
+          "end": 48
+        },
+        {
+          "word": "information",
+          "key": "information",
+          "start": 49,
+          "end": 60
+        },
+        {
+          "word": "for",
+          "key": "for",
+          "start": 61,
+          "end": 64
+        },
+        {
+          "word": "product",
+          "key": "product",
+          "start": 65,
+          "end": 72
+        },
+        {
+          "word": "development",
+          "key": "development",
+          "start": 73,
+          "end": 84
+        }
+      ],
+      "hints": [
+        {
+          "id": "A4-2:2:弱读候选",
+          "kind": "弱读候选",
+          "indices": [
+            2
+          ],
+          "phrase": "as",
+          "text": "这个功能词在非重读位置常被弱化；若用于强调、对比或位于停顿前，读法可能不同。请回听原音核对。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "A4-2:3:弱读候选",
+          "kind": "弱读候选",
+          "indices": [
+            3
+          ],
+          "phrase": "a",
+          "text": "这个功能词在非重读位置常被弱化；若用于强调、对比或位于停顿前，读法可能不同。请回听原音核对。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "A4-2:6:弱读候选",
+          "kind": "弱读候选",
+          "indices": [
+            6
+          ],
+          "phrase": "and",
+          "text": "这个功能词在非重读位置常被弱化；若用于强调、对比或位于停顿前，读法可能不同。请回听原音核对。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "A4-2:9:弱读候选",
+          "kind": "弱读候选",
+          "indices": [
+            9
+          ],
+          "phrase": "for",
+          "text": "这个功能词在非重读位置常被弱化；若用于强调、对比或位于停顿前，读法可能不同。请回听原音核对。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "A4-2:1-2:连读候选",
+          "kind": "连读候选",
+          "indices": [
+            1,
+            2
+          ],
+          "phrase": "works‿as",
+          "text": "前词的词尾辅音接后词的词首元音，可能紧密衔接；不必等两个词之间出现明显停顿。文字不能证明原音确实连读。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "A4-2:2-3:连读候选",
+          "kind": "连读候选",
+          "indices": [
+            2,
+            3
+          ],
+          "phrase": "as‿a",
+          "text": "前词的词尾辅音接后词的词首元音，可能紧密衔接；不必等两个词之间出现明显停顿。文字不能证明原音确实连读。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "A4-2:4-5:不完全爆破候选",
+          "kind": "不完全爆破候选",
+          "indices": [
+            4,
+            5
+          ],
+          "phrase": "market researcher",
+          "text": "前词以爆破音结尾、后词以辅音开头，前面的爆破可能很轻或不完全释放；不能把词尾直接当作不存在。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "A4-2:6-7:不完全爆破候选",
+          "kind": "不完全爆破候选",
+          "indices": [
+            6,
+            7
+          ],
+          "phrase": "and collects",
+          "text": "前词以爆破音结尾、后词以辅音开头，前面的爆破可能很轻或不完全释放；不能把词尾直接当作不存在。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "A4-2:7-8:连读候选",
+          "kind": "连读候选",
+          "indices": [
+            7,
+            8
+          ],
+          "phrase": "collects‿information",
+          "text": "前词的词尾辅音接后词的词首元音，可能紧密衔接；不必等两个词之间出现明显停顿。文字不能证明原音确实连读。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "A4-2:10-11:不完全爆破候选",
+          "kind": "不完全爆破候选",
+          "indices": [
+            10,
+            11
+          ],
+          "phrase": "product development",
+          "text": "前词以爆破音结尾、后词以辅音开头，前面的爆破可能很轻或不完全释放；不能把词尾直接当作不存在。",
+          "status": "pending-audio"
+        }
+      ],
+      "boundaries": [
+        {
+          "left": 0,
+          "right": 1,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 1,
+          "right": 2,
+          "status": "checked-text",
+          "kinds": [
+            "连读候选"
+          ]
+        },
+        {
+          "left": 2,
+          "right": 3,
+          "status": "checked-text",
+          "kinds": [
+            "连读候选"
+          ]
+        },
+        {
+          "left": 3,
+          "right": 4,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 4,
+          "right": 5,
+          "status": "checked-text",
+          "kinds": [
+            "不完全爆破候选"
+          ]
+        },
+        {
+          "left": 5,
+          "right": 6,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 6,
+          "right": 7,
+          "status": "checked-text",
+          "kinds": [
+            "不完全爆破候选"
+          ]
+        },
+        {
+          "left": 7,
+          "right": 8,
+          "status": "checked-text",
+          "kinds": [
+            "连读候选"
+          ]
+        },
+        {
+          "left": 8,
+          "right": 9,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 9,
+          "right": 10,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 10,
+          "right": 11,
+          "status": "checked-text",
+          "kinds": [
+            "不完全爆破候选"
+          ]
+        }
+      ],
+      "missing": [],
+      "verification": "pending-audio"
+    },
+    {
+      "sentenceId": "A4-3",
+      "tokens": [
+        {
+          "word": "What",
+          "key": "what",
+          "start": 10,
+          "end": 14
+        },
+        {
+          "word": "is",
+          "key": "is",
+          "start": 15,
+          "end": 17
+        },
+        {
+          "word": "Amy’s",
+          "key": "amy's",
+          "start": 18,
+          "end": 23
+        },
+        {
+          "word": "present",
+          "key": "present",
+          "start": 24,
+          "end": 31
+        },
+        {
+          "word": "job",
+          "key": "job",
+          "start": 32,
+          "end": 35
+        }
+      ],
+      "hints": [
+        {
+          "id": "A4-3:0-1:连读候选",
+          "kind": "连读候选",
+          "indices": [
+            0,
+            1
+          ],
+          "phrase": "What‿is",
+          "text": "前词的词尾辅音接后词的词首元音，可能紧密衔接；不必等两个词之间出现明显停顿。文字不能证明原音确实连读。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "A4-3:1-2:连读候选",
+          "kind": "连读候选",
+          "indices": [
+            1,
+            2
+          ],
+          "phrase": "is‿Amy’s",
+          "text": "前词的词尾辅音接后词的词首元音，可能紧密衔接；不必等两个词之间出现明显停顿。文字不能证明原音确实连读。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "A4-3:3-4:不完全爆破候选",
+          "kind": "不完全爆破候选",
+          "indices": [
+            3,
+            4
+          ],
+          "phrase": "present job",
+          "text": "前词以爆破音结尾、后词以辅音开头，前面的爆破可能很轻或不完全释放；不能把词尾直接当作不存在。",
+          "status": "pending-audio"
+        }
+      ],
+      "boundaries": [
+        {
+          "left": 0,
+          "right": 1,
+          "status": "checked-text",
+          "kinds": [
+            "连读候选"
+          ]
+        },
+        {
+          "left": 1,
+          "right": 2,
+          "status": "checked-text",
+          "kinds": [
+            "连读候选"
+          ]
+        },
+        {
+          "left": 2,
+          "right": 3,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 3,
+          "right": 4,
+          "status": "checked-text",
+          "kinds": [
+            "不完全爆破候选"
+          ]
+        }
+      ],
+      "missing": [],
+      "verification": "pending-audio"
+    },
+    {
+      "sentenceId": "A5-1",
+      "tokens": [
+        {
+          "word": "Hello",
+          "key": "hello",
+          "start": 3,
+          "end": 8
+        },
+        {
+          "word": "could",
+          "key": "could",
+          "start": 10,
+          "end": 15
+        },
+        {
+          "word": "I",
+          "key": "i",
+          "start": 16,
+          "end": 17
+        },
+        {
+          "word": "speak",
+          "key": "speak",
+          "start": 18,
+          "end": 23
+        },
+        {
+          "word": "to",
+          "key": "to",
+          "start": 24,
+          "end": 26
+        },
+        {
+          "word": "the",
+          "key": "the",
+          "start": 27,
+          "end": 30
+        },
+        {
+          "word": "hotel",
+          "key": "hotel",
+          "start": 31,
+          "end": 36
+        },
+        {
+          "word": "service",
+          "key": "service",
+          "start": 37,
+          "end": 44
+        },
+        {
+          "word": "center",
+          "key": "center",
+          "start": 45,
+          "end": 51
+        },
+        {
+          "word": "I",
+          "key": "i",
+          "start": 53,
+          "end": 54
+        },
+        {
+          "word": "want",
+          "key": "want",
+          "start": 55,
+          "end": 59
+        },
+        {
+          "word": "to",
+          "key": "to",
+          "start": 60,
+          "end": 62
+        },
+        {
+          "word": "make",
+          "key": "make",
+          "start": 63,
+          "end": 67
+        },
+        {
+          "word": "sure",
+          "key": "sure",
+          "start": 68,
+          "end": 72
+        },
+        {
+          "word": "my",
+          "key": "my",
+          "start": 73,
+          "end": 75
+        },
+        {
+          "word": "booking",
+          "key": "booking",
+          "start": 76,
+          "end": 83
+        },
+        {
+          "word": "is",
+          "key": "is",
+          "start": 84,
+          "end": 86
+        },
+        {
+          "word": "still",
+          "key": "still",
+          "start": 87,
+          "end": 92
+        },
+        {
+          "word": "valid",
+          "key": "valid",
+          "start": 93,
+          "end": 98
+        }
+      ],
+      "hints": [
+        {
+          "id": "A5-1:4:弱读候选",
+          "kind": "弱读候选",
+          "indices": [
+            4
+          ],
+          "phrase": "to",
+          "text": "这个功能词在非重读位置常被弱化；若用于强调、对比或位于停顿前，读法可能不同。请回听原音核对。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "A5-1:5:弱读候选",
+          "kind": "弱读候选",
+          "indices": [
+            5
+          ],
+          "phrase": "the",
+          "text": "这个功能词在非重读位置常被弱化；若用于强调、对比或位于停顿前，读法可能不同。请回听原音核对。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "A5-1:11:弱读候选",
+          "kind": "弱读候选",
+          "indices": [
+            11
+          ],
+          "phrase": "to",
+          "text": "这个功能词在非重读位置常被弱化；若用于强调、对比或位于停顿前，读法可能不同。请回听原音核对。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "A5-1:1-2:连读候选",
+          "kind": "连读候选",
+          "indices": [
+            1,
+            2
+          ],
+          "phrase": "could‿I",
+          "text": "前词的词尾辅音接后词的词首元音，可能紧密衔接；不必等两个词之间出现明显停顿。文字不能证明原音确实连读。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "A5-1:3-4:不完全爆破候选",
+          "kind": "不完全爆破候选",
+          "indices": [
+            3,
+            4
+          ],
+          "phrase": "speak to",
+          "text": "前词以爆破音结尾、后词以辅音开头，前面的爆破可能很轻或不完全释放；不能把词尾直接当作不存在。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "A5-1:7-8:辅音衔接候选",
+          "kind": "辅音衔接候选",
+          "indices": [
+            7,
+            8
+          ],
+          "phrase": "service center",
+          "text": "相邻两个词的边界辅音相同，可能连成较长的一次衔接；不等于一定省掉一个词或一个音。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "A5-1:10-11:辅音衔接候选",
+          "kind": "辅音衔接候选",
+          "indices": [
+            10,
+            11
+          ],
+          "phrase": "want to",
+          "text": "相邻两个词的边界辅音相同，可能连成较长的一次衔接；不等于一定省掉一个词或一个音。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "A5-1:10-11:不完全爆破候选",
+          "kind": "不完全爆破候选",
+          "indices": [
+            10,
+            11
+          ],
+          "phrase": "want to",
+          "text": "前词以爆破音结尾、后词以辅音开头，前面的爆破可能很轻或不完全释放；不能把词尾直接当作不存在。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "A5-1:12-13:不完全爆破候选",
+          "kind": "不完全爆破候选",
+          "indices": [
+            12,
+            13
+          ],
+          "phrase": "make sure",
+          "text": "前词以爆破音结尾、后词以辅音开头，前面的爆破可能很轻或不完全释放；不能把词尾直接当作不存在。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "A5-1:15-16:连读候选",
+          "kind": "连读候选",
+          "indices": [
+            15,
+            16
+          ],
+          "phrase": "booking‿is",
+          "text": "前词的词尾辅音接后词的词首元音，可能紧密衔接；不必等两个词之间出现明显停顿。文字不能证明原音确实连读。",
+          "status": "pending-audio"
+        }
+      ],
+      "boundaries": [
+        {
+          "left": 0,
+          "right": 1,
+          "status": "punctuation-boundary",
+          "kinds": []
+        },
+        {
+          "left": 1,
+          "right": 2,
+          "status": "checked-text",
+          "kinds": [
+            "连读候选"
+          ]
+        },
+        {
+          "left": 2,
+          "right": 3,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 3,
+          "right": 4,
+          "status": "checked-text",
+          "kinds": [
+            "不完全爆破候选"
+          ]
+        },
+        {
+          "left": 4,
+          "right": 5,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 5,
+          "right": 6,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 6,
+          "right": 7,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 7,
+          "right": 8,
+          "status": "checked-text",
+          "kinds": [
+            "辅音衔接候选"
+          ]
+        },
+        {
+          "left": 8,
+          "right": 9,
+          "status": "punctuation-boundary",
+          "kinds": []
+        },
+        {
+          "left": 9,
+          "right": 10,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 10,
+          "right": 11,
+          "status": "checked-text",
+          "kinds": [
+            "辅音衔接候选",
+            "不完全爆破候选"
+          ]
+        },
+        {
+          "left": 11,
+          "right": 12,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 12,
+          "right": 13,
+          "status": "checked-text",
+          "kinds": [
+            "不完全爆破候选"
+          ]
+        },
+        {
+          "left": 13,
+          "right": 14,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 14,
+          "right": 15,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 15,
+          "right": 16,
+          "status": "checked-text",
+          "kinds": [
+            "连读候选"
+          ]
+        },
+        {
+          "left": 16,
+          "right": 17,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 17,
+          "right": 18,
+          "status": "checked-text",
+          "kinds": []
+        }
+      ],
+      "missing": [],
+      "verification": "pending-audio"
+    },
+    {
+      "sentenceId": "A5-2",
+      "tokens": [
+        {
+          "word": "Please",
+          "key": "please",
+          "start": 3,
+          "end": 9
+        },
+        {
+          "word": "wait",
+          "key": "wait",
+          "start": 10,
+          "end": 14
+        },
+        {
+          "word": "a",
+          "key": "a",
+          "start": 15,
+          "end": 16
+        },
+        {
+          "word": "moment",
+          "key": "moment",
+          "start": 17,
+          "end": 23
+        },
+        {
+          "word": "I",
+          "key": "i",
+          "start": 25,
+          "end": 26
+        },
+        {
+          "word": "will",
+          "key": "will",
+          "start": 27,
+          "end": 31
+        },
+        {
+          "word": "check",
+          "key": "check",
+          "start": 32,
+          "end": 37
+        },
+        {
+          "word": "your",
+          "key": "your",
+          "start": 38,
+          "end": 42
+        },
+        {
+          "word": "reservation",
+          "key": "reservation",
+          "start": 43,
+          "end": 54
+        },
+        {
+          "word": "record",
+          "key": "record",
+          "start": 55,
+          "end": 61
+        }
+      ],
+      "hints": [
+        {
+          "id": "A5-2:2:弱读候选",
+          "kind": "弱读候选",
+          "indices": [
+            2
+          ],
+          "phrase": "a",
+          "text": "这个功能词在非重读位置常被弱化；若用于强调、对比或位于停顿前，读法可能不同。请回听原音核对。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "A5-2:7:弱读候选",
+          "kind": "弱读候选",
+          "indices": [
+            7
+          ],
+          "phrase": "your",
+          "text": "这个功能词在非重读位置常被弱化；若用于强调、对比或位于停顿前，读法可能不同。请回听原音核对。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "A5-2:1-2:连读候选",
+          "kind": "连读候选",
+          "indices": [
+            1,
+            2
+          ],
+          "phrase": "wait‿a",
+          "text": "前词的词尾辅音接后词的词首元音，可能紧密衔接；不必等两个词之间出现明显停顿。文字不能证明原音确实连读。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "A5-2:6-7:不完全爆破候选",
+          "kind": "不完全爆破候选",
+          "indices": [
+            6,
+            7
+          ],
+          "phrase": "check your",
+          "text": "前词以爆破音结尾、后词以辅音开头，前面的爆破可能很轻或不完全释放；不能把词尾直接当作不存在。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "A5-2:7-8:辅音衔接候选",
+          "kind": "辅音衔接候选",
+          "indices": [
+            7,
+            8
+          ],
+          "phrase": "your reservation",
+          "text": "相邻两个词的边界辅音相同，可能连成较长的一次衔接；不等于一定省掉一个词或一个音。",
+          "status": "pending-audio"
+        }
+      ],
+      "boundaries": [
+        {
+          "left": 0,
+          "right": 1,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 1,
+          "right": 2,
+          "status": "checked-text",
+          "kinds": [
+            "连读候选"
+          ]
+        },
+        {
+          "left": 2,
+          "right": 3,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 3,
+          "right": 4,
+          "status": "punctuation-boundary",
+          "kinds": []
+        },
+        {
+          "left": 4,
+          "right": 5,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 5,
+          "right": 6,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 6,
+          "right": 7,
+          "status": "checked-text",
+          "kinds": [
+            "不完全爆破候选"
+          ]
+        },
+        {
+          "left": 7,
+          "right": 8,
+          "status": "checked-text",
+          "kinds": [
+            "辅音衔接候选"
+          ]
+        },
+        {
+          "left": 8,
+          "right": 9,
+          "status": "checked-text",
+          "kinds": []
+        }
+      ],
+      "missing": [],
+      "verification": "pending-audio"
+    },
+    {
+      "sentenceId": "A5-3",
+      "tokens": [
+        {
+          "word": "Why",
+          "key": "why",
+          "start": 10,
+          "end": 13
+        },
+        {
+          "word": "is",
+          "key": "is",
+          "start": 14,
+          "end": 16
+        },
+        {
+          "word": "the",
+          "key": "the",
+          "start": 17,
+          "end": 20
+        },
+        {
+          "word": "man",
+          "key": "man",
+          "start": 21,
+          "end": 24
+        },
+        {
+          "word": "calling",
+          "key": "calling",
+          "start": 25,
+          "end": 32
+        },
+        {
+          "word": "the",
+          "key": "the",
+          "start": 33,
+          "end": 36
+        },
+        {
+          "word": "hotel",
+          "key": "hotel",
+          "start": 37,
+          "end": 42
+        }
+      ],
+      "hints": [
+        {
+          "id": "A5-3:2:弱读候选",
+          "kind": "弱读候选",
+          "indices": [
+            2
+          ],
+          "phrase": "the",
+          "text": "这个功能词在非重读位置常被弱化；若用于强调、对比或位于停顿前，读法可能不同。请回听原音核对。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "A5-3:5:弱读候选",
+          "kind": "弱读候选",
+          "indices": [
+            5
+          ],
+          "phrase": "the",
+          "text": "这个功能词在非重读位置常被弱化；若用于强调、对比或位于停顿前，读法可能不同。请回听原音核对。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "A5-3:0-1:元音衔接候选",
+          "kind": "元音衔接候选",
+          "indices": [
+            0,
+            1
+          ],
+          "phrase": "Why is",
+          "text": "两个元音之间可能有很轻的 /j/ 或 /w/ 过渡，取决于前词元音和说话方式；不要刻意加出一个很重的音。",
+          "status": "pending-audio"
+        }
+      ],
+      "boundaries": [
+        {
+          "left": 0,
+          "right": 1,
+          "status": "checked-text",
+          "kinds": [
+            "元音衔接候选"
+          ]
+        },
+        {
+          "left": 1,
+          "right": 2,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 2,
+          "right": 3,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 3,
+          "right": 4,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 4,
+          "right": 5,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 5,
+          "right": 6,
+          "status": "checked-text",
+          "kinds": []
+        }
+      ],
+      "missing": [],
+      "verification": "pending-audio"
+    },
+    {
+      "sentenceId": "B1-1",
+      "tokens": [
+        {
+          "word": "Hi",
+          "key": "hi",
+          "start": 3,
+          "end": 5
+        },
+        {
+          "word": "you’ve",
+          "key": "you've",
+          "start": 7,
+          "end": 13
+        },
+        {
+          "word": "sent",
+          "key": "sent",
+          "start": 14,
+          "end": 18
+        },
+        {
+          "word": "us",
+          "key": "us",
+          "start": 19,
+          "end": 21
+        },
+        {
+          "word": "your",
+          "key": "your",
+          "start": 22,
+          "end": 26
+        },
+        {
+          "word": "application",
+          "key": "application",
+          "start": 27,
+          "end": 38
+        },
+        {
+          "word": "Where",
+          "key": "where",
+          "start": 40,
+          "end": 45
+        },
+        {
+          "word": "did",
+          "key": "did",
+          "start": 46,
+          "end": 49
+        },
+        {
+          "word": "you",
+          "key": "you",
+          "start": 50,
+          "end": 53
+        },
+        {
+          "word": "learn",
+          "key": "learn",
+          "start": 54,
+          "end": 59
+        },
+        {
+          "word": "about",
+          "key": "about",
+          "start": 60,
+          "end": 65
+        },
+        {
+          "word": "this",
+          "key": "this",
+          "start": 66,
+          "end": 70
+        },
+        {
+          "word": "position",
+          "key": "position",
+          "start": 71,
+          "end": 79
+        }
+      ],
+      "hints": [
+        {
+          "id": "B1-1:3:弱读候选",
+          "kind": "弱读候选",
+          "indices": [
+            3
+          ],
+          "phrase": "us",
+          "text": "这个功能词在非重读位置常被弱化；若用于强调、对比或位于停顿前，读法可能不同。请回听原音核对。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "B1-1:4:弱读候选",
+          "kind": "弱读候选",
+          "indices": [
+            4
+          ],
+          "phrase": "your",
+          "text": "这个功能词在非重读位置常被弱化；若用于强调、对比或位于停顿前，读法可能不同。请回听原音核对。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "B1-1:2-3:连读候选",
+          "kind": "连读候选",
+          "indices": [
+            2,
+            3
+          ],
+          "phrase": "sent‿us",
+          "text": "前词的词尾辅音接后词的词首元音，可能紧密衔接；不必等两个词之间出现明显停顿。文字不能证明原音确实连读。 词典存在不同读音，是否适用取决于本句实际发音。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "B1-1:2-3:不完全爆破候选",
+          "kind": "不完全爆破候选",
+          "indices": [
+            2,
+            3
+          ],
+          "phrase": "sent us",
+          "text": "前词以爆破音结尾、后词以辅音开头，前面的爆破可能很轻或不完全释放；不能把词尾直接当作不存在。 词典存在不同读音，是否适用取决于本句实际发音。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "B1-1:4-5:连读候选",
+          "kind": "连读候选",
+          "indices": [
+            4,
+            5
+          ],
+          "phrase": "your‿application",
+          "text": "前词的词尾辅音接后词的词首元音，可能紧密衔接；不必等两个词之间出现明显停顿。文字不能证明原音确实连读。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "B1-1:7-8:不完全爆破候选",
+          "kind": "不完全爆破候选",
+          "indices": [
+            7,
+            8
+          ],
+          "phrase": "did you",
+          "text": "前词以爆破音结尾、后词以辅音开头，前面的爆破可能很轻或不完全释放；不能把词尾直接当作不存在。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "B1-1:9-10:连读候选",
+          "kind": "连读候选",
+          "indices": [
+            9,
+            10
+          ],
+          "phrase": "learn‿about",
+          "text": "前词的词尾辅音接后词的词首元音，可能紧密衔接；不必等两个词之间出现明显停顿。文字不能证明原音确实连读。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "B1-1:10-11:不完全爆破候选",
+          "kind": "不完全爆破候选",
+          "indices": [
+            10,
+            11
+          ],
+          "phrase": "about this",
+          "text": "前词以爆破音结尾、后词以辅音开头，前面的爆破可能很轻或不完全释放；不能把词尾直接当作不存在。",
+          "status": "pending-audio"
+        }
+      ],
+      "boundaries": [
+        {
+          "left": 0,
+          "right": 1,
+          "status": "punctuation-boundary",
+          "kinds": []
+        },
+        {
+          "left": 1,
+          "right": 2,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 2,
+          "right": 3,
+          "status": "checked-text",
+          "kinds": [
+            "连读候选",
+            "不完全爆破候选"
+          ]
+        },
+        {
+          "left": 3,
+          "right": 4,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 4,
+          "right": 5,
+          "status": "checked-text",
+          "kinds": [
+            "连读候选"
+          ]
+        },
+        {
+          "left": 5,
+          "right": 6,
+          "status": "punctuation-boundary",
+          "kinds": []
+        },
+        {
+          "left": 6,
+          "right": 7,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 7,
+          "right": 8,
+          "status": "checked-text",
+          "kinds": [
+            "不完全爆破候选"
+          ]
+        },
+        {
+          "left": 8,
+          "right": 9,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 9,
+          "right": 10,
+          "status": "checked-text",
+          "kinds": [
+            "连读候选"
+          ]
+        },
+        {
+          "left": 10,
+          "right": 11,
+          "status": "checked-text",
+          "kinds": [
+            "不完全爆破候选"
+          ]
+        },
+        {
+          "left": 11,
+          "right": 12,
+          "status": "checked-text",
+          "kinds": []
+        }
+      ],
+      "missing": [],
+      "verification": "pending-audio"
+    },
+    {
+      "sentenceId": "B1-2",
+      "tokens": [
+        {
+          "word": "From",
+          "key": "from",
+          "start": 3,
+          "end": 7
+        },
+        {
+          "word": "a",
+          "key": "a",
+          "start": 8,
+          "end": 9
+        },
+        {
+          "word": "former",
+          "key": "former",
+          "start": 10,
+          "end": 16
+        },
+        {
+          "word": "colleague",
+          "key": "colleague",
+          "start": 17,
+          "end": 26
+        },
+        {
+          "word": "He",
+          "key": "he",
+          "start": 28,
+          "end": 30
+        },
+        {
+          "word": "once",
+          "key": "once",
+          "start": 31,
+          "end": 35
+        },
+        {
+          "word": "worked",
+          "key": "worked",
+          "start": 36,
+          "end": 42
+        },
+        {
+          "word": "in",
+          "key": "in",
+          "start": 43,
+          "end": 45
+        },
+        {
+          "word": "your",
+          "key": "your",
+          "start": 46,
+          "end": 50
+        },
+        {
+          "word": "company",
+          "key": "company",
+          "start": 51,
+          "end": 58
+        }
+      ],
+      "hints": [
+        {
+          "id": "B1-2:0:弱读候选",
+          "kind": "弱读候选",
+          "indices": [
+            0
+          ],
+          "phrase": "From",
+          "text": "这个功能词在非重读位置常被弱化；若用于强调、对比或位于停顿前，读法可能不同。请回听原音核对。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "B1-2:1:弱读候选",
+          "kind": "弱读候选",
+          "indices": [
+            1
+          ],
+          "phrase": "a",
+          "text": "这个功能词在非重读位置常被弱化；若用于强调、对比或位于停顿前，读法可能不同。请回听原音核对。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "B1-2:4:弱读候选",
+          "kind": "弱读候选",
+          "indices": [
+            4
+          ],
+          "phrase": "He",
+          "text": "这个功能词在非重读位置常被弱化；若用于强调、对比或位于停顿前，读法可能不同。请回听原音核对。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "B1-2:8:弱读候选",
+          "kind": "弱读候选",
+          "indices": [
+            8
+          ],
+          "phrase": "your",
+          "text": "这个功能词在非重读位置常被弱化；若用于强调、对比或位于停顿前，读法可能不同。请回听原音核对。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "B1-2:0-1:连读候选",
+          "kind": "连读候选",
+          "indices": [
+            0,
+            1
+          ],
+          "phrase": "From‿a",
+          "text": "前词的词尾辅音接后词的词首元音，可能紧密衔接；不必等两个词之间出现明显停顿。文字不能证明原音确实连读。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "B1-2:6-7:连读候选",
+          "kind": "连读候选",
+          "indices": [
+            6,
+            7
+          ],
+          "phrase": "worked‿in",
+          "text": "前词的词尾辅音接后词的词首元音，可能紧密衔接；不必等两个词之间出现明显停顿。文字不能证明原音确实连读。",
+          "status": "pending-audio"
+        }
+      ],
+      "boundaries": [
+        {
+          "left": 0,
+          "right": 1,
+          "status": "checked-text",
+          "kinds": [
+            "连读候选"
+          ]
+        },
+        {
+          "left": 1,
+          "right": 2,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 2,
+          "right": 3,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 3,
+          "right": 4,
+          "status": "punctuation-boundary",
+          "kinds": []
+        },
+        {
+          "left": 4,
+          "right": 5,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 5,
+          "right": 6,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 6,
+          "right": 7,
+          "status": "checked-text",
+          "kinds": [
+            "连读候选"
+          ]
+        },
+        {
+          "left": 7,
+          "right": 8,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 8,
+          "right": 9,
+          "status": "checked-text",
+          "kinds": []
+        }
+      ],
+      "missing": [],
+      "verification": "pending-audio"
+    },
+    {
+      "sentenceId": "B1-3",
+      "tokens": [
+        {
+          "word": "I",
+          "key": "i",
+          "start": 3,
+          "end": 4
+        },
+        {
+          "word": "see",
+          "key": "see",
+          "start": 5,
+          "end": 8
+        },
+        {
+          "word": "Many",
+          "key": "many",
+          "start": 10,
+          "end": 14
+        },
+        {
+          "word": "applicants",
+          "key": "applicants",
+          "start": 15,
+          "end": 25
+        },
+        {
+          "word": "come",
+          "key": "come",
+          "start": 26,
+          "end": 30
+        },
+        {
+          "word": "from",
+          "key": "from",
+          "start": 31,
+          "end": 35
+        },
+        {
+          "word": "job‑hunting",
+          "key": "job-hunting",
+          "start": 36,
+          "end": 47
+        },
+        {
+          "word": "apps",
+          "key": "apps",
+          "start": 48,
+          "end": 52
+        },
+        {
+          "word": "these",
+          "key": "these",
+          "start": 53,
+          "end": 58
+        },
+        {
+          "word": "days",
+          "key": "days",
+          "start": 59,
+          "end": 63
+        }
+      ],
+      "hints": [
+        {
+          "id": "B1-3:5:弱读候选",
+          "kind": "弱读候选",
+          "indices": [
+            5
+          ],
+          "phrase": "from",
+          "text": "这个功能词在非重读位置常被弱化；若用于强调、对比或位于停顿前，读法可能不同。请回听原音核对。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "B1-3:2-3:元音衔接候选",
+          "kind": "元音衔接候选",
+          "indices": [
+            2,
+            3
+          ],
+          "phrase": "Many applicants",
+          "text": "两个元音之间可能有很轻的 /j/ 或 /w/ 过渡，取决于前词元音和说话方式；不要刻意加出一个很重的音。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "B1-3:6-7:连读候选",
+          "kind": "连读候选",
+          "indices": [
+            6,
+            7
+          ],
+          "phrase": "job‑hunting‿apps",
+          "text": "前词的词尾辅音接后词的词首元音，可能紧密衔接；不必等两个词之间出现明显停顿。文字不能证明原音确实连读。",
+          "status": "pending-audio"
+        }
+      ],
+      "boundaries": [
+        {
+          "left": 0,
+          "right": 1,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 1,
+          "right": 2,
+          "status": "punctuation-boundary",
+          "kinds": []
+        },
+        {
+          "left": 2,
+          "right": 3,
+          "status": "checked-text",
+          "kinds": [
+            "元音衔接候选"
+          ]
+        },
+        {
+          "left": 3,
+          "right": 4,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 4,
+          "right": 5,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 5,
+          "right": 6,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 6,
+          "right": 7,
+          "status": "checked-text",
+          "kinds": [
+            "连读候选"
+          ]
+        },
+        {
+          "left": 7,
+          "right": 8,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 8,
+          "right": 9,
+          "status": "checked-text",
+          "kinds": []
+        }
+      ],
+      "missing": [],
+      "verification": "pending-audio"
+    },
+    {
+      "sentenceId": "B1-4",
+      "tokens": [
+        {
+          "word": "Right",
+          "key": "right",
+          "start": 3,
+          "end": 8
+        },
+        {
+          "word": "Before",
+          "key": "before",
+          "start": 10,
+          "end": 16
+        },
+        {
+          "word": "the",
+          "key": "the",
+          "start": 17,
+          "end": 20
+        },
+        {
+          "word": "interview",
+          "key": "interview",
+          "start": 21,
+          "end": 30
+        },
+        {
+          "word": "I’d",
+          "key": "i'd",
+          "start": 32,
+          "end": 35
+        },
+        {
+          "word": "like",
+          "key": "like",
+          "start": 36,
+          "end": 40
+        },
+        {
+          "word": "to",
+          "key": "to",
+          "start": 41,
+          "end": 43
+        },
+        {
+          "word": "ask",
+          "key": "ask",
+          "start": 44,
+          "end": 47
+        },
+        {
+          "word": "some",
+          "key": "some",
+          "start": 48,
+          "end": 52
+        },
+        {
+          "word": "questions",
+          "key": "questions",
+          "start": 53,
+          "end": 62
+        }
+      ],
+      "hints": [
+        {
+          "id": "B1-4:2:弱读候选",
+          "kind": "弱读候选",
+          "indices": [
+            2
+          ],
+          "phrase": "the",
+          "text": "这个功能词在非重读位置常被弱化；若用于强调、对比或位于停顿前，读法可能不同。请回听原音核对。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "B1-4:6:弱读候选",
+          "kind": "弱读候选",
+          "indices": [
+            6
+          ],
+          "phrase": "to",
+          "text": "这个功能词在非重读位置常被弱化；若用于强调、对比或位于停顿前，读法可能不同。请回听原音核对。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "B1-4:2-3:元音衔接候选",
+          "kind": "元音衔接候选",
+          "indices": [
+            2,
+            3
+          ],
+          "phrase": "the interview",
+          "text": "两个元音之间可能有很轻的 /j/ 或 /w/ 过渡，取决于前词元音和说话方式；不要刻意加出一个很重的音。 词典存在不同读音，是否适用取决于本句实际发音。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "B1-4:4-5:不完全爆破候选",
+          "kind": "不完全爆破候选",
+          "indices": [
+            4,
+            5
+          ],
+          "phrase": "I’d like",
+          "text": "前词以爆破音结尾、后词以辅音开头，前面的爆破可能很轻或不完全释放；不能把词尾直接当作不存在。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "B1-4:5-6:不完全爆破候选",
+          "kind": "不完全爆破候选",
+          "indices": [
+            5,
+            6
+          ],
+          "phrase": "like to",
+          "text": "前词以爆破音结尾、后词以辅音开头，前面的爆破可能很轻或不完全释放；不能把词尾直接当作不存在。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "B1-4:6-7:元音衔接候选",
+          "kind": "元音衔接候选",
+          "indices": [
+            6,
+            7
+          ],
+          "phrase": "to ask",
+          "text": "两个元音之间可能有很轻的 /j/ 或 /w/ 过渡，取决于前词元音和说话方式；不要刻意加出一个很重的音。 词典存在不同读音，是否适用取决于本句实际发音。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "B1-4:7-8:不完全爆破候选",
+          "kind": "不完全爆破候选",
+          "indices": [
+            7,
+            8
+          ],
+          "phrase": "ask some",
+          "text": "前词以爆破音结尾、后词以辅音开头，前面的爆破可能很轻或不完全释放；不能把词尾直接当作不存在。",
+          "status": "pending-audio"
+        }
+      ],
+      "boundaries": [
+        {
+          "left": 0,
+          "right": 1,
+          "status": "punctuation-boundary",
+          "kinds": []
+        },
+        {
+          "left": 1,
+          "right": 2,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 2,
+          "right": 3,
+          "status": "checked-text",
+          "kinds": [
+            "元音衔接候选"
+          ]
+        },
+        {
+          "left": 3,
+          "right": 4,
+          "status": "punctuation-boundary",
+          "kinds": []
+        },
+        {
+          "left": 4,
+          "right": 5,
+          "status": "checked-text",
+          "kinds": [
+            "不完全爆破候选"
+          ]
+        },
+        {
+          "left": 5,
+          "right": 6,
+          "status": "checked-text",
+          "kinds": [
+            "不完全爆破候选"
+          ]
+        },
+        {
+          "left": 6,
+          "right": 7,
+          "status": "checked-text",
+          "kinds": [
+            "元音衔接候选"
+          ]
+        },
+        {
+          "left": 7,
+          "right": 8,
+          "status": "checked-text",
+          "kinds": [
+            "不完全爆破候选"
+          ]
+        },
+        {
+          "left": 8,
+          "right": 9,
+          "status": "checked-text",
+          "kinds": []
+        }
+      ],
+      "missing": [],
+      "verification": "pending-audio"
+    },
+    {
+      "sentenceId": "B1-5",
+      "tokens": [
+        {
+          "word": "Sure",
+          "key": "sure",
+          "start": 3,
+          "end": 7
+        },
+        {
+          "word": "What",
+          "key": "what",
+          "start": 9,
+          "end": 13
+        },
+        {
+          "word": "do",
+          "key": "do",
+          "start": 14,
+          "end": 16
+        },
+        {
+          "word": "you",
+          "key": "you",
+          "start": 17,
+          "end": 20
+        },
+        {
+          "word": "want",
+          "key": "want",
+          "start": 21,
+          "end": 25
+        },
+        {
+          "word": "to",
+          "key": "to",
+          "start": 26,
+          "end": 28
+        },
+        {
+          "word": "know",
+          "key": "know",
+          "start": 29,
+          "end": 33
+        },
+        {
+          "word": "most",
+          "key": "most",
+          "start": 34,
+          "end": 38
+        }
+      ],
+      "hints": [
+        {
+          "id": "B1-5:2:弱读候选",
+          "kind": "弱读候选",
+          "indices": [
+            2
+          ],
+          "phrase": "do",
+          "text": "这个功能词在非重读位置常被弱化；若用于强调、对比或位于停顿前，读法可能不同。请回听原音核对。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "B1-5:5:弱读候选",
+          "kind": "弱读候选",
+          "indices": [
+            5
+          ],
+          "phrase": "to",
+          "text": "这个功能词在非重读位置常被弱化；若用于强调、对比或位于停顿前，读法可能不同。请回听原音核对。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "B1-5:1-2:不完全爆破候选",
+          "kind": "不完全爆破候选",
+          "indices": [
+            1,
+            2
+          ],
+          "phrase": "What do",
+          "text": "前词以爆破音结尾、后词以辅音开头，前面的爆破可能很轻或不完全释放；不能把词尾直接当作不存在。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "B1-5:4-5:辅音衔接候选",
+          "kind": "辅音衔接候选",
+          "indices": [
+            4,
+            5
+          ],
+          "phrase": "want to",
+          "text": "相邻两个词的边界辅音相同，可能连成较长的一次衔接；不等于一定省掉一个词或一个音。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "B1-5:4-5:不完全爆破候选",
+          "kind": "不完全爆破候选",
+          "indices": [
+            4,
+            5
+          ],
+          "phrase": "want to",
+          "text": "前词以爆破音结尾、后词以辅音开头，前面的爆破可能很轻或不完全释放；不能把词尾直接当作不存在。",
+          "status": "pending-audio"
+        }
+      ],
+      "boundaries": [
+        {
+          "left": 0,
+          "right": 1,
+          "status": "punctuation-boundary",
+          "kinds": []
+        },
+        {
+          "left": 1,
+          "right": 2,
+          "status": "checked-text",
+          "kinds": [
+            "不完全爆破候选"
+          ]
+        },
+        {
+          "left": 2,
+          "right": 3,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 3,
+          "right": 4,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 4,
+          "right": 5,
+          "status": "checked-text",
+          "kinds": [
+            "辅音衔接候选",
+            "不完全爆破候选"
+          ]
+        },
+        {
+          "left": 5,
+          "right": 6,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 6,
+          "right": 7,
+          "status": "checked-text",
+          "kinds": []
+        }
+      ],
+      "missing": [],
+      "verification": "pending-audio"
+    },
+    {
+      "sentenceId": "B1-6",
+      "tokens": [
+        {
+          "word": "I",
+          "key": "i",
+          "start": 3,
+          "end": 4
+        },
+        {
+          "word": "wonder",
+          "key": "wonder",
+          "start": 5,
+          "end": 11
+        },
+        {
+          "word": "about",
+          "key": "about",
+          "start": 12,
+          "end": 17
+        },
+        {
+          "word": "the",
+          "key": "the",
+          "start": 18,
+          "end": 21
+        },
+        {
+          "word": "salary",
+          "key": "salary",
+          "start": 22,
+          "end": 28
+        },
+        {
+          "word": "range",
+          "key": "range",
+          "start": 29,
+          "end": 34
+        },
+        {
+          "word": "and",
+          "key": "and",
+          "start": 35,
+          "end": 38
+        },
+        {
+          "word": "our",
+          "key": "our",
+          "start": 39,
+          "end": 42
+        },
+        {
+          "word": "annual",
+          "key": "annual",
+          "start": 43,
+          "end": 49
+        },
+        {
+          "word": "leave",
+          "key": "leave",
+          "start": 50,
+          "end": 55
+        },
+        {
+          "word": "days",
+          "key": "days",
+          "start": 56,
+          "end": 60
+        }
+      ],
+      "hints": [
+        {
+          "id": "B1-6:3:弱读候选",
+          "kind": "弱读候选",
+          "indices": [
+            3
+          ],
+          "phrase": "the",
+          "text": "这个功能词在非重读位置常被弱化；若用于强调、对比或位于停顿前，读法可能不同。请回听原音核对。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "B1-6:6:弱读候选",
+          "kind": "弱读候选",
+          "indices": [
+            6
+          ],
+          "phrase": "and",
+          "text": "这个功能词在非重读位置常被弱化；若用于强调、对比或位于停顿前，读法可能不同。请回听原音核对。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "B1-6:7:弱读候选",
+          "kind": "弱读候选",
+          "indices": [
+            7
+          ],
+          "phrase": "our",
+          "text": "这个功能词在非重读位置常被弱化；若用于强调、对比或位于停顿前，读法可能不同。请回听原音核对。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "B1-6:2-3:不完全爆破候选",
+          "kind": "不完全爆破候选",
+          "indices": [
+            2,
+            3
+          ],
+          "phrase": "about the",
+          "text": "前词以爆破音结尾、后词以辅音开头，前面的爆破可能很轻或不完全释放；不能把词尾直接当作不存在。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "B1-6:5-6:连读候选",
+          "kind": "连读候选",
+          "indices": [
+            5,
+            6
+          ],
+          "phrase": "range‿and",
+          "text": "前词的词尾辅音接后词的词首元音，可能紧密衔接；不必等两个词之间出现明显停顿。文字不能证明原音确实连读。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "B1-6:6-7:连读候选",
+          "kind": "连读候选",
+          "indices": [
+            6,
+            7
+          ],
+          "phrase": "and‿our",
+          "text": "前词的词尾辅音接后词的词首元音，可能紧密衔接；不必等两个词之间出现明显停顿。文字不能证明原音确实连读。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "B1-6:7-8:连读候选",
+          "kind": "连读候选",
+          "indices": [
+            7,
+            8
+          ],
+          "phrase": "our‿annual",
+          "text": "前词的词尾辅音接后词的词首元音，可能紧密衔接；不必等两个词之间出现明显停顿。文字不能证明原音确实连读。 词典存在不同读音，是否适用取决于本句实际发音。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "B1-6:8-9:辅音衔接候选",
+          "kind": "辅音衔接候选",
+          "indices": [
+            8,
+            9
+          ],
+          "phrase": "annual leave",
+          "text": "相邻两个词的边界辅音相同，可能连成较长的一次衔接；不等于一定省掉一个词或一个音。",
+          "status": "pending-audio"
+        }
+      ],
+      "boundaries": [
+        {
+          "left": 0,
+          "right": 1,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 1,
+          "right": 2,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 2,
+          "right": 3,
+          "status": "checked-text",
+          "kinds": [
+            "不完全爆破候选"
+          ]
+        },
+        {
+          "left": 3,
+          "right": 4,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 4,
+          "right": 5,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 5,
+          "right": 6,
+          "status": "checked-text",
+          "kinds": [
+            "连读候选"
+          ]
+        },
+        {
+          "left": 6,
+          "right": 7,
+          "status": "checked-text",
+          "kinds": [
+            "连读候选"
+          ]
+        },
+        {
+          "left": 7,
+          "right": 8,
+          "status": "checked-text",
+          "kinds": [
+            "连读候选"
+          ]
+        },
+        {
+          "left": 8,
+          "right": 9,
+          "status": "checked-text",
+          "kinds": [
+            "辅音衔接候选"
+          ]
+        },
+        {
+          "left": 9,
+          "right": 10,
+          "status": "checked-text",
+          "kinds": []
+        }
+      ],
+      "missing": [],
+      "verification": "pending-audio"
+    },
+    {
+      "sentenceId": "B1-7",
+      "tokens": [
+        {
+          "word": "Those",
+          "key": "those",
+          "start": 3,
+          "end": 8
+        },
+        {
+          "word": "details",
+          "key": "details",
+          "start": 9,
+          "end": 16
+        },
+        {
+          "word": "will",
+          "key": "will",
+          "start": 17,
+          "end": 21
+        },
+        {
+          "word": "be",
+          "key": "be",
+          "start": 22,
+          "end": 24
+        },
+        {
+          "word": "talked",
+          "key": "talked",
+          "start": 25,
+          "end": 31
+        },
+        {
+          "word": "about",
+          "key": "about",
+          "start": 32,
+          "end": 37
+        },
+        {
+          "word": "in",
+          "key": "in",
+          "start": 38,
+          "end": 40
+        },
+        {
+          "word": "the",
+          "key": "the",
+          "start": 41,
+          "end": 44
+        },
+        {
+          "word": "face‑to‑face",
+          "key": "face-to-face",
+          "start": 45,
+          "end": 57
+        },
+        {
+          "word": "interview",
+          "key": "interview",
+          "start": 58,
+          "end": 67
+        }
+      ],
+      "hints": [
+        {
+          "id": "B1-7:7:弱读候选",
+          "kind": "弱读候选",
+          "indices": [
+            7
+          ],
+          "phrase": "the",
+          "text": "这个功能词在非重读位置常被弱化；若用于强调、对比或位于停顿前，读法可能不同。请回听原音核对。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "B1-7:4-5:连读候选",
+          "kind": "连读候选",
+          "indices": [
+            4,
+            5
+          ],
+          "phrase": "talked‿about",
+          "text": "前词的词尾辅音接后词的词首元音，可能紧密衔接；不必等两个词之间出现明显停顿。文字不能证明原音确实连读。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "B1-7:5-6:连读候选",
+          "kind": "连读候选",
+          "indices": [
+            5,
+            6
+          ],
+          "phrase": "about‿in",
+          "text": "前词的词尾辅音接后词的词首元音，可能紧密衔接；不必等两个词之间出现明显停顿。文字不能证明原音确实连读。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "B1-7:8-9:连读候选",
+          "kind": "连读候选",
+          "indices": [
+            8,
+            9
+          ],
+          "phrase": "face‑to‑face‿interview",
+          "text": "前词的词尾辅音接后词的词首元音，可能紧密衔接；不必等两个词之间出现明显停顿。文字不能证明原音确实连读。",
+          "status": "pending-audio"
+        }
+      ],
+      "boundaries": [
+        {
+          "left": 0,
+          "right": 1,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 1,
+          "right": 2,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 2,
+          "right": 3,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 3,
+          "right": 4,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 4,
+          "right": 5,
+          "status": "checked-text",
+          "kinds": [
+            "连读候选"
+          ]
+        },
+        {
+          "left": 5,
+          "right": 6,
+          "status": "checked-text",
+          "kinds": [
+            "连读候选"
+          ]
+        },
+        {
+          "left": 6,
+          "right": 7,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 7,
+          "right": 8,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 8,
+          "right": 9,
+          "status": "checked-text",
+          "kinds": [
+            "连读候选"
+          ]
+        }
+      ],
+      "missing": [],
+      "verification": "pending-audio"
+    },
+    {
+      "sentenceId": "B1-8",
+      "tokens": [
+        {
+          "word": "OK",
+          "key": "ok",
+          "start": 3,
+          "end": 5
+        },
+        {
+          "word": "When",
+          "key": "when",
+          "start": 7,
+          "end": 11
+        },
+        {
+          "word": "can",
+          "key": "can",
+          "start": 12,
+          "end": 15
+        },
+        {
+          "word": "I",
+          "key": "i",
+          "start": 16,
+          "end": 17
+        },
+        {
+          "word": "come",
+          "key": "come",
+          "start": 18,
+          "end": 22
+        },
+        {
+          "word": "for",
+          "key": "for",
+          "start": 23,
+          "end": 26
+        },
+        {
+          "word": "the",
+          "key": "the",
+          "start": 27,
+          "end": 30
+        },
+        {
+          "word": "interview",
+          "key": "interview",
+          "start": 31,
+          "end": 40
+        }
+      ],
+      "hints": [
+        {
+          "id": "B1-8:2:弱读候选",
+          "kind": "弱读候选",
+          "indices": [
+            2
+          ],
+          "phrase": "can",
+          "text": "这个功能词在非重读位置常被弱化；若用于强调、对比或位于停顿前，读法可能不同。请回听原音核对。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "B1-8:5:弱读候选",
+          "kind": "弱读候选",
+          "indices": [
+            5
+          ],
+          "phrase": "for",
+          "text": "这个功能词在非重读位置常被弱化；若用于强调、对比或位于停顿前，读法可能不同。请回听原音核对。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "B1-8:6:弱读候选",
+          "kind": "弱读候选",
+          "indices": [
+            6
+          ],
+          "phrase": "the",
+          "text": "这个功能词在非重读位置常被弱化；若用于强调、对比或位于停顿前，读法可能不同。请回听原音核对。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "B1-8:2-3:连读候选",
+          "kind": "连读候选",
+          "indices": [
+            2,
+            3
+          ],
+          "phrase": "can‿I",
+          "text": "前词的词尾辅音接后词的词首元音，可能紧密衔接；不必等两个词之间出现明显停顿。文字不能证明原音确实连读。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "B1-8:6-7:元音衔接候选",
+          "kind": "元音衔接候选",
+          "indices": [
+            6,
+            7
+          ],
+          "phrase": "the interview",
+          "text": "两个元音之间可能有很轻的 /j/ 或 /w/ 过渡，取决于前词元音和说话方式；不要刻意加出一个很重的音。 词典存在不同读音，是否适用取决于本句实际发音。",
+          "status": "pending-audio"
+        }
+      ],
+      "boundaries": [
+        {
+          "left": 0,
+          "right": 1,
+          "status": "punctuation-boundary",
+          "kinds": []
+        },
+        {
+          "left": 1,
+          "right": 2,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 2,
+          "right": 3,
+          "status": "checked-text",
+          "kinds": [
+            "连读候选"
+          ]
+        },
+        {
+          "left": 3,
+          "right": 4,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 4,
+          "right": 5,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 5,
+          "right": 6,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 6,
+          "right": 7,
+          "status": "checked-text",
+          "kinds": [
+            "元音衔接候选"
+          ]
+        }
+      ],
+      "missing": [],
+      "verification": "pending-audio"
+    },
+    {
+      "sentenceId": "B1-9",
+      "tokens": [
+        {
+          "word": "How",
+          "key": "how",
+          "start": 3,
+          "end": 6
+        },
+        {
+          "word": "about",
+          "key": "about",
+          "start": 7,
+          "end": 12
+        },
+        {
+          "word": "next",
+          "key": "next",
+          "start": 13,
+          "end": 17
+        },
+        {
+          "word": "Monday",
+          "key": "monday",
+          "start": 18,
+          "end": 24
+        },
+        {
+          "word": "morning",
+          "key": "morning",
+          "start": 25,
+          "end": 32
+        }
+      ],
+      "hints": [
+        {
+          "id": "B1-9:0-1:元音衔接候选",
+          "kind": "元音衔接候选",
+          "indices": [
+            0,
+            1
+          ],
+          "phrase": "How about",
+          "text": "两个元音之间可能有很轻的 /j/ 或 /w/ 过渡，取决于前词元音和说话方式；不要刻意加出一个很重的音。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "B1-9:1-2:不完全爆破候选",
+          "kind": "不完全爆破候选",
+          "indices": [
+            1,
+            2
+          ],
+          "phrase": "about next",
+          "text": "前词以爆破音结尾、后词以辅音开头，前面的爆破可能很轻或不完全释放；不能把词尾直接当作不存在。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "B1-9:2-3:不完全爆破候选",
+          "kind": "不完全爆破候选",
+          "indices": [
+            2,
+            3
+          ],
+          "phrase": "next Monday",
+          "text": "前词以爆破音结尾、后词以辅音开头，前面的爆破可能很轻或不完全释放；不能把词尾直接当作不存在。 词典存在不同读音，是否适用取决于本句实际发音。",
+          "status": "pending-audio"
+        }
+      ],
+      "boundaries": [
+        {
+          "left": 0,
+          "right": 1,
+          "status": "checked-text",
+          "kinds": [
+            "元音衔接候选"
+          ]
+        },
+        {
+          "left": 1,
+          "right": 2,
+          "status": "checked-text",
+          "kinds": [
+            "不完全爆破候选"
+          ]
+        },
+        {
+          "left": 2,
+          "right": 3,
+          "status": "checked-text",
+          "kinds": [
+            "不完全爆破候选"
+          ]
+        },
+        {
+          "left": 3,
+          "right": 4,
+          "status": "checked-text",
+          "kinds": []
+        }
+      ],
+      "missing": [],
+      "verification": "pending-audio"
+    },
+    {
+      "sentenceId": "B1-10",
+      "tokens": [
+        {
+          "word": "That",
+          "key": "that",
+          "start": 3,
+          "end": 7
+        },
+        {
+          "word": "time",
+          "key": "time",
+          "start": 8,
+          "end": 12
+        },
+        {
+          "word": "works",
+          "key": "works",
+          "start": 13,
+          "end": 18
+        },
+        {
+          "word": "for",
+          "key": "for",
+          "start": 19,
+          "end": 22
+        },
+        {
+          "word": "me",
+          "key": "me",
+          "start": 23,
+          "end": 25
+        }
+      ],
+      "hints": [
+        {
+          "id": "B1-10:3:弱读候选",
+          "kind": "弱读候选",
+          "indices": [
+            3
+          ],
+          "phrase": "for",
+          "text": "这个功能词在非重读位置常被弱化；若用于强调、对比或位于停顿前，读法可能不同。请回听原音核对。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "B1-10:0-1:辅音衔接候选",
+          "kind": "辅音衔接候选",
+          "indices": [
+            0,
+            1
+          ],
+          "phrase": "That time",
+          "text": "相邻两个词的边界辅音相同，可能连成较长的一次衔接；不等于一定省掉一个词或一个音。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "B1-10:0-1:不完全爆破候选",
+          "kind": "不完全爆破候选",
+          "indices": [
+            0,
+            1
+          ],
+          "phrase": "That time",
+          "text": "前词以爆破音结尾、后词以辅音开头，前面的爆破可能很轻或不完全释放；不能把词尾直接当作不存在。",
+          "status": "pending-audio"
+        }
+      ],
+      "boundaries": [
+        {
+          "left": 0,
+          "right": 1,
+          "status": "checked-text",
+          "kinds": [
+            "辅音衔接候选",
+            "不完全爆破候选"
+          ]
+        },
+        {
+          "left": 1,
+          "right": 2,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 2,
+          "right": 3,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 3,
+          "right": 4,
+          "status": "checked-text",
+          "kinds": []
+        }
+      ],
+      "missing": [],
+      "verification": "pending-audio"
+    },
+    {
+      "sentenceId": "B1-11",
+      "tokens": [
+        {
+          "word": "Where",
+          "key": "where",
+          "start": 19,
+          "end": 24
+        },
+        {
+          "word": "does",
+          "key": "does",
+          "start": 25,
+          "end": 29
+        },
+        {
+          "word": "the",
+          "key": "the",
+          "start": 30,
+          "end": 33
+        },
+        {
+          "word": "man",
+          "key": "man",
+          "start": 34,
+          "end": 37
+        },
+        {
+          "word": "get",
+          "key": "get",
+          "start": 38,
+          "end": 41
+        },
+        {
+          "word": "the",
+          "key": "the",
+          "start": 42,
+          "end": 45
+        },
+        {
+          "word": "job",
+          "key": "job",
+          "start": 46,
+          "end": 49
+        },
+        {
+          "word": "information",
+          "key": "information",
+          "start": 50,
+          "end": 61
+        }
+      ],
+      "hints": [
+        {
+          "id": "B1-11:1:弱读候选",
+          "kind": "弱读候选",
+          "indices": [
+            1
+          ],
+          "phrase": "does",
+          "text": "这个功能词在非重读位置常被弱化；若用于强调、对比或位于停顿前，读法可能不同。请回听原音核对。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "B1-11:2:弱读候选",
+          "kind": "弱读候选",
+          "indices": [
+            2
+          ],
+          "phrase": "the",
+          "text": "这个功能词在非重读位置常被弱化；若用于强调、对比或位于停顿前，读法可能不同。请回听原音核对。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "B1-11:5:弱读候选",
+          "kind": "弱读候选",
+          "indices": [
+            5
+          ],
+          "phrase": "the",
+          "text": "这个功能词在非重读位置常被弱化；若用于强调、对比或位于停顿前，读法可能不同。请回听原音核对。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "B1-11:4-5:不完全爆破候选",
+          "kind": "不完全爆破候选",
+          "indices": [
+            4,
+            5
+          ],
+          "phrase": "get the",
+          "text": "前词以爆破音结尾、后词以辅音开头，前面的爆破可能很轻或不完全释放；不能把词尾直接当作不存在。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "B1-11:6-7:连读候选",
+          "kind": "连读候选",
+          "indices": [
+            6,
+            7
+          ],
+          "phrase": "job‿information",
+          "text": "前词的词尾辅音接后词的词首元音，可能紧密衔接；不必等两个词之间出现明显停顿。文字不能证明原音确实连读。",
+          "status": "pending-audio"
+        }
+      ],
+      "boundaries": [
+        {
+          "left": 0,
+          "right": 1,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 1,
+          "right": 2,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 2,
+          "right": 3,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 3,
+          "right": 4,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 4,
+          "right": 5,
+          "status": "checked-text",
+          "kinds": [
+            "不完全爆破候选"
+          ]
+        },
+        {
+          "left": 5,
+          "right": 6,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 6,
+          "right": 7,
+          "status": "checked-text",
+          "kinds": [
+            "连读候选"
+          ]
+        }
+      ],
+      "missing": [],
+      "verification": "pending-audio"
+    },
+    {
+      "sentenceId": "B1-12",
+      "tokens": [
+        {
+          "word": "What",
+          "key": "what",
+          "start": 19,
+          "end": 23
+        },
+        {
+          "word": "information",
+          "key": "information",
+          "start": 24,
+          "end": 35
+        },
+        {
+          "word": "does",
+          "key": "does",
+          "start": 36,
+          "end": 40
+        },
+        {
+          "word": "the",
+          "key": "the",
+          "start": 41,
+          "end": 44
+        },
+        {
+          "word": "man",
+          "key": "man",
+          "start": 45,
+          "end": 48
+        },
+        {
+          "word": "want",
+          "key": "want",
+          "start": 49,
+          "end": 53
+        },
+        {
+          "word": "to",
+          "key": "to",
+          "start": 54,
+          "end": 56
+        },
+        {
+          "word": "know",
+          "key": "know",
+          "start": 57,
+          "end": 61
+        },
+        {
+          "word": "about",
+          "key": "about",
+          "start": 62,
+          "end": 67
+        },
+        {
+          "word": "the",
+          "key": "the",
+          "start": 68,
+          "end": 71
+        },
+        {
+          "word": "position",
+          "key": "position",
+          "start": 72,
+          "end": 80
+        }
+      ],
+      "hints": [
+        {
+          "id": "B1-12:2:弱读候选",
+          "kind": "弱读候选",
+          "indices": [
+            2
+          ],
+          "phrase": "does",
+          "text": "这个功能词在非重读位置常被弱化；若用于强调、对比或位于停顿前，读法可能不同。请回听原音核对。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "B1-12:3:弱读候选",
+          "kind": "弱读候选",
+          "indices": [
+            3
+          ],
+          "phrase": "the",
+          "text": "这个功能词在非重读位置常被弱化；若用于强调、对比或位于停顿前，读法可能不同。请回听原音核对。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "B1-12:6:弱读候选",
+          "kind": "弱读候选",
+          "indices": [
+            6
+          ],
+          "phrase": "to",
+          "text": "这个功能词在非重读位置常被弱化；若用于强调、对比或位于停顿前，读法可能不同。请回听原音核对。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "B1-12:9:弱读候选",
+          "kind": "弱读候选",
+          "indices": [
+            9
+          ],
+          "phrase": "the",
+          "text": "这个功能词在非重读位置常被弱化；若用于强调、对比或位于停顿前，读法可能不同。请回听原音核对。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "B1-12:0-1:连读候选",
+          "kind": "连读候选",
+          "indices": [
+            0,
+            1
+          ],
+          "phrase": "What‿information",
+          "text": "前词的词尾辅音接后词的词首元音，可能紧密衔接；不必等两个词之间出现明显停顿。文字不能证明原音确实连读。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "B1-12:5-6:辅音衔接候选",
+          "kind": "辅音衔接候选",
+          "indices": [
+            5,
+            6
+          ],
+          "phrase": "want to",
+          "text": "相邻两个词的边界辅音相同，可能连成较长的一次衔接；不等于一定省掉一个词或一个音。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "B1-12:5-6:不完全爆破候选",
+          "kind": "不完全爆破候选",
+          "indices": [
+            5,
+            6
+          ],
+          "phrase": "want to",
+          "text": "前词以爆破音结尾、后词以辅音开头，前面的爆破可能很轻或不完全释放；不能把词尾直接当作不存在。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "B1-12:7-8:元音衔接候选",
+          "kind": "元音衔接候选",
+          "indices": [
+            7,
+            8
+          ],
+          "phrase": "know about",
+          "text": "两个元音之间可能有很轻的 /j/ 或 /w/ 过渡，取决于前词元音和说话方式；不要刻意加出一个很重的音。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "B1-12:8-9:不完全爆破候选",
+          "kind": "不完全爆破候选",
+          "indices": [
+            8,
+            9
+          ],
+          "phrase": "about the",
+          "text": "前词以爆破音结尾、后词以辅音开头，前面的爆破可能很轻或不完全释放；不能把词尾直接当作不存在。",
+          "status": "pending-audio"
+        }
+      ],
+      "boundaries": [
+        {
+          "left": 0,
+          "right": 1,
+          "status": "checked-text",
+          "kinds": [
+            "连读候选"
+          ]
+        },
+        {
+          "left": 1,
+          "right": 2,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 2,
+          "right": 3,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 3,
+          "right": 4,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 4,
+          "right": 5,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 5,
+          "right": 6,
+          "status": "checked-text",
+          "kinds": [
+            "辅音衔接候选",
+            "不完全爆破候选"
+          ]
+        },
+        {
+          "left": 6,
+          "right": 7,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 7,
+          "right": 8,
+          "status": "checked-text",
+          "kinds": [
+            "元音衔接候选"
+          ]
+        },
+        {
+          "left": 8,
+          "right": 9,
+          "status": "checked-text",
+          "kinds": [
+            "不完全爆破候选"
+          ]
+        },
+        {
+          "left": 9,
+          "right": 10,
+          "status": "checked-text",
+          "kinds": []
+        }
+      ],
+      "missing": [],
+      "verification": "pending-audio"
+    },
+    {
+      "sentenceId": "B1-13",
+      "tokens": [
+        {
+          "word": "When",
+          "key": "when",
+          "start": 19,
+          "end": 23
+        },
+        {
+          "word": "will",
+          "key": "will",
+          "start": 24,
+          "end": 28
+        },
+        {
+          "word": "the",
+          "key": "the",
+          "start": 29,
+          "end": 32
+        },
+        {
+          "word": "man",
+          "key": "man",
+          "start": 33,
+          "end": 36
+        },
+        {
+          "word": "attend",
+          "key": "attend",
+          "start": 37,
+          "end": 43
+        },
+        {
+          "word": "the",
+          "key": "the",
+          "start": 44,
+          "end": 47
+        },
+        {
+          "word": "interview",
+          "key": "interview",
+          "start": 48,
+          "end": 57
+        }
+      ],
+      "hints": [
+        {
+          "id": "B1-13:2:弱读候选",
+          "kind": "弱读候选",
+          "indices": [
+            2
+          ],
+          "phrase": "the",
+          "text": "这个功能词在非重读位置常被弱化；若用于强调、对比或位于停顿前，读法可能不同。请回听原音核对。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "B1-13:5:弱读候选",
+          "kind": "弱读候选",
+          "indices": [
+            5
+          ],
+          "phrase": "the",
+          "text": "这个功能词在非重读位置常被弱化；若用于强调、对比或位于停顿前，读法可能不同。请回听原音核对。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "B1-13:3-4:连读候选",
+          "kind": "连读候选",
+          "indices": [
+            3,
+            4
+          ],
+          "phrase": "man‿attend",
+          "text": "前词的词尾辅音接后词的词首元音，可能紧密衔接；不必等两个词之间出现明显停顿。文字不能证明原音确实连读。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "B1-13:4-5:不完全爆破候选",
+          "kind": "不完全爆破候选",
+          "indices": [
+            4,
+            5
+          ],
+          "phrase": "attend the",
+          "text": "前词以爆破音结尾、后词以辅音开头，前面的爆破可能很轻或不完全释放；不能把词尾直接当作不存在。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "B1-13:5-6:元音衔接候选",
+          "kind": "元音衔接候选",
+          "indices": [
+            5,
+            6
+          ],
+          "phrase": "the interview",
+          "text": "两个元音之间可能有很轻的 /j/ 或 /w/ 过渡，取决于前词元音和说话方式；不要刻意加出一个很重的音。 词典存在不同读音，是否适用取决于本句实际发音。",
+          "status": "pending-audio"
+        }
+      ],
+      "boundaries": [
+        {
+          "left": 0,
+          "right": 1,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 1,
+          "right": 2,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 2,
+          "right": 3,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 3,
+          "right": 4,
+          "status": "checked-text",
+          "kinds": [
+            "连读候选"
+          ]
+        },
+        {
+          "left": 4,
+          "right": 5,
+          "status": "checked-text",
+          "kinds": [
+            "不完全爆破候选"
+          ]
+        },
+        {
+          "left": 5,
+          "right": 6,
+          "status": "checked-text",
+          "kinds": [
+            "元音衔接候选"
+          ]
+        }
+      ],
+      "missing": [],
+      "verification": "pending-audio"
+    },
+    {
+      "sentenceId": "B2-1",
+      "tokens": [
+        {
+          "word": "You’re",
+          "key": "you're",
+          "start": 3,
+          "end": 9
+        },
+        {
+          "word": "carrying",
+          "key": "carrying",
+          "start": 10,
+          "end": 18
+        },
+        {
+          "word": "your",
+          "key": "your",
+          "start": 19,
+          "end": 23
+        },
+        {
+          "word": "business",
+          "key": "business",
+          "start": 24,
+          "end": 32
+        },
+        {
+          "word": "bag",
+          "key": "bag",
+          "start": 33,
+          "end": 36
+        },
+        {
+          "word": "Where",
+          "key": "where",
+          "start": 38,
+          "end": 43
+        },
+        {
+          "word": "are",
+          "key": "are",
+          "start": 44,
+          "end": 47
+        },
+        {
+          "word": "you",
+          "key": "you",
+          "start": 48,
+          "end": 51
+        },
+        {
+          "word": "going",
+          "key": "going",
+          "start": 52,
+          "end": 57
+        }
+      ],
+      "hints": [
+        {
+          "id": "B2-1:2:弱读候选",
+          "kind": "弱读候选",
+          "indices": [
+            2
+          ],
+          "phrase": "your",
+          "text": "这个功能词在非重读位置常被弱化；若用于强调、对比或位于停顿前，读法可能不同。请回听原音核对。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "B2-1:6:弱读候选",
+          "kind": "弱读候选",
+          "indices": [
+            6
+          ],
+          "phrase": "are",
+          "text": "这个功能词在非重读位置常被弱化；若用于强调、对比或位于停顿前，读法可能不同。请回听原音核对。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "B2-1:5-6:连读候选",
+          "kind": "连读候选",
+          "indices": [
+            5,
+            6
+          ],
+          "phrase": "Where‿are",
+          "text": "前词的词尾辅音接后词的词首元音，可能紧密衔接；不必等两个词之间出现明显停顿。文字不能证明原音确实连读。",
+          "status": "pending-audio"
+        }
+      ],
+      "boundaries": [
+        {
+          "left": 0,
+          "right": 1,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 1,
+          "right": 2,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 2,
+          "right": 3,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 3,
+          "right": 4,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 4,
+          "right": 5,
+          "status": "punctuation-boundary",
+          "kinds": []
+        },
+        {
+          "left": 5,
+          "right": 6,
+          "status": "checked-text",
+          "kinds": [
+            "连读候选"
+          ]
+        },
+        {
+          "left": 6,
+          "right": 7,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 7,
+          "right": 8,
+          "status": "checked-text",
+          "kinds": []
+        }
+      ],
+      "missing": [],
+      "verification": "pending-audio"
+    },
+    {
+      "sentenceId": "B2-2",
+      "tokens": [
+        {
+          "word": "I’m",
+          "key": "i'm",
+          "start": 3,
+          "end": 6
+        },
+        {
+          "word": "heading",
+          "key": "heading",
+          "start": 7,
+          "end": 14
+        },
+        {
+          "word": "for",
+          "key": "for",
+          "start": 15,
+          "end": 18
+        },
+        {
+          "word": "the",
+          "key": "the",
+          "start": 19,
+          "end": 22
+        },
+        {
+          "word": "western",
+          "key": "western",
+          "start": 23,
+          "end": 30
+        },
+        {
+          "word": "industrial",
+          "key": "industrial",
+          "start": 31,
+          "end": 41
+        },
+        {
+          "word": "park",
+          "key": "park",
+          "start": 42,
+          "end": 46
+        }
+      ],
+      "hints": [
+        {
+          "id": "B2-2:2:弱读候选",
+          "kind": "弱读候选",
+          "indices": [
+            2
+          ],
+          "phrase": "for",
+          "text": "这个功能词在非重读位置常被弱化；若用于强调、对比或位于停顿前，读法可能不同。请回听原音核对。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "B2-2:3:弱读候选",
+          "kind": "弱读候选",
+          "indices": [
+            3
+          ],
+          "phrase": "the",
+          "text": "这个功能词在非重读位置常被弱化；若用于强调、对比或位于停顿前，读法可能不同。请回听原音核对。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "B2-2:4-5:连读候选",
+          "kind": "连读候选",
+          "indices": [
+            4,
+            5
+          ],
+          "phrase": "western‿industrial",
+          "text": "前词的词尾辅音接后词的词首元音，可能紧密衔接；不必等两个词之间出现明显停顿。文字不能证明原音确实连读。",
+          "status": "pending-audio"
+        }
+      ],
+      "boundaries": [
+        {
+          "left": 0,
+          "right": 1,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 1,
+          "right": 2,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 2,
+          "right": 3,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 3,
+          "right": 4,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 4,
+          "right": 5,
+          "status": "checked-text",
+          "kinds": [
+            "连读候选"
+          ]
+        },
+        {
+          "left": 5,
+          "right": 6,
+          "status": "checked-text",
+          "kinds": []
+        }
+      ],
+      "missing": [],
+      "verification": "pending-audio"
+    },
+    {
+      "sentenceId": "B2-3",
+      "tokens": [
+        {
+          "word": "Is",
+          "key": "is",
+          "start": 3,
+          "end": 5
+        },
+        {
+          "word": "there",
+          "key": "there",
+          "start": 6,
+          "end": 11
+        },
+        {
+          "word": "any",
+          "key": "any",
+          "start": 12,
+          "end": 15
+        },
+        {
+          "word": "business",
+          "key": "business",
+          "start": 16,
+          "end": 24
+        },
+        {
+          "word": "activity",
+          "key": "activity",
+          "start": 25,
+          "end": 33
+        },
+        {
+          "word": "there",
+          "key": "there",
+          "start": 34,
+          "end": 39
+        }
+      ],
+      "hints": [
+        {
+          "id": "B2-3:1-2:连读候选",
+          "kind": "连读候选",
+          "indices": [
+            1,
+            2
+          ],
+          "phrase": "there‿any",
+          "text": "前词的词尾辅音接后词的词首元音，可能紧密衔接；不必等两个词之间出现明显停顿。文字不能证明原音确实连读。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "B2-3:3-4:连读候选",
+          "kind": "连读候选",
+          "indices": [
+            3,
+            4
+          ],
+          "phrase": "business‿activity",
+          "text": "前词的词尾辅音接后词的词首元音，可能紧密衔接；不必等两个词之间出现明显停顿。文字不能证明原音确实连读。",
+          "status": "pending-audio"
+        }
+      ],
+      "boundaries": [
+        {
+          "left": 0,
+          "right": 1,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 1,
+          "right": 2,
+          "status": "checked-text",
+          "kinds": [
+            "连读候选"
+          ]
+        },
+        {
+          "left": 2,
+          "right": 3,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 3,
+          "right": 4,
+          "status": "checked-text",
+          "kinds": [
+            "连读候选"
+          ]
+        },
+        {
+          "left": 4,
+          "right": 5,
+          "status": "checked-text",
+          "kinds": []
+        }
+      ],
+      "missing": [],
+      "verification": "pending-audio"
+    },
+    {
+      "sentenceId": "B2-4",
+      "tokens": [
+        {
+          "word": "Yes",
+          "key": "yes",
+          "start": 3,
+          "end": 6
+        },
+        {
+          "word": "There",
+          "key": "there",
+          "start": 8,
+          "end": 13
+        },
+        {
+          "word": "is",
+          "key": "is",
+          "start": 14,
+          "end": 16
+        },
+        {
+          "word": "a",
+          "key": "a",
+          "start": 17,
+          "end": 18
+        },
+        {
+          "word": "product",
+          "key": "product",
+          "start": 19,
+          "end": 26
+        },
+        {
+          "word": "exhibition",
+          "key": "exhibition",
+          "start": 27,
+          "end": 37
+        },
+        {
+          "word": "over",
+          "key": "over",
+          "start": 38,
+          "end": 42
+        },
+        {
+          "word": "there",
+          "key": "there",
+          "start": 43,
+          "end": 48
+        }
+      ],
+      "hints": [
+        {
+          "id": "B2-4:3:弱读候选",
+          "kind": "弱读候选",
+          "indices": [
+            3
+          ],
+          "phrase": "a",
+          "text": "这个功能词在非重读位置常被弱化；若用于强调、对比或位于停顿前，读法可能不同。请回听原音核对。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "B2-4:1-2:连读候选",
+          "kind": "连读候选",
+          "indices": [
+            1,
+            2
+          ],
+          "phrase": "There‿is",
+          "text": "前词的词尾辅音接后词的词首元音，可能紧密衔接；不必等两个词之间出现明显停顿。文字不能证明原音确实连读。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "B2-4:2-3:连读候选",
+          "kind": "连读候选",
+          "indices": [
+            2,
+            3
+          ],
+          "phrase": "is‿a",
+          "text": "前词的词尾辅音接后词的词首元音，可能紧密衔接；不必等两个词之间出现明显停顿。文字不能证明原音确实连读。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "B2-4:4-5:连读候选",
+          "kind": "连读候选",
+          "indices": [
+            4,
+            5
+          ],
+          "phrase": "product‿exhibition",
+          "text": "前词的词尾辅音接后词的词首元音，可能紧密衔接；不必等两个词之间出现明显停顿。文字不能证明原音确实连读。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "B2-4:5-6:连读候选",
+          "kind": "连读候选",
+          "indices": [
+            5,
+            6
+          ],
+          "phrase": "exhibition‿over",
+          "text": "前词的词尾辅音接后词的词首元音，可能紧密衔接；不必等两个词之间出现明显停顿。文字不能证明原音确实连读。",
+          "status": "pending-audio"
+        }
+      ],
+      "boundaries": [
+        {
+          "left": 0,
+          "right": 1,
+          "status": "punctuation-boundary",
+          "kinds": []
+        },
+        {
+          "left": 1,
+          "right": 2,
+          "status": "checked-text",
+          "kinds": [
+            "连读候选"
+          ]
+        },
+        {
+          "left": 2,
+          "right": 3,
+          "status": "checked-text",
+          "kinds": [
+            "连读候选"
+          ]
+        },
+        {
+          "left": 3,
+          "right": 4,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 4,
+          "right": 5,
+          "status": "checked-text",
+          "kinds": [
+            "连读候选"
+          ]
+        },
+        {
+          "left": 5,
+          "right": 6,
+          "status": "checked-text",
+          "kinds": [
+            "连读候选"
+          ]
+        },
+        {
+          "left": 6,
+          "right": 7,
+          "status": "checked-text",
+          "kinds": []
+        }
+      ],
+      "missing": [],
+      "verification": "pending-audio"
+    },
+    {
+      "sentenceId": "B2-5",
+      "tokens": [
+        {
+          "word": "Sounds",
+          "key": "sounds",
+          "start": 3,
+          "end": 9
+        },
+        {
+          "word": "interesting",
+          "key": "interesting",
+          "start": 10,
+          "end": 21
+        },
+        {
+          "word": "Are",
+          "key": "are",
+          "start": 23,
+          "end": 26
+        },
+        {
+          "word": "you",
+          "key": "you",
+          "start": 27,
+          "end": 30
+        },
+        {
+          "word": "going",
+          "key": "going",
+          "start": 31,
+          "end": 36
+        },
+        {
+          "word": "there",
+          "key": "there",
+          "start": 37,
+          "end": 42
+        },
+        {
+          "word": "quite",
+          "key": "quite",
+          "start": 43,
+          "end": 48
+        },
+        {
+          "word": "often",
+          "key": "often",
+          "start": 49,
+          "end": 54
+        }
+      ],
+      "hints": [
+        {
+          "id": "B2-5:2:弱读候选",
+          "kind": "弱读候选",
+          "indices": [
+            2
+          ],
+          "phrase": "Are",
+          "text": "这个功能词在非重读位置常被弱化；若用于强调、对比或位于停顿前，读法可能不同。请回听原音核对。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "B2-5:0-1:连读候选",
+          "kind": "连读候选",
+          "indices": [
+            0,
+            1
+          ],
+          "phrase": "Sounds‿interesting",
+          "text": "前词的词尾辅音接后词的词首元音，可能紧密衔接；不必等两个词之间出现明显停顿。文字不能证明原音确实连读。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "B2-5:6-7:连读候选",
+          "kind": "连读候选",
+          "indices": [
+            6,
+            7
+          ],
+          "phrase": "quite‿often",
+          "text": "前词的词尾辅音接后词的词首元音，可能紧密衔接；不必等两个词之间出现明显停顿。文字不能证明原音确实连读。",
+          "status": "pending-audio"
+        }
+      ],
+      "boundaries": [
+        {
+          "left": 0,
+          "right": 1,
+          "status": "checked-text",
+          "kinds": [
+            "连读候选"
+          ]
+        },
+        {
+          "left": 1,
+          "right": 2,
+          "status": "punctuation-boundary",
+          "kinds": []
+        },
+        {
+          "left": 2,
+          "right": 3,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 3,
+          "right": 4,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 4,
+          "right": 5,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 5,
+          "right": 6,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 6,
+          "right": 7,
+          "status": "checked-text",
+          "kinds": [
+            "连读候选"
+          ]
+        }
+      ],
+      "missing": [],
+      "verification": "pending-audio"
+    },
+    {
+      "sentenceId": "B2-6",
+      "tokens": [
+        {
+          "word": "Not",
+          "key": "not",
+          "start": 3,
+          "end": 6
+        },
+        {
+          "word": "really",
+          "key": "really",
+          "start": 7,
+          "end": 13
+        },
+        {
+          "word": "This",
+          "key": "this",
+          "start": 15,
+          "end": 19
+        },
+        {
+          "word": "is",
+          "key": "is",
+          "start": 20,
+          "end": 22
+        },
+        {
+          "word": "only",
+          "key": "only",
+          "start": 23,
+          "end": 27
+        },
+        {
+          "word": "my",
+          "key": "my",
+          "start": 28,
+          "end": 30
+        },
+        {
+          "word": "second",
+          "key": "second",
+          "start": 31,
+          "end": 37
+        },
+        {
+          "word": "trip",
+          "key": "trip",
+          "start": 38,
+          "end": 42
+        },
+        {
+          "word": "there",
+          "key": "there",
+          "start": 43,
+          "end": 48
+        }
+      ],
+      "hints": [
+        {
+          "id": "B2-6:0-1:不完全爆破候选",
+          "kind": "不完全爆破候选",
+          "indices": [
+            0,
+            1
+          ],
+          "phrase": "Not really",
+          "text": "前词以爆破音结尾、后词以辅音开头，前面的爆破可能很轻或不完全释放；不能把词尾直接当作不存在。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "B2-6:2-3:连读候选",
+          "kind": "连读候选",
+          "indices": [
+            2,
+            3
+          ],
+          "phrase": "This‿is",
+          "text": "前词的词尾辅音接后词的词首元音，可能紧密衔接；不必等两个词之间出现明显停顿。文字不能证明原音确实连读。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "B2-6:3-4:连读候选",
+          "kind": "连读候选",
+          "indices": [
+            3,
+            4
+          ],
+          "phrase": "is‿only",
+          "text": "前词的词尾辅音接后词的词首元音，可能紧密衔接；不必等两个词之间出现明显停顿。文字不能证明原音确实连读。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "B2-6:6-7:不完全爆破候选",
+          "kind": "不完全爆破候选",
+          "indices": [
+            6,
+            7
+          ],
+          "phrase": "second trip",
+          "text": "前词以爆破音结尾、后词以辅音开头，前面的爆破可能很轻或不完全释放；不能把词尾直接当作不存在。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "B2-6:7-8:不完全爆破候选",
+          "kind": "不完全爆破候选",
+          "indices": [
+            7,
+            8
+          ],
+          "phrase": "trip there",
+          "text": "前词以爆破音结尾、后词以辅音开头，前面的爆破可能很轻或不完全释放；不能把词尾直接当作不存在。",
+          "status": "pending-audio"
+        }
+      ],
+      "boundaries": [
+        {
+          "left": 0,
+          "right": 1,
+          "status": "checked-text",
+          "kinds": [
+            "不完全爆破候选"
+          ]
+        },
+        {
+          "left": 1,
+          "right": 2,
+          "status": "punctuation-boundary",
+          "kinds": []
+        },
+        {
+          "left": 2,
+          "right": 3,
+          "status": "checked-text",
+          "kinds": [
+            "连读候选"
+          ]
+        },
+        {
+          "left": 3,
+          "right": 4,
+          "status": "checked-text",
+          "kinds": [
+            "连读候选"
+          ]
+        },
+        {
+          "left": 4,
+          "right": 5,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 5,
+          "right": 6,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 6,
+          "right": 7,
+          "status": "checked-text",
+          "kinds": [
+            "不完全爆破候选"
+          ]
+        },
+        {
+          "left": 7,
+          "right": 8,
+          "status": "checked-text",
+          "kinds": [
+            "不完全爆破候选"
+          ]
+        }
+      ],
+      "missing": [],
+      "verification": "pending-audio"
+    },
+    {
+      "sentenceId": "B2-7",
+      "tokens": [
+        {
+          "word": "Will",
+          "key": "will",
+          "start": 3,
+          "end": 7
+        },
+        {
+          "word": "you",
+          "key": "you",
+          "start": 8,
+          "end": 11
+        },
+        {
+          "word": "stay",
+          "key": "stay",
+          "start": 12,
+          "end": 16
+        },
+        {
+          "word": "there",
+          "key": "there",
+          "start": 17,
+          "end": 22
+        },
+        {
+          "word": "for",
+          "key": "for",
+          "start": 23,
+          "end": 26
+        },
+        {
+          "word": "the",
+          "key": "the",
+          "start": 27,
+          "end": 30
+        },
+        {
+          "word": "whole",
+          "key": "whole",
+          "start": 31,
+          "end": 36
+        },
+        {
+          "word": "day",
+          "key": "day",
+          "start": 37,
+          "end": 40
+        }
+      ],
+      "hints": [
+        {
+          "id": "B2-7:4:弱读候选",
+          "kind": "弱读候选",
+          "indices": [
+            4
+          ],
+          "phrase": "for",
+          "text": "这个功能词在非重读位置常被弱化；若用于强调、对比或位于停顿前，读法可能不同。请回听原音核对。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "B2-7:5:弱读候选",
+          "kind": "弱读候选",
+          "indices": [
+            5
+          ],
+          "phrase": "the",
+          "text": "这个功能词在非重读位置常被弱化；若用于强调、对比或位于停顿前，读法可能不同。请回听原音核对。",
+          "status": "pending-audio"
+        }
+      ],
+      "boundaries": [
+        {
+          "left": 0,
+          "right": 1,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 1,
+          "right": 2,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 2,
+          "right": 3,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 3,
+          "right": 4,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 4,
+          "right": 5,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 5,
+          "right": 6,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 6,
+          "right": 7,
+          "status": "checked-text",
+          "kinds": []
+        }
+      ],
+      "missing": [],
+      "verification": "pending-audio"
+    },
+    {
+      "sentenceId": "B2-8",
+      "tokens": [
+        {
+          "word": "Probably",
+          "key": "probably",
+          "start": 3,
+          "end": 11
+        },
+        {
+          "word": "not",
+          "key": "not",
+          "start": 12,
+          "end": 15
+        },
+        {
+          "word": "I",
+          "key": "i",
+          "start": 17,
+          "end": 18
+        },
+        {
+          "word": "plan",
+          "key": "plan",
+          "start": 19,
+          "end": 23
+        },
+        {
+          "word": "to",
+          "key": "to",
+          "start": 24,
+          "end": 26
+        },
+        {
+          "word": "get",
+          "key": "get",
+          "start": 27,
+          "end": 30
+        },
+        {
+          "word": "back",
+          "key": "back",
+          "start": 31,
+          "end": 35
+        },
+        {
+          "word": "before",
+          "key": "before",
+          "start": 36,
+          "end": 42
+        },
+        {
+          "word": "dinner",
+          "key": "dinner",
+          "start": 43,
+          "end": 49
+        }
+      ],
+      "hints": [
+        {
+          "id": "B2-8:4:弱读候选",
+          "kind": "弱读候选",
+          "indices": [
+            4
+          ],
+          "phrase": "to",
+          "text": "这个功能词在非重读位置常被弱化；若用于强调、对比或位于停顿前，读法可能不同。请回听原音核对。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "B2-8:5-6:不完全爆破候选",
+          "kind": "不完全爆破候选",
+          "indices": [
+            5,
+            6
+          ],
+          "phrase": "get back",
+          "text": "前词以爆破音结尾、后词以辅音开头，前面的爆破可能很轻或不完全释放；不能把词尾直接当作不存在。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "B2-8:6-7:不完全爆破候选",
+          "kind": "不完全爆破候选",
+          "indices": [
+            6,
+            7
+          ],
+          "phrase": "back before",
+          "text": "前词以爆破音结尾、后词以辅音开头，前面的爆破可能很轻或不完全释放；不能把词尾直接当作不存在。",
+          "status": "pending-audio"
+        }
+      ],
+      "boundaries": [
+        {
+          "left": 0,
+          "right": 1,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 1,
+          "right": 2,
+          "status": "punctuation-boundary",
+          "kinds": []
+        },
+        {
+          "left": 2,
+          "right": 3,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 3,
+          "right": 4,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 4,
+          "right": 5,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 5,
+          "right": 6,
+          "status": "checked-text",
+          "kinds": [
+            "不完全爆破候选"
+          ]
+        },
+        {
+          "left": 6,
+          "right": 7,
+          "status": "checked-text",
+          "kinds": [
+            "不完全爆破候选"
+          ]
+        },
+        {
+          "left": 7,
+          "right": 8,
+          "status": "checked-text",
+          "kinds": []
+        }
+      ],
+      "missing": [],
+      "verification": "pending-audio"
+    },
+    {
+      "sentenceId": "B2-9",
+      "tokens": [
+        {
+          "word": "Where",
+          "key": "where",
+          "start": 19,
+          "end": 24
+        },
+        {
+          "word": "is",
+          "key": "is",
+          "start": 25,
+          "end": 27
+        },
+        {
+          "word": "the",
+          "key": "the",
+          "start": 28,
+          "end": 31
+        },
+        {
+          "word": "woman",
+          "key": "woman",
+          "start": 32,
+          "end": 37
+        },
+        {
+          "word": "going",
+          "key": "going",
+          "start": 38,
+          "end": 43
+        }
+      ],
+      "hints": [
+        {
+          "id": "B2-9:2:弱读候选",
+          "kind": "弱读候选",
+          "indices": [
+            2
+          ],
+          "phrase": "the",
+          "text": "这个功能词在非重读位置常被弱化；若用于强调、对比或位于停顿前，读法可能不同。请回听原音核对。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "B2-9:0-1:连读候选",
+          "kind": "连读候选",
+          "indices": [
+            0,
+            1
+          ],
+          "phrase": "Where‿is",
+          "text": "前词的词尾辅音接后词的词首元音，可能紧密衔接；不必等两个词之间出现明显停顿。文字不能证明原音确实连读。",
+          "status": "pending-audio"
+        }
+      ],
+      "boundaries": [
+        {
+          "left": 0,
+          "right": 1,
+          "status": "checked-text",
+          "kinds": [
+            "连读候选"
+          ]
+        },
+        {
+          "left": 1,
+          "right": 2,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 2,
+          "right": 3,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 3,
+          "right": 4,
+          "status": "checked-text",
+          "kinds": []
+        }
+      ],
+      "missing": [],
+      "verification": "pending-audio"
+    },
+    {
+      "sentenceId": "B2-10",
+      "tokens": [
+        {
+          "word": "What",
+          "key": "what",
+          "start": 20,
+          "end": 24
+        },
+        {
+          "word": "does",
+          "key": "does",
+          "start": 25,
+          "end": 29
+        },
+        {
+          "word": "the",
+          "key": "the",
+          "start": 30,
+          "end": 33
+        },
+        {
+          "word": "woman",
+          "key": "woman",
+          "start": 34,
+          "end": 39
+        },
+        {
+          "word": "plan",
+          "key": "plan",
+          "start": 40,
+          "end": 44
+        },
+        {
+          "word": "to",
+          "key": "to",
+          "start": 45,
+          "end": 47
+        },
+        {
+          "word": "do",
+          "key": "do",
+          "start": 48,
+          "end": 50
+        },
+        {
+          "word": "after",
+          "key": "after",
+          "start": 51,
+          "end": 56
+        },
+        {
+          "word": "the",
+          "key": "the",
+          "start": 57,
+          "end": 60
+        },
+        {
+          "word": "exhibition",
+          "key": "exhibition",
+          "start": 61,
+          "end": 71
+        }
+      ],
+      "hints": [
+        {
+          "id": "B2-10:1:弱读候选",
+          "kind": "弱读候选",
+          "indices": [
+            1
+          ],
+          "phrase": "does",
+          "text": "这个功能词在非重读位置常被弱化；若用于强调、对比或位于停顿前，读法可能不同。请回听原音核对。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "B2-10:2:弱读候选",
+          "kind": "弱读候选",
+          "indices": [
+            2
+          ],
+          "phrase": "the",
+          "text": "这个功能词在非重读位置常被弱化；若用于强调、对比或位于停顿前，读法可能不同。请回听原音核对。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "B2-10:5:弱读候选",
+          "kind": "弱读候选",
+          "indices": [
+            5
+          ],
+          "phrase": "to",
+          "text": "这个功能词在非重读位置常被弱化；若用于强调、对比或位于停顿前，读法可能不同。请回听原音核对。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "B2-10:6:弱读候选",
+          "kind": "弱读候选",
+          "indices": [
+            6
+          ],
+          "phrase": "do",
+          "text": "这个功能词在非重读位置常被弱化；若用于强调、对比或位于停顿前，读法可能不同。请回听原音核对。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "B2-10:8:弱读候选",
+          "kind": "弱读候选",
+          "indices": [
+            8
+          ],
+          "phrase": "the",
+          "text": "这个功能词在非重读位置常被弱化；若用于强调、对比或位于停顿前，读法可能不同。请回听原音核对。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "B2-10:0-1:不完全爆破候选",
+          "kind": "不完全爆破候选",
+          "indices": [
+            0,
+            1
+          ],
+          "phrase": "What does",
+          "text": "前词以爆破音结尾、后词以辅音开头，前面的爆破可能很轻或不完全释放；不能把词尾直接当作不存在。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "B2-10:6-7:元音衔接候选",
+          "kind": "元音衔接候选",
+          "indices": [
+            6,
+            7
+          ],
+          "phrase": "do after",
+          "text": "两个元音之间可能有很轻的 /j/ 或 /w/ 过渡，取决于前词元音和说话方式；不要刻意加出一个很重的音。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "B2-10:8-9:元音衔接候选",
+          "kind": "元音衔接候选",
+          "indices": [
+            8,
+            9
+          ],
+          "phrase": "the exhibition",
+          "text": "两个元音之间可能有很轻的 /j/ 或 /w/ 过渡，取决于前词元音和说话方式；不要刻意加出一个很重的音。 词典存在不同读音，是否适用取决于本句实际发音。",
+          "status": "pending-audio"
+        }
+      ],
+      "boundaries": [
+        {
+          "left": 0,
+          "right": 1,
+          "status": "checked-text",
+          "kinds": [
+            "不完全爆破候选"
+          ]
+        },
+        {
+          "left": 1,
+          "right": 2,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 2,
+          "right": 3,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 3,
+          "right": 4,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 4,
+          "right": 5,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 5,
+          "right": 6,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 6,
+          "right": 7,
+          "status": "checked-text",
+          "kinds": [
+            "元音衔接候选"
+          ]
+        },
+        {
+          "left": 7,
+          "right": 8,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 8,
+          "right": 9,
+          "status": "checked-text",
+          "kinds": [
+            "元音衔接候选"
+          ]
+        }
+      ],
+      "missing": [],
+      "verification": "pending-audio"
+    },
+    {
+      "sentenceId": "C-1",
+      "tokens": [
+        {
+          "word": "Building",
+          "key": "building",
+          "start": 0,
+          "end": 8
+        },
+        {
+          "word": "trust",
+          "key": "trust",
+          "start": 9,
+          "end": 14
+        },
+        {
+          "word": "is",
+          "key": "is",
+          "start": 15,
+          "end": 17
+        },
+        {
+          "word": "extremely",
+          "key": "extremely",
+          "start": 18,
+          "end": 27
+        },
+        {
+          "word": "important",
+          "key": "important",
+          "start": 28,
+          "end": 37
+        },
+        {
+          "word": "for",
+          "key": "for",
+          "start": 38,
+          "end": 41
+        },
+        {
+          "word": "long‑term",
+          "key": "long-term",
+          "start": 42,
+          "end": 51
+        },
+        {
+          "word": "business",
+          "key": "business",
+          "start": 52,
+          "end": 60
+        },
+        {
+          "word": "partnership",
+          "key": "partnership",
+          "start": 61,
+          "end": 72
+        }
+      ],
+      "hints": [
+        {
+          "id": "C-1:5:弱读候选",
+          "kind": "弱读候选",
+          "indices": [
+            5
+          ],
+          "phrase": "for",
+          "text": "这个功能词在非重读位置常被弱化；若用于强调、对比或位于停顿前，读法可能不同。请回听原音核对。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "C-1:1-2:连读候选",
+          "kind": "连读候选",
+          "indices": [
+            1,
+            2
+          ],
+          "phrase": "trust‿is",
+          "text": "前词的词尾辅音接后词的词首元音，可能紧密衔接；不必等两个词之间出现明显停顿。文字不能证明原音确实连读。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "C-1:2-3:连读候选",
+          "kind": "连读候选",
+          "indices": [
+            2,
+            3
+          ],
+          "phrase": "is‿extremely",
+          "text": "前词的词尾辅音接后词的词首元音，可能紧密衔接；不必等两个词之间出现明显停顿。文字不能证明原音确实连读。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "C-1:3-4:元音衔接候选",
+          "kind": "元音衔接候选",
+          "indices": [
+            3,
+            4
+          ],
+          "phrase": "extremely important",
+          "text": "两个元音之间可能有很轻的 /j/ 或 /w/ 过渡，取决于前词元音和说话方式；不要刻意加出一个很重的音。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "C-1:4-5:不完全爆破候选",
+          "kind": "不完全爆破候选",
+          "indices": [
+            4,
+            5
+          ],
+          "phrase": "important for",
+          "text": "前词以爆破音结尾、后词以辅音开头，前面的爆破可能很轻或不完全释放；不能把词尾直接当作不存在。",
+          "status": "pending-audio"
+        }
+      ],
+      "boundaries": [
+        {
+          "left": 0,
+          "right": 1,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 1,
+          "right": 2,
+          "status": "checked-text",
+          "kinds": [
+            "连读候选"
+          ]
+        },
+        {
+          "left": 2,
+          "right": 3,
+          "status": "checked-text",
+          "kinds": [
+            "连读候选"
+          ]
+        },
+        {
+          "left": 3,
+          "right": 4,
+          "status": "checked-text",
+          "kinds": [
+            "元音衔接候选"
+          ]
+        },
+        {
+          "left": 4,
+          "right": 5,
+          "status": "checked-text",
+          "kinds": [
+            "不完全爆破候选"
+          ]
+        },
+        {
+          "left": 5,
+          "right": 6,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 6,
+          "right": 7,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 7,
+          "right": 8,
+          "status": "checked-text",
+          "kinds": []
+        }
+      ],
+      "missing": [],
+      "verification": "pending-audio"
+    },
+    {
+      "sentenceId": "C-2",
+      "tokens": [
+        {
+          "word": "When",
+          "key": "when",
+          "start": 0,
+          "end": 4
+        },
+        {
+          "word": "two",
+          "key": "two",
+          "start": 5,
+          "end": 8
+        },
+        {
+          "word": "companies",
+          "key": "companies",
+          "start": 9,
+          "end": 18
+        },
+        {
+          "word": "choose",
+          "key": "choose",
+          "start": 19,
+          "end": 25
+        },
+        {
+          "word": "to",
+          "key": "to",
+          "start": 26,
+          "end": 28
+        },
+        {
+          "word": "cooperate",
+          "key": "cooperate",
+          "start": 29,
+          "end": 38
+        },
+        {
+          "word": "trust",
+          "key": "trust",
+          "start": 40,
+          "end": 45
+        },
+        {
+          "word": "forms",
+          "key": "forms",
+          "start": 46,
+          "end": 51
+        },
+        {
+          "word": "the",
+          "key": "the",
+          "start": 52,
+          "end": 55
+        },
+        {
+          "word": "foundation",
+          "key": "foundation",
+          "start": 56,
+          "end": 66
+        },
+        {
+          "word": "of",
+          "key": "of",
+          "start": 67,
+          "end": 69
+        },
+        {
+          "word": "their",
+          "key": "their",
+          "start": 70,
+          "end": 75
+        },
+        {
+          "word": "joint",
+          "key": "joint",
+          "start": 76,
+          "end": 81
+        },
+        {
+          "word": "work",
+          "key": "work",
+          "start": 82,
+          "end": 86
+        }
+      ],
+      "hints": [
+        {
+          "id": "C-2:4:弱读候选",
+          "kind": "弱读候选",
+          "indices": [
+            4
+          ],
+          "phrase": "to",
+          "text": "这个功能词在非重读位置常被弱化；若用于强调、对比或位于停顿前，读法可能不同。请回听原音核对。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "C-2:8:弱读候选",
+          "kind": "弱读候选",
+          "indices": [
+            8
+          ],
+          "phrase": "the",
+          "text": "这个功能词在非重读位置常被弱化；若用于强调、对比或位于停顿前，读法可能不同。请回听原音核对。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "C-2:10:弱读候选",
+          "kind": "弱读候选",
+          "indices": [
+            10
+          ],
+          "phrase": "of",
+          "text": "这个功能词在非重读位置常被弱化；若用于强调、对比或位于停顿前，读法可能不同。请回听原音核对。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "C-2:6-7:不完全爆破候选",
+          "kind": "不完全爆破候选",
+          "indices": [
+            6,
+            7
+          ],
+          "phrase": "trust forms",
+          "text": "前词以爆破音结尾、后词以辅音开头，前面的爆破可能很轻或不完全释放；不能把词尾直接当作不存在。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "C-2:9-10:连读候选",
+          "kind": "连读候选",
+          "indices": [
+            9,
+            10
+          ],
+          "phrase": "foundation‿of",
+          "text": "前词的词尾辅音接后词的词首元音，可能紧密衔接；不必等两个词之间出现明显停顿。文字不能证明原音确实连读。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "C-2:12-13:不完全爆破候选",
+          "kind": "不完全爆破候选",
+          "indices": [
+            12,
+            13
+          ],
+          "phrase": "joint work",
+          "text": "前词以爆破音结尾、后词以辅音开头，前面的爆破可能很轻或不完全释放；不能把词尾直接当作不存在。",
+          "status": "pending-audio"
+        }
+      ],
+      "boundaries": [
+        {
+          "left": 0,
+          "right": 1,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 1,
+          "right": 2,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 2,
+          "right": 3,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 3,
+          "right": 4,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 4,
+          "right": 5,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 5,
+          "right": 6,
+          "status": "punctuation-boundary",
+          "kinds": []
+        },
+        {
+          "left": 6,
+          "right": 7,
+          "status": "checked-text",
+          "kinds": [
+            "不完全爆破候选"
+          ]
+        },
+        {
+          "left": 7,
+          "right": 8,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 8,
+          "right": 9,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 9,
+          "right": 10,
+          "status": "checked-text",
+          "kinds": [
+            "连读候选"
+          ]
+        },
+        {
+          "left": 10,
+          "right": 11,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 11,
+          "right": 12,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 12,
+          "right": 13,
+          "status": "checked-text",
+          "kinds": [
+            "不完全爆破候选"
+          ]
+        }
+      ],
+      "missing": [],
+      "verification": "pending-audio"
+    },
+    {
+      "sentenceId": "C-3",
+      "tokens": [
+        {
+          "word": "Clear",
+          "key": "clear",
+          "start": 0,
+          "end": 5
+        },
+        {
+          "word": "and",
+          "key": "and",
+          "start": 6,
+          "end": 9
+        },
+        {
+          "word": "honest",
+          "key": "honest",
+          "start": 10,
+          "end": 16
+        },
+        {
+          "word": "communication",
+          "key": "communication",
+          "start": 17,
+          "end": 30
+        },
+        {
+          "word": "is",
+          "key": "is",
+          "start": 31,
+          "end": 33
+        },
+        {
+          "word": "another",
+          "key": "another",
+          "start": 34,
+          "end": 41
+        },
+        {
+          "word": "key",
+          "key": "key",
+          "start": 42,
+          "end": 45
+        },
+        {
+          "word": "point",
+          "key": "point",
+          "start": 46,
+          "end": 51
+        }
+      ],
+      "hints": [
+        {
+          "id": "C-3:1:弱读候选",
+          "kind": "弱读候选",
+          "indices": [
+            1
+          ],
+          "phrase": "and",
+          "text": "这个功能词在非重读位置常被弱化；若用于强调、对比或位于停顿前，读法可能不同。请回听原音核对。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "C-3:0-1:连读候选",
+          "kind": "连读候选",
+          "indices": [
+            0,
+            1
+          ],
+          "phrase": "Clear‿and",
+          "text": "前词的词尾辅音接后词的词首元音，可能紧密衔接；不必等两个词之间出现明显停顿。文字不能证明原音确实连读。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "C-3:1-2:连读候选",
+          "kind": "连读候选",
+          "indices": [
+            1,
+            2
+          ],
+          "phrase": "and‿honest",
+          "text": "前词的词尾辅音接后词的词首元音，可能紧密衔接；不必等两个词之间出现明显停顿。文字不能证明原音确实连读。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "C-3:2-3:不完全爆破候选",
+          "kind": "不完全爆破候选",
+          "indices": [
+            2,
+            3
+          ],
+          "phrase": "honest communication",
+          "text": "前词以爆破音结尾、后词以辅音开头，前面的爆破可能很轻或不完全释放；不能把词尾直接当作不存在。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "C-3:3-4:连读候选",
+          "kind": "连读候选",
+          "indices": [
+            3,
+            4
+          ],
+          "phrase": "communication‿is",
+          "text": "前词的词尾辅音接后词的词首元音，可能紧密衔接；不必等两个词之间出现明显停顿。文字不能证明原音确实连读。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "C-3:4-5:连读候选",
+          "kind": "连读候选",
+          "indices": [
+            4,
+            5
+          ],
+          "phrase": "is‿another",
+          "text": "前词的词尾辅音接后词的词首元音，可能紧密衔接；不必等两个词之间出现明显停顿。文字不能证明原音确实连读。",
+          "status": "pending-audio"
+        }
+      ],
+      "boundaries": [
+        {
+          "left": 0,
+          "right": 1,
+          "status": "checked-text",
+          "kinds": [
+            "连读候选"
+          ]
+        },
+        {
+          "left": 1,
+          "right": 2,
+          "status": "checked-text",
+          "kinds": [
+            "连读候选"
+          ]
+        },
+        {
+          "left": 2,
+          "right": 3,
+          "status": "checked-text",
+          "kinds": [
+            "不完全爆破候选"
+          ]
+        },
+        {
+          "left": 3,
+          "right": 4,
+          "status": "checked-text",
+          "kinds": [
+            "连读候选"
+          ]
+        },
+        {
+          "left": 4,
+          "right": 5,
+          "status": "checked-text",
+          "kinds": [
+            "连读候选"
+          ]
+        },
+        {
+          "left": 5,
+          "right": 6,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 6,
+          "right": 7,
+          "status": "checked-text",
+          "kinds": []
+        }
+      ],
+      "missing": [],
+      "verification": "pending-audio"
+    },
+    {
+      "sentenceId": "C-4",
+      "tokens": [
+        {
+          "word": "When",
+          "key": "when",
+          "start": 0,
+          "end": 4
+        },
+        {
+          "word": "partners",
+          "key": "partners",
+          "start": 5,
+          "end": 13
+        },
+        {
+          "word": "share",
+          "key": "share",
+          "start": 14,
+          "end": 19
+        },
+        {
+          "word": "real",
+          "key": "real",
+          "start": 20,
+          "end": 24
+        },
+        {
+          "word": "thoughts",
+          "key": "thoughts",
+          "start": 25,
+          "end": 33
+        },
+        {
+          "word": "in",
+          "key": "in",
+          "start": 34,
+          "end": 36
+        },
+        {
+          "word": "time",
+          "key": "time",
+          "start": 37,
+          "end": 41
+        },
+        {
+          "word": "many",
+          "key": "many",
+          "start": 43,
+          "end": 47
+        },
+        {
+          "word": "unnecessary",
+          "key": "unnecessary",
+          "start": 48,
+          "end": 59
+        },
+        {
+          "word": "misunderstandings",
+          "key": "misunderstandings",
+          "start": 60,
+          "end": 77
+        },
+        {
+          "word": "can",
+          "key": "can",
+          "start": 78,
+          "end": 81
+        },
+        {
+          "word": "be",
+          "key": "be",
+          "start": 82,
+          "end": 84
+        },
+        {
+          "word": "avoided",
+          "key": "avoided",
+          "start": 85,
+          "end": 92
+        }
+      ],
+      "hints": [
+        {
+          "id": "C-4:10:弱读候选",
+          "kind": "弱读候选",
+          "indices": [
+            10
+          ],
+          "phrase": "can",
+          "text": "这个功能词在非重读位置常被弱化；若用于强调、对比或位于停顿前，读法可能不同。请回听原音核对。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "C-4:2-3:辅音衔接候选",
+          "kind": "辅音衔接候选",
+          "indices": [
+            2,
+            3
+          ],
+          "phrase": "share real",
+          "text": "相邻两个词的边界辅音相同，可能连成较长的一次衔接；不等于一定省掉一个词或一个音。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "C-4:4-5:连读候选",
+          "kind": "连读候选",
+          "indices": [
+            4,
+            5
+          ],
+          "phrase": "thoughts‿in",
+          "text": "前词的词尾辅音接后词的词首元音，可能紧密衔接；不必等两个词之间出现明显停顿。文字不能证明原音确实连读。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "C-4:7-8:元音衔接候选",
+          "kind": "元音衔接候选",
+          "indices": [
+            7,
+            8
+          ],
+          "phrase": "many unnecessary",
+          "text": "两个元音之间可能有很轻的 /j/ 或 /w/ 过渡，取决于前词元音和说话方式；不要刻意加出一个很重的音。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "C-4:11-12:元音衔接候选",
+          "kind": "元音衔接候选",
+          "indices": [
+            11,
+            12
+          ],
+          "phrase": "be avoided",
+          "text": "两个元音之间可能有很轻的 /j/ 或 /w/ 过渡，取决于前词元音和说话方式；不要刻意加出一个很重的音。",
+          "status": "pending-audio"
+        }
+      ],
+      "boundaries": [
+        {
+          "left": 0,
+          "right": 1,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 1,
+          "right": 2,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 2,
+          "right": 3,
+          "status": "checked-text",
+          "kinds": [
+            "辅音衔接候选"
+          ]
+        },
+        {
+          "left": 3,
+          "right": 4,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 4,
+          "right": 5,
+          "status": "checked-text",
+          "kinds": [
+            "连读候选"
+          ]
+        },
+        {
+          "left": 5,
+          "right": 6,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 6,
+          "right": 7,
+          "status": "punctuation-boundary",
+          "kinds": []
+        },
+        {
+          "left": 7,
+          "right": 8,
+          "status": "checked-text",
+          "kinds": [
+            "元音衔接候选"
+          ]
+        },
+        {
+          "left": 8,
+          "right": 9,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 9,
+          "right": 10,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 10,
+          "right": 11,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 11,
+          "right": 12,
+          "status": "checked-text",
+          "kinds": [
+            "元音衔接候选"
+          ]
+        }
+      ],
+      "missing": [],
+      "verification": "pending-audio"
+    },
+    {
+      "sentenceId": "C-5",
+      "tokens": [
+        {
+          "word": "Besides",
+          "key": "besides",
+          "start": 0,
+          "end": 7
+        },
+        {
+          "word": "trust",
+          "key": "trust",
+          "start": 8,
+          "end": 13
+        },
+        {
+          "word": "and",
+          "key": "and",
+          "start": 14,
+          "end": 17
+        },
+        {
+          "word": "communication",
+          "key": "communication",
+          "start": 18,
+          "end": 31
+        },
+        {
+          "word": "partners",
+          "key": "partners",
+          "start": 33,
+          "end": 41
+        },
+        {
+          "word": "need",
+          "key": "need",
+          "start": 42,
+          "end": 46
+        },
+        {
+          "word": "to",
+          "key": "to",
+          "start": 47,
+          "end": 49
+        },
+        {
+          "word": "set",
+          "key": "set",
+          "start": 50,
+          "end": 53
+        },
+        {
+          "word": "reasonable",
+          "key": "reasonable",
+          "start": 54,
+          "end": 64
+        },
+        {
+          "word": "rules",
+          "key": "rules",
+          "start": 65,
+          "end": 70
+        },
+        {
+          "word": "for",
+          "key": "for",
+          "start": 71,
+          "end": 74
+        },
+        {
+          "word": "dealing",
+          "key": "dealing",
+          "start": 75,
+          "end": 82
+        },
+        {
+          "word": "with",
+          "key": "with",
+          "start": 83,
+          "end": 87
+        },
+        {
+          "word": "unexpected",
+          "key": "unexpected",
+          "start": 88,
+          "end": 98
+        },
+        {
+          "word": "risks",
+          "key": "risks",
+          "start": 99,
+          "end": 104
+        }
+      ],
+      "hints": [
+        {
+          "id": "C-5:2:弱读候选",
+          "kind": "弱读候选",
+          "indices": [
+            2
+          ],
+          "phrase": "and",
+          "text": "这个功能词在非重读位置常被弱化；若用于强调、对比或位于停顿前，读法可能不同。请回听原音核对。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "C-5:6:弱读候选",
+          "kind": "弱读候选",
+          "indices": [
+            6
+          ],
+          "phrase": "to",
+          "text": "这个功能词在非重读位置常被弱化；若用于强调、对比或位于停顿前，读法可能不同。请回听原音核对。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "C-5:10:弱读候选",
+          "kind": "弱读候选",
+          "indices": [
+            10
+          ],
+          "phrase": "for",
+          "text": "这个功能词在非重读位置常被弱化；若用于强调、对比或位于停顿前，读法可能不同。请回听原音核对。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "C-5:1-2:连读候选",
+          "kind": "连读候选",
+          "indices": [
+            1,
+            2
+          ],
+          "phrase": "trust‿and",
+          "text": "前词的词尾辅音接后词的词首元音，可能紧密衔接；不必等两个词之间出现明显停顿。文字不能证明原音确实连读。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "C-5:2-3:不完全爆破候选",
+          "kind": "不完全爆破候选",
+          "indices": [
+            2,
+            3
+          ],
+          "phrase": "and communication",
+          "text": "前词以爆破音结尾、后词以辅音开头，前面的爆破可能很轻或不完全释放；不能把词尾直接当作不存在。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "C-5:5-6:不完全爆破候选",
+          "kind": "不完全爆破候选",
+          "indices": [
+            5,
+            6
+          ],
+          "phrase": "need to",
+          "text": "前词以爆破音结尾、后词以辅音开头，前面的爆破可能很轻或不完全释放；不能把词尾直接当作不存在。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "C-5:7-8:不完全爆破候选",
+          "kind": "不完全爆破候选",
+          "indices": [
+            7,
+            8
+          ],
+          "phrase": "set reasonable",
+          "text": "前词以爆破音结尾、后词以辅音开头，前面的爆破可能很轻或不完全释放；不能把词尾直接当作不存在。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "C-5:12-13:连读候选",
+          "kind": "连读候选",
+          "indices": [
+            12,
+            13
+          ],
+          "phrase": "with‿unexpected",
+          "text": "前词的词尾辅音接后词的词首元音，可能紧密衔接；不必等两个词之间出现明显停顿。文字不能证明原音确实连读。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "C-5:13-14:不完全爆破候选",
+          "kind": "不完全爆破候选",
+          "indices": [
+            13,
+            14
+          ],
+          "phrase": "unexpected risks",
+          "text": "前词以爆破音结尾、后词以辅音开头，前面的爆破可能很轻或不完全释放；不能把词尾直接当作不存在。",
+          "status": "pending-audio"
+        }
+      ],
+      "boundaries": [
+        {
+          "left": 0,
+          "right": 1,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 1,
+          "right": 2,
+          "status": "checked-text",
+          "kinds": [
+            "连读候选"
+          ]
+        },
+        {
+          "left": 2,
+          "right": 3,
+          "status": "checked-text",
+          "kinds": [
+            "不完全爆破候选"
+          ]
+        },
+        {
+          "left": 3,
+          "right": 4,
+          "status": "punctuation-boundary",
+          "kinds": []
+        },
+        {
+          "left": 4,
+          "right": 5,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 5,
+          "right": 6,
+          "status": "checked-text",
+          "kinds": [
+            "不完全爆破候选"
+          ]
+        },
+        {
+          "left": 6,
+          "right": 7,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 7,
+          "right": 8,
+          "status": "checked-text",
+          "kinds": [
+            "不完全爆破候选"
+          ]
+        },
+        {
+          "left": 8,
+          "right": 9,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 9,
+          "right": 10,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 10,
+          "right": 11,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 11,
+          "right": 12,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 12,
+          "right": 13,
+          "status": "checked-text",
+          "kinds": [
+            "连读候选"
+          ]
+        },
+        {
+          "left": 13,
+          "right": 14,
+          "status": "checked-text",
+          "kinds": [
+            "不完全爆破候选"
+          ]
+        }
+      ],
+      "missing": [],
+      "verification": "pending-audio"
+    },
+    {
+      "sentenceId": "C-6",
+      "tokens": [
+        {
+          "word": "No",
+          "key": "no",
+          "start": 0,
+          "end": 2
+        },
+        {
+          "word": "business",
+          "key": "business",
+          "start": 3,
+          "end": 11
+        },
+        {
+          "word": "cooperation",
+          "key": "cooperation",
+          "start": 12,
+          "end": 23
+        },
+        {
+          "word": "can",
+          "key": "can",
+          "start": 24,
+          "end": 27
+        },
+        {
+          "word": "stay",
+          "key": "stay",
+          "start": 28,
+          "end": 32
+        },
+        {
+          "word": "totally",
+          "key": "totally",
+          "start": 33,
+          "end": 40
+        },
+        {
+          "word": "smooth",
+          "key": "smooth",
+          "start": 41,
+          "end": 47
+        },
+        {
+          "word": "all",
+          "key": "all",
+          "start": 48,
+          "end": 51
+        },
+        {
+          "word": "the",
+          "key": "the",
+          "start": 52,
+          "end": 55
+        },
+        {
+          "word": "time",
+          "key": "time",
+          "start": 56,
+          "end": 60
+        }
+      ],
+      "hints": [
+        {
+          "id": "C-6:3:弱读候选",
+          "kind": "弱读候选",
+          "indices": [
+            3
+          ],
+          "phrase": "can",
+          "text": "这个功能词在非重读位置常被弱化；若用于强调、对比或位于停顿前，读法可能不同。请回听原音核对。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "C-6:8:弱读候选",
+          "kind": "弱读候选",
+          "indices": [
+            8
+          ],
+          "phrase": "the",
+          "text": "这个功能词在非重读位置常被弱化；若用于强调、对比或位于停顿前，读法可能不同。请回听原音核对。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "C-6:6-7:连读候选",
+          "kind": "连读候选",
+          "indices": [
+            6,
+            7
+          ],
+          "phrase": "smooth‿all",
+          "text": "前词的词尾辅音接后词的词首元音，可能紧密衔接；不必等两个词之间出现明显停顿。文字不能证明原音确实连读。",
+          "status": "pending-audio"
+        }
+      ],
+      "boundaries": [
+        {
+          "left": 0,
+          "right": 1,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 1,
+          "right": 2,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 2,
+          "right": 3,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 3,
+          "right": 4,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 4,
+          "right": 5,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 5,
+          "right": 6,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 6,
+          "right": 7,
+          "status": "checked-text",
+          "kinds": [
+            "连读候选"
+          ]
+        },
+        {
+          "left": 7,
+          "right": 8,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 8,
+          "right": 9,
+          "status": "checked-text",
+          "kinds": []
+        }
+      ],
+      "missing": [],
+      "verification": "pending-audio"
+    },
+    {
+      "sentenceId": "C-7",
+      "tokens": [
+        {
+          "word": "When",
+          "key": "when",
+          "start": 0,
+          "end": 4
+        },
+        {
+          "word": "trouble",
+          "key": "trouble",
+          "start": 5,
+          "end": 12
+        },
+        {
+          "word": "comes",
+          "key": "comes",
+          "start": 13,
+          "end": 18
+        },
+        {
+          "word": "clear",
+          "key": "clear",
+          "start": 20,
+          "end": 25
+        },
+        {
+          "word": "rules",
+          "key": "rules",
+          "start": 26,
+          "end": 31
+        },
+        {
+          "word": "can",
+          "key": "can",
+          "start": 32,
+          "end": 35
+        },
+        {
+          "word": "help",
+          "key": "help",
+          "start": 36,
+          "end": 40
+        },
+        {
+          "word": "both",
+          "key": "both",
+          "start": 41,
+          "end": 45
+        },
+        {
+          "word": "sides",
+          "key": "sides",
+          "start": 46,
+          "end": 51
+        },
+        {
+          "word": "solve",
+          "key": "solve",
+          "start": 52,
+          "end": 57
+        },
+        {
+          "word": "problems",
+          "key": "problems",
+          "start": 58,
+          "end": 66
+        },
+        {
+          "word": "properly",
+          "key": "properly",
+          "start": 67,
+          "end": 75
+        }
+      ],
+      "hints": [
+        {
+          "id": "C-7:5:弱读候选",
+          "kind": "弱读候选",
+          "indices": [
+            5
+          ],
+          "phrase": "can",
+          "text": "这个功能词在非重读位置常被弱化；若用于强调、对比或位于停顿前，读法可能不同。请回听原音核对。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "C-7:3-4:辅音衔接候选",
+          "kind": "辅音衔接候选",
+          "indices": [
+            3,
+            4
+          ],
+          "phrase": "clear rules",
+          "text": "相邻两个词的边界辅音相同，可能连成较长的一次衔接；不等于一定省掉一个词或一个音。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "C-7:6-7:不完全爆破候选",
+          "kind": "不完全爆破候选",
+          "indices": [
+            6,
+            7
+          ],
+          "phrase": "help both",
+          "text": "前词以爆破音结尾、后词以辅音开头，前面的爆破可能很轻或不完全释放；不能把词尾直接当作不存在。",
+          "status": "pending-audio"
+        }
+      ],
+      "boundaries": [
+        {
+          "left": 0,
+          "right": 1,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 1,
+          "right": 2,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 2,
+          "right": 3,
+          "status": "punctuation-boundary",
+          "kinds": []
+        },
+        {
+          "left": 3,
+          "right": 4,
+          "status": "checked-text",
+          "kinds": [
+            "辅音衔接候选"
+          ]
+        },
+        {
+          "left": 4,
+          "right": 5,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 5,
+          "right": 6,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 6,
+          "right": 7,
+          "status": "checked-text",
+          "kinds": [
+            "不完全爆破候选"
+          ]
+        },
+        {
+          "left": 7,
+          "right": 8,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 8,
+          "right": 9,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 9,
+          "right": 10,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 10,
+          "right": 11,
+          "status": "checked-text",
+          "kinds": []
+        }
+      ],
+      "missing": [],
+      "verification": "pending-audio"
+    },
+    {
+      "sentenceId": "C-8",
+      "tokens": [
+        {
+          "word": "Finally",
+          "key": "finally",
+          "start": 0,
+          "end": 7
+        },
+        {
+          "word": "keeping",
+          "key": "keeping",
+          "start": 9,
+          "end": 16
+        },
+        {
+          "word": "regular",
+          "key": "regular",
+          "start": 17,
+          "end": 24
+        },
+        {
+          "word": "contact",
+          "key": "contact",
+          "start": 25,
+          "end": 32
+        },
+        {
+          "word": "with",
+          "key": "with",
+          "start": 33,
+          "end": 37
+        },
+        {
+          "word": "your",
+          "key": "your",
+          "start": 38,
+          "end": 42
+        },
+        {
+          "word": "partners",
+          "key": "partners",
+          "start": 43,
+          "end": 51
+        },
+        {
+          "word": "matters",
+          "key": "matters",
+          "start": 52,
+          "end": 59
+        },
+        {
+          "word": "a",
+          "key": "a",
+          "start": 60,
+          "end": 61
+        },
+        {
+          "word": "lot",
+          "key": "lot",
+          "start": 62,
+          "end": 65
+        }
+      ],
+      "hints": [
+        {
+          "id": "C-8:5:弱读候选",
+          "kind": "弱读候选",
+          "indices": [
+            5
+          ],
+          "phrase": "your",
+          "text": "这个功能词在非重读位置常被弱化；若用于强调、对比或位于停顿前，读法可能不同。请回听原音核对。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "C-8:8:弱读候选",
+          "kind": "弱读候选",
+          "indices": [
+            8
+          ],
+          "phrase": "a",
+          "text": "这个功能词在非重读位置常被弱化；若用于强调、对比或位于停顿前，读法可能不同。请回听原音核对。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "C-8:3-4:不完全爆破候选",
+          "kind": "不完全爆破候选",
+          "indices": [
+            3,
+            4
+          ],
+          "phrase": "contact with",
+          "text": "前词以爆破音结尾、后词以辅音开头，前面的爆破可能很轻或不完全释放；不能把词尾直接当作不存在。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "C-8:7-8:连读候选",
+          "kind": "连读候选",
+          "indices": [
+            7,
+            8
+          ],
+          "phrase": "matters‿a",
+          "text": "前词的词尾辅音接后词的词首元音，可能紧密衔接；不必等两个词之间出现明显停顿。文字不能证明原音确实连读。",
+          "status": "pending-audio"
+        }
+      ],
+      "boundaries": [
+        {
+          "left": 0,
+          "right": 1,
+          "status": "punctuation-boundary",
+          "kinds": []
+        },
+        {
+          "left": 1,
+          "right": 2,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 2,
+          "right": 3,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 3,
+          "right": 4,
+          "status": "checked-text",
+          "kinds": [
+            "不完全爆破候选"
+          ]
+        },
+        {
+          "left": 4,
+          "right": 5,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 5,
+          "right": 6,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 6,
+          "right": 7,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 7,
+          "right": 8,
+          "status": "checked-text",
+          "kinds": [
+            "连读候选"
+          ]
+        },
+        {
+          "left": 8,
+          "right": 9,
+          "status": "checked-text",
+          "kinds": []
+        }
+      ],
+      "missing": [],
+      "verification": "pending-audio"
+    },
+    {
+      "sentenceId": "C-9",
+      "tokens": [
+        {
+          "word": "Frequent",
+          "key": "frequent",
+          "start": 0,
+          "end": 8
+        },
+        {
+          "word": "proper",
+          "key": "proper",
+          "start": 9,
+          "end": 15
+        },
+        {
+          "word": "contact",
+          "key": "contact",
+          "start": 16,
+          "end": 23
+        },
+        {
+          "word": "helps",
+          "key": "helps",
+          "start": 24,
+          "end": 29
+        },
+        {
+          "word": "strengthen",
+          "key": "strengthen",
+          "start": 30,
+          "end": 40
+        },
+        {
+          "word": "ties",
+          "key": "ties",
+          "start": 41,
+          "end": 45
+        },
+        {
+          "word": "and",
+          "key": "and",
+          "start": 46,
+          "end": 49
+        },
+        {
+          "word": "maintain",
+          "key": "maintain",
+          "start": 50,
+          "end": 58
+        },
+        {
+          "word": "stable",
+          "key": "stable",
+          "start": 59,
+          "end": 65
+        },
+        {
+          "word": "business",
+          "key": "business",
+          "start": 66,
+          "end": 74
+        },
+        {
+          "word": "relations",
+          "key": "relations",
+          "start": 75,
+          "end": 84
+        },
+        {
+          "word": "for",
+          "key": "for",
+          "start": 85,
+          "end": 88
+        },
+        {
+          "word": "both",
+          "key": "both",
+          "start": 89,
+          "end": 93
+        },
+        {
+          "word": "sides",
+          "key": "sides",
+          "start": 94,
+          "end": 99
+        }
+      ],
+      "hints": [
+        {
+          "id": "C-9:6:弱读候选",
+          "kind": "弱读候选",
+          "indices": [
+            6
+          ],
+          "phrase": "and",
+          "text": "这个功能词在非重读位置常被弱化；若用于强调、对比或位于停顿前，读法可能不同。请回听原音核对。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "C-9:11:弱读候选",
+          "kind": "弱读候选",
+          "indices": [
+            11
+          ],
+          "phrase": "for",
+          "text": "这个功能词在非重读位置常被弱化；若用于强调、对比或位于停顿前，读法可能不同。请回听原音核对。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "C-9:0-1:不完全爆破候选",
+          "kind": "不完全爆破候选",
+          "indices": [
+            0,
+            1
+          ],
+          "phrase": "Frequent proper",
+          "text": "前词以爆破音结尾、后词以辅音开头，前面的爆破可能很轻或不完全释放；不能把词尾直接当作不存在。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "C-9:2-3:不完全爆破候选",
+          "kind": "不完全爆破候选",
+          "indices": [
+            2,
+            3
+          ],
+          "phrase": "contact helps",
+          "text": "前词以爆破音结尾、后词以辅音开头，前面的爆破可能很轻或不完全释放；不能把词尾直接当作不存在。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "C-9:3-4:辅音衔接候选",
+          "kind": "辅音衔接候选",
+          "indices": [
+            3,
+            4
+          ],
+          "phrase": "helps strengthen",
+          "text": "相邻两个词的边界辅音相同，可能连成较长的一次衔接；不等于一定省掉一个词或一个音。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "C-9:5-6:连读候选",
+          "kind": "连读候选",
+          "indices": [
+            5,
+            6
+          ],
+          "phrase": "ties‿and",
+          "text": "前词的词尾辅音接后词的词首元音，可能紧密衔接；不必等两个词之间出现明显停顿。文字不能证明原音确实连读。",
+          "status": "pending-audio"
+        },
+        {
+          "id": "C-9:6-7:不完全爆破候选",
+          "kind": "不完全爆破候选",
+          "indices": [
+            6,
+            7
+          ],
+          "phrase": "and maintain",
+          "text": "前词以爆破音结尾、后词以辅音开头，前面的爆破可能很轻或不完全释放；不能把词尾直接当作不存在。",
+          "status": "pending-audio"
+        }
+      ],
+      "boundaries": [
+        {
+          "left": 0,
+          "right": 1,
+          "status": "checked-text",
+          "kinds": [
+            "不完全爆破候选"
+          ]
+        },
+        {
+          "left": 1,
+          "right": 2,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 2,
+          "right": 3,
+          "status": "checked-text",
+          "kinds": [
+            "不完全爆破候选"
+          ]
+        },
+        {
+          "left": 3,
+          "right": 4,
+          "status": "checked-text",
+          "kinds": [
+            "辅音衔接候选"
+          ]
+        },
+        {
+          "left": 4,
+          "right": 5,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 5,
+          "right": 6,
+          "status": "checked-text",
+          "kinds": [
+            "连读候选"
+          ]
+        },
+        {
+          "left": 6,
+          "right": 7,
+          "status": "checked-text",
+          "kinds": [
+            "不完全爆破候选"
+          ]
+        },
+        {
+          "left": 7,
+          "right": 8,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 8,
+          "right": 9,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 9,
+          "right": 10,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 10,
+          "right": 11,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 11,
+          "right": 12,
+          "status": "checked-text",
+          "kinds": []
+        },
+        {
+          "left": 12,
+          "right": 13,
+          "status": "checked-text",
+          "kinds": []
+        }
+      ],
+      "missing": [],
+      "verification": "pending-audio"
+    }
+  ]
+}
