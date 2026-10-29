@@ -1,0 +1,198 @@
+{
+  "pages": [
+    {
+      "chapter": 1,
+      "page": 1,
+      "image": "ch1-p01.png"
+    },
+    {
+      "chapter": 1,
+      "page": 2,
+      "image": "ch1-p02.png"
+    },
+    {
+      "chapter": 1,
+      "page": 3,
+      "image": "ch1-p03.png"
+    },
+    {
+      "chapter": 1,
+      "page": 4,
+      "image": "ch1-p04.png"
+    },
+    {
+      "chapter": 1,
+      "page": 5,
+      "image": "ch1-p05.png"
+    },
+    {
+      "chapter": 1,
+      "page": 6,
+      "image": "ch1-p06.png"
+    },
+    {
+      "chapter": 1,
+      "page": 7,
+      "image": "ch1-p07.png"
+    },
+    {
+      "chapter": 1,
+      "page": 8,
+      "image": "ch1-p08.png"
+    },
+    {
+      "chapter": 1,
+      "page": 9,
+      "image": "ch1-p09.png"
+    },
+    {
+      "chapter": 1,
+      "page": 10,
+      "image": "ch1-p10.png"
+    },
+    {
+      "chapter": 1,
+      "page": 11,
+      "image": "ch1-p11.png"
+    },
+    {
+      "chapter": 1,
+      "page": 12,
+      "image": "ch1-p12.png"
+    },
+    {
+      "chapter": 1,
+      "page": 13,
+      "image": "ch1-p13.png"
+    },
+    {
+      "chapter": 1,
+      "page": 14,
+      "image": "ch1-p14.png"
+    },
+    {
+      "chapter": 1,
+      "page": 15,
+      "image": "ch1-p15.png"
+    },
+    {
+      "chapter": 1,
+      "page": 16,
+      "image": "ch1-p16.png"
+    },
+    {
+      "chapter": 2,
+      "page": 1,
+      "image": "ch2-p01.png"
+    },
+    {
+      "chapter": 2,
+      "page": 2,
+      "image": "ch2-p02.png"
+    },
+    {
+      "chapter": 2,
+      "page": 3,
+      "image": "ch2-p03.png"
+    },
+    {
+      "chapter": 2,
+      "page": 4,
+      "image": "ch2-p04.png"
+    },
+    {
+      "chapter": 2,
+      "page": 5,
+      "image": "ch2-p05.png"
+    },
+    {
+      "chapter": 2,
+      "page": 6,
+      "image": "ch2-p06.png"
+    },
+    {
+      "chapter": 2,
+      "page": 7,
+      "image": "ch2-p07.png"
+    },
+    {
+      "chapter": 2,
+      "page": 8,
+      "image": "ch2-p08.png"
+    },
+    {
+      "chapter": 2,
+      "page": 9,
+      "image": "ch2-p09.png"
+    },
+    {
+      "chapter": 2,
+      "page": 10,
+      "image": "ch2-p10.png"
+    },
+    {
+      "chapter": 2,
+      "page": 11,
+      "image": "ch2-p11.png"
+    },
+    {
+      "chapter": 2,
+      "page": 12,
+      "image": "ch2-p12.png"
+    },
+    {
+      "chapter": 2,
+      "page": 13,
+      "image": "ch2-p13.png"
+    },
+    {
+      "chapter": 2,
+      "page": 14,
+      "image": "ch2-p14.png"
+    },
+    {
+      "chapter": 2,
+      "page": 15,
+      "image": "ch2-p15.png"
+    },
+    {
+      "chapter": 2,
+      "page": 16,
+      "image": "ch2-p16.png"
+    },
+    {
+      "chapter": 2,
+      "page": 17,
+      "image": "ch2-p17.png"
+    },
+    {
+      "chapter": 2,
+      "page": 18,
+      "image": "ch2-p18.png"
+    },
+    {
+      "chapter": 2,
+      "page": 19,
+      "image": "ch2-p19.png"
+    },
+    {
+      "chapter": 2,
+      "page": 20,
+      "image": "ch2-p20.png"
+    }
+  ],
+  "chapters": [
+    {
+      "id": "computer-ch1",
+      "pages": 16,
+      "sections": 11,
+      "pdfSha256": "361899522c06c2ba4605db457ea3244e05070763e99fba7d78912771d937529b"
+    },
+    {
+      "id": "computer-ch2",
+      "pages": 20,
+      "sections": 8,
+      "pdfSha256": "b5a3d1bc44a84a40d7f4892e99ce2e1c2b6f96f0c494918344b8f5d78e1df8e6"
+    }
+  ]
+}

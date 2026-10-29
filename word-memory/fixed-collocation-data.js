@@ -1,0 +1,1 @@
+window.ALL_FIXED_COLLOCATIONS = [];

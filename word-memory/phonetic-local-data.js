@@ -1,0 +1,1 @@
+window.WORD_MEMORY_LOCAL_IPA = {};

@@ -1,0 +1,11 @@
+{
+  "provider": "Qwen official public demo",
+  "source": "https://huggingface.co/spaces/Qwen/Qwen3-TTS",
+  "model": "Qwen3-TTS-12Hz-1.7B-CustomVoice",
+  "speaker": "Vivian",
+  "text": "这个地方要注意，位和字节不是一回事。一个字节等于八位。记住这个区别，后面的换算就顺了。",
+  "instruction": "用精神饱满但不过度兴奋的中文女教师口吻，像在一对一讲解。讲到重点时有轻重和抑扬，停顿自然，语速适中，有交流感，不要新闻播音腔，不要喊叫。",
+  "costCharged": 0,
+  "durationSeconds": 10.536875,
+  "sha256": "4615cdd91fe81a15b35e8e3419dcaeb1474c519ac5bb287ba48c0eb7cd2ec44e"
+}

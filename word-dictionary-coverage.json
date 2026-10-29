@@ -1,0 +1,14 @@
+{
+  "scope": "现有阅读原文与题目、听力原文、英语题干与选项",
+  "textBlocks": 2344,
+  "distinctWordForms": 2366,
+  "missing": [],
+  "checks": [
+    "点词先看释义，确认才收藏",
+    "词组查词",
+    "真实B226同步",
+    "重复合并与背诵进度保留",
+    "手机排版"
+  ],
+  "dictionarySource": "https://github.com/skywind3000/ECDICT"
+}

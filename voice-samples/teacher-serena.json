@@ -1,0 +1,12 @@
+{
+  "provider": "Qwen official public demo",
+  "model": "Qwen3-TTS-12Hz-1.7B-CustomVoice",
+  "speaker": "Serena",
+  "costCharged": 0,
+  "text": "先别急着看答案，想一想这个概念。对，就是这样。把思路理顺，比死记硬背更重要。",
+  "instruction": "用自然亲切的女教师语气讲解，放松、有耐心，重点词有轻重变化，停顿自然，不要播音腔。",
+  "source": "https://huggingface.co/spaces/Qwen/Qwen3-TTS",
+  "sha256": "bd76f9039003b3f24ea8906a954857feae118a84e8d222ed407427c2ee1774ce",
+  "durationSeconds": 11.28,
+  "scope": "audition sample only; not lesson narration"
+}

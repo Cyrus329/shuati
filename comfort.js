@@ -9,7 +9,7 @@
     for(const name of ['theme','accent','font','density','background'])document.documentElement.dataset[name]=settings[name];
     document.documentElement.dataset.metrics=String(settings.showMetrics);document.documentElement.dataset.subjects=String(settings.showSubjects);document.documentElement.dataset.shortcuts=String(settings.showShortcuts);
     document.documentElement.style.setProperty('--reading',settings.size+'px');
-    document.querySelectorAll('.brand h1,[data-space-title]').forEach(title=>title.textContent=settings.title||'个人刷题记录中心');
+    document.querySelectorAll('.brand h1,[data-space-title]').forEach(title=>title.textContent=settings.title||'个人学习册');
     const greeting=document.querySelector('.study-welcome h2');if(greeting)greeting.textContent=settings.greeting||'把知识，变成自己的底气。';
     document.body.classList.toggle('focus-mode',!!settings.focus);
     if($('themeSelect'))$('themeSelect').value=document.documentElement.dataset.theme;

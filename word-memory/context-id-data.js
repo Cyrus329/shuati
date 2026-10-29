@@ -1,0 +1,1 @@
+window.WORD_MEMORY_CONTEXT_BY_ID = {};

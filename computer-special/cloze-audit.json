@@ -1,0 +1,84 @@
+{
+  "blankCount": 685,
+  "unmappedRedCharacters": [],
+  "sections": [
+    {
+      "id": "computer-ch1-intro",
+      "blanks": 0
+    },
+    {
+      "id": "computer-ch1-01",
+      "blanks": 22
+    },
+    {
+      "id": "computer-ch1-02",
+      "blanks": 15
+    },
+    {
+      "id": "computer-ch1-03",
+      "blanks": 8
+    },
+    {
+      "id": "computer-ch1-04",
+      "blanks": 11
+    },
+    {
+      "id": "computer-ch1-05",
+      "blanks": 43
+    },
+    {
+      "id": "computer-ch1-06",
+      "blanks": 28
+    },
+    {
+      "id": "computer-ch1-07",
+      "blanks": 22
+    },
+    {
+      "id": "computer-ch1-08",
+      "blanks": 9
+    },
+    {
+      "id": "computer-ch1-09",
+      "blanks": 66
+    },
+    {
+      "id": "computer-ch1-10",
+      "blanks": 13
+    },
+    {
+      "id": "computer-ch2-intro",
+      "blanks": 0
+    },
+    {
+      "id": "computer-ch2-11",
+      "blanks": 94
+    },
+    {
+      "id": "computer-ch2-12",
+      "blanks": 47
+    },
+    {
+      "id": "computer-ch2-13",
+      "blanks": 71
+    },
+    {
+      "id": "computer-ch2-14",
+      "blanks": 53
+    },
+    {
+      "id": "computer-ch2-15",
+      "blanks": 93
+    },
+    {
+      "id": "computer-ch2-16",
+      "blanks": 29
+    },
+    {
+      "id": "computer-ch2-17",
+      "blanks": 61
+    }
+  ],
+  "clozeVersion": 2,
+  "mergedLineBreakFragments": 11
+}

@@ -1,0 +1,10 @@
+'use strict';
+(()=>{function chunks(value){let text=String(value||''),out=[];while(text.length){let end=Math.min(140,text.length);if(end<text.length){const cut=Math.max(text.lastIndexOf('。',end-1),text.lastIndexOf('；',end-1),text.lastIndexOf('\n',end-1));if(cut>=40)end=cut+1;}out.push(text.slice(0,end));text=text.slice(end);}return out.filter(x=>x.trim());}
+function sequence(q,revealed=false){const out=[{kind:'stem',text:'题目。'+String(q.stem||'')}];for(const [key,text]of Object.entries(q.options||{}))out.push({kind:'option',text:'选项'+key+'。'+text});if(revealed){const answer=q.verifiedAnswer||q.sourceAnswer;if(answer)out.push({kind:'answer',text:'参考答案。'+answer});if(q.analysis)out.push({kind:'analysis',text:'解析。'+q.analysis});if(q.questionNote)out.push({kind:'analysis',text:'核查说明。'+q.questionNote});}return out;}
+function voiceKey(v){return String(v.voiceURI||v.name||'');}
+function isNatural(v){return /natural|neural|自然/i.test(v?.name||'');}
+function chineseVoices(voices){const seen=new Set();return Array.from(voices||[]).filter(v=>v&&/^(zh|cmn)([-_]|$)/i.test(v.lang||'')&&v.name&&!/undefined/i.test(v.name+' '+(v.voiceURI||''))).filter(v=>{const key=voiceKey(v);if(seen.has(key))return false;seen.add(key);return true;});}
+function chooseVoice(voices,preferred=''){const all=chineseVoices(voices),manual=all.find(v=>voiceKey(v)===preferred);if(manual)return manual;return all.filter(v=>!/^zh[-_](hk|mo)/i.test(v.lang)).sort((a,b)=>score(b)-score(a))[0]||null;}
+function score(v){return(isNatural(v)?1000:0)+(/^zh[-_]cn$/i.test(v.lang)?100:0)+(v.localService===false?10:0)+(/xiaoxiao|晓晓/i.test(v.name)?25:/yunxi|云希/i.test(v.name)?20:0);}
+function pronounce(text){return String(text||'').replace(/[\u{1D400}-\u{1D7FF}\uFF01-\uFF5E]/gu,c=>c.normalize('NFKC')).replace(/\bUTF[-‐‑–](\d+)\b/gi,(_,n)=>'U T F '+n).replace(/\b(CPU|GPU|USB|RGB)\b/g,x=>x.split('').join(' '));}
+const api={chunks,sequence,voiceKey,isNatural,chineseVoices,chooseVoice,pronounce};if(typeof module!=='undefined')module.exports=api;if(typeof window!=='undefined')window.ComputerSpeechCore=api;})();

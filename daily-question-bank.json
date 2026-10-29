@@ -1,7 +1,7 @@
 {
   "format": "cqzsb-daily-bank-v1",
-  "version": "2.37",
-  "count": 105,
+  "version": "3.0-diverse",
+  "count": 167,
   "records": [
     {
       "id": "CQZSB-DAILY-MATH-001",
@@ -3348,6 +3348,1656 @@
       "verifiedAnswer": "A",
       "analysis": "F(0)=1给出了不再继续调用自身的基本情形，使输入非负整数时沿n−1逐步递减后能够结束递归，故选A。它不是让所有结果为0，也没有改变乘法规则。递归通常需同时明确基本情形和向基本情形推进的步骤。",
       "questionNote": ""
+    },
+    {
+      "id": "CQZSB-MIX-20261025-MATH-001",
+      "subject": "高等数学",
+      "section": "当前已学内容",
+      "skillTag": "定义域",
+      "topic": "函数",
+      "point": "对数与分母根式的定义域",
+      "type": "填空题",
+      "stem": "求函数 f(x)=ln(x+11)/√(13−x) 的定义域：____。",
+      "options": {},
+      "verifiedAnswer": "(−11,13)",
+      "analysis": "对数要求x+11>0，得到x>−11。 根号位于分母，要求13−x>0，得到x<13。 取两项条件的交集为(−11,13)。",
+      "difficulty": "中",
+      "originType": "自编专项",
+      "examTarget": "重庆普通高校专升本",
+      "scoringPoints": [
+        "正确列出对数真数大于0。",
+        "分母根式严格大于0，不能包含使分母为0的端点。",
+        "交集区间及两个开端点正确。"
+      ],
+      "mathLesson": {
+        "method": "分别列限制，再求交集。",
+        "steps": [
+          "对数要求x+11>0，得到x>−11。",
+          "根号位于分母，要求13−x>0，得到x<13。",
+          "取两项条件的交集为(−11,13)。"
+        ],
+        "conclusion": "(−11,13)",
+        "pitfall": "根式在分母时不允许等于0。",
+        "caveat": ""
+      }
+    },
+    {
+      "id": "CQZSB-MIX-20261025-MATH-008",
+      "subject": "高等数学",
+      "section": "当前已学内容",
+      "skillTag": "解析式与复合",
+      "topic": "函数",
+      "point": "一次函数复合运算",
+      "type": "计算题",
+      "stem": "已知 f(x)=2x+11，g(x)=3x−5，计算 f(g(x)) 并写出步骤。",
+      "options": {},
+      "verifiedAnswer": "6x+1",
+      "analysis": "把g(x)=3x−5代入f的自变量位置。 f(g(x))=2(3x−5)+11。 展开并合并同类项，得到6x+1。",
+      "difficulty": "中",
+      "originType": "自编专项",
+      "examTarget": "重庆普通高校专升本",
+      "scoringPoints": [
+        "代入顺序是把g(x)整体代入f。",
+        "正确展开系数。",
+        "常数项计算和结论正确。"
+      ],
+      "mathLesson": {
+        "method": "先整体代入，再展开化简。",
+        "steps": [
+          "把g(x)=3x−5代入f的自变量位置。",
+          "f(g(x))=2(3x−5)+11。",
+          "展开并合并同类项，得到6x+1。"
+        ],
+        "conclusion": "6x+1",
+        "pitfall": "f(g(x))与g(f(x))不能交换。",
+        "caveat": ""
+      }
+    },
+    {
+      "id": "CQZSB-MIX-20261025-MATH-015",
+      "subject": "高等数学",
+      "section": "当前已学内容",
+      "skillTag": "反函数",
+      "topic": "函数",
+      "point": "一次函数反函数及定义域",
+      "type": "计算题",
+      "stem": "求函数 f(x)=(3x+19)/5（x∈ℝ）的反函数，并说明反函数的定义域。",
+      "options": {},
+      "verifiedAnswer": "f⁻¹(x)=(5x−19)/3，x∈ℝ",
+      "analysis": "设y=(3x+19)/5，两边乘5，得到5y=3x+19。 解出原自变量x=(5y−19)/3。 交换字母x和y，得到f⁻¹(x)=(5x−19)/3，x∈ℝ。",
+      "difficulty": "中",
+      "originType": "自编专项",
+      "examTarget": "重庆普通高校专升本",
+      "scoringPoints": [
+        "通过原函数方程解出x。",
+        "交换自变量与因变量后表达式正确。",
+        "反函数定义域为原函数值域ℝ。"
+      ],
+      "mathLesson": {
+        "method": "解方程，再交换字母并检查定义域。",
+        "steps": [
+          "设y=(3x+19)/5，两边乘5，得到5y=3x+19。",
+          "解出原自变量x=(5y−19)/3。",
+          "交换字母x和y，得到f⁻¹(x)=(5x−19)/3，x∈ℝ。"
+        ],
+        "conclusion": "f⁻¹(x)=(5x−19)/3，x∈ℝ",
+        "pitfall": "反函数记号f⁻¹不是倒数。",
+        "caveat": ""
+      }
+    },
+    {
+      "id": "CQZSB-MIX-20261025-ENG-001",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "可数与数量",
+      "topic": "词汇与语法",
+      "point": "名词复数与数量限定",
+      "type": "填空题",
+      "stem": "Several _____ (student) waited outside the laboratory.",
+      "options": {},
+      "verifiedAnswer": "students",
+      "analysis": "several后接可数名词复数。",
+      "difficulty": "中",
+      "originType": "自编专项",
+      "examTarget": "重庆普通高校专升本",
+      "scoringPoints": [
+        "识别数量词或限定词要求复数。",
+        "写出题干括号内名词的正确复数形式。"
+      ],
+      "englishLesson": {
+        "translation": "几名学生在实验室外等候。",
+        "answerExplanation": "several后接可数名词复数。",
+        "steps": [
+          "先找空前表示数量的词。",
+          "several后接可数名词复数。"
+        ],
+        "memoryTip": "一般名词复数加s。",
+        "optionAnalysis": {},
+        "references": [],
+        "caveat": "书面题参考表达不要求逐字一致，请按评分点核对。"
+      }
+    },
+    {
+      "id": "CQZSB-MIX-20261025-ENG-002",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "可数与数量",
+      "topic": "词汇与语法",
+      "point": "名词复数与数量限定",
+      "type": "填空题",
+      "stem": "The two _____ (woman) are discussing a new plan.",
+      "options": {},
+      "verifiedAnswer": "women",
+      "analysis": "two要求复数，woman的复数为women。",
+      "difficulty": "中",
+      "originType": "自编专项",
+      "examTarget": "重庆普通高校专升本",
+      "scoringPoints": [
+        "识别数量词或限定词要求复数。",
+        "写出题干括号内名词的正确复数形式。"
+      ],
+      "englishLesson": {
+        "translation": "这两位女士正在讨论一项新计划。",
+        "answerExplanation": "two要求复数，woman的复数为women。",
+        "steps": [
+          "先找空前表示数量的词。",
+          "two要求复数，woman的复数为women。"
+        ],
+        "memoryTip": "woman的复数不是womans。",
+        "optionAnalysis": {},
+        "references": [],
+        "caveat": "书面题参考表达不要求逐字一致，请按评分点核对。"
+      }
+    },
+    {
+      "id": "CQZSB-MIX-20261025-ENG-003",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "可数与数量",
+      "topic": "词汇与语法",
+      "point": "名词复数与数量限定",
+      "type": "填空题",
+      "stem": "Please put these _____ (box) beside the door.",
+      "options": {},
+      "verifiedAnswer": "boxes",
+      "analysis": "these后接复数，box以x结尾加es。",
+      "difficulty": "中",
+      "originType": "自编专项",
+      "examTarget": "重庆普通高校专升本",
+      "scoringPoints": [
+        "识别数量词或限定词要求复数。",
+        "写出题干括号内名词的正确复数形式。"
+      ],
+      "englishLesson": {
+        "translation": "请把这些箱子放在门旁。",
+        "answerExplanation": "these后接复数，box以x结尾加es。",
+        "steps": [
+          "先找空前表示数量的词。",
+          "these后接复数，box以x结尾加es。"
+        ],
+        "memoryTip": "以x结尾的名词复数通常加es。",
+        "optionAnalysis": {},
+        "references": [],
+        "caveat": "书面题参考表达不要求逐字一致，请按评分点核对。"
+      }
+    },
+    {
+      "id": "CQZSB-MIX-20261025-ENG-004",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "可数与数量",
+      "topic": "词汇与语法",
+      "point": "名词复数与数量限定",
+      "type": "填空题",
+      "stem": "Three _____ (child) are waiting for their parents.",
+      "options": {},
+      "verifiedAnswer": "children",
+      "analysis": "three要求复数，child的复数为children。",
+      "difficulty": "中",
+      "originType": "自编专项",
+      "examTarget": "重庆普通高校专升本",
+      "scoringPoints": [
+        "识别数量词或限定词要求复数。",
+        "写出题干括号内名词的正确复数形式。"
+      ],
+      "englishLesson": {
+        "translation": "三个孩子正在等他们的父母。",
+        "answerExplanation": "three要求复数，child的复数为children。",
+        "steps": [
+          "先找空前表示数量的词。",
+          "three要求复数，child的复数为children。"
+        ],
+        "memoryTip": "child到children是不规则变化。",
+        "optionAnalysis": {},
+        "references": [],
+        "caveat": "书面题参考表达不要求逐字一致，请按评分点核对。"
+      }
+    },
+    {
+      "id": "CQZSB-MIX-20261025-ENG-005",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "可数与数量",
+      "topic": "词汇与语法",
+      "point": "名词复数与数量限定",
+      "type": "填空题",
+      "stem": "These _____ (dictionary) belong to our English teacher.",
+      "options": {},
+      "verifiedAnswer": "dictionaries",
+      "analysis": "these要求复数，dictionary辅音字母加y结尾，变y为i再加es。",
+      "difficulty": "中",
+      "originType": "自编专项",
+      "examTarget": "重庆普通高校专升本",
+      "scoringPoints": [
+        "识别数量词或限定词要求复数。",
+        "写出题干括号内名词的正确复数形式。"
+      ],
+      "englishLesson": {
+        "translation": "这些词典属于我们的英语老师。",
+        "answerExplanation": "these要求复数，dictionary辅音字母加y结尾，变y为i再加es。",
+        "steps": [
+          "先找空前表示数量的词。",
+          "these要求复数，dictionary辅音字母加y结尾，变y为i再加es。"
+        ],
+        "memoryTip": "辅音字母加y结尾的名词变复数时改y为ies。",
+        "optionAnalysis": {},
+        "references": [],
+        "caveat": "书面题参考表达不要求逐字一致，请按评分点核对。"
+      }
+    },
+    {
+      "id": "CQZSB-MIX-20261025-ENG-006",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "可数与数量",
+      "topic": "词汇与语法",
+      "point": "名词复数与数量限定",
+      "type": "填空题",
+      "stem": "Both _____ (factory) produce office furniture.",
+      "options": {},
+      "verifiedAnswer": "factories",
+      "analysis": "both表示两者，factory在这里需要复数形式factories。",
+      "difficulty": "中",
+      "originType": "自编专项",
+      "examTarget": "重庆普通高校专升本",
+      "scoringPoints": [
+        "识别数量词或限定词要求复数。",
+        "写出题干括号内名词的正确复数形式。"
+      ],
+      "englishLesson": {
+        "translation": "这两家工厂都生产办公家具。",
+        "answerExplanation": "both表示两者，factory在这里需要复数形式factories。",
+        "steps": [
+          "先找空前表示数量的词。",
+          "both表示两者，factory在这里需要复数形式factories。"
+        ],
+        "memoryTip": "both加可数名词复数。",
+        "optionAnalysis": {},
+        "references": [],
+        "caveat": "书面题参考表达不要求逐字一致，请按评分点核对。"
+      }
+    },
+    {
+      "id": "CQZSB-MIX-20261025-ENG-007",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "可数与数量",
+      "topic": "词汇与语法",
+      "point": "名词复数与数量限定",
+      "type": "填空题",
+      "stem": "The five _____ (leaf) on the table are dry.",
+      "options": {},
+      "verifiedAnswer": "leaves",
+      "analysis": "five要求复数，leaf变复数为leaves。",
+      "difficulty": "中",
+      "originType": "自编专项",
+      "examTarget": "重庆普通高校专升本",
+      "scoringPoints": [
+        "识别数量词或限定词要求复数。",
+        "写出题干括号内名词的正确复数形式。"
+      ],
+      "englishLesson": {
+        "translation": "桌上的五片叶子已经干了。",
+        "answerExplanation": "five要求复数，leaf变复数为leaves。",
+        "steps": [
+          "先找空前表示数量的词。",
+          "five要求复数，leaf变复数为leaves。"
+        ],
+        "memoryTip": "leaf的复数是leaves。",
+        "optionAnalysis": {},
+        "references": [],
+        "caveat": "书面题参考表达不要求逐字一致，请按评分点核对。"
+      }
+    },
+    {
+      "id": "CQZSB-MIX-20261025-ENG-008",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "词义搭配",
+      "topic": "句子翻译",
+      "point": "英译汉：主干与修饰信息完整",
+      "type": "翻译题",
+      "stem": "将下列句子译成汉语：Regular reading helps students develop good learning habits and understand the world from different points of view.",
+      "options": {},
+      "verifiedAnswer": "经常阅读有助于学生养成良好的学习习惯，并从不同角度理解世界。",
+      "analysis": "参考译文：经常阅读有助于学生养成良好的学习习惯，并从不同角度理解世界。 信息完整、语义正确的其他汉语表达可以接受，不要求逐字一致。",
+      "difficulty": "中",
+      "originType": "自编专项",
+      "examTarget": "重庆普通高校专升本",
+      "scoringPoints": [
+        "regular reading译为经常阅读或有规律地阅读。",
+        "完整表达养成良好学习习惯。",
+        "different points of view译出不同角度或观点。"
+      ],
+      "englishLesson": {
+        "translation": "经常阅读有助于学生养成良好的学习习惯，并从不同角度理解世界。",
+        "answerExplanation": "参考译文：经常阅读有助于学生养成良好的学习习惯，并从不同角度理解世界。 信息完整、语义正确的其他汉语表达可以接受，不要求逐字一致。",
+        "steps": [
+          "先找出主语、谓语及并列或从属关系。",
+          "再将修饰语、逻辑关系和关键词的含义补全。",
+          "用通顺的汉语组织译文，并检查核对要点是否遗漏。"
+        ],
+        "memoryTip": "先译主干，再补修饰；信息完整、汉语通顺即可，不机械逐字翻译。",
+        "optionAnalysis": {},
+        "references": [],
+        "caveat": "书面题参考表达不要求逐字一致，请按评分点核对。"
+      }
+    },
+    {
+      "id": "CQZSB-MIX-20261025-ENG-009",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "词义搭配",
+      "topic": "句子翻译",
+      "point": "英译汉：主干与修饰信息完整",
+      "type": "翻译题",
+      "stem": "将下列句子译成汉语：Public transport makes it easier for people to travel around the city and can reduce traffic pressure.",
+      "options": {},
+      "verifiedAnswer": "公共交通让人们在城市中出行更加方便，并且可以减轻交通压力。",
+      "analysis": "参考译文：公共交通让人们在城市中出行更加方便，并且可以减轻交通压力。 信息完整、语义正确的其他汉语表达可以接受，不要求逐字一致。",
+      "difficulty": "中",
+      "originType": "自编专项",
+      "examTarget": "重庆普通高校专升本",
+      "scoringPoints": [
+        "public transport译为公共交通。",
+        "makes it easier for people to travel完整表达使出行更方便。",
+        "can reduce表达可以减轻，不漏译情态含义。"
+      ],
+      "englishLesson": {
+        "translation": "公共交通让人们在城市中出行更加方便，并且可以减轻交通压力。",
+        "answerExplanation": "参考译文：公共交通让人们在城市中出行更加方便，并且可以减轻交通压力。 信息完整、语义正确的其他汉语表达可以接受，不要求逐字一致。",
+        "steps": [
+          "先找出主语、谓语及并列或从属关系。",
+          "再将修饰语、逻辑关系和关键词的含义补全。",
+          "用通顺的汉语组织译文，并检查核对要点是否遗漏。"
+        ],
+        "memoryTip": "先译主干，再补修饰；信息完整、汉语通顺即可，不机械逐字翻译。",
+        "optionAnalysis": {},
+        "references": [],
+        "caveat": "书面题参考表达不要求逐字一致，请按评分点核对。"
+      }
+    },
+    {
+      "id": "CQZSB-MIX-20261025-ENG-010",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "词义搭配",
+      "topic": "句子翻译",
+      "point": "英译汉：主干与修饰信息完整",
+      "type": "翻译题",
+      "stem": "将下列句子译成汉语：Learning traditional skills allows young people to understand local culture and pass valuable knowledge on to future generations.",
+      "options": {},
+      "verifiedAnswer": "学习传统技艺能让年轻人了解当地文化，并将宝贵的知识传给后代。",
+      "analysis": "参考译文：学习传统技艺能让年轻人了解当地文化，并将宝贵的知识传给后代。 信息完整、语义正确的其他汉语表达可以接受，不要求逐字一致。",
+      "difficulty": "中",
+      "originType": "自编专项",
+      "examTarget": "重庆普通高校专升本",
+      "scoringPoints": [
+        "traditional skills译为传统技艺或传统技能。",
+        "local culture译为当地文化。",
+        "pass knowledge on to future generations译出将知识传给后代。"
+      ],
+      "englishLesson": {
+        "translation": "学习传统技艺能让年轻人了解当地文化，并将宝贵的知识传给后代。",
+        "answerExplanation": "参考译文：学习传统技艺能让年轻人了解当地文化，并将宝贵的知识传给后代。 信息完整、语义正确的其他汉语表达可以接受，不要求逐字一致。",
+        "steps": [
+          "先找出主语、谓语及并列或从属关系。",
+          "再将修饰语、逻辑关系和关键词的含义补全。",
+          "用通顺的汉语组织译文，并检查核对要点是否遗漏。"
+        ],
+        "memoryTip": "先译主干，再补修饰；信息完整、汉语通顺即可，不机械逐字翻译。",
+        "optionAnalysis": {},
+        "references": [],
+        "caveat": "书面题参考表达不要求逐字一致，请按评分点核对。"
+      }
+    },
+    {
+      "id": "CQZSB-MIX-20261025-ENG-011",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "词义搭配",
+      "topic": "句子翻译",
+      "point": "英译汉：主干与修饰信息完整",
+      "type": "翻译题",
+      "stem": "将下列句子译成汉语：Schools should encourage students to take part in practical activities so that they can put what they learn into use.",
+      "options": {},
+      "verifiedAnswer": "学校应鼓励学生参加实践活动，以便他们能将所学知识付诸应用。",
+      "analysis": "参考译文：学校应鼓励学生参加实践活动，以便他们能将所学知识付诸应用。 信息完整、语义正确的其他汉语表达可以接受，不要求逐字一致。",
+      "difficulty": "中",
+      "originType": "自编专项",
+      "examTarget": "重庆普通高校专升本",
+      "scoringPoints": [
+        "should encourage译出应当鼓励。",
+        "practical activities译为实践活动。",
+        "so that译出目的关系，put what they learn into use译出学以致用。"
+      ],
+      "englishLesson": {
+        "translation": "学校应鼓励学生参加实践活动，以便他们能将所学知识付诸应用。",
+        "answerExplanation": "参考译文：学校应鼓励学生参加实践活动，以便他们能将所学知识付诸应用。 信息完整、语义正确的其他汉语表达可以接受，不要求逐字一致。",
+        "steps": [
+          "先找出主语、谓语及并列或从属关系。",
+          "再将修饰语、逻辑关系和关键词的含义补全。",
+          "用通顺的汉语组织译文，并检查核对要点是否遗漏。"
+        ],
+        "memoryTip": "先译主干，再补修饰；信息完整、汉语通顺即可，不机械逐字翻译。",
+        "optionAnalysis": {},
+        "references": [],
+        "caveat": "书面题参考表达不要求逐字一致，请按评分点核对。"
+      }
+    },
+    {
+      "id": "CQZSB-MIX-20261025-ENG-012",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "词义搭配",
+      "topic": "句子翻译",
+      "point": "英译汉：主干与修饰信息完整",
+      "type": "翻译题",
+      "stem": "将下列句子译成汉语：Although digital tools make communication more convenient, face-to-face conversations are still important for building trust.",
+      "options": {},
+      "verifiedAnswer": "尽管数字工具让交流更加便捷，面对面的交谈对于建立信任仍然很重要。",
+      "analysis": "参考译文：尽管数字工具让交流更加便捷，面对面的交谈对于建立信任仍然很重要。 信息完整、语义正确的其他汉语表达可以接受，不要求逐字一致。",
+      "difficulty": "中",
+      "originType": "自编专项",
+      "examTarget": "重庆普通高校专升本",
+      "scoringPoints": [
+        "although译出让步关系。",
+        "communication more convenient译出交流更便捷。",
+        "face-to-face、still和building trust的含义完整。"
+      ],
+      "englishLesson": {
+        "translation": "尽管数字工具让交流更加便捷，面对面的交谈对于建立信任仍然很重要。",
+        "answerExplanation": "参考译文：尽管数字工具让交流更加便捷，面对面的交谈对于建立信任仍然很重要。 信息完整、语义正确的其他汉语表达可以接受，不要求逐字一致。",
+        "steps": [
+          "先找出主语、谓语及并列或从属关系。",
+          "再将修饰语、逻辑关系和关键词的含义补全。",
+          "用通顺的汉语组织译文，并检查核对要点是否遗漏。"
+        ],
+        "memoryTip": "先译主干，再补修饰；信息完整、汉语通顺即可，不机械逐字翻译。",
+        "optionAnalysis": {},
+        "references": [],
+        "caveat": "书面题参考表达不要求逐字一致，请按评分点核对。"
+      }
+    },
+    {
+      "id": "CQZSB-MIX-20261025-ENG-013",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "词义搭配",
+      "topic": "句子翻译",
+      "point": "英译汉：主干与修饰信息完整",
+      "type": "翻译题",
+      "stem": "将下列句子译成汉语：A healthy lifestyle depends not only on regular exercise but also on enough rest and a balanced diet.",
+      "options": {},
+      "verifiedAnswer": "健康的生活方式不仅取决于经常锻炼，还取决于充足的休息和均衡的饮食。",
+      "analysis": "参考译文：健康的生活方式不仅取决于经常锻炼，还取决于充足的休息和均衡的饮食。 信息完整、语义正确的其他汉语表达可以接受，不要求逐字一致。",
+      "difficulty": "中",
+      "originType": "自编专项",
+      "examTarget": "重庆普通高校专升本",
+      "scoringPoints": [
+        "not only ... but also译出不仅而且关系。",
+        "regular exercise译出经常锻炼。",
+        "enough rest和a balanced diet分别译出充足休息和均衡饮食。"
+      ],
+      "englishLesson": {
+        "translation": "健康的生活方式不仅取决于经常锻炼，还取决于充足的休息和均衡的饮食。",
+        "answerExplanation": "参考译文：健康的生活方式不仅取决于经常锻炼，还取决于充足的休息和均衡的饮食。 信息完整、语义正确的其他汉语表达可以接受，不要求逐字一致。",
+        "steps": [
+          "先找出主语、谓语及并列或从属关系。",
+          "再将修饰语、逻辑关系和关键词的含义补全。",
+          "用通顺的汉语组织译文，并检查核对要点是否遗漏。"
+        ],
+        "memoryTip": "先译主干，再补修饰；信息完整、汉语通顺即可，不机械逐字翻译。",
+        "optionAnalysis": {},
+        "references": [],
+        "caveat": "书面题参考表达不要求逐字一致，请按评分点核对。"
+      }
+    },
+    {
+      "id": "CQZSB-MIX-20261025-ENG-014",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "词义搭配",
+      "topic": "句子翻译",
+      "point": "英译汉：主干与修饰信息完整",
+      "type": "翻译题",
+      "stem": "将下列句子译成汉语：By protecting the natural environment, we can create better living conditions for both ourselves and future generations.",
+      "options": {},
+      "verifiedAnswer": "通过保护自然环境，我们可以为自己和后代创造更好的生活条件。",
+      "analysis": "参考译文：通过保护自然环境，我们可以为自己和后代创造更好的生活条件。 信息完整、语义正确的其他汉语表达可以接受，不要求逐字一致。",
+      "difficulty": "中",
+      "originType": "自编专项",
+      "examTarget": "重庆普通高校专升本",
+      "scoringPoints": [
+        "by protecting译出通过保护的方式。",
+        "better living conditions译出更好的生活条件。",
+        "both ourselves and future generations两方面均不遗漏。"
+      ],
+      "englishLesson": {
+        "translation": "通过保护自然环境，我们可以为自己和后代创造更好的生活条件。",
+        "answerExplanation": "参考译文：通过保护自然环境，我们可以为自己和后代创造更好的生活条件。 信息完整、语义正确的其他汉语表达可以接受，不要求逐字一致。",
+        "steps": [
+          "先找出主语、谓语及并列或从属关系。",
+          "再将修饰语、逻辑关系和关键词的含义补全。",
+          "用通顺的汉语组织译文，并检查核对要点是否遗漏。"
+        ],
+        "memoryTip": "先译主干，再补修饰；信息完整、汉语通顺即可，不机械逐字翻译。",
+        "optionAnalysis": {},
+        "references": [],
+        "caveat": "书面题参考表达不要求逐字一致，请按评分点核对。"
+      }
+    },
+    {
+      "id": "CQZSB-MIX-20261025-COMP-001",
+      "subject": "计算机",
+      "section": "当前已学内容",
+      "skillTag": "Windows操作",
+      "topic": "计算机基础知识",
+      "point": "快捷方式与原文件",
+      "type": "判断题",
+      "stem": "在Windows中，删除快捷方式一定会同时删除它指向的原文件。",
+      "options": {
+        "A": "正确",
+        "B": "错误"
+      },
+      "verifiedAnswer": "B",
+      "analysis": "快捷方式只是指向原对象的链接；删除快捷方式通常不删除原文件。",
+      "difficulty": "中",
+      "originType": "自编专项",
+      "examTarget": "重庆普通高校专升本"
+    },
+    {
+      "id": "CQZSB-MIX-20261025-COMP-002",
+      "subject": "计算机",
+      "section": "当前已学内容",
+      "skillTag": "系统组成",
+      "topic": "计算机基础知识",
+      "point": "RAM的易失性",
+      "type": "判断题",
+      "stem": "计算机断电后，RAM中原有的数据通常不能继续保留。",
+      "options": {
+        "A": "正确",
+        "B": "错误"
+      },
+      "verifiedAnswer": "A",
+      "analysis": "RAM属于易失性存储器，断电后其中内容通常丢失。",
+      "difficulty": "中",
+      "originType": "自编专项",
+      "examTarget": "重庆普通高校专升本"
+    },
+    {
+      "id": "CQZSB-MIX-20261025-COMP-003",
+      "subject": "计算机",
+      "section": "当前已学内容",
+      "skillTag": "数制与编码",
+      "topic": "计算机基础知识",
+      "point": "字节与位",
+      "type": "判断题",
+      "stem": "在计算机的信息存储单位中，1字节等于8位。",
+      "options": {
+        "A": "正确",
+        "B": "错误"
+      },
+      "verifiedAnswer": "A",
+      "analysis": "字节Byte与位bit不同，1B=8bit。",
+      "difficulty": "中",
+      "originType": "自编专项",
+      "examTarget": "重庆普通高校专升本"
+    },
+    {
+      "id": "CQZSB-MIX-20261025-COMP-004",
+      "subject": "计算机",
+      "section": "当前已学内容",
+      "skillTag": "系统组成",
+      "topic": "计算机基础知识",
+      "point": "系统软件与应用软件",
+      "type": "判断题",
+      "stem": "操作系统属于应用软件。",
+      "options": {
+        "A": "正确",
+        "B": "错误"
+      },
+      "verifiedAnswer": "B",
+      "analysis": "操作系统管理计算机资源，是系统软件。",
+      "difficulty": "中",
+      "originType": "自编专项",
+      "examTarget": "重庆普通高校专升本"
+    },
+    {
+      "id": "CQZSB-MIX-20261025-COMP-005",
+      "subject": "计算机",
+      "section": "当前已学内容",
+      "skillTag": "Windows操作",
+      "topic": "计算机基础知识",
+      "point": "扩展名与实际格式",
+      "type": "判断题",
+      "stem": "文件扩展名与操作系统识别文件类型有关，但只改扩展名通常不会转换文件的实际格式。",
+      "options": {
+        "A": "正确",
+        "B": "错误"
+      },
+      "verifiedAnswer": "A",
+      "analysis": "扩展名帮助识别或关联类型，实际格式由内容结构决定。",
+      "difficulty": "中",
+      "originType": "自编专项",
+      "examTarget": "重庆普通高校专升本"
+    },
+    {
+      "id": "CQZSB-MIX-20261025-COMP-006",
+      "subject": "计算机",
+      "section": "当前已学内容",
+      "skillTag": "数制与编码",
+      "topic": "计算机基础知识",
+      "point": "二进制数码",
+      "type": "判断题",
+      "stem": "二进制数使用的数码只有0和1。",
+      "options": {
+        "A": "正确",
+        "B": "错误"
+      },
+      "verifiedAnswer": "A",
+      "analysis": "二进制逢二进一，只使用0和1两个数码。",
+      "difficulty": "中",
+      "originType": "自编专项",
+      "examTarget": "重庆普通高校专升本"
+    },
+    {
+      "id": "CQZSB-MIX-20261025-COMP-007",
+      "subject": "计算机",
+      "section": "当前已学内容",
+      "skillTag": "计算思维",
+      "topic": "计算机基础知识",
+      "point": "源程序与机器指令",
+      "type": "判断题",
+      "stem": "CPU能够直接执行任意用高级语言编写的源程序。",
+      "options": {
+        "A": "正确",
+        "B": "错误"
+      },
+      "verifiedAnswer": "B",
+      "analysis": "高级语言源程序通常要经过编译或解释等处理，CPU最终执行机器指令。",
+      "difficulty": "中",
+      "originType": "自编专项",
+      "examTarget": "重庆普通高校专升本"
+    },
+    {
+      "id": "CQZSB-MIX-20261025-COMP-008",
+      "subject": "计算机",
+      "section": "当前已学内容",
+      "skillTag": "数制与编码",
+      "topic": "计算机基础知识",
+      "point": "存储容量单位换算",
+      "type": "填空题",
+      "stem": "按1KB=1024B计算，3KB等于____B。",
+      "options": {},
+      "verifiedAnswer": "3072",
+      "analysis": "3×1024=3072，所以3KB=3072B。",
+      "difficulty": "中",
+      "originType": "自编专项",
+      "examTarget": "重庆普通高校专升本",
+      "scoringPoints": [
+        "使用题干给定的1024换算关系。",
+        "结果为3072B。"
+      ]
+    },
+    {
+      "id": "CQZSB-MIX-20261025-COMP-009",
+      "subject": "计算机",
+      "section": "当前已学内容",
+      "skillTag": "数制与编码",
+      "topic": "计算机基础知识",
+      "point": "二进制转十进制",
+      "type": "填空题",
+      "stem": "二进制数(11010)₂对应的十进制数为____。",
+      "options": {},
+      "verifiedAnswer": "26",
+      "analysis": "1×16+1×8+0×4+1×2+0×1=26。",
+      "difficulty": "中",
+      "originType": "自编专项",
+      "examTarget": "重庆普通高校专升本",
+      "scoringPoints": [
+        "按位权展开。",
+        "加总得到26。"
+      ]
+    },
+    {
+      "id": "CQZSB-MIX-20261025-COMP-010",
+      "subject": "计算机",
+      "section": "当前已学内容",
+      "skillTag": "数制与编码",
+      "topic": "计算机基础知识",
+      "point": "十进制转二进制",
+      "type": "填空题",
+      "stem": "把十进制数45写成六位无符号二进制数：____。",
+      "options": {},
+      "verifiedAnswer": "101101",
+      "analysis": "45=32+8+4+1，所以对应六位二进制101101。",
+      "difficulty": "中",
+      "originType": "自编专项",
+      "examTarget": "重庆普通高校专升本",
+      "scoringPoints": [
+        "位权从32到1排列。",
+        "结果必须是六位101101。"
+      ]
+    },
+    {
+      "id": "CQZSB-MIX-20261025-COMP-011",
+      "subject": "计算机",
+      "section": "当前已学内容",
+      "skillTag": "Windows操作",
+      "topic": "计算机基础知识",
+      "point": "文件名通配符",
+      "type": "填空题",
+      "stem": "在Windows文件名通配符规则下，表示文件名第二个字符为Q、扩展名为txt的模式可写为____。",
+      "options": {},
+      "verifiedAnswer": "?Q*.txt",
+      "analysis": "?匹配一个字符，Q固定第二个字符，*匹配其后任意数量字符，.txt固定扩展名。",
+      "difficulty": "中",
+      "originType": "自编专项",
+      "examTarget": "重庆普通高校专升本",
+      "scoringPoints": [
+        "首位用?而不是*。",
+        "Q在第二位，随后用*。",
+        "扩展名.txt保持正确。"
+      ]
+    },
+    {
+      "id": "CQZSB-MIX-20261025-COMP-012",
+      "subject": "计算机",
+      "section": "当前已学内容",
+      "skillTag": "系统组成",
+      "topic": "计算机基础知识",
+      "point": "操作系统的作用",
+      "type": "填空题",
+      "stem": "负责管理计算机软硬件资源并向用户提供基本服务的系统软件，通常称为____。",
+      "options": {},
+      "verifiedAnswer": "操作系统",
+      "analysis": "操作系统负责资源管理、程序运行支持和提供基本用户服务。",
+      "difficulty": "中",
+      "originType": "自编专项",
+      "examTarget": "重庆普通高校专升本",
+      "scoringPoints": [
+        "写出操作系统或含义一致的名称。",
+        "不能把普通应用软件写成资源管理核心。"
+      ]
+    },
+    {
+      "id": "CQZSB-MIX-20261025-COMP-013",
+      "subject": "计算机",
+      "section": "当前已学内容",
+      "skillTag": "系统组成",
+      "topic": "计算机基础知识",
+      "point": "CPU的基本组成",
+      "type": "填空题",
+      "stem": "CPU通常主要由运算器和____组成。",
+      "options": {},
+      "verifiedAnswer": "控制器",
+      "analysis": "基础组成表述中，CPU主要包括运算器和控制器。",
+      "difficulty": "中",
+      "originType": "自编专项",
+      "examTarget": "重庆普通高校专升本",
+      "scoringPoints": [
+        "补出控制器。"
+      ]
+    },
+    {
+      "id": "CQZSB-MIX-20261025-COMP-014",
+      "subject": "计算机",
+      "section": "当前已学内容",
+      "skillTag": "计算思维",
+      "topic": "计算机基础知识",
+      "point": "流程图符号",
+      "type": "填空题",
+      "stem": "在常见程序流程图中，用于表示一般处理步骤的矩形框通常称为____。",
+      "options": {},
+      "verifiedAnswer": "处理框",
+      "analysis": "矩形表示一般处理或计算操作，常称处理框；不要与菱形判断框混淆。",
+      "difficulty": "中",
+      "originType": "自编专项",
+      "examTarget": "重庆普通高校专升本",
+      "scoringPoints": [
+        "处理框或含义相同的处理操作框可接受。",
+        "与判断框区分。"
+      ]
+    },
+    {
+      "id": "CQZSB-MIX-20261025-COMP-015",
+      "subject": "计算机",
+      "section": "当前已学内容",
+      "skillTag": "计算机基础",
+      "topic": "计算机基础知识",
+      "point": "存储程序思想",
+      "type": "应用题",
+      "stem": "某人把“存储程序”理解为“计算机只存储数据、不存储程序”。请指出错误，并简述存储程序的含义。",
+      "options": {},
+      "verifiedAnswer": "程序指令和数据都可存放在存储器中。运行时按程序规定的顺序取出指令、解释并执行。",
+      "analysis": "程序指令和数据都可存放在存储器中。运行时按程序规定的顺序取出指令、解释并执行。",
+      "difficulty": "中",
+      "originType": "自编专项",
+      "examTarget": "重庆普通高校专升本",
+      "scoringPoints": [
+        "指出程序和数据都能存储。",
+        "说明按程序取指、执行。"
+      ]
+    },
+    {
+      "id": "CQZSB-MIX-20261025-COMP-016",
+      "subject": "计算机",
+      "section": "当前已学内容",
+      "skillTag": "系统组成",
+      "topic": "计算机基础知识",
+      "point": "基本部件与CPU",
+      "type": "应用题",
+      "stem": "一台微型计算机需要输入、保存、加工并输出信息。请按冯·诺依曼体系列出五类基本部件，并说明CPU通常包含其中哪些部分。",
+      "options": {},
+      "verifiedAnswer": "五类基本部件为运算器、控制器、存储器、输入设备和输出设备。CPU通常主要包括运算器和控制器。",
+      "analysis": "五类基本部件为运算器、控制器、存储器、输入设备和输出设备。CPU通常主要包括运算器和控制器。",
+      "difficulty": "中",
+      "originType": "自编专项",
+      "examTarget": "重庆普通高校专升本",
+      "scoringPoints": [
+        "五类部件完整。",
+        "CPU包含运算器和控制器。"
+      ]
+    },
+    {
+      "id": "CQZSB-MIX-20261025-COMP-017",
+      "subject": "计算机",
+      "section": "当前已学内容",
+      "skillTag": "系统组成",
+      "topic": "计算机基础知识",
+      "point": "软件分类及用途",
+      "type": "应用题",
+      "stem": "同学将Word、Windows、Excel、Linux混在同一类软件中。请按系统软件和应用软件分类，并说明分类依据。",
+      "options": {},
+      "verifiedAnswer": "Windows和Linux属于系统软件，负责管理资源、提供运行环境；Word和Excel属于应用软件，用于完成文档编辑、表格处理等具体任务。",
+      "analysis": "Windows和Linux属于系统软件，负责管理资源、提供运行环境；Word和Excel属于应用软件，用于完成文档编辑、表格处理等具体任务。",
+      "difficulty": "中",
+      "originType": "自编专项",
+      "examTarget": "重庆普通高校专升本",
+      "scoringPoints": [
+        "Windows、Linux归入系统软件。",
+        "Word、Excel归入应用软件。",
+        "说明管理资源与完成具体任务的区别。"
+      ]
+    },
+    {
+      "id": "CQZSB-MIX-20261025-COMP-018",
+      "subject": "计算机",
+      "section": "当前已学内容",
+      "skillTag": "计算机基础",
+      "topic": "计算机基础知识",
+      "point": "通用与专用计算机",
+      "type": "应用题",
+      "stem": "一套设备只控制某条生产线，另一台电脑可进行文档编辑、上网和编程。按用途，它们更适合分别归为哪类计算机？说明理由。",
+      "options": {},
+      "verifiedAnswer": "前者更适合归为专用计算机，针对特定控制任务设计；后者更适合归为通用计算机，可执行多种任务。",
+      "analysis": "前者更适合归为专用计算机，针对特定控制任务设计；后者更适合归为通用计算机，可执行多种任务。",
+      "difficulty": "中",
+      "originType": "自编专项",
+      "examTarget": "重庆普通高校专升本",
+      "scoringPoints": [
+        "特定生产线控制对应专用。",
+        "多用途电脑对应通用。",
+        "说明分类依据是用途和使用范围。"
+      ]
+    },
+    {
+      "id": "CQZSB-MIX-20261025-COMP-019",
+      "subject": "计算机",
+      "section": "当前已学内容",
+      "skillTag": "计算机基础",
+      "topic": "计算机基础知识",
+      "point": "计算机发展主要器件",
+      "type": "应用题",
+      "stem": "某同学把计算机主要电子器件的发展顺序记成“晶体管、电子管、集成电路”。请纠正顺序，并补充常见的四代划分。",
+      "options": {},
+      "verifiedAnswer": "常见四代划分依次是电子管、晶体管、小中规模集成电路、大规模及超大规模集成电路计算机。",
+      "analysis": "常见四代划分依次是电子管、晶体管、小中规模集成电路、大规模及超大规模集成电路计算机。",
+      "difficulty": "中",
+      "originType": "自编专项",
+      "examTarget": "重庆普通高校专升本",
+      "scoringPoints": [
+        "第一代电子管、第二代晶体管。",
+        "第三代小中规模集成电路。",
+        "第四代大规模及超大规模集成电路。"
+      ]
+    },
+    {
+      "id": "CQZSB-MIX-20261025-COMP-020",
+      "subject": "计算机",
+      "section": "当前已学内容",
+      "skillTag": "系统组成",
+      "topic": "计算机基础知识",
+      "point": "软件例子与分类",
+      "type": "应用题",
+      "stem": "分别举出两种系统软件和两种应用软件，并用一句话说明两类软件的主要区别。",
+      "options": {},
+      "verifiedAnswer": "系统软件可举Windows、Linux；应用软件可举Word、Excel。前者侧重资源管理和运行支持，后者用于完成用户的具体应用任务；其他分类正确的例子也可。",
+      "analysis": "系统软件可举Windows、Linux；应用软件可举Word、Excel。前者侧重资源管理和运行支持，后者用于完成用户的具体应用任务；其他分类正确的例子也可。",
+      "difficulty": "中",
+      "originType": "自编专项",
+      "examTarget": "重庆普通高校专升本",
+      "scoringPoints": [
+        "两种系统软件例子正确。",
+        "两种应用软件例子正确。",
+        "区别表述合理，不要求与参考例子完全相同。"
+      ]
+    },
+    {
+      "id": "CQZSB-MIX-20261025-COMP-021",
+      "subject": "计算机",
+      "section": "当前已学内容",
+      "skillTag": "系统组成",
+      "topic": "计算机基础知识",
+      "point": "易失性与保存",
+      "type": "应用题",
+      "stem": "断电后，一段只放在RAM中尚未保存的文字消失，但硬盘里已保存的文档仍在。请解释原因，并给出避免丢失的做法。",
+      "options": {},
+      "verifiedAnswer": "RAM具有易失性，断电后内容通常丢失；硬盘等非易失性存储介质可长期保存数据。应及时把文档保存到非易失性存储器，并按需备份。",
+      "analysis": "RAM具有易失性，断电后内容通常丢失；硬盘等非易失性存储介质可长期保存数据。应及时把文档保存到非易失性存储器，并按需备份。",
+      "difficulty": "中",
+      "originType": "自编专项",
+      "examTarget": "重庆普通高校专升本",
+      "scoringPoints": [
+        "解释RAM易失性。",
+        "解释硬盘等非易失性存储。",
+        "提出及时保存或备份的做法。"
+      ]
+    },
+    {
+      "id": "CQZSB-DIVERSE-20261027-MATH-001",
+      "subject": "高等数学",
+      "section": "当前已学内容",
+      "skillTag": "定义域",
+      "topic": "函数",
+      "point": "对数真数为分式",
+      "type": "填空题",
+      "stem": "求 f(x)=ln((x−1)/(x+2)) 的定义域。",
+      "options": {},
+      "verifiedAnswer": "(−∞,−2)∪(1,+∞)",
+      "scoringPoints": [
+        "要求(x−1)/(x+2)>0，临界点为−2、1。",
+        "两因子同号时分式为正，得到x<−2或x>1。"
+      ],
+      "autoGradeDisabled": true,
+      "analysis": "要求(x−1)/(x+2)>0，临界点为−2、1。；两因子同号时分式为正，得到x<−2或x>1。",
+      "mathLesson": {
+        "method": "先列真数大于0，再用符号表解分式不等式。",
+        "steps": [
+          "要求(x−1)/(x+2)>0，临界点为−2、1。",
+          "两因子同号时分式为正，得到x<−2或x>1。"
+        ],
+        "conclusion": "(−∞,−2)∪(1,+∞)",
+        "pitfall": "分母零点与真数零点都不能取。",
+        "caveat": ""
+      }
+    },
+    {
+      "id": "CQZSB-DIVERSE-20261027-MATH-002",
+      "subject": "高等数学",
+      "section": "当前已学内容",
+      "skillTag": "定义域",
+      "topic": "函数",
+      "point": "乘积根式与区间并集",
+      "type": "填空题",
+      "stem": "求 f(x)=√((x−1)(x−3)) 的定义域。",
+      "options": {},
+      "verifiedAnswer": "(−∞,1]∪[3,+∞)",
+      "scoringPoints": [
+        "要求(x−1)(x−3)≥0。",
+        "二次项系数为正，取两根外侧并包含零点：x≤1或x≥3。"
+      ],
+      "autoGradeDisabled": true,
+      "analysis": "要求(x−1)(x−3)≥0。；二次项系数为正，取两根外侧并包含零点：x≤1或x≥3。",
+      "mathLesson": {
+        "method": "根号内乘积非负，用零点分区判断符号。",
+        "steps": [
+          "要求(x−1)(x−3)≥0。",
+          "二次项系数为正，取两根外侧并包含零点：x≤1或x≥3。"
+        ],
+        "conclusion": "(−∞,1]∪[3,+∞)",
+        "pitfall": "不能把乘积非负误写成两个因子都非负。",
+        "caveat": ""
+      }
+    },
+    {
+      "id": "CQZSB-DIVERSE-20261027-MATH-003",
+      "subject": "高等数学",
+      "section": "当前已学内容",
+      "skillTag": "定义域",
+      "topic": "函数",
+      "point": "根号套对数",
+      "type": "填空题",
+      "stem": "求 f(x)=√(ln x) 的定义域。",
+      "options": {},
+      "verifiedAnswer": "[1,+∞)",
+      "scoringPoints": [
+        "ln x有意义要求x>0；外层根号要求ln x≥0。",
+        "ln x≥0等价于x≥1，与x>0取交集得[1,+∞)。"
+      ],
+      "autoGradeDisabled": true,
+      "analysis": "ln x有意义要求x>0；外层根号要求ln x≥0。；ln x≥0等价于x≥1，与x>0取交集得[1,+∞)。",
+      "mathLesson": {
+        "method": "先列内层对数限制，再列外层根号限制。",
+        "steps": [
+          "ln x有意义要求x>0；外层根号要求ln x≥0。",
+          "ln x≥0等价于x≥1，与x>0取交集得[1,+∞)。"
+        ],
+        "conclusion": "[1,+∞)",
+        "pitfall": "真数大于0还不够，外层根号也有限制。",
+        "caveat": ""
+      }
+    },
+    {
+      "id": "CQZSB-DIVERSE-20261027-MATH-004",
+      "subject": "高等数学",
+      "section": "当前已学内容",
+      "skillTag": "定义域",
+      "topic": "函数",
+      "point": "对数套二次根式",
+      "type": "填空题",
+      "stem": "求 f(x)=ln(√(9−x²)) 的定义域。",
+      "options": {},
+      "verifiedAnswer": "(−3,3)",
+      "scoringPoints": [
+        "要求√(9−x²)>0，所以9−x²>0。",
+        "解得−3<x<3；端点使真数为0，必须排除。"
+      ],
+      "autoGradeDisabled": true,
+      "analysis": "要求√(9−x²)>0，所以9−x²>0。；解得−3<x<3；端点使真数为0，必须排除。",
+      "mathLesson": {
+        "method": "对数真数必须严格为正。",
+        "steps": [
+          "要求√(9−x²)>0，所以9−x²>0。",
+          "解得−3<x<3；端点使真数为0，必须排除。"
+        ],
+        "conclusion": "(−3,3)",
+        "pitfall": "根式单独允许0，放在对数中就不能取0。",
+        "caveat": ""
+      }
+    },
+    {
+      "id": "CQZSB-DIVERSE-20261027-MATH-005",
+      "subject": "高等数学",
+      "section": "当前已学内容",
+      "skillTag": "定义域",
+      "topic": "函数",
+      "point": "绝对值分母与根式交集",
+      "type": "填空题",
+      "stem": "求 f(x)=√(x+1)/(|x|−2) 的定义域。",
+      "options": {},
+      "verifiedAnswer": "[−1,2)∪(2,+∞)",
+      "scoringPoints": [
+        "根式要求x≥−1；分母不为0要求x≠−2且x≠2。",
+        "−2已在根式区间外，只需从[−1,+∞)中排除2。"
+      ],
+      "autoGradeDisabled": true,
+      "analysis": "根式要求x≥−1；分母不为0要求x≠−2且x≠2。；−2已在根式区间外，只需从[−1,+∞)中排除2。",
+      "mathLesson": {
+        "method": "先求根式区间，再排除分母零点。",
+        "steps": [
+          "根式要求x≥−1；分母不为0要求x≠−2且x≠2。",
+          "−2已在根式区间外，只需从[−1,+∞)中排除2。"
+        ],
+        "conclusion": "[−1,2)∪(2,+∞)",
+        "pitfall": "不是所有分母零点都落在候选区间内。",
+        "caveat": ""
+      }
+    },
+    {
+      "id": "CQZSB-DIVERSE-20261027-MATH-006",
+      "subject": "高等数学",
+      "section": "当前已学内容",
+      "skillTag": "定义域",
+      "topic": "函数",
+      "point": "抽象函数自变量换算",
+      "type": "填空题",
+      "stem": "已知 f(2x−1) 的定义域为[−1,2]，求 f(x) 的定义域。",
+      "options": {},
+      "verifiedAnswer": "[−3,3]",
+      "scoringPoints": [
+        "令t=2x−1；题目给出的是x∈[−1,2]。",
+        "2x−1在该区间递增，输入t从−3变化到3，所以f的定义域为[−3,3]。"
+      ],
+      "autoGradeDisabled": true,
+      "analysis": "令t=2x−1；题目给出的是x∈[−1,2]。；2x−1在该区间递增，输入t从−3变化到3，所以f的定义域为[−3,3]。",
+      "mathLesson": {
+        "method": "区分复合式的自变量与f的输入。",
+        "steps": [
+          "令t=2x−1；题目给出的是x∈[−1,2]。",
+          "2x−1在该区间递增，输入t从−3变化到3，所以f的定义域为[−3,3]。"
+        ],
+        "conclusion": "[−3,3]",
+        "pitfall": "不能把外层x区间直接当作f的输入区间。",
+        "caveat": ""
+      }
+    },
+    {
+      "id": "CQZSB-DIVERSE-20261027-MATH-007",
+      "subject": "高等数学",
+      "section": "当前已学内容",
+      "skillTag": "解析式与复合",
+      "topic": "函数",
+      "point": "分段复合逐次判断",
+      "type": "填空题",
+      "stem": "设 f(x)=x²（x<1），f(x)=2x+1（x≥1）。求 f(f(−2))。",
+      "options": {},
+      "verifiedAnswer": "9",
+      "scoringPoints": [
+        "−2<1，先算f(−2)=4。",
+        "4≥1，再用第二段，f(4)=2×4+1=9。"
+      ],
+      "autoGradeDisabled": true,
+      "analysis": "−2<1，先算f(−2)=4。；4≥1，再用第二段，f(4)=2×4+1=9。",
+      "mathLesson": {
+        "method": "每次代入都重新判断当前输入所在分段。",
+        "steps": [
+          "−2<1，先算f(−2)=4。",
+          "4≥1，再用第二段，f(4)=2×4+1=9。"
+        ],
+        "conclusion": "9",
+        "pitfall": "第二次代入不能沿用第一次的分段。",
+        "caveat": ""
+      }
+    },
+    {
+      "id": "CQZSB-DIVERSE-20261027-MATH-008",
+      "subject": "高等数学",
+      "section": "当前已学内容",
+      "skillTag": "解析式与复合",
+      "topic": "函数",
+      "point": "函数方程联立消元",
+      "type": "计算题",
+      "stem": "已知对一切实数x有 f(x)+2f(−x)=3x+1，求 f(x)。",
+      "options": {},
+      "verifiedAnswer": "f(x)=−3x+1/3",
+      "scoringPoints": [
+        "将x换成−x，得到f(−x)+2f(x)=−3x+1。",
+        "第二式乘2减第一式：3f(x)=−9x+1，故f(x)=−3x+1/3。"
+      ],
+      "autoGradeDisabled": true,
+      "analysis": "将x换成−x，得到f(−x)+2f(x)=−3x+1。；第二式乘2减第一式：3f(x)=−9x+1，故f(x)=−3x+1/3。",
+      "mathLesson": {
+        "method": "分别代入x与−x，联立消元。",
+        "steps": [
+          "将x换成−x，得到f(−x)+2f(x)=−3x+1。",
+          "第二式乘2减第一式：3f(x)=−9x+1，故f(x)=−3x+1/3。"
+        ],
+        "conclusion": "f(x)=−3x+1/3",
+        "pitfall": "替换−x时右侧一次项也要变号。",
+        "caveat": ""
+      }
+    },
+    {
+      "id": "CQZSB-DIVERSE-20261027-MATH-009",
+      "subject": "高等数学",
+      "section": "当前已学内容",
+      "skillTag": "解析式与复合",
+      "topic": "函数",
+      "point": "平移输入换元",
+      "type": "计算题",
+      "stem": "已知 f(x+1)=x²−2x，求 f(x)。",
+      "options": {},
+      "verifiedAnswer": "f(x)=x²−4x+3",
+      "scoringPoints": [
+        "令t=x+1，则x=t−1。",
+        "f(t)=(t−1)²−2(t−1)=t²−4t+3，再把t换成x。"
+      ],
+      "autoGradeDisabled": true,
+      "analysis": "令t=x+1，则x=t−1。；f(t)=(t−1)²−2(t−1)=t²−4t+3，再把t换成x。",
+      "mathLesson": {
+        "method": "令新变量等于函数的完整输入。",
+        "steps": [
+          "令t=x+1，则x=t−1。",
+          "f(t)=(t−1)²−2(t−1)=t²−4t+3，再把t换成x。"
+        ],
+        "conclusion": "f(x)=x²−4x+3",
+        "pitfall": "必须替换右边每一处x。",
+        "caveat": ""
+      }
+    },
+    {
+      "id": "CQZSB-DIVERSE-20261027-MATH-010",
+      "subject": "高等数学",
+      "section": "当前已学内容",
+      "skillTag": "解析式与复合",
+      "topic": "函数",
+      "point": "复合次序对比",
+      "type": "计算题",
+      "stem": "设 f(x)=x²，g(x)=x+1。分别求 f(g(x)) 与 g(f(x))，并判断两者是否恒相等。",
+      "options": {},
+      "verifiedAnswer": "f(g(x))=x²+2x+1；g(f(x))=x²+1；不恒相等",
+      "scoringPoints": [
+        "f(g(x))=(x+1)²=x²+2x+1；g(f(x))=x²+1。",
+        "两式之差为2x，仅x=0时相等，因此不恒相等。"
+      ],
+      "autoGradeDisabled": true,
+      "analysis": "f(g(x))=(x+1)²=x²+2x+1；g(f(x))=x²+1。；两式之差为2x，仅x=0时相等，因此不恒相等。",
+      "mathLesson": {
+        "method": "把内层表达式整体代入外层。",
+        "steps": [
+          "f(g(x))=(x+1)²=x²+2x+1；g(f(x))=x²+1。",
+          "两式之差为2x，仅x=0时相等，因此不恒相等。"
+        ],
+        "conclusion": "f(g(x))=x²+2x+1；g(f(x))=x²+1；不恒相等",
+        "pitfall": "复合函数一般不满足交换律。",
+        "caveat": ""
+      }
+    },
+    {
+      "id": "CQZSB-DIVERSE-20261027-MATH-011",
+      "subject": "高等数学",
+      "section": "当前已学内容",
+      "skillTag": "解析式与复合",
+      "topic": "函数",
+      "point": "分式输入反解",
+      "type": "填空题",
+      "stem": "已知 f(1/(x+1))=x/(x+1)（x≠−1），求 f(t)，并写出t的范围。",
+      "options": {},
+      "verifiedAnswer": "f(t)=1−t，t≠0",
+      "scoringPoints": [
+        "令t=1/(x+1)，则t≠0且x=1/t−1。",
+        "x/(x+1)=xt=(1/t−1)t=1−t，故f(t)=1−t。"
+      ],
+      "autoGradeDisabled": true,
+      "analysis": "令t=1/(x+1)，则t≠0且x=1/t−1。；x/(x+1)=xt=(1/t−1)t=1−t，故f(t)=1−t。",
+      "mathLesson": {
+        "method": "换元后同时确定新输入的取值范围。",
+        "steps": [
+          "令t=1/(x+1)，则t≠0且x=1/t−1。",
+          "x/(x+1)=xt=(1/t−1)t=1−t，故f(t)=1−t。"
+        ],
+        "conclusion": "f(t)=1−t，t≠0",
+        "pitfall": "不要漏掉新变量不能等于0。",
+        "caveat": ""
+      }
+    },
+    {
+      "id": "CQZSB-DIVERSE-20261027-MATH-012",
+      "subject": "高等数学",
+      "section": "当前已学内容",
+      "skillTag": "解析式与复合",
+      "topic": "函数",
+      "point": "二次内层的对数复合定义域",
+      "type": "填空题",
+      "stem": "设 f(t)=ln t，g(x)=x²−4。求 f(g(x)) 的定义域。",
+      "options": {},
+      "verifiedAnswer": "(−∞,−2)∪(2,+∞)",
+      "scoringPoints": [
+        "f要求输入t>0，所以g(x)=x²−4>0。",
+        "解得x<−2或x>2。"
+      ],
+      "autoGradeDisabled": true,
+      "analysis": "f要求输入t>0，所以g(x)=x²−4>0。；解得x<−2或x>2。",
+      "mathLesson": {
+        "method": "把内层的值放入外层定义域条件。",
+        "steps": [
+          "f要求输入t>0，所以g(x)=x²−4>0。",
+          "解得x<−2或x>2。"
+        ],
+        "conclusion": "(−∞,−2)∪(2,+∞)",
+        "pitfall": "内层多项式处处有意义不代表复合式处处有意义。",
+        "caveat": ""
+      }
+    },
+    {
+      "id": "CQZSB-DIVERSE-20261027-MATH-013",
+      "subject": "高等数学",
+      "section": "当前已学内容",
+      "skillTag": "反函数",
+      "topic": "函数",
+      "point": "分式反函数与遗漏值",
+      "type": "计算题",
+      "stem": "求 f(x)=(x−1)/(x+1)（x≠−1）的反函数及其定义域。",
+      "options": {},
+      "verifiedAnswer": "f⁻¹(x)=(x+1)/(1−x)，x≠1",
+      "scoringPoints": [
+        "由y(x+1)=x−1，得到x(y−1)=−1−y，即x=(1+y)/(1−y)。",
+        "交换x、y：f⁻¹(x)=(x+1)/(1−x)，原值域排除1，所以反函数定义域为R去掉1。"
+      ],
+      "autoGradeDisabled": true,
+      "analysis": "由y(x+1)=x−1，得到x(y−1)=−1−y，即x=(1+y)/(1−y)。；交换x、y：f⁻¹(x)=(x+1)/(1−x)，原值域排除1，所以反函数定义域为R去掉1。",
+      "mathLesson": {
+        "method": "设y=f(x)，反解原自变量并交换字母。",
+        "steps": [
+          "由y(x+1)=x−1，得到x(y−1)=−1−y，即x=(1+y)/(1−y)。",
+          "交换x、y：f⁻¹(x)=(x+1)/(1−x)，原值域排除1，所以反函数定义域为R去掉1。"
+        ],
+        "conclusion": "f⁻¹(x)=(x+1)/(1−x)，x≠1",
+        "pitfall": "反函数定义域是原函数值域。",
+        "caveat": ""
+      }
+    },
+    {
+      "id": "CQZSB-DIVERSE-20261027-MATH-014",
+      "subject": "高等数学",
+      "section": "当前已学内容",
+      "skillTag": "反函数",
+      "topic": "函数",
+      "point": "指数平移反解",
+      "type": "计算题",
+      "stem": "求 f(x)=e^x+2 的反函数，并写出反函数定义域。",
+      "options": {},
+      "verifiedAnswer": "f⁻¹(x)=ln(x−2)，x>2",
+      "scoringPoints": [
+        "y=e^x+2给出y−2=e^x>0，故y>2。",
+        "取对数x=ln(y−2)，交换字母得到f⁻¹(x)=ln(x−2)，x>2。"
+      ],
+      "autoGradeDisabled": true,
+      "analysis": "y=e^x+2给出y−2=e^x>0，故y>2。；取对数x=ln(y−2)，交换字母得到f⁻¹(x)=ln(x−2)，x>2。",
+      "mathLesson": {
+        "method": "先移项，再取对数。",
+        "steps": [
+          "y=e^x+2给出y−2=e^x>0，故y>2。",
+          "取对数x=ln(y−2)，交换字母得到f⁻¹(x)=ln(x−2)，x>2。"
+        ],
+        "conclusion": "f⁻¹(x)=ln(x−2)，x>2",
+        "pitfall": "不能写成ln x−2。",
+        "caveat": ""
+      }
+    },
+    {
+      "id": "CQZSB-DIVERSE-20261027-MATH-015",
+      "subject": "高等数学",
+      "section": "当前已学内容",
+      "skillTag": "反函数",
+      "topic": "函数",
+      "point": "根式平移反解与主值",
+      "type": "计算题",
+      "stem": "求 f(x)=√(x+2)−1（x≥−2）的反函数及其定义域。",
+      "options": {},
+      "verifiedAnswer": "f⁻¹(x)=(x+1)²−2，x≥−1",
+      "scoringPoints": [
+        "y+1=√(x+2)≥0，所以y≥−1。",
+        "平方得x=(y+1)²−2，交换字母；反函数定义域为[−1,+∞)。"
+      ],
+      "autoGradeDisabled": true,
+      "analysis": "y+1=√(x+2)≥0，所以y≥−1。；平方得x=(y+1)²−2，交换字母；反函数定义域为[−1,+∞)。",
+      "mathLesson": {
+        "method": "先确定原值域，再平方反解。",
+        "steps": [
+          "y+1=√(x+2)≥0，所以y≥−1。",
+          "平方得x=(y+1)²−2，交换字母；反函数定义域为[−1,+∞)。"
+        ],
+        "conclusion": "f⁻¹(x)=(x+1)²−2，x≥−1",
+        "pitfall": "平方后的式子不能丢掉原值域限制。",
+        "caveat": ""
+      }
+    },
+    {
+      "id": "CQZSB-DIVERSE-20261027-MATH-016",
+      "subject": "高等数学",
+      "section": "当前已学内容",
+      "skillTag": "反函数",
+      "topic": "函数",
+      "point": "奇函数与逆向求值",
+      "type": "填空题",
+      "stem": "已知可逆的奇函数f满足 f(2)=5，求 f⁻¹(−5)。",
+      "options": {},
+      "verifiedAnswer": "−2",
+      "scoringPoints": [
+        "f为奇函数，所以f(−2)=−f(2)=−5。",
+        "反函数把输出−5映回输入−2，因此f⁻¹(−5)=−2。"
+      ],
+      "autoGradeDisabled": true,
+      "analysis": "f为奇函数，所以f(−2)=−f(2)=−5。；反函数把输出−5映回输入−2，因此f⁻¹(−5)=−2。",
+      "mathLesson": {
+        "method": "先用奇性求原函数对应点，再逆向读取。",
+        "steps": [
+          "f为奇函数，所以f(−2)=−f(2)=−5。",
+          "反函数把输出−5映回输入−2，因此f⁻¹(−5)=−2。"
+        ],
+        "conclusion": "−2",
+        "pitfall": "反函数值不是1/f(−5)。",
+        "caveat": ""
+      }
+    },
+    {
+      "id": "CQZSB-DIVERSE-20261027-MATH-017",
+      "subject": "高等数学",
+      "section": "当前已学内容",
+      "skillTag": "奇偶与性质",
+      "topic": "函数",
+      "point": "分式奇性证明",
+      "type": "计算题",
+      "stem": "判断 f(x)=x/(1+x²) 的奇偶性，并说明理由。",
+      "options": {},
+      "verifiedAnswer": "奇函数",
+      "scoringPoints": [
+        "1+x²始终大于0，定义域R关于原点对称。",
+        "f(−x)=−x/(1+x²)=−f(x)，所以是奇函数。"
+      ],
+      "autoGradeDisabled": true,
+      "analysis": "1+x²始终大于0，定义域R关于原点对称。；f(−x)=−x/(1+x²)=−f(x)，所以是奇函数。",
+      "mathLesson": {
+        "method": "先检查定义域对称，再计算f(−x)。",
+        "steps": [
+          "1+x²始终大于0，定义域R关于原点对称。",
+          "f(−x)=−x/(1+x²)=−f(x)，所以是奇函数。"
+        ],
+        "conclusion": "奇函数",
+        "pitfall": "只看分子或分母的奇偶性不能代替完整判断。",
+        "caveat": ""
+      }
+    },
+    {
+      "id": "CQZSB-DIVERSE-20261027-MATH-018",
+      "subject": "高等数学",
+      "section": "当前已学内容",
+      "skillTag": "奇偶与性质",
+      "topic": "函数",
+      "point": "指数对称组合",
+      "type": "计算题",
+      "stem": "判断 f(x)=e^x+e^(−x) 的奇偶性，并说明理由。",
+      "options": {},
+      "verifiedAnswer": "偶函数",
+      "scoringPoints": [
+        "定义域是R，关于原点对称。",
+        "f(−x)=e^(−x)+e^x=f(x)，所以是偶函数。"
+      ],
+      "autoGradeDisabled": true,
+      "analysis": "定义域是R，关于原点对称。；f(−x)=e^(−x)+e^x=f(x)，所以是偶函数。",
+      "mathLesson": {
+        "method": "将−x整体代入，观察两项互换。",
+        "steps": [
+          "定义域是R，关于原点对称。",
+          "f(−x)=e^(−x)+e^x=f(x)，所以是偶函数。"
+        ],
+        "conclusion": "偶函数",
+        "pitfall": "指数函数本身非奇非偶，组合后可能具有奇偶性。",
+        "caveat": ""
+      }
+    },
+    {
+      "id": "CQZSB-DIVERSE-20261027-MATH-019",
+      "subject": "高等数学",
+      "section": "当前已学内容",
+      "skillTag": "奇偶与性质",
+      "topic": "函数",
+      "point": "非对称定义域否定奇偶性",
+      "type": "计算题",
+      "stem": "判断 f(x)=x²（x∈[−1,2]）的奇偶性。",
+      "options": {},
+      "verifiedAnswer": "非奇非偶",
+      "scoringPoints": [
+        "定义域包含2，却不包含−2，因此不关于原点对称。",
+        "即使表达式x²满足代数上的f(−x)=f(x)，该限定定义域上的函数仍非奇非偶。"
+      ],
+      "autoGradeDisabled": true,
+      "analysis": "定义域包含2，却不包含−2，因此不关于原点对称。；即使表达式x²满足代数上的f(−x)=f(x)，该限定定义域上的函数仍非奇非偶。",
+      "mathLesson": {
+        "method": "奇偶性首先受定义域约束。",
+        "steps": [
+          "定义域包含2，却不包含−2，因此不关于原点对称。",
+          "即使表达式x²满足代数上的f(−x)=f(x)，该限定定义域上的函数仍非奇非偶。"
+        ],
+        "conclusion": "非奇非偶",
+        "pitfall": "不能只凭表达式x²就判偶函数。",
+        "caveat": ""
+      }
+    },
+    {
+      "id": "CQZSB-DIVERSE-20261027-MATH-020",
+      "subject": "高等数学",
+      "section": "当前已学内容",
+      "skillTag": "奇偶与性质",
+      "topic": "函数",
+      "point": "奇函数在原点的性质",
+      "type": "计算题",
+      "stem": "已知奇函数f在x=0处有定义，证明 f(0)=0。",
+      "options": {},
+      "verifiedAnswer": "f(0)=0",
+      "scoringPoints": [
+        "奇函数满足f(−x)=−f(x)，令x=0得f(0)=−f(0)。",
+        "移项得到2f(0)=0，因此f(0)=0。"
+      ],
+      "autoGradeDisabled": true,
+      "analysis": "奇函数满足f(−x)=−f(x)，令x=0得f(0)=−f(0)。；移项得到2f(0)=0，因此f(0)=0。",
+      "mathLesson": {
+        "method": "把原点代入奇函数定义。",
+        "steps": [
+          "奇函数满足f(−x)=−f(x)，令x=0得f(0)=−f(0)。",
+          "移项得到2f(0)=0，因此f(0)=0。"
+        ],
+        "conclusion": "f(0)=0",
+        "pitfall": "必须有“在0处有定义”的前提。",
+        "caveat": ""
+      }
+    },
+    {
+      "id": "CQZSB-DIVERSE-20261027-MATH-021",
+      "subject": "高等数学",
+      "section": "当前已学内容",
+      "skillTag": "参数与值域",
+      "topic": "函数",
+      "point": "受限区间跨越顶点",
+      "type": "填空题",
+      "stem": "求 f(x)=(x+1)² 在x∈[−2,0]上的值域。",
+      "options": {},
+      "verifiedAnswer": "[0,1]",
+      "scoringPoints": [
+        "顶点x=−1位于给定区间内，最小值为0。",
+        "两端点函数值均为1，所以最大值为1，值域为[0,1]。"
+      ],
+      "autoGradeDisabled": true,
+      "analysis": "顶点x=−1位于给定区间内，最小值为0。；两端点函数值均为1，所以最大值为1，值域为[0,1]。",
+      "mathLesson": {
+        "method": "同时检查区间内部顶点与端点。",
+        "steps": [
+          "顶点x=−1位于给定区间内，最小值为0。",
+          "两端点函数值均为1，所以最大值为1，值域为[0,1]。"
+        ],
+        "conclusion": "[0,1]",
+        "pitfall": "只算端点会漏掉内部最小值。",
+        "caveat": ""
+      }
+    },
+    {
+      "id": "CQZSB-DIVERSE-20261027-MATH-022",
+      "subject": "高等数学",
+      "section": "当前已学内容",
+      "skillTag": "参数与值域",
+      "topic": "函数",
+      "point": "分式值域与不取零",
+      "type": "填空题",
+      "stem": "求 f(x)=1/(x²+1)（x∈R）的值域。",
+      "options": {},
+      "verifiedAnswer": "(0,1]",
+      "scoringPoints": [
+        "x²+1≥1，所以0<1/(x²+1)≤1。",
+        "x=0可取到1；任意y∈(0,1]均可令x²=1/y−1实现，但0不能取到。"
+      ],
+      "autoGradeDisabled": true,
+      "analysis": "x²+1≥1，所以0<1/(x²+1)≤1。；x=0可取到1；任意y∈(0,1]均可令x²=1/y−1实现，但0不能取到。",
+      "mathLesson": {
+        "method": "先求分母范围，再取倒数并核对端点。",
+        "steps": [
+          "x²+1≥1，所以0<1/(x²+1)≤1。",
+          "x=0可取到1；任意y∈(0,1]均可令x²=1/y−1实现，但0不能取到。"
+        ],
+        "conclusion": "(0,1]",
+        "pitfall": "趋近0不等于能取到0。",
+        "caveat": ""
+      }
+    },
+    {
+      "id": "CQZSB-DIVERSE-20261027-MATH-023",
+      "subject": "高等数学",
+      "section": "当前已学内容",
+      "skillTag": "参数与值域",
+      "topic": "函数",
+      "point": "根式定义域为全体实数的参数",
+      "type": "填空题",
+      "stem": "若 f(x)=√(ax+1) 的定义域为R，求a。",
+      "options": {},
+      "verifiedAnswer": "a=0",
+      "scoringPoints": [
+        "要求ax+1≥0对每个实数x成立。",
+        "若a≠0，可沿使ax趋于负无穷的方向选x，矛盾；a=0时根号内恒为1，成立。"
+      ],
+      "autoGradeDisabled": true,
+      "analysis": "要求ax+1≥0对每个实数x成立。；若a≠0，可沿使ax趋于负无穷的方向选x，矛盾；a=0时根号内恒为1，成立。",
+      "mathLesson": {
+        "method": "把全体实数有意义转化为一次式恒非负。",
+        "steps": [
+          "要求ax+1≥0对每个实数x成立。",
+          "若a≠0，可沿使ax趋于负无穷的方向选x，矛盾；a=0时根号内恒为1，成立。"
+        ],
+        "conclusion": "a=0",
+        "pitfall": "在有限区间恒非负与在R上恒非负条件不同。",
+        "caveat": ""
+      }
+    },
+    {
+      "id": "CQZSB-DIVERSE-20261027-MATH-024",
+      "subject": "高等数学",
+      "section": "当前已学内容",
+      "skillTag": "参数与值域",
+      "topic": "函数",
+      "point": "对数全实定义域的严格参数界",
+      "type": "填空题",
+      "stem": "若 f(x)=ln(x²+a) 的定义域为R，求a的范围。",
+      "options": {},
+      "verifiedAnswer": "a>0",
+      "scoringPoints": [
+        "x²+a在x=0处取得最小值a。",
+        "要使所有x的真数都大于0，充要条件是a>0；a=0时x=0不合法。"
+      ],
+      "autoGradeDisabled": true,
+      "analysis": "x²+a在x=0处取得最小值a。；要使所有x的真数都大于0，充要条件是a>0；a=0时x=0不合法。",
+      "mathLesson": {
+        "method": "真数在R上必须严格大于0。",
+        "steps": [
+          "x²+a在x=0处取得最小值a。",
+          "要使所有x的真数都大于0，充要条件是a>0；a=0时x=0不合法。"
+        ],
+        "conclusion": "a>0",
+        "pitfall": "对数真数是严格大于0，不是大于等于0。",
+        "caveat": ""
+      }
     }
-  ]
+  ],
+  "examTarget": "重庆普通高校专升本",
+  "description": "已学章节自编专项题；数学移除18道仅数字不同的模板变体，新增24道不同条件与任务的题。结构去重后不足时提示补题，不用换数字凑数。"
 }

@@ -1,0 +1,880 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>蓝色森林单词记忆｜完整功能版</title>
+  <link rel="dns-prefetch" href="//dict.youdao.com">
+  <link rel="dns-prefetch" href="//ssl.gstatic.com">
+  <link rel="preconnect" href="https://dict.youdao.com" crossorigin>
+  <link rel="preconnect" href="https://ssl.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="./styles.css?v=70b211">
+  <link rel="stylesheet" href="./ui-refresh.css?v=70b145">
+  <link rel="preload" as="audio" href="./assets/pronunciation-primer.wav?v=70b060fullstart20260820" type="audio/wav">
+  <link rel="stylesheet" href="./mobile-polish.css?v=70b150">
+  <link rel="stylesheet" href="./spelling-hub.css?v=70b210">
+  <link rel="stylesheet" href="./restore-b223.css?v=b226p220">
+  <link rel="stylesheet" href="./guided-learning.css?v=b226p220">
+</head>
+<body class="ui-b143">
+  <div class="app-shell">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">WORD MEMORY <span class="version-badge">B226</span></p>
+        <h1>短语记忆 · 220条</h1>
+      </div>
+      <div class="topbar-actions">
+        <button class="secondary-button" id="exportButton" title="导出本机备份" aria-label="导出本机备份">↧ 导出备份</button>
+        <button class="secondary-button" id="cloudSyncButton"><span aria-hidden="true">☁</span> 云同步</button>
+        <details class="header-more">
+          <summary>更多操作 <span aria-hidden="true">⌄</span></summary>
+          <div class="header-more-menu">
+            <span class="menu-label">学习方式</span>
+            <button class="secondary-button" id="startNewButton"><span aria-hidden="true">▶</span> 新词连背</button>
+            <button class="secondary-button" id="weakOnlyButton"><span aria-hidden="true">★</span> 只背不会的</button>
+            <button class="secondary-button" id="sprintButton"><span aria-hidden="true">◷</span> 15分钟冲刺</button>
+            <span class="menu-label">数据与批量操作</span>
+            <button class="secondary-button" id="importButton" title="导入旧数据 / 备份文件" aria-label="导入旧数据">↥ 导入旧数据</button>
+            <button class="secondary-button" type="button" onclick="location.hash='reset-local';location.reload()">清空本机全部学习进度</button>
+            <button class="secondary-button" id="batchLearnButton"><span aria-hidden="true">✓</span> 一键记完新词</button>
+          </div>
+        </details>
+        <button class="primary-button" id="focusDueButton"><span aria-hidden="true">◎</span> 开始复习</button>
+      </div>
+    </header>
+    <div class="focus-kind-entry"><label>专注学习分区 <select data-focus-vocab-select aria-label="专注学习分区"><option value="word">单词 · 0</option><option value="phrase">短语 · 220</option></select></label></div>
+    <div class="mobile-focus-entry-row">
+      <button class="mobile-focus-entry" id="mobileFocusEntry" type="button" aria-describedby="mobileFocusEntryHint">
+        <span class="mobile-focus-entry-copy">
+          <span class="mobile-focus-entry-kicker">FOCUS SESSION</span>
+          <strong>留一点时间，专心记住一个词。</strong>
+          <small id="mobileFocusEntryHint">看词 → 英选中 → 中选英 → 可选拼写 · 专注独立存档</small>
+        </span>
+        <span class="mobile-focus-entry-cta">进入专注模式 →</span>
+      </button>
+    </div>
+    <div class="readonly-banner" id="readonlyBanner" hidden></div>
+
+    <main class="workspace">
+      <nav class="module-switcher" aria-label="大模块切换">
+        <button class="module-button active" type="button" data-module-target="folder"><span>📁</span><strong>英语资料夹</strong><small>当前资料：蓝色森林 · 1050 单词 / 140 短语</small></button>
+        <button class="module-button" type="button" data-module-target="spelling"><span>✍️</span><strong>拼写训练</strong><small>看中文写英文 · 专练主动拼写</small></button>
+        <button class="module-button" type="button" data-module-target="study"><span>🧠</span><strong>记忆训练</strong><small>复习 / 新词 / 听写 / 拼写</small></button>
+        <button class="module-button" type="button" data-module-target="smart"><span>🔎</span><strong>构词归类</strong><small>词根 / 形近 / 同义</small></button>
+        <button class="module-button" type="button" data-module-target="review"><span>⚡</span><strong>快速复习</strong><small>错词回炉 / 极速 / 冲刺</small></button>
+        <button class="module-button" type="button" data-module-target="browse"><span>☷</span><strong>全词浏览</strong><small id="browseTotalHint">词库快速查阅</small></button>
+        <button class="module-button" type="button" data-module-target="progress"><span>📊</span><strong>学习进度</strong><small>专注与普通训练进度</small></button>
+        <button class="module-button" type="button" data-module-target="manage"><span>＋</span><strong>管理词库</strong><small>添加 / 筛选 / 总词库</small></button>
+      </nav>
+
+      <section class="spelling-hub module-section" data-module-section="spelling" id="spellingHub" aria-label="拼写训练中心">
+        <div class="spelling-hub-hero">
+          <div>
+            <p class="eyebrow">SPELLING LAB · ACTIVE RECALL</p>
+            <h2>拼写训练中心</h2>
+            <p>把“看得懂”变成“写得出”：拼错先5分钟纠错；独立拼对后按 1天 → 2天 → 4天 → 7天 → 14天 → 30天回炉。没到期的词不会提前混进今日训练。</p>
+          </div>
+          <div class="spelling-hub-goal">
+            <span>训练规则</span>
+            <strong>先想，再写</strong>
+            <small>拼写系统独立记录，不重置31天主复习阶段</small>
+          </div>
+        </div>
+
+        <div class="spelling-hub-stats" aria-label="拼写掌握统计">
+          <article><span>今日掌握</span><strong id="spellingHubMasteredToday">0</strong><small>两次独立拼对</small></article>
+          <article><span>到期回炉</span><strong id="spellingHubDue">0</strong><small>现在应该再拼</small></article>
+          <article><span>今日首拼正确率</span><strong id="spellingHubAccuracy">—</strong><small>第一次就写对</small></article>
+          <article><span>长期拼写毕业</span><strong id="spellingHubGraduated">0</strong><small>通过30天复测</small></article>
+        </div>
+
+        <section class="spelling-month-plan" id="spellingMonthPlan" aria-label="90天全库拼写计划">
+          <div class="spelling-month-plan-copy"><span>90 DAY PLAN · WORDS + PHRASES + GRAMMAR</span><strong id="spellingMonthPlanTitle">90天全库拼写计划</strong><p id="spellingMonthPlanDetail">从今天开始，把单词、短语和语法固定结构按90天自动分配；已拼对的内容不会重复发放。</p></div>
+          <div class="spelling-month-plan-progress"><i id="spellingMonthPlanBar"></i></div>
+          <div class="spelling-month-plan-metrics"><span><b id="spellingMonthPlanDay">未开始</b><small>计划日期</small></span><span><b id="spellingMonthPlanToday">—</b><small>今天还需完成</small></span><span><b id="spellingMonthPlanDone">0/0</b><small>全词已完成</small></span></div>
+          <div class="spelling-month-plan-actions"><button class="spelling-month-plan-start" id="spellingMonthPlanStart" type="button">从今天开始90天计划</button><button class="spelling-month-plan-today" id="spellingMonthPlanTodayStart" type="button" hidden>开始今天的拼写</button><button class="spelling-month-plan-reset" id="spellingMonthPlanReset" type="button" hidden>重新计算90天计划</button></div>
+        </section>
+
+        <div class="spelling-hub-paths" aria-label="拼写训练入口">
+          <button class="spelling-path-card primary" id="spellingHubTodayStart" type="button">
+            <span class="spelling-path-icon">✍️</span><span><strong>今日拼写</strong><small>到期词优先，不足30个再补“已认识但未建立拼写”的词</small></span><b id="spellingHubTodayCount">30</b>
+          </button>
+          <button class="spelling-path-card due-card" id="spellingHubDueStart" type="button">
+            <span class="spelling-path-icon">⏰</span><span><strong>到期复习</strong><small>只练现在已到期的拼写内容，不混入新词；单词、短语和语法固定结构都会进入这里</small></span><b id="spellingHubDueStartCount">0</b>
+          </button>
+          <button class="spelling-path-card" id="spellingHubMistakeStart" type="button">
+            <span class="spelling-path-icon">↻</span><span><strong>拼写错词</strong><small>只处理真正拼错过的词，按错误次数和到期时间排序</small></span><b id="spellingHubMistakeCount">0</b>
+          </button>
+          <button class="spelling-path-card" id="spellingHubFamilyStart" type="button">
+            <span class="spelling-path-icon">🌿</span><span><strong>词族强化</strong><small>把 represent → representation → representative 这类变化集中练</small></span><b>词族</b>
+          </button>
+          <button class="spelling-path-card" id="spellingHubListeningStart" type="button">
+            <span class="spelling-path-icon">🔊</span><span><strong>听音拼写</strong><small>第二训练通道：只听发音写英文，不靠中文提示</small></span><b>听写</b>
+          </button>
+          <button class="spelling-path-card" id="spellingHubCollocationStart" type="button">
+            <span class="spelling-path-icon">🧩</span><span><strong>固定搭配专项</strong><small>扫描全部词库固定搭配 / 句型，按来源专项练中文 → 英文</small></span><b id="spellingHubCollocationCount">1785</b>
+          </button>
+          <button class="spelling-path-card history-card" id="spellingHubHistoryOpen" type="button">
+            <span class="spelling-path-icon">📚</span><span><strong>拼写记录</strong><small>查看已经练过的词、正确/错误次数、回炉阶段和最近练习时间</small></span><b id="spellingHubHistoryCount">0</b>
+          </button>
+          <button class="spelling-path-card history-card" id="spellingHubDailyOpen" type="button">
+            <span class="spelling-path-icon">🗓️</span><span><strong>每日拼写回看</strong><small>按日期查看当天拼过的内容；可一键遮住英文或中文再回忆</small></span><b id="spellingHubDailyCount">0</b>
+          </button>
+        </div>
+
+        <div class="spelling-hub-panel">
+          <div class="spelling-hub-panel-head">
+            <div><span>自由专项</span><strong>自己指定范围练</strong></div>
+            <small>可精确到蓝色森林 / 四级核心 / Unit / 短语等</small>
+          </div>
+          <div class="spelling-hub-controls">
+            <label><span>练什么</span><select id="spellingHubKind"><option value="word">单词</option><option value="phrase" selected>短语</option></select></label>
+            <label><span>大来源</span><select id="spellingHubSource"><option value="all" selected>全部词库</option><option value="蓝色森林">蓝色森林</option><option value="四级核心">四级核心</option><option value="四级">四级</option><option value="Word List">Word List</option><option value="短语练习">短语练习</option><option value="全方位">全方位</option><option value="固定搭配专项">固定搭配专项</option><option value="听写内容">听写内容</option></select></label>
+            <label><span>具体分组</span><select id="spellingHubGroup"><option value="all" selected>全部分组</option></select></label>
+            <label><span>掌握状态</span><select id="spellingHubStatus"><option value="learned" selected>已学过的词</option><option value="weak">薄弱词优先</option><option value="all">全部</option><option value="new">只练新词</option></select></label>
+            <label><span>本轮数量</span><select id="spellingHubLimit"><option value="30" selected>30个</option><option value="50">50个</option><option value="100">100个</option><option value="all">全部</option></select></label>
+          </div>
+          <div class="spelling-hub-actions">
+            <button class="spelling-hub-start" id="spellingHubStart" type="button"><span>▶</span><strong>开始自由专项</strong><small>中文 → 英文 · 分级提示 · 强制闭卷重拼</small></button>
+            <button class="spelling-hub-secondary" id="spellingHubWeakStart" type="button"><strong>直接练薄弱词</strong><small>按主词库薄弱分优先</small></button>
+          </div>
+          <div class="spelling-error-summary" id="spellingHubErrorSummary"><strong>常错模式</strong><span>开始练习后，这里会统计你的漏字母、顺序、词尾、双写等错误。</span></div>
+          <p class="spelling-hub-note" id="spellingHubNote">第一次拼错只告诉你“错在哪里”，第二次才给首字母和长度，第三次才显示答案；看完答案必须重新闭卷拼对。</p>
+        </div>
+
+        <div class="spelling-session" id="spellingLabSession" hidden aria-hidden="true">
+          <div class="spelling-session-backdrop" data-spelling-action="close"></div>
+          <section class="spelling-session-card" role="dialog" aria-modal="true" aria-labelledby="spellingSessionTitle">
+            <header class="spelling-session-head">
+              <div><small id="spellingSessionKicker">主动提取</small><strong id="spellingSessionTitle">中文 → 英文</strong></div>
+              <button class="spelling-session-close" type="button" data-spelling-action="close" aria-label="关闭">×</button>
+            </header>
+            <div class="spelling-session-progress"><i id="spellingSessionProgressBar"></i></div>
+            <div class="spelling-session-meta"><span id="spellingSessionIndex">1/30</span><span id="spellingSessionSchedule">首次建立</span></div>
+            <main class="spelling-session-body">
+              <div class="spelling-session-prompt" id="spellingSessionPrompt"></div>
+              <button class="spelling-listen-button" id="spellingListenButton" type="button" hidden>🔊 播放发音</button>
+              <div class="spelling-hint-box" id="spellingHintBox" hidden></div>
+              <div class="spelling-answer-box" id="spellingAnswerBox" hidden></div>
+              <label class="spelling-input-wrap" id="spellingInputWrap"><span>完整拼写</span><input id="spellingLabInput" type="text" autocomplete="off" autocapitalize="none" spellcheck="false" enterkeyhint="done" placeholder="在这里写英文"></label>
+              <p class="spelling-session-feedback" id="spellingSessionFeedback" aria-live="polite"></p>
+              <div class="spelling-session-actions">
+                <button class="secondary-button" id="spellingDontKnowButton" type="button">完全不会</button>
+                <button class="mastered-button" id="spellingMasteredButton" type="button">✓ 已掌握</button>
+                <button class="primary-button" id="spellingCheckButton" type="button">检查 Enter</button>
+              </div>
+            </main>
+            <footer class="spelling-session-footer"><span id="spellingSessionFooter">英文、音标和发音在提交前不会泄露。</span></footer>
+          </section>
+        </div>
+
+        <div class="spelling-history" id="spellingHistoryPanel" hidden aria-hidden="true">
+          <div class="spelling-history-backdrop" data-spelling-history-action="close"></div>
+          <section class="spelling-history-card" role="dialog" aria-modal="true" aria-labelledby="spellingHistoryTitle">
+            <header class="spelling-history-head">
+              <div><small>MY SPELLING</small><strong id="spellingHistoryTitle">📚 拼写记录</strong><p>这里显示你真正练过的词，不影响31天主学习进度。</p></div>
+              <button class="spelling-session-close" type="button" data-spelling-history-action="close" aria-label="关闭">×</button>
+            </header>
+            <div class="spelling-history-summary">
+              <article><span>已练拼写</span><strong id="spellingHistoryTotal">0</strong></article>
+              <article><span>正在回炉</span><strong id="spellingHistoryReview">0</strong></article>
+              <article><span>手动已掌握</span><strong id="spellingHistoryManualMastered">0</strong></article>
+              <article><span>拼写毕业</span><strong id="spellingHistoryGraduated">0</strong></article>
+            </div>
+            <div class="spelling-history-toolbar">
+              <div class="spelling-history-tabs" id="spellingHistoryTabs">
+                <button type="button" data-history-filter="all" class="active">全部练过</button>
+                <button type="button" data-history-filter="today">今天练过</button>
+                <button type="button" data-history-filter="correct">拼对过</button>
+                <button type="button" data-history-filter="wrong">拼错过</button>
+                <button type="button" data-history-filter="review">正在回炉</button>
+                <button type="button" data-history-filter="mastered">已掌握</button>
+                <button type="button" data-history-filter="graduated">拼写毕业</button>
+              </div>
+              <div class="spelling-history-search-row">
+                <input id="spellingHistorySearch" type="search" autocomplete="off" placeholder="搜索英文或中文释义">
+                <select id="spellingHistorySource" aria-label="按来源筛选">
+                  <option value="all">全部来源</option><option value="蓝色森林">蓝色森林</option><option value="四级核心">四级核心</option><option value="四级">四级</option><option value="Word List">Word List</option><option value="短语练习">短语练习</option><option value="全方位">全方位</option><option value="固定搭配专项">固定搭配专项</option>
+                </select>
+              </div>
+              <div class="spelling-history-date-row">
+                <label>查看某天 <input id="spellingHistoryDate" type="date" aria-label="查看某天的拼写记录"></label>
+                <div class="spelling-history-mask-tools" id="spellingHistoryMaskTools" aria-label="中英文遮盖">
+                  <button type="button" class="active" data-history-mask="none">显示中英</button>
+                  <button type="button" data-history-mask="english">遮英文</button>
+                  <button type="button" data-history-mask="meaning">遮中文</button>
+                </div>
+                <button class="spelling-history-clear" id="spellingHistoryClearBeforeToday" type="button">清除今天之前拼写记录</button>
+              </div>
+            </div>
+            <div class="spelling-history-result-meta" id="spellingHistoryMeta">0 条记录</div>
+            <div class="spelling-history-list" id="spellingHistoryList"></div>
+          </section>
+        </div>
+      </section>
+
+      <section class="peppa-zone module-section" data-module-section="peppa" id="peppaZone" aria-label="小猪佩奇英语专区">
+        <div id="peppaZoneApp"></div>
+      </section>
+
+      <section class="stats-grid module-section" data-module-section="study" aria-label="记忆统计">
+        <article class="metric">
+          <span>词条总数</span>
+          <strong id="totalCount">0</strong>
+        </article>
+        <article class="metric time">
+          <span>总学习时长</span>
+          <strong id="totalStudyTime">0分</strong>
+          <small id="todayStudyTime">今日 0分</small>
+        </article>
+        <article class="metric accent">
+          <span>现在到期</span>
+          <strong id="dueCount">0</strong>
+        </article>
+        <article class="metric warm">
+          <span>今日完成</span>
+          <strong id="todayCount">0</strong>
+        </article>
+        <article class="metric calm completed-metric">
+          <span>已学习</span>
+          <strong id="doneTodayCount">0</strong>
+          <div class="metric-split" aria-label="累计已学习的单词和短语数量">
+            <div><small>单词</small><b id="todayWordActionCount">0</b></div>
+            <div><small>短语</small><b id="todayPhraseActionCount">0</b></div>
+          </div>
+        </article>
+      </section>
+
+      <section class="hero-workbench module-section" data-module-section="study">
+        <div class="study-area">
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow">Now</p>
+              <h2>记忆卡片</h2>
+            </div>
+            <div class="session-tools">
+              <div class="sprint-chip" id="sprintStatus">未开始</div>
+              <div class="clock-chip" id="clockNow">--:--</div>
+            </div>
+          </div>
+
+          <div class="mode-tabs" role="tablist" aria-label="学习模式">
+            <button class="tab-button active" id="dueModeButton" type="button">到期复习</button>
+            <button class="tab-button" id="newModeButton" type="button">新词记忆</button>
+            <button class="tab-button" id="allModeButton" type="button" title="手动抽查不会计入到期复习；本轮已评分的词不会重复出现">手动抽查</button>
+          </div>
+
+          <div class="practice-switch main-practice-switch" aria-label="常用练习方式">
+            <button class="practice-button active" data-practice-mode="card" type="button">卡片</button>
+            <button class="practice-button" data-practice-mode="zhToEn" type="button">中译英</button>
+            <button class="practice-button" data-practice-mode="choiceZhToEn" type="button">中文选英文</button>
+            <button class="practice-button" data-practice-mode="spell" type="button">拼写</button>
+            <button class="practice-button" data-practice-mode="dictation" type="button">听写</button>
+            <button class="practice-button" data-practice-mode="forms" type="button">变形</button>
+          </div>
+          <details class="special-practice-panel pos-practice-panel">
+            <summary>语法辨析训练</summary>
+            <div class="special-practice-note">五个模式独立记录进度。先练五大词性，再分别突破名词可数性、动词及物性、易混词形和句子语境。</div>
+            <div class="practice-switch special-practice-switch grammar-practice-grid" aria-label="语法辨析训练">
+              <button class="practice-button pos-practice-start" data-practice-mode="posClassify" type="button"><b>五大词性</b><small>名词 / 动词 / 数词 / 形容词 / 副词</small></button>
+              <button class="practice-button pos-practice-start" data-practice-mode="nounCountability" type="button"><b>名词可数性</b><small>可数 / 不可数 / 两者均可</small></button>
+              <button class="practice-button pos-practice-start" data-practice-mode="verbTransitivity" type="button"><b>动词及物性</b><small>及物 / 不及物 / 系动词等</small></button>
+              <button class="practice-button pos-practice-start" data-practice-mode="wordFamily" type="button"><b>易混词形</b><small>同词族中选择正确形式</small></button>
+              <button class="practice-button pos-practice-start" data-practice-mode="posContext" type="button"><b>句子语境</b><small>判断标记词在句中的词性</small></button>
+            </div>
+          </details>
+          <p class="mode-progress-note">默认进入卡片。五类语法训练独立计算正确率和复习进度；答题后自动进入下一题。</p>
+
+          <div class="dictation-tools" aria-label="听写设置">
+            <label class="compact-select">
+              <span>听写顺序</span>
+              <select id="dictationOrderSelect">
+                <option value="due">到期优先</option>
+                <option value="important">重点错词优先</option>
+                <option value="random">随机乱序</option>
+                <option value="az">A-Z 顺序</option>
+              </select>
+            </label>
+          </div>
+
+        </div>
+
+        <aside class="schedule-panel">
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow">Plan</p>
+              <h2>今日几点背</h2>
+            </div>
+            <button class="text-button" id="copyPlanButton" type="button">复制计划</button>
+          </div>
+          <div class="time-ladder" id="todayTimeline"></div>
+        </aside>
+
+        <article class="word-card" id="activeCard"></article>
+        <aside class="card-scene-panel today-scene-memory" id="todaySceneMemory" aria-live="polite" aria-label="当前单词图片记忆" hidden></aside>
+      </section>
+
+
+      <details class="study-insights module-section" data-module-section="study">
+        <summary><span><strong>学习记录与计划</strong><small>查看倒计时、今日战报与打卡日历</small></span><span aria-hidden="true">＋</span></summary>
+        <div class="study-insights-body">
+      <section class="prep-dashboard" aria-label="专升本今日任务">
+        <article class="countdown-panel">
+          <div>
+            <p class="eyebrow">Exam</p>
+            <h2>专升本倒计时</h2>
+          </div>
+          <div class="countdown-number"><strong id="examDays">--</strong><span>天</span></div>
+          <label class="compact-field">
+            <span>考试日期</span>
+            <input id="examDateInput" type="date">
+          </label>
+        </article>
+        <article class="task-panel">
+          <span>今日新词</span>
+          <strong id="todayNewTarget">0</strong>
+          <p id="todayNewHint">先完成新词，再等系统复习</p>
+        </article>
+        <article class="task-panel accent">
+          <span>复习动作</span>
+          <strong id="todayReviewTarget">0</strong>
+          <p id="todayReviewHint">按页面显示的具体时间背</p>
+        </article>
+        <article class="task-panel warm">
+          <span>连续打卡</span>
+          <strong id="dashboardCheckInStreak">0</strong>
+          <p>连续学习天数</p>
+        </article>
+        <article class="task-panel calm">
+          <span>累计打卡</span>
+          <strong id="dashboardCheckInTotal">0</strong>
+          <p>有真实学习记录的天数</p>
+        </article>
+      </section>
+
+      <section class="daily-report" id="dailyReport" aria-label="今日战报"></section>
+
+      <section class="checkin-panel" id="checkInPanel" aria-label="学习打卡日历">
+        <div class="panel-heading checkin-heading">
+          <div>
+            <p class="eyebrow">Check-in</p>
+            <h2>学习打卡日历</h2>
+            <p class="checkin-rule">自动读取真实学习记录；导入单词、修改资料和只打开网页都不会打卡。</p>
+          </div>
+          <span class="checkin-today-status" id="checkInTodayStatus">正在读取学习记录</span>
+        </div>
+        <div class="checkin-summary" aria-label="学习打卡统计">
+          <article><span>连续打卡</span><strong id="checkInStreak">0</strong><small>天</small></article>
+          <article><span>累计打卡</span><strong id="checkInTotalDays">0</strong><small>天</small></article>
+          <article><span>首次可追溯学习</span><strong id="checkInFirstStudy">暂无</strong><small>按真实操作记录</small></article>
+          <article><span>词库记录始于</span><strong id="checkInCreatedAt">--</strong><small>不是学习打卡</small></article>
+        </div>
+        <div class="checkin-calendar-shell">
+          <div class="checkin-calendar-nav">
+            <button class="secondary-button" id="checkInPrev" type="button" aria-label="上个月">←</button>
+            <strong id="checkInMonthLabel">--</strong>
+            <div><button class="secondary-button" id="checkInToday" type="button">本月</button><button class="secondary-button" id="checkInNext" type="button" aria-label="下个月">→</button></div>
+          </div>
+          <div id="checkInCalendar"></div>
+        </div>
+        <p class="checkin-note">有颜色和 ✓ 的日期表示当天确实做过单词学习、答题、拼写、语境复习或高速复习；空白日期不会自动补签。</p>
+      </section>
+
+        </div>
+      </details>
+
+      <section class="folder-library-panel module-section" data-module-section="folder" id="folderLibraryPanel" aria-label="英语资料文件夹">
+        <div class="panel-heading">
+          <div>
+            <p class="eyebrow">Folders</p>
+            <h2>英语资料夹</h2>
+          </div>
+          <p class="folder-hint">从一组词开始，让每次学习都有积累。</p>
+        </div>
+        <div class="folder-library-layout">
+          <div class="folder-source-list" id="folderSourceList"></div>
+          <div class="folder-content" id="folderContent"></div>
+        </div>
+      </section>
+
+      <section class="smart-vocab-panel module-section" data-module-section="smart" id="smartVocabPanel" aria-label="智能归类与辨析">
+        <div class="panel-heading">
+          <div>
+            <p class="eyebrow">Smart</p>
+            <h2>构词 / 形近 / 同义归类</h2>
+          </div>
+          <p class="folder-hint">先选类型，再点开看单词；不一次性铺开，手机不卡。</p>
+        </div>
+        <div class="smart-tabs">
+          <button class="smart-tab active" data-smart-tab="affix" type="button">前缀后缀词根</button>
+          <button class="smart-tab" data-smart-tab="similar" type="button">形近词对比</button>
+          <button class="smart-tab" data-smart-tab="synonym" type="button">同义词辨析</button>
+          <button class="smart-tab" data-smart-tab="family" type="button">词族归类</button>
+          <button class="smart-tab" data-smart-tab="polysemy" type="button">一词多义</button>
+          <button class="smart-tab" data-smart-tab="collocation" type="button">固定搭配</button>
+        </div>
+        <div id="smartVocabContent" class="smart-vocab-content"></div>
+      </section>
+
+
+      <section class="memory-lab-panel module-section" data-module-section="review" id="memoryLabPanel" aria-label="30词快速复盘">
+        <div class="panel-heading memory-lab-heading quick30-heading">
+          <div>
+            <p class="eyebrow">Quick 30</p>
+            <h2>30词快速复盘</h2>
+            <p class="folder-hint">每次只过30词：会 / 看中文才会 / 不会。独立存档，不修改主卡片阶段。</p>
+          </div>
+          <label class="mini-recap-switch" for="miniRecapToggle">
+            <input id="miniRecapToggle" type="checkbox">
+            <span><strong>每10词小复盘</strong><small>默认关闭；开启后每完成10词弹出一次</small></span>
+          </label>
+        </div>
+
+        <section class="speed-review-hub quick30-hub" id="speedReviewHub" aria-label="30词快速复盘器">
+          <div class="speed-review-hub-heading quick30-hub-heading">
+            <div>
+              <h3>一次过30词</h3>
+              <p>先看英文直接判断；需要看中文再点“显示中文”。分类后分别进入三个独立池。</p>
+            </div>
+            <button class="quick30-clear" type="button" data-speed-action="clear-store">清空快速复盘分类</button>
+          </div>
+          <div class="quick30-controls">
+            <label><span>范围</span><select id="speedReviewSource"><option value="all">全部词库</option><option value="蓝色森林">蓝色森林</option><option value="四级">四级</option><option value="四级核心">四级核心</option><option value="四级翻译">四级翻译</option><option value="短语练习">短语练习</option><option value="Word List">Word List</option><option value="听写内容">听写内容</option></select></label>
+            <label><span>本轮策略</span><select id="speedReviewStrategy"><option value="smart" selected>智能混合（推荐）</option><option value="weak">薄弱词优先</option><option value="recent">最近学习优先</option><option value="original">按原始顺序</option></select></label>
+            <button class="quick30-start" type="button" data-speed-start="batch"><strong>开始新的30词</strong><small>已分类过的词不会重复进入新批次</small></button>
+            <div class="speed-review-resume" id="speedReviewResume">暂无未完成的30词</div>
+          </div>
+          <div class="quick30-coach" id="speedReviewCoach" role="status">
+            <span class="quick30-coach-icon">◎</span><div><strong>推荐流程：先回想，再看中文，最后按真实掌握度分类</strong><small>每轮30词；不会和“看中文才会”的词会自动留在复盘池，下一轮优先出现。</small></div>
+          </div>
+          <div class="quick30-buckets" aria-label="快速复盘分类池">
+            <button type="button" class="quick30-bucket known" data-speed-bucket="known"><span>✓</span><strong>会 / 认识</strong><b id="speedReviewKnownCount">0</b><small>以后不再进入快速复盘</small></button>
+            <button type="button" class="quick30-bucket meaning" data-speed-bucket="meaning"><span>◐</span><strong>看中文才会</strong><b id="speedReviewMeaningCount">0</b><small>单独放这里，需要时再看</small></button>
+            <button type="button" class="quick30-bucket unknown" data-speed-bucket="unknown"><span>×</span><strong>不会</strong><b id="speedReviewUnknownCount">0</b><small>单独放这里，重点复习</small></button>
+          </div>
+          <p class="quick30-note">三类只属于快速复盘，不会改动“记住 / 模糊 / 忘了”、31天阶段或全词独立练习进度；复盘池只记录你真正的回忆表现。</p>
+        </section>
+      </section>
+
+      <section class="quick-browser-panel module-section" data-module-section="browse" id="quickBrowserPanel" aria-label="全词库快速浏览">
+        <div class="panel-heading quick-browser-heading">
+          <div>
+            <p class="eyebrow">All Words</p>
+            <h2>全词库快速浏览</h2>
+            <p class="folder-hint">默认按你资料中的原始导入顺序浏览；需要时再手动切换A-Z、薄弱优先等排序。</p>
+          </div>
+          <div class="quick-browser-heading-actions">
+            <div class="browse-quiz-launch-copy">
+              <strong id="quickBrowserTotal">0词</strong>
+              <small id="browseQuizLauncherStats">跟随主存档：尚未作答</small>
+            </div>
+            <button class="browse-quiz-launch" type="button" data-browse-quiz-start>
+              <span>▦</span><strong>全词独立练习</strong><small>错词回卡；中→英 + 拼写双关都过才算过</small>
+            </button>
+          </div>
+        </div>
+        <div class="quick-browser-kind-tabs" id="quickBrowseKindTabs" role="group" aria-label="全词浏览分区">
+          <button class="active" type="button" data-quick-browse-kind="word" aria-pressed="true"><strong>单词区</strong><small id="quickBrowseWordCount">0词</small></button>
+          <button type="button" data-quick-browse-kind="phrase" aria-pressed="false"><strong>短语区</strong><small id="quickBrowsePhraseCount">0条</small></button>
+          <span>两个区域分别浏览，并使用各自独立练习存档</span>
+        </div>
+        <div class="quick-browser-tools">
+          <label class="search-box"><span>⌕</span><input id="quickBrowseSearch" type="search" placeholder="搜索英文、中文、分组、例句"></label>
+          <select id="quickBrowseSource" aria-label="来源筛选"><option value="all">全部来源</option><option value="蓝色森林">蓝色森林</option><option value="四级">四级</option><option value="四级核心">四级核心</option><option value="短语练习">短语练习</option><option value="Word List">Word List</option><option value="全方位">全方位</option><option value="听写内容">听写内容</option></select>
+          <select id="quickBrowseStatus" aria-label="掌握筛选"><option value="all">全部状态</option><option value="new">新词</option><option value="learning">学习中</option><option value="mature">稳定</option><option value="weak">薄弱词</option><option value="important">重点词</option></select>
+          <select id="quickBrowseSort" aria-label="排序"><option value="original" selected>我的原始顺序</option><option value="az">A-Z</option><option value="za">Z-A</option><option value="weak">薄弱优先</option><option value="recent">最近学习</option><option value="source">按来源</option></select>
+          <select id="quickBrowseMask" aria-label="遮挡"><option value="show">英文中文都显示</option><option value="hideChinese">遮住中文</option><option value="hideEnglish">遮住英文</option></select>
+          <select id="quickBrowsePageSize" aria-label="每页数量"><option value="100">每页100词</option><option value="200" selected>每页200词</option><option value="300">每页300词</option></select>
+        </div>
+        <div class="alphabet-strip" id="quickBrowseAlphabet"></div>
+        <div class="quick-browser-summary" id="quickBrowserSummary"></div>
+        <div class="quick-browser-list" id="quickBrowserList"></div>
+        <div class="quick-browser-pagination" id="quickBrowserPagination"></div>
+      </section>
+
+      <section class="groups-panel module-section focus-dashboard" data-module-section="progress"><div class="panel-heading"><div><p class="eyebrow">Focus Progress</p><h2>专注学习进度</h2></div><p class="folder-hint">单词、短语分别记录；与普通训练进度各自保存。</p></div><div class="group-grid" id="focusGroupProgress"></div></section>
+      <section class="groups-panel module-section" data-module-section="progress">
+        <div class="panel-heading">
+          <div>
+            <p class="eyebrow">Groups</p>
+            <h2>普通训练分组进度</h2>
+          </div>
+        </div>
+        <div class="group-grid" id="groupProgress"></div>
+      </section>
+
+      <section class="entry-grid module-section" data-module-section="manage">
+        <div class="panel-heading" style="grid-column:1/-1">
+          <div><p class="eyebrow">Emergency recovery</p><h2>设备存档修复</h2><p class="folder-hint">如果曾被旧版共享基线覆盖，可恢复本设备上一份完整快照。</p></div>
+          <a class="secondary-button" href="./restore-previous-progress.html">恢复覆盖前存档</a>
+        </div>
+        <section class="panel" style="padding:20px;margin-bottom:16px">
+          <h2>恢复学习时长</h2>
+<p>Windows 用户请双击 START.bat 启动。以后更新版本仍用这个入口，以同一浏览器打开固定地址，时长可跨版本接续。首次从直接打开网页切换过来，需要导入旧版完整备份。</p>
+          <p>读取同一浏览器的旧时长，或从旧版完整备份导入。仅恢复时长，累计取较大值。</p>
+          <button type="button" id="restoreLegacyTimer">读取旧版时长</button>
+          <label class="secondary-button">从备份恢复时长 <input type="file" id="restoreTimerArchive" accept=".json,application/json" hidden></label>
+          <button type="button" id="exportTimerArchive">导出时长备份</button>
+          <button type="button" id="restartStudyTimer">重新开始计时（仅重置时长）</button>
+          <p id="restoreTimerStatus" role="status"></p>
+        </section>
+        <form class="entry-form" id="wordForm">
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow">Add</p>
+              <h2>添加单词</h2>
+            </div>
+          </div>
+          <div class="form-grid">
+            <label>
+              <span>单词/短语</span>
+              <input id="termInput" required maxlength="80" placeholder="carry out">
+            </label>
+            <label>
+              <span>中文</span>
+              <input id="meaningInput" maxlength="120" placeholder="执行，实施">
+            </label>
+            <label>
+              <span>搭配/例句</span>
+              <input id="phraseInput" maxlength="180" placeholder="carry out a plan">
+            </label>
+            <label>
+              <span>标签</span>
+              <input id="tagInput" maxlength="60" placeholder="阅读 / 作文 / 高频">
+            </label>
+            <label>
+              <span>词库分类</span>
+              <select id="sourceInput">
+                <option value="全方位">全方位</option>
+                <option value="四级">四级</option>
+                <option value="四级核心">四级核心</option>
+                
+                <option value="蓝色森林">蓝色森林</option>
+              </select>
+            </label>
+          </div>
+          <div class="verb-forms-grid">
+            <label>
+              <span>三单</span>
+              <input id="thirdPersonInput" maxlength="80" placeholder="studies">
+            </label>
+            <label>
+              <span>过去式</span>
+              <input id="pastTenseInput" maxlength="80" placeholder="studied">
+            </label>
+            <label>
+              <span>过去分词</span>
+              <input id="pastParticipleInput" maxlength="80" placeholder="studied">
+            </label>
+          </div>
+          <label>
+            <span>备注</span>
+            <textarea id="noteInput" rows="2" placeholder="易混词、词根、发音提醒"></textarea>
+          </label>
+          <div class="form-actions">
+            <button class="secondary-button" id="clearFormButton" type="button">清空</button>
+            <button class="primary-button" type="submit"><span aria-hidden="true">＋</span> 加入词库</button>
+          </div>
+        </form>
+
+        <section class="bulk-panel">
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow">Paste</p>
+              <h2>批量加入</h2>
+            </div>
+          </div>
+          <label class="bulk-source-select">
+            <span>归到</span>
+            <select id="bulkSourceInput">
+              <option value="全方位">全方位</option>
+              <option value="四级">四级</option>
+              <option value="四级核心">四级核心</option>
+              
+              <option value="蓝色森林">蓝色森林</option>
+            </select>
+          </label>
+          <textarea id="bulkInput" rows="8" placeholder="study | 学习 | study English | studies | studied | studied&#10;carry out | 执行 | carry out a task"></textarea>
+          <div class="form-actions">
+            <button class="secondary-button" id="clearBulkButton" type="button">清空</button>
+            <button class="primary-button" id="bulkAddButton" type="button"><span aria-hidden="true">＋</span> 批量加入</button>
+          </div>
+        </section>
+      </section>
+
+      <section class="library-panel module-section" data-module-section="manage">
+        <div class="panel-heading">
+          <div>
+            <p class="eyebrow">Library</p>
+            <h2>词库</h2>
+          </div>
+          <div class="library-tools">
+            <label class="search-box">
+              <span aria-hidden="true">⌕</span>
+              <input id="searchInput" type="search" placeholder="搜索单词、中文、短语">
+            </label>
+            <select id="statusFilter" aria-label="状态筛选">
+              <option value="all">全部</option>
+              <option value="due">到期</option>
+              <option value="new">新词</option>
+              <option value="learning">学习中</option>
+              <option value="mature">稳定</option>
+              <option value="important">重点词</option>
+            </select>
+            <select id="librarySourceFilter" aria-label="词库分类筛选">
+              <option value="all">全部分类</option>
+              <option value="全方位">全方位</option>
+              <option value="四级">四级</option>
+              <option value="四级核心">四级核心</option>
+              
+              <option value="蓝色森林">蓝色森林</option>
+            </select>
+            <select id="listMaskMode" aria-label="列表遮挡">
+              <option value="show">显示全部</option>
+              <option value="hideEnglish">遮英文</option>
+              <option value="hideChinese">遮中文</option>
+            </select>
+          </div>
+        </div>
+        <div class="word-list" id="wordList"></div>
+      </section>
+    </main>
+  </div>
+
+  <input id="importInput" type="file" accept="application/json,.json" hidden>
+  <dialog class="cloud-dialog" id="cloudDialog" aria-labelledby="cloudDialogTitle">
+    <form class="cloud-panel" id="cloudForm" method="dialog">
+      <div class="cloud-heading">
+        <div>
+          <p class="eyebrow">Supabase Cloud</p>
+          <h2 id="cloudDialogTitle">云同步</h2>
+        </div>
+        <button class="icon-button secondary" type="button" id="closeCloudButton" aria-label="关闭">×</button>
+      </div>
+      <p class="cloud-intro">这里默认保存到云端并开启自动同步。第一次使用云同步前，必须在 Supabase SQL Editor 运行本包里的 supabase-word-memory-repair.sql。</p>
+      <div class="cloud-grid">
+        <label>
+          <span>公开编号</span>
+          <input id="cloudSlugInput" type="text" inputmode="latin" autocomplete="off" placeholder="cyrus329" maxlength="32">
+        </label>
+        <label>
+          <span>显示名称</span>
+          <input id="cloudNameInput" type="text" autocomplete="off" placeholder="短语记忆 · 220条">
+        </label>
+        <label>
+          <span>编辑密码</span>
+          <input id="cloudPinInput" type="password" autocomplete="current-password" placeholder="至少 4 位">
+        </label>
+        <label class="toggle-line">
+          <input id="cloudPublicInput" type="checkbox" checked>
+          <span>允许公开链接查看</span>
+        </label>
+        <label class="wide">
+          <span>Supabase 项目地址</span>
+          <input id="supabaseUrlInput" type="url" autocomplete="url" placeholder="https://xxxx.supabase.co">
+        </label>
+        <label class="wide">
+          <span>Supabase anon public key</span>
+          <input id="supabaseKeyInput" type="text" autocomplete="off" placeholder="sb_publishable_... 或 eyJ...">
+        </label>
+        <label class="wide">
+          <span>网页地址</span>
+          <input id="shareBaseUrlInput" type="url" autocomplete="url" placeholder="https://你的用户名.github.io/word-memory/">
+        </label>
+      </div>
+      <div class="share-row">
+        <button class="secondary-button" type="button" id="copyPublicLinkButton">复制公开链接</button>
+        <button class="secondary-button" type="button" id="copyEditLinkButton">复制协作链接</button>
+        <a class="secondary-button" href="./supabase-word-memory-repair.sql" download>下载云同步SQL</a>
+      </div>
+      <p class="cloud-status" id="cloudStatus" role="status" aria-live="polite"></p>
+      <div class="cloud-actions">
+        <button class="secondary-button" type="button" id="loadCloudButton">连接并加载云端</button>
+        <button class="secondary-button" type="button" id="localSaveButton">只保存本机</button>
+        <button class="secondary-button" type="button" id="cancelCloudButton">取消</button>
+        <button class="secondary-button" type="button" id="tryCloudSaveButton">检查云同步</button>
+        <button class="primary-button" type="submit">保存并开启云同步</button>
+      </div>
+    </form>
+  </dialog>
+  <div class="gaze-panel" id="gazePanel" hidden aria-live="polite">
+    <div class="gaze-panel-head">
+      <strong>实验翻词已关闭</strong>
+      <button class="text-button" id="gazeStopButton" type="button">关闭</button>
+    </div>
+    <p id="gazeStatus">已关闭。当前版本恢复稳定按钮操作，避免乱识别。</p>
+    <div class="gaze-zones"><span>已移除手指翻词</span><span>显示词义按钮已恢复</span><span>优先保证记忆记录稳定</span></div>
+  </div>
+  <section class="mobile-focus-mode" id="mobileFocusMode" role="dialog" aria-modal="true" aria-label="一屏一词专注记忆" hidden>
+    <header class="mobile-focus-header">
+      <button class="mobile-focus-exit" id="mobileFocusExit" type="button" aria-label="退出一屏一词模式">退出</button>
+      <div class="mobile-focus-heading">
+        <strong id="mobileFocusTitle">一屏一词</strong>
+        <span id="mobileFocusSource">当前词库</span>
+      </div>
+      <strong class="mobile-focus-count" id="mobileFocusCount">0 / 0</strong>
+    </header>
+    <div class="mobile-focus-progress" id="mobileFocusProgress" role="progressbar" aria-label="背词进度" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+      <span id="mobileFocusProgressFill"></span>
+    </div>
+
+    <label class="focus-kind-inside">当前分区 <select data-focus-vocab-select aria-label="专注分区"><option value="word">单词</option><option value="phrase">短语</option></select></label>
+    <div class="mobile-focus-group-status" id="mobileFocusGroupStatus">本组 10 词 · 先完整看完，再选中文</div>
+    <nav class="mobile-focus-tools" aria-label="专注模式功能">
+      <button id="mobileFocusTodayInsideButton" type="button">继续今日词组</button>
+      <button id="mobileFocusDueInsideButton" type="button">艾宾浩斯复习 <span id="mobileFocusDueInsideCount">0</span></button>
+      <button id="mobileFocusHistoryInsideButton" type="button">查看已练词组</button>
+      <button id="mobileFocusArchiveExportButton" type="button">导出专注存档</button>
+      <button id="mobileFocusArchiveImportButton" type="button">导入专注存档</button>
+    </nav>
+    <input id="mobileFocusArchiveInput" type="file" accept="application/json,.json" hidden>
+    <div class="mobile-focus-stage" id="mobileFocusStage">
+      <section class="mobile-focus-history mobile-focus-history-inside" id="mobileFocusHistory" hidden aria-label="已练专注词汇">
+        <header><strong>已练专注词汇</strong><button id="mobileFocusHistoryClose" type="button" aria-label="返回专注练习">×</button></header>
+        <p>按日期和组别查看当前分区的已练记录。</p><div class="mobile-focus-mask-actions"><button type="button" id="mobileFocusHistoryMaskEnglish">遮住英文</button><button type="button" id="mobileFocusHistoryMaskChinese">遮住中文</button></div>
+        <div id="mobileFocusHistoryList"></div>
+      </section>
+      <article class="mobile-focus-card" id="mobileFocusCard" aria-label="当前十词学习卡片">
+        <aside class="mobile-focus-previous" id="mobileFocusPrevious" aria-live="polite" hidden>
+          <span>上一个</span>
+          <strong id="mobileFocusPreviousTerm"></strong>
+          <p id="mobileFocusPreviousMeaning"></p>
+        </aside>
+        <button class="mobile-focus-audio" id="mobileFocusAudio" type="button" aria-label="朗读当前单词">🔊</button>
+        <p class="mobile-focus-kicker" id="mobileFocusKicker">第 1 步 · 完整看词</p>
+        <h2 class="mobile-focus-term" id="mobileFocusTerm">单词</h2>
+        <p class="mobile-focus-phonetic" id="mobileFocusPhonetic"></p>
+        <div class="mobile-focus-answer" id="mobileFocusAnswer">
+          <p class="mobile-focus-meaning" id="mobileFocusMeaning"></p>
+          <div class="mobile-focus-detail" id="mobileFocusDetail"></div>
+        </div>
+
+        <div class="mobile-focus-choice" id="mobileFocusChoice" hidden aria-label="中文释义四选一">
+          <div class="mobile-focus-choice-grid">
+            <button type="button" data-mobile-focus-choice="0"></button>
+            <button type="button" data-mobile-focus-choice="1"></button>
+            <button type="button" data-mobile-focus-choice="2"></button>
+            <button type="button" data-mobile-focus-choice="3"></button>
+          </div>
+          <p class="mobile-focus-choice-feedback" id="mobileFocusChoiceFeedback" aria-live="polite"></p>
+        </div>
+
+        <div class="mobile-focus-spelling" id="mobileFocusSpelling" hidden>
+          <label for="mobileFocusSpellingInput">请输入英文</label>
+          <input id="mobileFocusSpellingInput" type="text" autocomplete="off" autocapitalize="none" spellcheck="false" enterkeyhint="done" placeholder="看中文拼写英文">
+          <div class="mobile-focus-spelling-actions">
+            <button id="mobileFocusSpellingCheck" type="button">检查拼写</button>
+            <button id="mobileFocusSpellingClear" type="button">重写</button>
+            <button id="mobileFocusSkipSpelling" type="button" hidden>跳过拼写，下一词</button>
+          </div>
+          <p class="mobile-focus-spelling-feedback" id="mobileFocusSpellingFeedback" aria-live="polite"></p>
+        </div>
+        <p class="mobile-focus-tip" id="mobileFocusTip">中文释义已直接显示；看完后点“下一个”。</p>
+      </article>
+      <div class="mobile-focus-empty" id="mobileFocusEmpty" hidden>
+        <strong id="mobileFocusCompleteTitle">这一组已经看完了</strong>
+        <p id="mobileFocusCompleteText">现在做一次英文选中文，检查十个词是否真的记住。</p>
+        <div class="mobile-focus-complete-actions" id="mobileFocusCompleteActions">
+          <button type="button" data-mobile-focus-complete="choice">开始英文选中文</button>
+          <button type="button" data-mobile-focus-complete="next">先不测，下一组</button>
+        </div>
+      </div>
+    </div>
+    <nav class="mobile-focus-navigate" id="mobileFocusNavigate" aria-label="本组单词切换">
+      <button id="mobileFocusPreviousButton" type="button">← 上一个</button>
+      <button id="mobileFocusNextButton" type="button">下一个 →</button>
+    </nav>
+    <div class="mobile-focus-shared-note" id="mobileFocusSharedNote">中文选英文会写入专注模式自己的艾宾浩斯存档；不会混入普通主存档。拼写只在你主动选择后进行。</div>
+    <footer class="mobile-focus-actions" aria-label="记忆程度">
+      <button class="mobile-focus-rate forgot" type="button" data-mobile-focus-rate="forgot"><strong>忘了</strong><small>专注独立记录</small></button>
+      <button class="mobile-focus-rate fuzzy" type="button" data-mobile-focus-rate="fuzzy"><strong>模糊</strong><small>加强复习</small></button>
+      <button class="mobile-focus-rate remember" type="button" data-mobile-focus-rate="remember"><strong>记住</strong><small>专注独立记录</small></button>
+    </footer>
+  </section>
+  <section class="speed-review-overlay" id="speedReviewOverlay" hidden aria-label="30词快速复盘独立练习">
+    <div class="speed-review-shell quick30-shell">
+      <header class="speed-review-overlay-header">
+        <div>
+          <span>30词快速复盘 · 独立存档</span>
+          <strong id="speedReviewTitle">新的30词</strong>
+          <small id="speedReviewScope">全部词库</small>
+        </div>
+        <button type="button" data-speed-action="close" aria-label="关闭快速复盘">×</button>
+      </header>
+      <div class="speed-review-progress quick30-progress">
+        <div><span id="speedReviewProgressText">0 / 30</span><i><b id="speedReviewProgressBar"></b></i></div>
+      </div>
+      <main class="speed-review-content quick30-content" id="speedReviewContent"></main>
+      <footer class="speed-review-footer quick30-footer" id="speedReviewFooter"></footer>
+    </div>
+  </section>
+
+  <section class="browse-quiz-overlay" id="browseQuizOverlay" hidden aria-label="全词浏览独立练习">
+    <header class="browse-quiz-header">
+      <button class="browse-quiz-close" id="browseQuizClose" type="button" aria-label="关闭">←</button>
+      <div>
+        <strong>全词浏览独立练习</strong>
+        <small id="browseQuizScope">当前全词浏览范围</small>
+      </div>
+      <div class="browse-quiz-header-actions">
+        <button id="browseQuizReset" type="button">清空当前区进度</button>
+      </div>
+    </header>
+    <div class="browse-quiz-kind-tabs" role="group" aria-label="独立练习分区">
+      <button class="active" type="button" data-browse-quiz-kind="word" aria-pressed="true"><strong>单词区</strong><small>跟随主存档</small></button>
+      <button type="button" data-browse-quiz-kind="phrase" aria-pressed="false"><strong>短语区</strong><small>跟随主存档</small></button>
+    </div>
+    <div class="browse-quiz-mode-tabs" role="group" aria-label="全词浏览练习方式">
+      <button class="active" type="button" data-browse-quiz-mode="enToZh" aria-pressed="true">看英文选中文</button>
+      <button type="button" data-browse-quiz-mode="zhToEn" aria-pressed="false">看中文选英文</button>
+      <button type="button" data-browse-quiz-mode="spelling" aria-pressed="false">看中文拼英文</button>
+      <button id="browseQuizAutoUk" class="browse-quiz-auto-uk is-on" type="button" aria-pressed="true" title="开启后，除拼写模式外，每进入下一题自动播放英音">英音自动：开</button>
+    </div>
+    <div class="browse-quiz-progress-row">
+      <strong id="browseQuizProgress">0/0</strong>
+      <span id="browseQuizStats">已练0词</span>
+    </div>
+    <section class="browse-quiz-milestone" id="browseQuizMilestone" aria-live="polite" hidden></section>
+    <main class="browse-quiz-stage" id="browseQuizStage">
+      <article class="browse-quiz-card" id="browseQuizCard">
+        <p class="browse-quiz-instruction" id="browseQuizInstruction">请选择正确的中文释义</p>
+        <button class="browse-quiz-term" id="browseQuizTerm" type="button" title="可用时点击发音"></button>
+        <button class="browse-quiz-phonetic" id="browseQuizPhonetic" type="button" title="可用时点击发音"></button>
+        <div class="browse-quiz-options" id="browseQuizOptions"></div>
+        <div class="browse-quiz-spelling" id="browseQuizSpelling" hidden>
+          <input id="browseQuizSpellingInput" type="text" autocomplete="off" autocapitalize="none" spellcheck="false" enterkeyhint="done" placeholder="输入英文拼写">
+          <button id="browseQuizSpellingCheck" type="button">检查</button>
+          <small>按 Enter 也可以检查</small>
+        </div>
+        <p class="browse-quiz-feedback" id="browseQuizFeedback" aria-live="polite"></p>
+        <div class="browse-quiz-chunks-v52" id="browseQuizChunks" hidden></div>
+        <button class="browse-quiz-unknown" id="browseQuizUnknown" type="button">不认识？<small>当前词仍需最终答对或拼对才能继续</small></button>
+      </article>
+    </main>
+    <p class="browse-quiz-save-note" id="browseQuizSaveNote"></p>
+    <footer class="browse-quiz-footer">
+      <div class="browse-quiz-mark-actions">
+        <button id="browseQuizFavorite" type="button" aria-pressed="false"><span>☆</span><strong>收藏</strong></button>
+        <button id="browseQuizFamiliar" type="button" aria-pressed="false"><span>熟</span><strong>熟词</strong></button>
+      </div>
+      <div class="browse-quiz-session-actions">
+        <button id="browseQuizWrongOnly" type="button">错词双关通关</button>
+        <button id="browseQuizRestart" type="button">按当前筛选重新开始</button>
+      </div>
+      <div class="browse-quiz-nav-actions">
+        <button id="browseQuizPrevious" type="button" aria-label="上一个">←</button>
+        <button id="browseQuizNext" type="button" aria-label="下一个">→</button>
+      </div>
+    </footer>
+  </section>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="./phonetic-local-data.js?v=70b162"></script>
+<script src="./pronunciation-support.js?v=70b162"></script>
+<script src="./speed-review-merge.js?v=164"></script>
+<script src="./storage-codec.js?v=163"></script>
+<script src="./startup.js?v=b226p220"></script>
+<script src="./restore-b223.js?v=b226p220"></script>
+<script src="./timer-recovery.js?v=b226p220"></script>
+<script src="wordlink-core.js"></script><script src="wordlink-receiver.js"></script>
+</body>
+</html>
