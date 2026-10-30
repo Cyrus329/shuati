@@ -37,14 +37,16 @@
   const removedIds = new Set(window.REMOVED_QUESTION_IDS||[]);
   const raw = () => [...base,...(Array.isArray(state.custom)?state.custom:[])].filter(q=>!removedIds.has(q.id)&&!removedIds.has(q.canonicalId)).map(q=>window.PersonalHistory.question(window.IndividualAudit?.applySource(q)||q));
   // 一个数学题一个档案，各来源和重做痕迹留在 occurrences。
+  let renderQuestionsCache=null,renderQuestionsDepth=0;
   const all = () => {
+    if(renderQuestionsDepth && renderQuestionsCache)return renderQuestionsCache;
     const groups=new Map();
     for(const q of raw()) {
       const key=q.canonicalId || q.id;
       if(!groups.has(key))groups.set(key,[]);
       groups.get(key).push(q);
     }
-    return [...groups.values()].map(members=>{
+    const result=[...groups.values()].map(members=>{
       const rep=members[0];
       const statuses=members.map(q=>state.edits[q.id]?.firstStatus ?? q.firstStatus);
       const historicalAttempts=members.flatMap(q=>Array.isArray(state.attempts[q.id])?state.attempts[q.id]:[]);
@@ -56,6 +58,8 @@
         sourceGradingDispute:members.some(x=>x.sourceGradingDispute), autoGradeDisabled:members.some(x=>x.autoGradeDisabled), issue:members.some(x=>x.issue), needsReview:members.some(x=>x.needsReview),
         related:members.length>1 ? members.length+' 次题源/作答记录已合并；任意一次错，按错优先统计。' : rep.related};
     });
+    if(renderQuestionsDepth)renderQuestionsCache=result;
+    return result;
   };
   const change = (q, key) => state.edits[q.id]?.[key] ?? q[key];
   const firstStatus = q => q.groupStatus || change(q,'firstStatus');
@@ -127,7 +131,7 @@
     return ['待判定','warn'];
   };
   const countStatus = s => all().filter(q=>s==='错误'?isMistake(q):s==='正确'?isCorrectOnly(q):firstStatus(q)===s).length;
-  async function save(){if(resetInProgress)return false;storageOkay=await persistence.save(state);return storageOkay;}
+  async function save(){renderQuestionsCache=null;if(resetInProgress)return false;storageOkay=await persistence.save(state);return storageOkay;}
 
   let toastTimer;
   function toast(s){const el=$('toast');el.textContent=s;el.classList.add('visible');clearTimeout(toastTimer);toastTimer=setTimeout(()=>el.classList.remove('visible'),3800);}
@@ -260,8 +264,7 @@
       <div class="detail-section"><h3 class="section-title">个人补充备注</h3><label class="input-row"><span>自己随时更新的理解（不覆盖当时原始备注）</span><textarea id="personalNote" rows="3" placeholder="复习后补充的规律、公式、易错点">${escape(personalDrafts[q.id]??state.edits[q.id]?.personal??'')}</textarea></label><div style="margin-top:10px"><button class="btn neutral" id="savePersonal" type="button">保存备注</button></div></div>
       <div class="bottom-nav"><button class="btn neutral" type="button" id="prevQuestion">← 上一题</button><button class="btn neutral" type="button" id="nextQuestion">下一题 →</button></div>`;
     window.ComputerSpeech?.attachQuestion(q,showAnswer,$('detail'));
-    if(window.MathJax?.startup?.promise)window.MathJax.startup.promise.then(()=>window.MathJax.typesetPromise([$ ('detail')])).catch(()=>{});
-    else if(window.MathJax?.typesetPromise)window.MathJax.typesetPromise([$ ('detail')]).catch(()=>{});
+    window.MathNotation?.typeset($('detail'));
     const linkedNotes=window.PersonalCore.normalizeLibrary(state.library).notes.filter(n=>!n.deletedAt&&(q.aliases||[q.id]).includes(n.questionId));
     if(linkedNotes.length)$('detail').insertAdjacentHTML('beforeend','<div class="detail-section"><h3 class="section-title">原有笔记</h3>'+linkedNotes.map(n=>`<details><summary>${escape(n.title)}</summary><p style="white-space:pre-wrap">${escape(n.content||n.description||'')}</p></details>`).join('')+'</div>');
     const captureNote = () => { if($('reviewNote')) noteDrafts[q.id]=$('reviewNote').value;if($('personalNote'))personalDrafts[q.id]=$('personalNote').value; };
@@ -333,7 +336,8 @@
     $('errorReport').querySelectorAll('[data-cause]').forEach(el=>el.addEventListener('click',()=>{clearSearchPreserveTopic();$('errorCause').value=el.dataset.cause;view='archive';chosenId='';setViewUI();}));
   }
   function clearSearchPreserveTopic(){knowledgeSelection='';methodMistakeIds=null;$('difficulty').value='';if($('showCompleted'))$('showCompleted').checked=!state.ui.hideCorrectQuestions;familySelection='';if($('familyType'))$('familyType').value='';$('currentState').value='';$('errorCause').value='';$('search').value='';$('status').value='';$('subject').value='';populateFilters();$('topic').value='';}
-  function setViewUI(){
+  function setViewUI(){renderQuestionsDepth++;try{return renderViewUI();}finally{if(--renderQuestionsDepth===0)renderQuestionsCache=null;}}
+  function renderViewUI(){
     $('englishStudyView').classList.toggle('hidden',view!=='english');
     $('learningHomeView').classList.toggle('hidden',view!=='dashboard');$('learningBookView').classList.toggle('hidden',view!=='notebook');
     $('computerSpecialView').classList.toggle('hidden',view!=='computer');
@@ -482,7 +486,7 @@
     if(e.key==='ArrowRight'&&i<ids.length-1){e.preventDefault();select(ids[i+1])}
     if(e.key==='ArrowLeft'&&i>0){e.preventDefault();select(ids[i-1])}
   });
-  function openArchivedQuestion(id){document.querySelectorAll('dialog[open]').forEach(d=>d.close());clearSearchPreserveTopic();$('search').value=id;view='archive';chosenId=id;gradedPin='';autoSavedChoice='';selectedOption='';showAnswer=false;showImage=false;setViewUI();$('detail').scrollIntoView({block:'start'});}
+  function openArchivedQuestion(id){document.querySelectorAll('dialog[open]').forEach(d=>d.close());clearSearchPreserveTopic();$('showCompleted').checked=true;$('search').value=id;view='archive';chosenId=id;gradedPin='';autoSavedChoice='';selectedOption='';showAnswer=false;showImage=false;setViewUI();$('detail').scrollIntoView({block:'start'});}
   window.DeskUI.init({navigate:changeView,questions:()=>all(),resources:()=>[],openQuestion:openArchivedQuestion});
   window.LibraryUI.init({questions:()=>all(),openQuestion:openArchivedQuestion,getLibrary:()=>state.library,async saveLibrary(value){state.library=window.PersonalCore.normalizeLibrary(value);return save();},navigate:changeView,toast});
   window.addEventListener('journal-appearance-change',async e=>{

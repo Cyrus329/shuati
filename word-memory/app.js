@@ -3203,8 +3203,30 @@ function compactProgress(progress = {}, options = {}) {
   return out;
 }
 
+let builtinContentDefaultsCache = null;
+function builtinContentDelta(word) {
+  if (!builtinContentDefaultsCache) builtinContentDefaultsCache = new Map(ALL_BUILTIN_WORDS.map((item) => [item.id, normalizeWord(item)]));
+  const builtin = builtinContentDefaultsCache.get(word.id);
+  if (!builtin) return null;
+  const content = {};
+  ["meaning", "phrase", "note", "groups", "sources"].forEach((key) => {
+    if (JSON.stringify(word[key]) !== JSON.stringify(builtin[key])) content[key] = word[key];
+  });
+  return Object.keys(content).length ? content : null;
+}
+
 function applyCompactProgress(word, compact = {}) {
   if (!word || !compact) return word;
+  // Imported additions to builtin entries belong to the save, just like progress.
+  const content = compact.content;
+  if (content && typeof content === "object") {
+    ["meaning", "phrase", "note"].forEach((key) => {
+      if (typeof content[key] === "string") word[key] = mergeStudyText(word[key], content[key]);
+    });
+    ["groups", "sources"].forEach((key) => {
+      if (Array.isArray(content[key])) word[key] = [...new Set([...(word[key] || []), ...content[key]].filter((item) => typeof item === "string"))];
+    });
+  }
   if (compact.mastery && compact.mastery !== "未学") word.mastery = compact.mastery;
   if (typeof compact.important === "boolean") word.important = Boolean(word.important || compact.important);
   const legacyIncoming = { status: compact.status || "new", stage: Number.isInteger(compact.stage) ? compact.stage : -1, nextReviewAt: compact.nextReviewAt || "", lastStudiedAt: compact.lastStudiedAt || "", history: [] };
@@ -3219,6 +3241,8 @@ function applyCompactProgress(word, compact = {}) {
 }
 function compactWordRecord(word, options = {}) {
   const record = { id: word.id };
+  const content = builtinContentDelta(word);
+  if (content) record.content = content;
   const mastery = word.mastery || "未学";
   const status = word.status || "new";
   const stage = Number.isInteger(word.stage) ? word.stage : -1;
@@ -3416,6 +3440,8 @@ function b169QuickProgressRecord(progress = {}) {
 
 function b169QuickWordRecord(word = {}) {
   const record = { id: canonicalBuiltinAliasId(word.id || "") || word.id };
+  const content = builtinContentDelta(word);
+  if (content) record.content = content;
   const mastery = word.mastery || "未学";
   const status = word.status || "new";
   const stage = Number.isInteger(word.stage) ? word.stage : -1;

@@ -29,18 +29,18 @@
   const W=typeof window!=='undefined'?window.WeaknessCore:require('./weakness-core.js');
   return Object.fromEntries(W.build(questions.filter(q=>q.subject===subject&&(q.section||'当前已学内容')===section),skill).map(g=>[g.tag,{weak:g.priority,good:g.good}]));
  }
- function createDay(bank,plan={},questions=[],date){if(!/^\d{4}-\d{2}-\d{2}$/.test(date||''))throw Error('日期无效。');if(plan.days?.[date])return {day:plan.days[date],records:[],existing:true,shortages:[]};
+ function createDay(bank,plan={},questions=[],date,{fillMissing=false}={}){if(!/^\d{4}-\d{2}-\d{2}$/.test(date||''))throw Error('日期无效。');const original=plan.days?.[date];if(original&&!fillMissing)return {day:original,records:[],existing:true,shortages:[]};const present=new Set((original?.groups||[]).map(g=>JSON.stringify([g.subject,g.section])));
   const usedIds=new Set(questions.filter(q=>q.dailyNew).map(q=>q.id)),usedFingerprints=new Set(questions.map(fingerprint)),usedStructures=new Set(questions.filter(q=>q.dailyNew).map(structure));for(const day of Object.values(plan.days||{}))for(const g of day.groups||[])g.ids.forEach(id=>usedIds.add(id));
   const groups=new Map();for(const q of bank){const key=JSON.stringify([q.subject,q.section]);if(!groups.has(key))groups.set(key,[]);groups.get(key).push(q);}
   const records=[],result=[],shortages=[];
-  for(const [key,candidates] of groups){const [subject,section]=JSON.parse(key),available=[...new Map(candidates.filter(q=>!usedIds.has(q.id)&&!usedFingerprints.has(fingerprint(q))&&!usedStructures.has(structure(q))).map(q=>[structure(q),q])).values()];if(available.length<7){shortages.push({subject,section,remaining:available.length});continue;}
+  for(const [key,candidates] of groups){if(present.has(key))continue;const [subject,section]=JSON.parse(key),available=[...new Map(candidates.filter(q=>!usedIds.has(q.id)&&!usedFingerprints.has(fingerprint(q))&&!usedStructures.has(structure(q))).map(q=>[structure(q),q])).values()];if(available.length<7){shortages.push({subject,section,remaining:available.length});continue;}
    const scores=profile(questions,subject,section),chosen=[],selected=new Set(),tags={};
    const take=(role,n,score)=>{const sorted=[...available].filter(q=>!selected.has(q.id)).sort((a,b)=>score(b)-score(a)||a.id.localeCompare(b.id)),roleTags={};for(const preferred of [true,false])for(const cap of [3,Infinity])for(const q of sorted){if(n===0)break;if(selected.has(q.id)||(preferred&&score(q)<=0)||(roleTags[q.skillTag]||0)>=cap||chosen.some(v=>fingerprint(v.q)===fingerprint(q)))continue;selected.add(q.id);roleTags[q.skillTag]=(roleTags[q.skillTag]||0)+1;chosen.push({q,role});n--;}};
    take('weak',5,q=>scores[q.skillTag]?.weak||0);take('strong',2,q=>{const p=scores[q.skillTag]||{};return (p.good||0)*10/(1+(p.weak||0));});
    T.balance(chosen,available,scores);
    const ids=[];for(const {q,role}of chosen){const item={...q,canonicalId:q.id,dailyNew:true,dailyDate:date,dailyRole:role,firstStatus:'未作答',ownAnswer:'',memo:'',custom:true,source:'每日新题·核对题库',sourceAnswer:q.verifiedAnswer,batch:date+' · 每日新题',archivedAt:date,answerQuality:'题包答案与解析已核对',difficulty:q.difficulty||'中',sourceImageRefs:[],needsReview:false,issue:false,guessed:false,autoGradeDisabled:T.written(q)||!!q.autoGradeDisabled};records.push(item);ids.push(item.id);usedIds.add(item.id);usedFingerprints.add(fingerprint(item));usedStructures.add(structure(item));}
    result.push({key:subject+' / '+section,subject,section,ids,weak:5,strong:2,profile:scores});
-  }return {day:{date,groups:result,diversityVersion:1},records,existing:false,shortages};
+  }return {day:{...original,date,groups:[...(original?.groups||[]),...result],diversityVersion:original?.diversityVersion??1},records,existing:!!original,extended:!!original&&result.length>0,shortages};
  }
  function refreshDiversity(bank,value={},questions=[],date){
   const plan=JSON.parse(JSON.stringify(value)),day=plan.days?.[date];if(!day||day.diversityVersion===1)return {plan,records:[],replaced:0,changed:false};
@@ -57,5 +57,6 @@
   }
   day.diversityVersion=1;return {plan,records,replaced,changed:true};
  }
- const api={validateBank,fingerprint,structure,skill,profile,createDay,refreshDiversity};if(typeof module!=='undefined')module.exports=api;if(typeof window!=='undefined')window.DailyNewCore=api;
+ function needsCompletion(bank,plan,date){const keys=new Set((plan.days?.[date]?.groups||[]).map(g=>JSON.stringify([g.subject,g.section])));return bank.some(q=>!keys.has(JSON.stringify([q.subject,q.section])));}
+ const api={validateBank,fingerprint,structure,skill,profile,createDay,refreshDiversity,needsCompletion};if(typeof module!=='undefined')module.exports=api;if(typeof window!=='undefined')window.DailyNewCore=api;
 })();

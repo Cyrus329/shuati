@@ -1,7 +1,7 @@
 {
   "format": "cqzsb-daily-bank-v1",
   "version": "3.0-diverse",
-  "count": 167,
+  "count": 272,
   "records": [
     {
       "id": "CQZSB-DAILY-MATH-001",
@@ -4996,8 +4996,3679 @@
         "pitfall": "对数真数是严格大于0，不是大于等于0。",
         "caveat": ""
       }
+    },
+    {
+      "id": "CQZSB-REFILL-20261029-ENG-001",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "可数与数量",
+      "topic": "名词与代词",
+      "point": "advice与suggestion的可数性对比",
+      "type": "单选题",
+      "stem": "Your first suggestion was helpful. Could you give me another ____?",
+      "options": {
+        "A": "suggestion",
+        "B": "advice",
+        "C": "information",
+        "D": "homework"
+      },
+      "verifiedAnswer": "A",
+      "analysis": "选A。another表示另一个，直接修饰单数可数名词；suggestion可数，advice不可数。",
+      "englishLesson": {
+        "translation": "你的第一条建议很有帮助。你能再给我一条建议吗？",
+        "answerExplanation": "another表示另一个，直接修饰单数可数名词；suggestion可数，advice不可数。",
+        "optionAnalysis": {
+          "A": {
+            "meaning": "建议（可数）",
+            "reason": "正确：another后可接单数可数名词。"
+          },
+          "B": {
+            "meaning": "建议（不可数）",
+            "reason": "不可数，不能直接用another计数。"
+          },
+          "C": {
+            "meaning": "信息（不可数）",
+            "reason": "不可数，且语境要求建议。"
+          },
+          "D": {
+            "meaning": "家庭作业（不可数）",
+            "reason": "不可数，且不是建议。"
+          }
+        },
+        "steps": [
+          "观察句中信息，确定考查advice与suggestion的可数性对比。",
+          "another表示另一个，直接修饰单数可数名词；suggestion可数，advice不可数。",
+          "代入suggestion，核对结构及中文意思。"
+        ],
+        "memoryTip": "一条建议可说a suggestion或a piece of advice。",
+        "caveat": "本题为依据已导入知识点编写的原创练习，不是官方真题。",
+        "references": []
+      }
+    },
+    {
+      "id": "CQZSB-REFILL-20261029-ENG-002",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "可数与数量",
+      "topic": "名词与代词",
+      "point": "little的不可数限定及否定含义",
+      "type": "单选题",
+      "stem": "There is ____ petrol in the tank; the car cannot even reach the next street.",
+      "options": {
+        "A": "a few",
+        "B": "few",
+        "C": "little",
+        "D": "a few of"
+      },
+      "verifiedAnswer": "C",
+      "analysis": "选C。petrol不可数，先排除few类；不能开到下一条街表明几乎没有，用little。",
+      "englishLesson": {
+        "translation": "油箱里几乎没有汽油了；这辆车甚至到不了下一条街。",
+        "answerExplanation": "petrol不可数，先排除few类；不能开到下一条街表明几乎没有，用little。",
+        "optionAnalysis": {
+          "A": {
+            "meaning": "几个（肯定）",
+            "reason": "petrol不可数，不能用a few。"
+          },
+          "B": {
+            "meaning": "几乎没有几个（否定）",
+            "reason": "few修饰可数复数。"
+          },
+          "C": {
+            "meaning": "几乎没有（不可数，否定）",
+            "reason": "正确：cannot even表明少到不够用。"
+          },
+          "D": {
+            "meaning": "其中几个（可数）",
+            "reason": "a few of需要可数复数的限定集合，不能直接接petrol。"
+          }
+        },
+        "steps": [
+          "观察句中信息，确定考查little的不可数限定及否定含义。",
+          "petrol不可数，先排除few类；不能开到下一条街表明几乎没有，用little。",
+          "代入little，核对结构及中文意思。"
+        ],
+        "memoryTip": "few数个数，little量多少；无a偏否定。",
+        "caveat": "本题为依据已导入知识点编写的原创练习，不是官方真题。",
+        "references": []
+      }
+    },
+    {
+      "id": "CQZSB-REFILL-20261029-ENG-003",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "可数与数量",
+      "topic": "名词与代词",
+      "point": "a few修饰可数复数",
+      "type": "单选题",
+      "stem": "I do have ____ questions, so please wait while I ask them.",
+      "options": {
+        "A": "little",
+        "B": "a few",
+        "C": "a lot",
+        "D": "a little"
+      },
+      "verifiedAnswer": "B",
+      "analysis": "选B。questions可数复数，且明确表示确实有几个，用a few。",
+      "englishLesson": {
+        "translation": "我确实有几个问题，所以请等我把它们问完。",
+        "answerExplanation": "questions可数复数，且明确表示确实有几个，用a few。",
+        "optionAnalysis": {
+          "A": {
+            "meaning": "几乎没有（不可数）",
+            "reason": "questions是可数复数。"
+          },
+          "B": {
+            "meaning": "有几个（可数）",
+            "reason": "正确：do have强调确实有，a few为肯定意义。"
+          },
+          "C": {
+            "meaning": "很多（后接名词时缺of）",
+            "reason": "a lot后直接接questions缺少of，应为a lot of questions。"
+          },
+          "D": {
+            "meaning": "有一点（不可数）",
+            "reason": "a little不能修饰questions。"
+          }
+        },
+        "steps": [
+          "观察句中信息，确定考查a few修饰可数复数。",
+          "questions可数复数，且明确表示确实有几个，用a few。",
+          "代入a few，核对结构及中文意思。"
+        ],
+        "memoryTip": "有几个用a few。",
+        "caveat": "本题为依据已导入知识点编写的原创练习，不是官方真题。",
+        "references": []
+      }
+    },
+    {
+      "id": "CQZSB-REFILL-20261029-ENG-004",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "可数与数量",
+      "topic": "名词与代词",
+      "point": "量词作主语的单复数",
+      "type": "单选题",
+      "stem": "Two bottles of orange juice ____ on the counter.",
+      "options": {
+        "A": "is",
+        "B": "was",
+        "C": "has",
+        "D": "are"
+      },
+      "verifiedAnswer": "D",
+      "analysis": "选D。主语中心是two bottles，of orange juice说明瓶中内容；主语为复数，选are。",
+      "englishLesson": {
+        "translation": "两瓶橙汁在柜台上。",
+        "answerExplanation": "主语中心是two bottles，of orange juice说明瓶中内容；主语为复数，选are。",
+        "optionAnalysis": {
+          "A": {
+            "meaning": "是（单数现在式）",
+            "reason": "主语中心是复数bottles。"
+          },
+          "B": {
+            "meaning": "是（单数过去式）",
+            "reason": "同样与复数主语不一致。"
+          },
+          "C": {
+            "meaning": "有（第三人称单数）",
+            "reason": "has既不匹配复数主语，也不能表达在柜台上。"
+          },
+          "D": {
+            "meaning": "是（复数现在式）",
+            "reason": "正确：two bottles决定谓语用复数。"
+          }
+        },
+        "steps": [
+          "观察句中信息，确定考查量词作主语的单复数。",
+          "主语中心是two bottles，of orange juice说明瓶中内容；主语为复数，选are。",
+          "代入are，核对结构及中文意思。"
+        ],
+        "memoryTip": "量词结构看量词：a bottle is，two bottles are。",
+        "caveat": "本题为依据已导入知识点编写的原创练习，不是官方真题。",
+        "references": []
+      }
+    },
+    {
+      "id": "CQZSB-REFILL-20261029-ENG-005",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "可数与数量",
+      "topic": "名词与代词",
+      "point": "furniture不可数及much修饰",
+      "type": "单选题",
+      "stem": "The room is small, so we cannot put ____ furniture in it.",
+      "options": {
+        "A": "many",
+        "B": "a few",
+        "C": "much",
+        "D": "several"
+      },
+      "verifiedAnswer": "C",
+      "analysis": "选C。furniture表示家具时不可数，表示很多家具用much furniture。",
+      "englishLesson": {
+        "translation": "房间很小，因此我们不能在里面放太多家具。",
+        "answerExplanation": "furniture表示家具时不可数，表示很多家具用much furniture。",
+        "optionAnalysis": {
+          "A": {
+            "meaning": "许多（可数复数）",
+            "reason": "furniture不是可数复数。"
+          },
+          "B": {
+            "meaning": "几个（可数复数）",
+            "reason": "a few不能修饰furniture。"
+          },
+          "C": {
+            "meaning": "许多（不可数）",
+            "reason": "正确：furniture为不可数名词。"
+          },
+          "D": {
+            "meaning": "几个（可数复数）",
+            "reason": "several需要可数名词复数。"
+          }
+        },
+        "steps": [
+          "观察句中信息，确定考查furniture不可数及much修饰。",
+          "furniture表示家具时不可数，表示很多家具用much furniture。",
+          "代入much，核对结构及中文意思。"
+        ],
+        "memoryTip": "家具不可数，一件用a piece of furniture。",
+        "caveat": "本题为依据已导入知识点编写的原创练习，不是官方真题。",
+        "references": []
+      }
+    },
+    {
+      "id": "CQZSB-REFILL-20261029-ENG-006",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "可数与数量",
+      "topic": "名词与代词",
+      "point": "police的复数谓语",
+      "type": "单选题",
+      "stem": "The police ____ checking the bags at the entrance now.",
+      "options": {
+        "A": "are",
+        "B": "is",
+        "C": "am",
+        "D": "be"
+      },
+      "verifiedAnswer": "A",
+      "analysis": "选A。the police表示警察群体，谓语按复数处理；now与checking组成are checking。",
+      "englishLesson": {
+        "translation": "警察现在正在入口处检查行李。",
+        "answerExplanation": "the police表示警察群体，谓语按复数处理；now与checking组成are checking。",
+        "optionAnalysis": {
+          "A": {
+            "meaning": "是（复数）",
+            "reason": "正确：the police在此指警察群体，接复数谓语。"
+          },
+          "B": {
+            "meaning": "是（第三人称单数）",
+            "reason": "police在此不能按形式当单数。"
+          },
+          "C": {
+            "meaning": "是（第一人称单数）",
+            "reason": "am只与I配合。"
+          },
+          "D": {
+            "meaning": "be原形",
+            "reason": "陈述句现在进行时需要限定形式are。"
+          }
+        },
+        "steps": [
+          "观察句中信息，确定考查police的复数谓语。",
+          "the police表示警察群体，谓语按复数处理；now与checking组成are checking。",
+          "代入are，核对结构及中文意思。"
+        ],
+        "memoryTip": "police形式无s，谓语仍用复数。",
+        "caveat": "本题为依据已导入知识点编写的原创练习，不是官方真题。",
+        "references": []
+      }
+    },
+    {
+      "id": "CQZSB-REFILL-20261029-ENG-007",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "可数与数量",
+      "topic": "名词与代词",
+      "point": "people作人们时本身为复数",
+      "type": "单选题",
+      "stem": "Only one person was here at first; now ten ____ are waiting outside.",
+      "options": {
+        "A": "person",
+        "B": "persons of people",
+        "C": "peoples",
+        "D": "people"
+      },
+      "verifiedAnswer": "D",
+      "analysis": "选D。ten表示十个人，people本身可表示人的复数；peoples通常表示多个民族。",
+      "englishLesson": {
+        "translation": "起初这里只有一个人；现在有十个人在外面等候。",
+        "answerExplanation": "ten表示十个人，people本身可表示人的复数；peoples通常表示多个民族。",
+        "optionAnalysis": {
+          "A": {
+            "meaning": "一个人（单数）",
+            "reason": "ten后不能用person单数。"
+          },
+          "B": {
+            "meaning": "不合语法的拼接",
+            "reason": "不是表示十个人的规范结构。"
+          },
+          "C": {
+            "meaning": "民族（复数）",
+            "reason": "peoples通常指多个民族，不符合这里的人数。"
+          },
+          "D": {
+            "meaning": "人们（复数）",
+            "reason": "正确：people可表示person的复数意义。"
+          }
+        },
+        "steps": [
+          "观察句中信息，确定考查people作人们时本身为复数。",
+          "ten表示十个人，people本身可表示人的复数；peoples通常表示多个民族。",
+          "代入people，核对结构及中文意思。"
+        ],
+        "memoryTip": "一个person，多个人people。",
+        "caveat": "本题为依据已导入知识点编写的原创练习，不是官方真题。",
+        "references": []
+      }
+    },
+    {
+      "id": "CQZSB-REFILL-20261029-ENG-008",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "可数与数量",
+      "topic": "名词与代词",
+      "point": "复合名词中心词复数",
+      "type": "单选题",
+      "stem": "Both of my ____ work at the same school; they are married to my two sisters.",
+      "options": {
+        "A": "brother-in-laws",
+        "B": "brothers-in-law",
+        "C": "brothers-in-laws",
+        "D": "brother-in-law"
+      },
+      "verifiedAnswer": "B",
+      "analysis": "选B。brother-in-law的复数是brothers-in-law，复数标记加在中心名词brother上。",
+      "englishLesson": {
+        "translation": "我两位姐妹的丈夫都在同一所学校工作；他们分别与我的两位姐妹结婚。",
+        "answerExplanation": "brother-in-law的复数是brothers-in-law，复数标记加在中心名词brother上。",
+        "optionAnalysis": {
+          "A": {
+            "meaning": "错误复数：只变law",
+            "reason": "中心词brother应变复数。"
+          },
+          "B": {
+            "meaning": "姐妹的丈夫等姻亲男性（复数）",
+            "reason": "正确：brother-in-law的中心词为brother。"
+          },
+          "C": {
+            "meaning": "错误复数：两处变复数",
+            "reason": "law在此不变复数。"
+          },
+          "D": {
+            "meaning": "姐妹的丈夫等姻亲男性（单数）",
+            "reason": "both要求两个，不能用单数。"
+          }
+        },
+        "steps": [
+          "观察句中信息，确定考查复合名词中心词复数。",
+          "brother-in-law的复数是brothers-in-law，复数标记加在中心名词brother上。",
+          "代入brothers-in-law，核对结构及中文意思。"
+        ],
+        "memoryTip": "复合名词找中心：brothers-in-law。",
+        "caveat": "本题为依据已导入知识点编写的原创练习，不是官方真题。",
+        "references": []
+      }
+    },
+    {
+      "id": "CQZSB-REFILL-20261029-ENG-009",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "可数与数量",
+      "topic": "名词与代词",
+      "point": "名词作定语通常用单数",
+      "type": "单选题",
+      "stem": "This shop sells shoes for children. It is a ____ shop.",
+      "options": {
+        "A": "shoes",
+        "B": "shoe",
+        "C": "shoe’s",
+        "D": "shoes’s"
+      },
+      "verifiedAnswer": "B",
+      "analysis": "选B。名词shoe表示店的类别，作定语通常用单数：a shoe shop。",
+      "englishLesson": {
+        "translation": "这家店出售儿童鞋。它是一家鞋店。",
+        "answerExplanation": "名词shoe表示店的类别，作定语通常用单数：a shoe shop。",
+        "optionAnalysis": {
+          "A": {
+            "meaning": "鞋（复数）",
+            "reason": "表示店铺类别通常用shoe作定语。"
+          },
+          "B": {
+            "meaning": "鞋（作名词定语）",
+            "reason": "正确：shoe shop为鞋店。"
+          },
+          "C": {
+            "meaning": "鞋的（单数所有格）",
+            "reason": "此处不是某只鞋所拥有的店。"
+          },
+          "D": {
+            "meaning": "错误的所有格",
+            "reason": "shoes’s不是规范形式。"
+          }
+        },
+        "steps": [
+          "观察句中信息，确定考查名词作定语通常用单数。",
+          "名词shoe表示店的类别，作定语通常用单数：a shoe shop。",
+          "代入shoe，核对结构及中文意思。"
+        ],
+        "memoryTip": "名词作类别定语常用单数。",
+        "caveat": "本题为依据已导入知识点编写的原创练习，不是官方真题。",
+        "references": []
+      }
+    },
+    {
+      "id": "CQZSB-REFILL-20261029-ENG-010",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "可数与数量",
+      "topic": "名词与代词",
+      "point": "复合形容词中的单数名词",
+      "type": "单选题",
+      "stem": "The course lasts six weeks. It is a ____ course.",
+      "options": {
+        "A": "six-weeks",
+        "B": "six weeks",
+        "C": "six-week",
+        "D": "six-week’s"
+      },
+      "verifiedAnswer": "C",
+      "analysis": "选C。six-week是带连字符的复合形容词，其中week用单数。",
+      "englishLesson": {
+        "translation": "这门课程持续六周。它是一门为期六周的课程。",
+        "answerExplanation": "six-week是带连字符的复合形容词，其中week用单数。",
+        "optionAnalysis": {
+          "A": {
+            "meaning": "错误的复数复合形容词",
+            "reason": "连字符结构中的week应单数。"
+          },
+          "B": {
+            "meaning": "六周（普通名词短语）",
+            "reason": "此处需要放在course前的复合定语。"
+          },
+          "C": {
+            "meaning": "为期六周的",
+            "reason": "正确：数词-单数名词构成复合形容词。"
+          },
+          "D": {
+            "meaning": "错误的混合结构",
+            "reason": "此结构不加所有格标记。"
+          }
+        },
+        "steps": [
+          "观察句中信息，确定考查复合形容词中的单数名词。",
+          "six-week是带连字符的复合形容词，其中week用单数。",
+          "代入six-week，核对结构及中文意思。"
+        ],
+        "memoryTip": "六周课程：six-week course。",
+        "caveat": "本题为依据已导入知识点编写的原创练习，不是官方真题。",
+        "references": []
+      }
+    },
+    {
+      "id": "CQZSB-REFILL-20261029-ENG-011",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "所有格",
+      "topic": "名词与代词",
+      "point": "所有格省略已知名词",
+      "type": "单选题",
+      "stem": "My office is on the first floor; the ____ is on the second floor.（指经理的办公室）",
+      "options": {
+        "A": "manager",
+        "B": "managers",
+        "C": "manager’s",
+        "D": "managers’s"
+      },
+      "verifiedAnswer": "C",
+      "analysis": "选C。前文已有office，the manager’s可省略office，意为经理的办公室。",
+      "englishLesson": {
+        "translation": "我的办公室在一楼；经理的办公室在二楼。",
+        "answerExplanation": "前文已有office，the manager’s可省略office，意为经理的办公室。",
+        "optionAnalysis": {
+          "A": {
+            "meaning": "经理",
+            "reason": "缺少所有格，不能表示经理的办公室。"
+          },
+          "B": {
+            "meaning": "经理们",
+            "reason": "仅表示经理们，不能替代办公室。"
+          },
+          "C": {
+            "meaning": "经理的（办公室）",
+            "reason": "正确：manager’s后省略前文已出现的office。"
+          },
+          "D": {
+            "meaning": "错误的复数所有格",
+            "reason": "以s结尾复数所有格应为managers’，本句又特指一位经理。"
+          }
+        },
+        "steps": [
+          "观察句中信息，确定考查所有格省略已知名词。",
+          "前文已有office，the manager’s可省略office，意为经理的办公室。",
+          "代入manager’s，核对结构及中文意思。"
+        ],
+        "memoryTip": "所有格后同名词可省略。",
+        "caveat": "本题为依据已导入知识点编写的原创练习，不是官方真题。",
+        "references": []
+      }
+    },
+    {
+      "id": "CQZSB-REFILL-20261029-ENG-012",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "所有格",
+      "topic": "名词与代词",
+      "point": "of所有格表达无生命事物部分",
+      "type": "单选题",
+      "stem": "Please write your name at the bottom ____ the page.",
+      "options": {
+        "A": "with",
+        "B": "of",
+        "C": "for",
+        "D": "by"
+      },
+      "verifiedAnswer": "B",
+      "analysis": "选B。bottom与page构成部分和整体，用the bottom of the page。",
+      "englishLesson": {
+        "translation": "请在这一页的底部写上你的名字。",
+        "answerExplanation": "bottom与page构成部分和整体，用the bottom of the page。",
+        "optionAnalysis": {
+          "A": {
+            "meaning": "和/用",
+            "reason": "不能连接bottom与page表示部分所属。"
+          },
+          "B": {
+            "meaning": "……的",
+            "reason": "正确：the bottom of the page为这一页的底部。"
+          },
+          "C": {
+            "meaning": "为了",
+            "reason": "for不表示这里的部分与整体。"
+          },
+          "D": {
+            "meaning": "由/在旁边",
+            "reason": "by不表示这里的所属关系。"
+          }
+        },
+        "steps": [
+          "观察句中信息，确定考查of所有格表达无生命事物部分。",
+          "bottom与page构成部分和整体，用the bottom of the page。",
+          "代入of，核对结构及中文意思。"
+        ],
+        "memoryTip": "无生命事物的部分常用of。",
+        "caveat": "本题为依据已导入知识点编写的原创练习，不是官方真题。",
+        "references": []
+      }
+    },
+    {
+      "id": "CQZSB-REFILL-20261029-ENG-013",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "所有格",
+      "topic": "名词与代词",
+      "point": "不规则复数men的所有格",
+      "type": "单选题",
+      "stem": "The sign says “____ Changing Room”; only adult males may use it.",
+      "options": {
+        "A": "Mens",
+        "B": "Mens’",
+        "C": "Man’s",
+        "D": "Men’s"
+      },
+      "verifiedAnswer": "D",
+      "analysis": "选D。men不以s结尾，它的所有格为men’s；表示供男性群体使用的更衣室。",
+      "englishLesson": {
+        "translation": "标牌上写着“男更衣室”；只有成年男性可以使用。",
+        "answerExplanation": "men不以s结尾，它的所有格为men’s；表示供男性群体使用的更衣室。",
+        "optionAnalysis": {
+          "A": {
+            "meaning": "错误形式",
+            "reason": "men的所有格不能只加s。"
+          },
+          "B": {
+            "meaning": "错误所有格",
+            "reason": "men不以s结尾，不能只加撇号。"
+          },
+          "C": {
+            "meaning": "一个男人的",
+            "reason": "表示一名男人的，不符合供成年男性群体使用。"
+          },
+          "D": {
+            "meaning": "男人们的",
+            "reason": "正确：men是不规则复数，加’s。"
+          }
+        },
+        "steps": [
+          "观察句中信息，确定考查不规则复数men的所有格。",
+          "men不以s结尾，它的所有格为men’s；表示供男性群体使用的更衣室。",
+          "代入Men’s，核对结构及中文意思。"
+        ],
+        "memoryTip": "men、women、children都加’s。",
+        "caveat": "本题为依据已导入知识点编写的原创练习，不是官方真题。",
+        "references": []
+      }
+    },
+    {
+      "id": "CQZSB-REFILL-20261029-ENG-014",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "所有格",
+      "topic": "名词与代词",
+      "point": "复数时间所有格与休息",
+      "type": "单选题",
+      "stem": "After working all morning, we need ten ____ rest.（用minutes的所有格）",
+      "options": {
+        "A": "minutes’",
+        "B": "minute’s",
+        "C": "minutes’s",
+        "D": "minute"
+      },
+      "verifiedAnswer": "A",
+      "analysis": "选A。ten minutes为复数时间名词，所有格为ten minutes’。",
+      "englishLesson": {
+        "translation": "工作了一整个上午之后，我们需要休息十分钟。",
+        "answerExplanation": "ten minutes为复数时间名词，所有格为ten minutes’。",
+        "optionAnalysis": {
+          "A": {
+            "meaning": "十分钟的（复数所有格）",
+            "reason": "正确：ten minutes的所有格只加撇号。"
+          },
+          "B": {
+            "meaning": "一分钟的（单数所有格）",
+            "reason": "ten要求minutes复数。"
+          },
+          "C": {
+            "meaning": "错误复数所有格",
+            "reason": "minutes以s结尾，只加撇号。"
+          },
+          "D": {
+            "meaning": "分钟（单数）",
+            "reason": "既无复数也无所有格。"
+          }
+        },
+        "steps": [
+          "观察句中信息，确定考查复数时间所有格与休息。",
+          "ten minutes为复数时间名词，所有格为ten minutes’。",
+          "代入minutes’，核对结构及中文意思。"
+        ],
+        "memoryTip": "复数时间以s结尾：minutes’ rest。",
+        "caveat": "本题为依据已导入知识点编写的原创练习，不是官方真题。",
+        "references": []
+      }
+    },
+    {
+      "id": "CQZSB-REFILL-20261029-ENG-015",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "所有格",
+      "topic": "名词与代词",
+      "point": "距离名词的单数所有格",
+      "type": "单选题",
+      "stem": "The bus stop is one ____ walk from the gate.（用minute的所有格）",
+      "options": {
+        "A": "minutes’",
+        "B": "minutes",
+        "C": "minute’s",
+        "D": "minute"
+      },
+      "verifiedAnswer": "C",
+      "analysis": "选C。one后用单数minute，时间名词修饰walk表示距离时用所有格minute’s。",
+      "englishLesson": {
+        "translation": "公交车站离大门步行一分钟。",
+        "answerExplanation": "one后用单数minute，时间名词修饰walk表示距离时用所有格minute’s。",
+        "optionAnalysis": {
+          "A": {
+            "meaning": "数分钟的",
+            "reason": "one对应单数minute。"
+          },
+          "B": {
+            "meaning": "分钟（复数）",
+            "reason": "缺少单数和所有格形式。"
+          },
+          "C": {
+            "meaning": "一分钟的",
+            "reason": "正确：one minute’s walk表示步行一分钟的距离。"
+          },
+          "D": {
+            "meaning": "分钟（单数）",
+            "reason": "缺少所有格标记。"
+          }
+        },
+        "steps": [
+          "观察句中信息，确定考查距离名词的单数所有格。",
+          "one后用单数minute，时间名词修饰walk表示距离时用所有格minute’s。",
+          "代入minute’s，核对结构及中文意思。"
+        ],
+        "memoryTip": "一分钟minute’s，多分钟minutes’。",
+        "caveat": "本题为依据已导入知识点编写的原创练习，不是官方真题。",
+        "references": []
+      }
+    },
+    {
+      "id": "CQZSB-REFILL-20261029-ENG-016",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "所有格",
+      "topic": "名词与代词",
+      "point": "双重所有格使用名词所有格",
+      "type": "单选题",
+      "stem": "Of all my uncle’s neighbours, Mr Hill is the kindest. He is a neighbour of ____.",
+      "options": {
+        "A": "mine uncles",
+        "B": "my uncle’s",
+        "C": "mine uncle",
+        "D": "me uncle"
+      },
+      "verifiedAnswer": "B",
+      "analysis": "选B。a neighbour of my uncle’s表示我叔叔诸多邻居中的一位，of后接所有格。",
+      "englishLesson": {
+        "translation": "在我叔叔的所有邻居中，希尔先生最友善。他是我叔叔的一位邻居。",
+        "answerExplanation": "a neighbour of my uncle’s表示我叔叔诸多邻居中的一位，of后接所有格。",
+        "optionAnalysis": {
+          "A": {
+            "meaning": "错误的物主形式加复数名词",
+            "reason": "mine为名词性物主代词，不能直接限定uncles。"
+          },
+          "B": {
+            "meaning": "我叔叔的（双重所有格）",
+            "reason": "正确：a neighbour of my uncle’s表示我叔叔的一位邻居。"
+          },
+          "C": {
+            "meaning": "错误的物主形式加单数名词",
+            "reason": "mine不能放在uncle前作形容词性物主限定词，应使用my。"
+          },
+          "D": {
+            "meaning": "错误的物主形式",
+            "reason": "me不能作uncle前的物主限定词。"
+          }
+        },
+        "steps": [
+          "观察句中信息，确定考查双重所有格使用名词所有格。",
+          "a neighbour of my uncle’s表示我叔叔诸多邻居中的一位，of后接所有格。",
+          "代入my uncle’s，核对结构及中文意思。"
+        ],
+        "memoryTip": "of后仍可用’s，表示其中一位。",
+        "caveat": "本题为依据已导入知识点编写的原创练习，不是官方真题。",
+        "references": []
+      }
+    },
+    {
+      "id": "CQZSB-REFILL-20261029-ENG-017",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "所有格",
+      "topic": "名词与代词",
+      "point": "所属疑问词whose",
+      "type": "单选题",
+      "stem": "—____ coat is this? —It belongs to the visitor by the window.",
+      "options": {
+        "A": "Who",
+        "B": "Whom",
+        "C": "Who’s",
+        "D": "Whose"
+      },
+      "verifiedAnswer": "D",
+      "analysis": "选D。答句belong to明确谈所属，提问用whose修饰coat。",
+      "englishLesson": {
+        "translation": "——这是谁的外套？——它属于窗边的那位访客。",
+        "answerExplanation": "答句belong to明确谈所属，提问用whose修饰coat。",
+        "optionAnalysis": {
+          "A": {
+            "meaning": "谁（主格）",
+            "reason": "不能直接修饰coat询问所属。"
+          },
+          "B": {
+            "meaning": "谁（宾格）",
+            "reason": "不能作coat前的物主限定词。"
+          },
+          "C": {
+            "meaning": "谁是/谁已经",
+            "reason": "who’s是缩写，不等于谁的。"
+          },
+          "D": {
+            "meaning": "谁的",
+            "reason": "正确：whose coat询问外套属于谁。"
+          }
+        },
+        "steps": [
+          "观察句中信息，确定考查所属疑问词whose。",
+          "答句belong to明确谈所属，提问用whose修饰coat。",
+          "代入Whose，核对结构及中文意思。"
+        ],
+        "memoryTip": "whose谁的；who’s谁是。",
+        "caveat": "本题为依据已导入知识点编写的原创练习，不是官方真题。",
+        "references": []
+      }
+    },
+    {
+      "id": "CQZSB-REFILL-20261029-ENG-018",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "所有格",
+      "topic": "名词与代词",
+      "point": "belongs to后用宾格而非所有格",
+      "type": "单选题",
+      "stem": "This dictionary belongs to ____, although my name is on the cover.",
+      "options": {
+        "A": "his",
+        "B": "he",
+        "C": "him",
+        "D": "himself"
+      },
+      "verifiedAnswer": "C",
+      "analysis": "选C。belong to后接所属对象，介词to后的人称代词用宾格him。",
+      "englishLesson": {
+        "translation": "虽然封面上有我的名字，但这本词典属于他。",
+        "answerExplanation": "belong to后接所属对象，介词to后的人称代词用宾格him。",
+        "optionAnalysis": {
+          "A": {
+            "meaning": "他的（物主代词）",
+            "reason": "belongs to后接物主而非他的东西，不能用his。"
+          },
+          "B": {
+            "meaning": "他（主格）",
+            "reason": "介词to后不使用主格he。"
+          },
+          "C": {
+            "meaning": "他（宾格）",
+            "reason": "正确：to后用宾格him，表示属于他。"
+          },
+          "D": {
+            "meaning": "他自己",
+            "reason": "主语是dictionary，不能用himself回指dictionary。"
+          }
+        },
+        "steps": [
+          "观察句中信息，确定考查belongs to后用宾格而非所有格。",
+          "belong to后接所属对象，介词to后的人称代词用宾格him。",
+          "代入him，核对结构及中文意思。"
+        ],
+        "memoryTip": "属于他：belongs to him。",
+        "caveat": "本题为依据已导入知识点编写的原创练习，不是官方真题。",
+        "references": []
+      }
+    },
+    {
+      "id": "CQZSB-REFILL-20261029-ENG-019",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "所有格",
+      "topic": "名词与代词",
+      "point": "双重所有格用名词性物主代词",
+      "type": "单选题",
+      "stem": "We each brought a photo. This is a photo of ____, not one of yours.（指我拥有的一张照片）",
+      "options": {
+        "A": "mine",
+        "B": "my",
+        "C": "me",
+        "D": "I"
+      },
+      "verifiedAnswer": "A",
+      "analysis": "选A。题目强调照片归我所有，a photo of mine表示我的一张照片；a photo of me强调照片上是我。",
+      "englishLesson": {
+        "translation": "我们每人带了一张照片。这是我拥有的一张照片，不是你的照片中的一张。",
+        "answerExplanation": "题目强调照片归我所有，a photo of mine表示我的一张照片；a photo of me强调照片上是我。",
+        "optionAnalysis": {
+          "A": {
+            "meaning": "我的（名词性物主代词）",
+            "reason": "正确：of mine为双重所有格，表示我拥有的照片之一。"
+          },
+          "B": {
+            "meaning": "我的（形容词性物主代词）",
+            "reason": "my后面必须有名词。"
+          },
+          "C": {
+            "meaning": "我（宾格）",
+            "reason": "a photo of me表示拍有我的照片，与题目限定的拥有关系不同。"
+          },
+          "D": {
+            "meaning": "我（主格）",
+            "reason": "介词of后不能用主格I。"
+          }
+        },
+        "steps": [
+          "观察句中信息，确定考查双重所有格用名词性物主代词。",
+          "题目强调照片归我所有，a photo of mine表示我的一张照片；a photo of me强调照片上是我。",
+          "代入mine，核对结构及中文意思。"
+        ],
+        "memoryTip": "of mine属我；of me拍我。",
+        "caveat": "本题为依据已导入知识点编写的原创练习，不是官方真题。",
+        "references": []
+      }
+    },
+    {
+      "id": "CQZSB-REFILL-20261029-ENG-020",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "所有格",
+      "topic": "名词与代词",
+      "point": "共同所有与单数中心词",
+      "type": "单选题",
+      "stem": "The twins own one laptop together. ____ laptop needs repair.",
+      "options": {
+        "A": "Amy’s and May’s",
+        "B": "Amy and May’s",
+        "C": "Amy and May",
+        "D": "Amy’s and May"
+      },
+      "verifiedAnswer": "B",
+      "analysis": "选B。one laptop together表明共同所有，只在May后加’s。",
+      "englishLesson": {
+        "translation": "这对双胞胎共同拥有一台笔记本电脑。他们的这台电脑需要维修。",
+        "answerExplanation": "one laptop together表明共同所有，只在May后加’s。",
+        "optionAnalysis": {
+          "A": {
+            "meaning": "艾米的和梅的（分别所有）",
+            "reason": "分别所有通常对应各自物品，题目明确共同拥有一台。"
+          },
+          "B": {
+            "meaning": "艾米和梅共同的",
+            "reason": "正确：共同所有只在最后一人名后加’s。"
+          },
+          "C": {
+            "meaning": "艾米和梅（无所有格）",
+            "reason": "缺少所有格标记。"
+          },
+          "D": {
+            "meaning": "仅艾米带所有格的错误结构",
+            "reason": "共同所有应在最后的人名后加’s。"
+          }
+        },
+        "steps": [
+          "观察句中信息，确定考查共同所有与单数中心词。",
+          "one laptop together表明共同所有，只在May后加’s。",
+          "代入Amy and May’s，核对结构及中文意思。"
+        ],
+        "memoryTip": "共同有，最后加。",
+        "caveat": "本题为依据已导入知识点编写的原创练习，不是官方真题。",
+        "references": []
+      }
+    },
+    {
+      "id": "CQZSB-REFILL-20261029-ENG-021",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "代词",
+      "topic": "名词与代词",
+      "point": "并列主语中人称代词主格",
+      "type": "单选题",
+      "stem": "My sister and ____ are responsible for opening the library.",
+      "options": {
+        "A": "me",
+        "B": "my",
+        "C": "mine",
+        "D": "I"
+      },
+      "verifiedAnswer": "D",
+      "analysis": "选D。空格与My sister并列作are的主语，选择主格I。",
+      "englishLesson": {
+        "translation": "我姐姐和我负责开图书馆的门。",
+        "answerExplanation": "空格与My sister并列作are的主语，选择主格I。",
+        "optionAnalysis": {
+          "A": {
+            "meaning": "我（宾格）",
+            "reason": "整个并列结构作主语，应使用主格。"
+          },
+          "B": {
+            "meaning": "我的（形容词性）",
+            "reason": "后无名词，且此处需要人称主语。"
+          },
+          "C": {
+            "meaning": "我的（名词性）",
+            "reason": "物主代词不能表达我本人。"
+          },
+          "D": {
+            "meaning": "我（主格）",
+            "reason": "正确：My sister and I构成并列主语。"
+          }
+        },
+        "steps": [
+          "观察句中信息，确定考查并列主语中人称代词主格。",
+          "空格与My sister并列作are的主语，选择主格I。",
+          "代入I，核对结构及中文意思。"
+        ],
+        "memoryTip": "作主语用I，作宾语用me。",
+        "caveat": "本题为依据已导入知识点编写的原创练习，不是官方真题。",
+        "references": []
+      }
+    },
+    {
+      "id": "CQZSB-REFILL-20261029-ENG-022",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "代词",
+      "topic": "名词与代词",
+      "point": "动词后并列宾语",
+      "type": "单选题",
+      "stem": "The guide showed my parents and ____ the way to the museum.",
+      "options": {
+        "A": "I",
+        "B": "my",
+        "C": "me",
+        "D": "mine"
+      },
+      "verifiedAnswer": "C",
+      "analysis": "选C。showed后接人的宾语，空格用宾格me，与my parents并列。",
+      "englishLesson": {
+        "translation": "导游为我的父母和我指明了去博物馆的路。",
+        "answerExplanation": "showed后接人的宾语，空格用宾格me，与my parents并列。",
+        "optionAnalysis": {
+          "A": {
+            "meaning": "我（主格）",
+            "reason": "showed后作宾语，不使用主格I。"
+          },
+          "B": {
+            "meaning": "我的（形容词性）",
+            "reason": "my后应有名词。"
+          },
+          "C": {
+            "meaning": "我（宾格）",
+            "reason": "正确：my parents and me为showed的宾语。"
+          },
+          "D": {
+            "meaning": "我的（名词性）",
+            "reason": "mine表示我的东西，不能表示我本人。"
+          }
+        },
+        "steps": [
+          "观察句中信息，确定考查动词后并列宾语。",
+          "showed后接人的宾语，空格用宾格me，与my parents并列。",
+          "代入me，核对结构及中文意思。"
+        ],
+        "memoryTip": "去掉并列部分：showed me。",
+        "caveat": "本题为依据已导入知识点编写的原创练习，不是官方真题。",
+        "references": []
+      }
+    },
+    {
+      "id": "CQZSB-REFILL-20261029-ENG-023",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "代词",
+      "topic": "名词与代词",
+      "point": "形容词性与名词性物主代词对照",
+      "type": "单选题",
+      "stem": "Our classroom is upstairs, while ____ is on the ground floor.（指他们的教室）",
+      "options": {
+        "A": "their",
+        "B": "theirs",
+        "C": "them",
+        "D": "they"
+      },
+      "verifiedAnswer": "B",
+      "analysis": "选B。空格独立作主语，代替their classroom，应使用名词性物主代词theirs。",
+      "englishLesson": {
+        "translation": "我们的教室在楼上，而他们的教室在底层。",
+        "answerExplanation": "空格独立作主语，代替their classroom，应使用名词性物主代词theirs。",
+        "optionAnalysis": {
+          "A": {
+            "meaning": "他们的（形容词性）",
+            "reason": "后无名词，不能单独替代their classroom。"
+          },
+          "B": {
+            "meaning": "他们的（名词性）",
+            "reason": "正确：theirs=their classroom。"
+          },
+          "C": {
+            "meaning": "他们（宾格）",
+            "reason": "表示他们本人，不是他们的教室。"
+          },
+          "D": {
+            "meaning": "他们（主格）",
+            "reason": "表示他们本人，不能代替教室。"
+          }
+        },
+        "steps": [
+          "观察句中信息，确定考查形容词性与名词性物主代词对照。",
+          "空格独立作主语，代替their classroom，应使用名词性物主代词theirs。",
+          "代入theirs，核对结构及中文意思。"
+        ],
+        "memoryTip": "有名词their，无名词theirs。",
+        "caveat": "本题为依据已导入知识点编写的原创练习，不是官方真题。",
+        "references": []
+      }
+    },
+    {
+      "id": "CQZSB-REFILL-20261029-ENG-024",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "代词",
+      "topic": "名词与代词",
+      "point": "反身代词by oneself表示独自",
+      "type": "单选题",
+      "stem": "No one helped us carry the sofa; we moved it by ____.",
+      "options": {
+        "A": "ourselves",
+        "B": "we",
+        "C": "our",
+        "D": "ours"
+      },
+      "verifiedAnswer": "A",
+      "analysis": "选A。No one helped说明强调独自完成，by oneself用对应we的ourselves。",
+      "englishLesson": {
+        "translation": "没有人帮我们搬沙发；我们独自把它搬走了。",
+        "answerExplanation": "No one helped说明强调独自完成，by oneself用对应we的ourselves。",
+        "optionAnalysis": {
+          "A": {
+            "meaning": "我们自己",
+            "reason": "正确：by ourselves表示独自、没有别人帮助。"
+          },
+          "B": {
+            "meaning": "我们（主格）",
+            "reason": "介词by后不能使用主格we。"
+          },
+          "C": {
+            "meaning": "我们的（形容词性）",
+            "reason": "our后须接名词。"
+          },
+          "D": {
+            "meaning": "我们的（名词性）",
+            "reason": "ours表示我们的东西，不表示我们自己。"
+          }
+        },
+        "steps": [
+          "观察句中信息，确定考查反身代词by oneself表示独自。",
+          "No one helped说明强调独自完成，by oneself用对应we的ourselves。",
+          "代入ourselves，核对结构及中文意思。"
+        ],
+        "memoryTip": "by oneself=独自。",
+        "caveat": "本题为依据已导入知识点编写的原创练习，不是官方真题。",
+        "references": []
+      }
+    },
+    {
+      "id": "CQZSB-REFILL-20261029-ENG-025",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "代词",
+      "topic": "名词与代词",
+      "point": "反身代词enjoy oneself",
+      "type": "单选题",
+      "stem": "The children enjoyed ____ at the school picnic.",
+      "options": {
+        "A": "them",
+        "B": "their",
+        "C": "themselves",
+        "D": "theirs"
+      },
+      "verifiedAnswer": "C",
+      "analysis": "选C。enjoy oneself为玩得开心；主语children为复数，反身代词用themselves。",
+      "englishLesson": {
+        "translation": "孩子们在学校野餐活动中玩得很开心。",
+        "answerExplanation": "enjoy oneself为玩得开心；主语children为复数，反身代词用themselves。",
+        "optionAnalysis": {
+          "A": {
+            "meaning": "他们（宾格）",
+            "reason": "enjoy them表示喜欢他们，不是主语自己玩得开心。"
+          },
+          "B": {
+            "meaning": "他们的（形容词性）",
+            "reason": "后无名词，且不能作enjoy的完整宾语。"
+          },
+          "C": {
+            "meaning": "他们自己",
+            "reason": "正确：enjoy oneself表示玩得开心，children对应themselves。"
+          },
+          "D": {
+            "meaning": "他们的（名词性）",
+            "reason": "表示他们的东西，语义不合。"
+          }
+        },
+        "steps": [
+          "观察句中信息，确定考查反身代词enjoy oneself。",
+          "enjoy oneself为玩得开心；主语children为复数，反身代词用themselves。",
+          "代入themselves，核对结构及中文意思。"
+        ],
+        "memoryTip": "玩得开心enjoy oneself。",
+        "caveat": "本题为依据已导入知识点编写的原创练习，不是官方真题。",
+        "references": []
+      }
+    },
+    {
+      "id": "CQZSB-REFILL-20261029-ENG-026",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "代词",
+      "topic": "名词与代词",
+      "point": "it代替前文同一事物",
+      "type": "单选题",
+      "stem": "I left my phone on the kitchen table. Please bring ____ to me.",
+      "options": {
+        "A": "one",
+        "B": "them",
+        "C": "ones",
+        "D": "it"
+      },
+      "verifiedAnswer": "D",
+      "analysis": "选D。要求拿来的是前文落下的同一部手机，直接用it回指。",
+      "englishLesson": {
+        "translation": "我把手机落在厨房桌子上了。请把它拿给我。",
+        "answerExplanation": "要求拿来的是前文落下的同一部手机，直接用it回指。",
+        "optionAnalysis": {
+          "A": {
+            "meaning": "同类中的一个",
+            "reason": "one泛指同类一个，不能明确指我落下的同一部手机。"
+          },
+          "B": {
+            "meaning": "它们（复数宾格）",
+            "reason": "前文phone为单数，不能用them。"
+          },
+          "C": {
+            "meaning": "同类复数替代词",
+            "reason": "前文phone单数，不用复数ones。"
+          },
+          "D": {
+            "meaning": "它（前文同一物）",
+            "reason": "正确：it回指前文已知的同一部手机。"
+          }
+        },
+        "steps": [
+          "观察句中信息，确定考查it代替前文同一事物。",
+          "要求拿来的是前文落下的同一部手机，直接用it回指。",
+          "代入it，核对结构及中文意思。"
+        ],
+        "memoryTip": "同一个用it，同类另一个用one。",
+        "caveat": "本题为依据已导入知识点编写的原创练习，不是官方真题。",
+        "references": []
+      }
+    },
+    {
+      "id": "CQZSB-REFILL-20261029-ENG-027",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "代词",
+      "topic": "名词与代词",
+      "point": "ones替代复数同类名词",
+      "type": "单选题",
+      "stem": "These gloves are too thin for winter. I need thicker ____.",
+      "options": {
+        "A": "one",
+        "B": "ones",
+        "C": "it",
+        "D": "that"
+      },
+      "verifiedAnswer": "B",
+      "analysis": "选B。需要同类中更厚的手套，用复数替代词ones。",
+      "englishLesson": {
+        "translation": "这些手套冬天戴太薄了。我需要更厚的手套。",
+        "answerExplanation": "需要同类中更厚的手套，用复数替代词ones。",
+        "optionAnalysis": {
+          "A": {
+            "meaning": "一个（单数替代）",
+            "reason": "gloves为复数，不用one。"
+          },
+          "B": {
+            "meaning": "一些（复数替代）",
+            "reason": "正确：ones替代gloves，thicker修饰它。"
+          },
+          "C": {
+            "meaning": "它（同一单数物）",
+            "reason": "it不能代替复数gloves。"
+          },
+          "D": {
+            "meaning": "那个（单数）",
+            "reason": "that不能代替这里同类复数手套。"
+          }
+        },
+        "steps": [
+          "观察句中信息，确定考查ones替代复数同类名词。",
+          "需要同类中更厚的手套，用复数替代词ones。",
+          "代入ones，核对结构及中文意思。"
+        ],
+        "memoryTip": "单数one，复数ones。",
+        "caveat": "本题为依据已导入知识点编写的原创练习，不是官方真题。",
+        "references": []
+      }
+    },
+    {
+      "id": "CQZSB-REFILL-20261029-ENG-028",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "代词",
+      "topic": "名词与代词",
+      "point": "that替代比较中的不可数名词",
+      "type": "单选题",
+      "stem": "The water in this well is cleaner than ____ in the pond.",
+      "options": {
+        "A": "those",
+        "B": "one",
+        "C": "that",
+        "D": "these"
+      },
+      "verifiedAnswer": "C",
+      "analysis": "选C。比较的是两处的water；water不可数，用that避免重复。",
+      "englishLesson": {
+        "translation": "这口井里的水比池塘里的水干净。",
+        "answerExplanation": "比较的是两处的water；water不可数，用that避免重复。",
+        "optionAnalysis": {
+          "A": {
+            "meaning": "那些（复数）",
+            "reason": "water不可数，不用复数those。"
+          },
+          "B": {
+            "meaning": "一个（可数单数）",
+            "reason": "one只能替代可数名词单数。"
+          },
+          "C": {
+            "meaning": "那种/那部分（替代water）",
+            "reason": "正确：that替代water，后接in the pond限定。"
+          },
+          "D": {
+            "meaning": "这些（复数）",
+            "reason": "these不能替代不可数water。"
+          }
+        },
+        "steps": [
+          "观察句中信息，确定考查that替代比较中的不可数名词。",
+          "比较的是两处的water；water不可数，用that避免重复。",
+          "代入that，核对结构及中文意思。"
+        ],
+        "memoryTip": "比较不可数用that。",
+        "caveat": "本题为依据已导入知识点编写的原创练习，不是官方真题。",
+        "references": []
+      }
+    },
+    {
+      "id": "CQZSB-REFILL-20261029-ENG-029",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "代词",
+      "topic": "名词与代词",
+      "point": "those替代比较中的复数名词",
+      "type": "单选题",
+      "stem": "The windows in this hall are larger than ____ in the old hall.",
+      "options": {
+        "A": "those",
+        "B": "that",
+        "C": "it",
+        "D": "one"
+      },
+      "verifiedAnswer": "A",
+      "analysis": "选A。被比较的名词windows为复数，另一个大厅的窗户用those代替。",
+      "englishLesson": {
+        "translation": "这个大厅的窗户比旧大厅的窗户大。",
+        "answerExplanation": "被比较的名词windows为复数，另一个大厅的窗户用those代替。",
+        "optionAnalysis": {
+          "A": {
+            "meaning": "那些（替代复数窗户）",
+            "reason": "正确：those替代the windows，并由in the old hall限定。"
+          },
+          "B": {
+            "meaning": "那个（单数）",
+            "reason": "不能替代复数windows。"
+          },
+          "C": {
+            "meaning": "它（同一单数物）",
+            "reason": "既是单数，也不是同一组窗户。"
+          },
+          "D": {
+            "meaning": "一个（单数同类）",
+            "reason": "one不能替代复数windows。"
+          }
+        },
+        "steps": [
+          "观察句中信息，确定考查those替代比较中的复数名词。",
+          "被比较的名词windows为复数，另一个大厅的窗户用those代替。",
+          "代入those，核对结构及中文意思。"
+        ],
+        "memoryTip": "比较单数that，复数those。",
+        "caveat": "本题为依据已导入知识点编写的原创练习，不是官方真题。",
+        "references": []
+      }
+    },
+    {
+      "id": "CQZSB-REFILL-20261029-ENG-030",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "代词",
+      "topic": "名词与代词",
+      "point": "either两者任一个与单数谓语",
+      "type": "单选题",
+      "stem": "There are two empty seats. You may take ____ seat; both are available.",
+      "options": {
+        "A": "neither",
+        "B": "all",
+        "C": "both",
+        "D": "either"
+      },
+      "verifiedAnswer": "D",
+      "analysis": "选D。明确有两个座位，seat为单数，任选一个用either seat。",
+      "englishLesson": {
+        "translation": "有两个空座位。你可以任选一个；两个都可坐。",
+        "answerExplanation": "明确有两个座位，seat为单数，任选一个用either seat。",
+        "optionAnalysis": {
+          "A": {
+            "meaning": "两者都不",
+            "reason": "与both are available及任选含义不符。"
+          },
+          "B": {
+            "meaning": "全部（三者或以上）",
+            "reason": "all不能修饰此处单数seat表示二选一。"
+          },
+          "C": {
+            "meaning": "两者都",
+            "reason": "both后应接复数seats。"
+          },
+          "D": {
+            "meaning": "两者任一",
+            "reason": "正确：either seat表示两个中的任意一个座位。"
+          }
+        },
+        "steps": [
+          "观察句中信息，确定考查either两者任一个与单数谓语。",
+          "明确有两个座位，seat为单数，任选一个用either seat。",
+          "代入either，核对结构及中文意思。"
+        ],
+        "memoryTip": "either二选一。",
+        "caveat": "本题为依据已导入知识点编写的原创练习，不是官方真题。",
+        "references": []
+      }
+    },
+    {
+      "id": "CQZSB-REFILL-20261029-ENG-031",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "代词",
+      "topic": "名词与代词",
+      "point": "none表示三者以上全部否定",
+      "type": "单选题",
+      "stem": "I checked all five drawers, but ____ of them contained the missing key.",
+      "options": {
+        "A": "neither",
+        "B": "none",
+        "C": "either",
+        "D": "both"
+      },
+      "verifiedAnswer": "B",
+      "analysis": "选B。five drawers为三个以上，全部否定用none of them。",
+      "englishLesson": {
+        "translation": "我检查了全部五个抽屉，但没有一个里面有那把丢失的钥匙。",
+        "answerExplanation": "five drawers为三个以上，全部否定用none of them。",
+        "optionAnalysis": {
+          "A": {
+            "meaning": "两者都不",
+            "reason": "neither只限两者，本题五个。"
+          },
+          "B": {
+            "meaning": "一个也没有",
+            "reason": "正确：none用于五个中一个也没有。"
+          },
+          "C": {
+            "meaning": "两者任一",
+            "reason": "either只限两者，且不是全部否定。"
+          },
+          "D": {
+            "meaning": "两者都",
+            "reason": "both只限两者，且表示肯定。"
+          }
+        },
+        "steps": [
+          "观察句中信息，确定考查none表示三者以上全部否定。",
+          "five drawers为三个以上，全部否定用none of them。",
+          "代入none，核对结构及中文意思。"
+        ],
+        "memoryTip": "两者neither，多者none。",
+        "caveat": "本题为依据已导入知识点编写的原创练习，不是官方真题。",
+        "references": []
+      }
+    },
+    {
+      "id": "CQZSB-REFILL-20261029-ENG-032",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "代词",
+      "topic": "名词与代词",
+      "point": "each强调逐个与单数谓语",
+      "type": "单选题",
+      "stem": "The tutor spoke to ____ student separately, not to the whole group at once.",
+      "options": {
+        "A": "all",
+        "B": "both",
+        "C": "each",
+        "D": "many"
+      },
+      "verifiedAnswer": "C",
+      "analysis": "选C。separately强调一个一个地谈，each接单数student，表示每一个。",
+      "englishLesson": {
+        "translation": "导师分别与每个学生谈话，而不是一次与全组交谈。",
+        "answerExplanation": "separately强调一个一个地谈，each接单数student，表示每一个。",
+        "optionAnalysis": {
+          "A": {
+            "meaning": "所有",
+            "reason": "all通常接复数students，不能接这里的单数student。"
+          },
+          "B": {
+            "meaning": "两者都",
+            "reason": "both要接复数students。"
+          },
+          "C": {
+            "meaning": "每个",
+            "reason": "正确：each student强调逐个，并与separately呼应。"
+          },
+          "D": {
+            "meaning": "许多",
+            "reason": "many后接可数名词复数。"
+          }
+        },
+        "steps": [
+          "观察句中信息，确定考查each强调逐个与单数谓语。",
+          "separately强调一个一个地谈，each接单数student，表示每一个。",
+          "代入each，核对结构及中文意思。"
+        ],
+        "memoryTip": "each强调逐个。",
+        "caveat": "本题为依据已导入知识点编写的原创练习，不是官方真题。",
+        "references": []
+      }
+    },
+    {
+      "id": "CQZSB-REFILL-20261029-ENG-033",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "代词",
+      "topic": "名词与代词",
+      "point": "another与the other区分",
+      "type": "单选题",
+      "stem": "I have two gloves here. One is black; ____ is grey.",
+      "options": {
+        "A": "the other",
+        "B": "another",
+        "C": "other",
+        "D": "others"
+      },
+      "verifiedAnswer": "A",
+      "analysis": "选A。总数为two，排除one后余下一个有唯一性，用the other。",
+      "englishLesson": {
+        "translation": "我这里有两只手套。一只是黑色的；另一只是灰色的。",
+        "answerExplanation": "总数为two，排除one后余下一个有唯一性，用the other。",
+        "optionAnalysis": {
+          "A": {
+            "meaning": "两者中的另一个",
+            "reason": "正确：已知共两个，one...the other。"
+          },
+          "B": {
+            "meaning": "再一个/另一个（不限定两个）",
+            "reason": "总数已限定为两个，余下唯一一个用the other。"
+          },
+          "C": {
+            "meaning": "其他的（通常修饰名词）",
+            "reason": "other不能在此单独充当单数主语。"
+          },
+          "D": {
+            "meaning": "其他人/物（复数）",
+            "reason": "本题只剩一只，不能用复数others。"
+          }
+        },
+        "steps": [
+          "观察句中信息，确定考查another与the other区分。",
+          "总数为two，排除one后余下一个有唯一性，用the other。",
+          "代入the other，核对结构及中文意思。"
+        ],
+        "memoryTip": "两者一个one，另一个the other。",
+        "caveat": "本题为依据已导入知识点编写的原创练习，不是官方真题。",
+        "references": []
+      }
+    },
+    {
+      "id": "CQZSB-REFILL-20261029-ENG-034",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "代词",
+      "topic": "名词与代词",
+      "point": "some与others表示不确定部分",
+      "type": "单选题",
+      "stem": "Some visitors took photos, while ____ just enjoyed the view.",
+      "options": {
+        "A": "anothers",
+        "B": "the other",
+        "C": "other",
+        "D": "others"
+      },
+      "verifiedAnswer": "D",
+      "analysis": "选D。并未把游客明确分为全部两组，只说一些与另一些，用others独立代替其他游客。",
+      "englishLesson": {
+        "translation": "一些游客拍照，而另一些游客只是欣赏景色。",
+        "answerExplanation": "并未把游客明确分为全部两组，只说一些与另一些，用others独立代替其他游客。",
+        "optionAnalysis": {
+          "A": {
+            "meaning": "错误的another复数形式",
+            "reason": "another没有anothers这种复数形式，复数泛指其他人可用others。"
+          },
+          "B": {
+            "meaning": "另一个（特定单数）",
+            "reason": "不是已知两个人中的另一个。"
+          },
+          "C": {
+            "meaning": "其他的（需名词）",
+            "reason": "other后缺少visitors等名词。"
+          },
+          "D": {
+            "meaning": "另一些人（不特指）",
+            "reason": "正确：some...others表示一些……另一些……。"
+          }
+        },
+        "steps": [
+          "观察句中信息，确定考查some与others表示不确定部分。",
+          "并未把游客明确分为全部两组，只说一些与另一些，用others独立代替其他游客。",
+          "代入others，核对结构及中文意思。"
+        ],
+        "memoryTip": "some...others，一些……另一些。",
+        "caveat": "本题为依据已导入知识点编写的原创练习，不是官方真题。",
+        "references": []
+      }
+    },
+    {
+      "id": "CQZSB-REFILL-20261029-ENG-035",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "代词",
+      "topic": "名词与代词",
+      "point": "不定代词后置形容词",
+      "type": "单选题",
+      "stem": "This menu is too ordinary. Can we try ____ for dinner?",
+      "options": {
+        "A": "different something",
+        "B": "something different",
+        "C": "anything differently",
+        "D": "different anything"
+      },
+      "verifiedAnswer": "B",
+      "analysis": "选B。形容词修饰something等复合不定代词时放后面；请求尝试某物可用something。",
+      "englishLesson": {
+        "translation": "这份菜单太普通了。晚餐我们能尝试点不一样的东西吗？",
+        "answerExplanation": "形容词修饰something等复合不定代词时放后面；请求尝试某物可用something。",
+        "optionAnalysis": {
+          "A": {
+            "meaning": "错误词序：不一样的东西",
+            "reason": "修饰something的形容词要后置。"
+          },
+          "B": {
+            "meaning": "某种不一样的东西",
+            "reason": "正确：提出尝试某种不同食物的请求，用something different。"
+          },
+          "C": {
+            "meaning": "错误词性：任何东西不同地",
+            "reason": "differently为副词，不能这样修饰不定代词。"
+          },
+          "D": {
+            "meaning": "错误词序：任何不一样的东西",
+            "reason": "修饰anything的形容词也要后置。"
+          }
+        },
+        "steps": [
+          "观察句中信息，确定考查不定代词后置形容词。",
+          "形容词修饰something等复合不定代词时放后面；请求尝试某物可用something。",
+          "代入something different，核对结构及中文意思。"
+        ],
+        "memoryTip": "不定代词在前，形容词在后。",
+        "caveat": "本题为依据已导入知识点编写的原创练习，不是官方真题。",
+        "references": []
+      }
+    },
+    {
+      "id": "CQZSB-REFILL-20261029-ENG-036",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "代词",
+      "topic": "名词与代词",
+      "point": "each one of表示逐一检查",
+      "type": "单选题",
+      "stem": "____ of the four answers must be checked before you submit the form.",
+      "options": {
+        "A": "Everyone",
+        "B": "Every",
+        "C": "Each one",
+        "D": "All one"
+      },
+      "verifiedAnswer": "C",
+      "analysis": "选C。空格后有of the four answers，each one of表示其中每一个，指四个答案须逐一检查。",
+      "englishLesson": {
+        "translation": "提交表格之前，四个答案中的每一个都必须检查。",
+        "answerExplanation": "空格后有of the four answers，each one of表示其中每一个，指四个答案须逐一检查。",
+        "optionAnalysis": {
+          "A": {
+            "meaning": "每个人（复合代词）",
+            "reason": "everyone指每个人，不能直接接of the four answers。"
+          },
+          "B": {
+            "meaning": "每个（限定词）",
+            "reason": "every不能单独接of结构。"
+          },
+          "C": {
+            "meaning": "每一个（可接of）",
+            "reason": "正确：each one of the four answers表示四个答案中的每一个。"
+          },
+          "D": {
+            "meaning": "错误组合",
+            "reason": "不是规范的不定代词结构。"
+          }
+        },
+        "steps": [
+          "观察句中信息，确定考查each one of表示逐一检查。",
+          "空格后有of the four answers，each one of表示其中每一个，指四个答案须逐一检查。",
+          "代入Each one，核对结构及中文意思。"
+        ],
+        "memoryTip": "each one of，其中每一个。",
+        "caveat": "本题为依据已导入知识点编写的原创练习，不是官方真题。",
+        "references": []
+      }
+    },
+    {
+      "id": "CQZSB-REFILL-20261029-ENG-037",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "代词",
+      "topic": "名词与代词",
+      "point": "both与all的范围",
+      "type": "单选题",
+      "stem": "The family has three children, and ____ of them attend this school.",
+      "options": {
+        "A": "all",
+        "B": "both",
+        "C": "either",
+        "D": "neither"
+      },
+      "verifiedAnswer": "A",
+      "analysis": "选A。已知有三个孩子，表示他们全部，用all of them。",
+      "englishLesson": {
+        "translation": "这家有三个孩子，他们全都在这所学校上学。",
+        "answerExplanation": "已知有三个孩子，表示他们全部，用all of them。",
+        "optionAnalysis": {
+          "A": {
+            "meaning": "全部（三者或以上）",
+            "reason": "正确：three children三者全部用all。"
+          },
+          "B": {
+            "meaning": "两者都",
+            "reason": "both只用于两个。"
+          },
+          "C": {
+            "meaning": "两者任一个",
+            "reason": "either只用于两个中的任意一个。"
+          },
+          "D": {
+            "meaning": "两者都不",
+            "reason": "neither既只限两者，又是否定。"
+          }
+        },
+        "steps": [
+          "观察句中信息，确定考查both与all的范围。",
+          "已知有三个孩子，表示他们全部，用all of them。",
+          "代入all，核对结构及中文意思。"
+        ],
+        "memoryTip": "两者both，三者以上all。",
+        "caveat": "本题为依据已导入知识点编写的原创练习，不是官方真题。",
+        "references": []
+      }
+    },
+    {
+      "id": "CQZSB-REFILL-20261029-ENG-038",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "代词",
+      "topic": "名词与代词",
+      "point": "any用于否定句数量限定",
+      "type": "单选题",
+      "stem": "The cupboard is empty; there are not ____ cups left.",
+      "options": {
+        "A": "some",
+        "B": "much",
+        "C": "little",
+        "D": "any"
+      },
+      "verifiedAnswer": "D",
+      "analysis": "选D。cups为可数复数，not any cups表达没有任何杯子，与empty一致。",
+      "englishLesson": {
+        "translation": "橱柜空了；没有剩下任何杯子。",
+        "answerExplanation": "cups为可数复数，not any cups表达没有任何杯子，与empty一致。",
+        "optionAnalysis": {
+          "A": {
+            "meaning": "一些",
+            "reason": "普通否定句中此处用any表示一只也没有。"
+          },
+          "B": {
+            "meaning": "许多（不可数）",
+            "reason": "cups可数复数，不用much。"
+          },
+          "C": {
+            "meaning": "几乎没有（不可数）",
+            "reason": "cups可数复数，不用little。"
+          },
+          "D": {
+            "meaning": "任何/一些（否定句）",
+            "reason": "正确：not any cups表示没有任何杯子。"
+          }
+        },
+        "steps": [
+          "观察句中信息，确定考查any用于否定句数量限定。",
+          "cups为可数复数，not any cups表达没有任何杯子，与empty一致。",
+          "代入any，核对结构及中文意思。"
+        ],
+        "memoryTip": "普通否定句，一些常用any。",
+        "caveat": "本题为依据已导入知识点编写的原创练习，不是官方真题。",
+        "references": []
+      }
+    },
+    {
+      "id": "CQZSB-REFILL-20261029-ENG-039",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "冠词",
+      "topic": "冠词",
+      "point": "honest的首音为元音",
+      "type": "单选题",
+      "stem": "The witness gave ____ honest account of the accident.",
+      "options": {
+        "A": "a",
+        "B": "an",
+        "C": "the a",
+        "D": "/ an"
+      },
+      "verifiedAnswer": "B",
+      "analysis": "选B。honest首字母h不发音，首音为元音音素，故用an。",
+      "englishLesson": {
+        "translation": "这位目击者如实讲述了事故经过。",
+        "answerExplanation": "honest首字母h不发音，首音为元音音素，故用an。",
+        "optionAnalysis": {
+          "A": {
+            "meaning": "一个（辅音音素前）",
+            "reason": "honest的h不发音，首音为元音。"
+          },
+          "B": {
+            "meaning": "一个（元音音素前）",
+            "reason": "正确：an honest account。"
+          },
+          "C": {
+            "meaning": "错误的冠词叠加",
+            "reason": "冠词不能这样叠加。"
+          },
+          "D": {
+            "meaning": "错误的混合标记",
+            "reason": "不是可放入句中的冠词。"
+          }
+        },
+        "steps": [
+          "观察句中信息，确定考查honest的首音为元音。",
+          "honest首字母h不发音，首音为元音音素，故用an。",
+          "代入an，核对结构及中文意思。"
+        ],
+        "memoryTip": "看发音：an honest person。",
+        "caveat": "本题为依据已导入知识点编写的原创练习，不是官方真题。",
+        "references": []
+      }
+    },
+    {
+      "id": "CQZSB-REFILL-20261029-ENG-040",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "冠词",
+      "topic": "冠词",
+      "point": "European首音为辅音",
+      "type": "单选题",
+      "stem": "She works for ____ European company that makes bicycles.",
+      "options": {
+        "A": "an",
+        "B": "the an",
+        "C": "a",
+        "D": "a the"
+      },
+      "verifiedAnswer": "C",
+      "analysis": "选C。European的首音为/j/，虽然以字母E开头，仍用a。",
+      "englishLesson": {
+        "translation": "她为一家制造自行车的欧洲公司工作。",
+        "answerExplanation": "European的首音为/j/，虽然以字母E开头，仍用a。",
+        "optionAnalysis": {
+          "A": {
+            "meaning": "一个（元音音素前）",
+            "reason": "European以/j/辅音开头，不用an。"
+          },
+          "B": {
+            "meaning": "错误冠词叠加",
+            "reason": "不能叠加定冠词与不定冠词。"
+          },
+          "C": {
+            "meaning": "一个（辅音音素前）",
+            "reason": "正确：a European company。"
+          },
+          "D": {
+            "meaning": "错误冠词叠加",
+            "reason": "不能这样叠加冠词。"
+          }
+        },
+        "steps": [
+          "观察句中信息，确定考查European首音为辅音。",
+          "European的首音为/j/，虽然以字母E开头，仍用a。",
+          "代入a，核对结构及中文意思。"
+        ],
+        "memoryTip": "字母元音不等于发音元音。",
+        "caveat": "本题为依据已导入知识点编写的原创练习，不是官方真题。",
+        "references": []
+      }
+    },
+    {
+      "id": "CQZSB-REFILL-20261029-ENG-041",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "冠词",
+      "topic": "冠词",
+      "point": "缩写字母读音决定冠词",
+      "type": "单选题",
+      "stem": "The hospital ordered ____ X-ray machine for the new clinic.",
+      "options": {
+        "A": "a",
+        "B": "the an",
+        "C": "an",
+        "D": "an a"
+      },
+      "verifiedAnswer": "C",
+      "analysis": "选C。X按字母名称读，开头为元音音素，使用an。",
+      "englishLesson": {
+        "translation": "医院为新诊所订购了一台X光机。",
+        "answerExplanation": "X按字母名称读，开头为元音音素，使用an。",
+        "optionAnalysis": {
+          "A": {
+            "meaning": "一个（辅音音素前）",
+            "reason": "X读/eks/，首音为元音。"
+          },
+          "B": {
+            "meaning": "错误叠加",
+            "reason": "冠词不可叠加。"
+          },
+          "C": {
+            "meaning": "一个（元音音素前）",
+            "reason": "正确：an X-ray machine。"
+          },
+          "D": {
+            "meaning": "错误叠加",
+            "reason": "冠词不可叠加。"
+          }
+        },
+        "steps": [
+          "观察句中信息，确定考查缩写字母读音决定冠词。",
+          "X按字母名称读，开头为元音音素，使用an。",
+          "代入an，核对结构及中文意思。"
+        ],
+        "memoryTip": "读出缩写再选a/an。",
+        "caveat": "本题为依据已导入知识点编写的原创练习，不是官方真题。",
+        "references": []
+      }
+    },
+    {
+      "id": "CQZSB-REFILL-20261029-ENG-042",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "冠词",
+      "topic": "冠词",
+      "point": "特指带限定短语的唯一物",
+      "type": "单选题",
+      "stem": "Please close ____ door nearest to the stairs; the other doors can stay open.",
+      "options": {
+        "A": "a",
+        "B": "an",
+        "C": "∅",
+        "D": "the"
+      },
+      "verifiedAnswer": "D",
+      "analysis": "选D。nearest to the stairs从多扇门中确定一扇，用the特指。",
+      "englishLesson": {
+        "translation": "请关上最靠近楼梯的那扇门；其他门可以保持开着。",
+        "answerExplanation": "nearest to the stairs从多扇门中确定一扇，用the特指。",
+        "optionAnalysis": {
+          "A": {
+            "meaning": "一扇（泛指）",
+            "reason": "nearest to the stairs确定了具体哪一扇，应特指。"
+          },
+          "B": {
+            "meaning": "一扇（元音前）",
+            "reason": "door以辅音开头，且这里应特指。"
+          },
+          "C": {
+            "meaning": "不填冠词",
+            "reason": "单数可数名词door在此需要限定词。"
+          },
+          "D": {
+            "meaning": "这/那（特指）",
+            "reason": "正确：限定短语明确唯一的一扇门，用the。"
+          }
+        },
+        "steps": [
+          "观察句中信息，确定考查特指带限定短语的唯一物。",
+          "nearest to the stairs从多扇门中确定一扇，用the特指。",
+          "代入the，核对结构及中文意思。"
+        ],
+        "memoryTip": "哪一个已经确定，用the。",
+        "caveat": "本题为依据已导入知识点编写的原创练习，不是官方真题。",
+        "references": []
+      }
+    },
+    {
+      "id": "CQZSB-REFILL-20261029-ENG-043",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "冠词",
+      "topic": "冠词",
+      "point": "最高级前的定冠词",
+      "type": "单选题",
+      "stem": "Of the three routes, this is ____ shortest.",
+      "options": {
+        "A": "the",
+        "B": "a",
+        "C": "an",
+        "D": "these"
+      },
+      "verifiedAnswer": "A",
+      "analysis": "选A。of the three给出比较范围，shortest为最高级，前用the。",
+      "englishLesson": {
+        "translation": "在这三条路线中，这条最短。",
+        "answerExplanation": "of the three给出比较范围，shortest为最高级，前用the。",
+        "optionAnalysis": {
+          "A": {
+            "meaning": "定冠词",
+            "reason": "正确：三者比较的形容词最高级shortest前用the。"
+          },
+          "B": {
+            "meaning": "一个（辅音前）",
+            "reason": "不能表示这里确定的最短路线。"
+          },
+          "C": {
+            "meaning": "一个（元音前）",
+            "reason": "shortest首音不是元音，且最高级应配the。"
+          },
+          "D": {
+            "meaning": "这些（复数限定词）",
+            "reason": "these不能直接与单数最高级名词省略结构shortest搭配；这里需the shortest。"
+          }
+        },
+        "steps": [
+          "观察句中信息，确定考查最高级前的定冠词。",
+          "of the three给出比较范围，shortest为最高级，前用the。",
+          "代入the，核对结构及中文意思。"
+        ],
+        "memoryTip": "最高级前通常用the。",
+        "caveat": "本题为依据已导入知识点编写的原创练习，不是官方真题。",
+        "references": []
+      }
+    },
+    {
+      "id": "CQZSB-REFILL-20261029-ENG-044",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "冠词",
+      "topic": "冠词",
+      "point": "the加形容词表示一类人",
+      "type": "单选题",
+      "stem": "The charity provides free meals for ____ poor in this area.",
+      "options": {
+        "A": "a",
+        "B": "the",
+        "C": "an",
+        "D": "∅"
+      },
+      "verifiedAnswer": "B",
+      "analysis": "选B。the+形容词可表示某一类人，the poor意为穷人。",
+      "englishLesson": {
+        "translation": "这家慈善机构为该地区的穷人提供免费饭食。",
+        "answerExplanation": "the+形容词可表示某一类人，the poor意为穷人。",
+        "optionAnalysis": {
+          "A": {
+            "meaning": "一个",
+            "reason": "poor在此是形容词，a poor后还缺人或其他名词。"
+          },
+          "B": {
+            "meaning": "定冠词（组成一类人）",
+            "reason": "正确：the poor表示穷人这一类人。"
+          },
+          "C": {
+            "meaning": "一个（元音前）",
+            "reason": "poor首音非元音，且不能单独表示一个人。"
+          },
+          "D": {
+            "meaning": "不填冠词",
+            "reason": "poor单独不能在此充当人的复数名词。"
+          }
+        },
+        "steps": [
+          "观察句中信息，确定考查the加形容词表示一类人。",
+          "the+形容词可表示某一类人，the poor意为穷人。",
+          "代入the，核对结构及中文意思。"
+        ],
+        "memoryTip": "the poor穷人，the rich富人。",
+        "caveat": "本题为依据已导入知识点编写的原创练习，不是官方真题。",
+        "references": []
+      }
+    },
+    {
+      "id": "CQZSB-REFILL-20261029-ENG-045",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "冠词",
+      "topic": "冠词",
+      "point": "三餐泛指零冠词",
+      "type": "单选题",
+      "stem": "We usually have ____ lunch at noon.（∅表示不填）",
+      "options": {
+        "A": "many",
+        "B": "an",
+        "C": "∅",
+        "D": "the"
+      },
+      "verifiedAnswer": "C",
+      "analysis": "选C。usually说明日常习惯，普通三餐lunch不带修饰，不加冠词。",
+      "englishLesson": {
+        "translation": "我们通常在中午吃午饭。",
+        "answerExplanation": "usually说明日常习惯，普通三餐lunch不带修饰，不加冠词。",
+        "optionAnalysis": {
+          "A": {
+            "meaning": "许多（修饰可数复数）",
+            "reason": "many不能修饰此处单数形式lunch，普通三餐表达为have lunch。"
+          },
+          "B": {
+            "meaning": "一顿（元音前）",
+            "reason": "lunch首音不是元音，且普通三餐不加冠词。"
+          },
+          "C": {
+            "meaning": "不填冠词",
+            "reason": "正确：have lunch是普通吃午饭的表达。"
+          },
+          "D": {
+            "meaning": "那顿（特指）",
+            "reason": "句子没有特指哪一顿午饭。"
+          }
+        },
+        "steps": [
+          "观察句中信息，确定考查三餐泛指零冠词。",
+          "usually说明日常习惯，普通三餐lunch不带修饰，不加冠词。",
+          "代入∅，核对结构及中文意思。"
+        ],
+        "memoryTip": "普通三餐零冠词。",
+        "caveat": "本题为依据已导入知识点编写的原创练习，不是官方真题。",
+        "references": []
+      }
+    },
+    {
+      "id": "CQZSB-REFILL-20261029-ENG-046",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "冠词",
+      "topic": "冠词",
+      "point": "形容词修饰三餐时用不定冠词",
+      "type": "单选题",
+      "stem": "After the hike, we had ____ wonderful lunch at a small restaurant.",
+      "options": {
+        "A": "∅",
+        "B": "an",
+        "C": "the a",
+        "D": "a"
+      },
+      "verifiedAnswer": "D",
+      "analysis": "选D。三餐名词被形容词修饰，表示一顿怎样的饭，可加a；wonderful首音为辅音。",
+      "englishLesson": {
+        "translation": "徒步之后，我们在一家小餐馆吃了一顿很棒的午饭。",
+        "answerExplanation": "三餐名词被形容词修饰，表示一顿怎样的饭，可加a；wonderful首音为辅音。",
+        "optionAnalysis": {
+          "A": {
+            "meaning": "不填",
+            "reason": "lunch被wonderful修饰，强调一顿具体的午餐，用a。"
+          },
+          "B": {
+            "meaning": "一顿（元音前）",
+            "reason": "wonderful以辅音音素开头。"
+          },
+          "C": {
+            "meaning": "错误叠加",
+            "reason": "冠词不能叠加。"
+          },
+          "D": {
+            "meaning": "一顿（辅音前）",
+            "reason": "正确：a wonderful lunch表示一顿美好的午饭。"
+          }
+        },
+        "steps": [
+          "观察句中信息，确定考查形容词修饰三餐时用不定冠词。",
+          "三餐名词被形容词修饰，表示一顿怎样的饭，可加a；wonderful首音为辅音。",
+          "代入a，核对结构及中文意思。"
+        ],
+        "memoryTip": "普通have lunch，丰盛have a good lunch。",
+        "caveat": "本题为依据已导入知识点编写的原创练习，不是官方真题。",
+        "references": []
+      }
+    },
+    {
+      "id": "CQZSB-REFILL-20261029-ENG-047",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "冠词",
+      "topic": "冠词",
+      "point": "乐器前的定冠词",
+      "type": "单选题",
+      "stem": "The music teacher asked me to play ____ violin at the concert.",
+      "options": {
+        "A": "the",
+        "B": "a an",
+        "C": "an",
+        "D": "these"
+      },
+      "verifiedAnswer": "A",
+      "analysis": "选A。本题四项中只有the符合结构，play the violin为演奏小提琴的常见表达；部分英语用法中也有play violin，本题未将零冠词列为选项。",
+      "englishLesson": {
+        "translation": "音乐老师请我在音乐会上拉小提琴。",
+        "answerExplanation": "本题四项中只有the符合结构，play the violin为演奏小提琴的常见表达；部分英语用法中也有play violin，本题未将零冠词列为选项。",
+        "optionAnalysis": {
+          "A": {
+            "meaning": "定冠词",
+            "reason": "正确：play the violin为拉小提琴。"
+          },
+          "B": {
+            "meaning": "错误叠加",
+            "reason": "冠词不能叠加。"
+          },
+          "C": {
+            "meaning": "一个（元音前）",
+            "reason": "violin首音不是元音，而且本题是演奏乐器的常规表达。"
+          },
+          "D": {
+            "meaning": "这些（复数限定词）",
+            "reason": "these不能限定单数名词violin，应使用复数violins；本题常规表达为play the violin。"
+          }
+        },
+        "steps": [
+          "观察句中信息，确定考查乐器前的定冠词。",
+          "本题四项中只有the符合结构，play the violin为演奏小提琴的常见表达；部分英语用法中也有play violin，本题未将零冠词列为选项。",
+          "代入the，核对结构及中文意思。"
+        ],
+        "memoryTip": "教材常用：play the violin；球类零冠词。",
+        "caveat": "本题为依据已导入知识点编写的原创练习，不是官方真题。",
+        "references": []
+      }
+    },
+    {
+      "id": "CQZSB-REFILL-20261029-ENG-048",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "冠词",
+      "topic": "冠词",
+      "point": "江河专名用the",
+      "type": "单选题",
+      "stem": "The bridge crosses ____ Yangtze River near the city centre.",
+      "options": {
+        "A": "a",
+        "B": "the",
+        "C": "an",
+        "D": "∅"
+      },
+      "verifiedAnswer": "B",
+      "analysis": "选B。Yangtze River是河流名称，常用the Yangtze River。",
+      "englishLesson": {
+        "translation": "这座桥在市中心附近横跨长江。",
+        "answerExplanation": "Yangtze River是河流名称，常用the Yangtze River。",
+        "optionAnalysis": {
+          "A": {
+            "meaning": "一条",
+            "reason": "此处是确定的河流专名，不是任意一条。"
+          },
+          "B": {
+            "meaning": "定冠词",
+            "reason": "正确：江河名称前通常加the。"
+          },
+          "C": {
+            "meaning": "一条（元音前）",
+            "reason": "Yangtze首音非元音，且为河流专名。"
+          },
+          "D": {
+            "meaning": "不填",
+            "reason": "河流名称前通常需要the。"
+          }
+        },
+        "steps": [
+          "观察句中信息，确定考查江河专名用the。",
+          "Yangtze River是河流名称，常用the Yangtze River。",
+          "代入the，核对结构及中文意思。"
+        ],
+        "memoryTip": "江河前the：the Yangtze River。",
+        "caveat": "本题为依据已导入知识点编写的原创练习，不是官方真题。",
+        "references": []
+      }
+    },
+    {
+      "id": "CQZSB-REFILL-20261029-ENG-049",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "冠词",
+      "topic": "冠词",
+      "point": "序数词限定唯一顺序",
+      "type": "单选题",
+      "stem": "The lift is broken, and our office is on ____ eighth floor.",
+      "options": {
+        "A": "a",
+        "B": "an",
+        "C": "∅",
+        "D": "the"
+      },
+      "verifiedAnswer": "D",
+      "analysis": "选D。表示楼层顺序时，on the eighth floor中的序数词前使用the。",
+      "englishLesson": {
+        "translation": "电梯坏了，我们的办公室在八楼。",
+        "answerExplanation": "表示楼层顺序时，on the eighth floor中的序数词前使用the。",
+        "optionAnalysis": {
+          "A": {
+            "meaning": "一个",
+            "reason": "序数词明确楼层顺序，此处不用不定冠词。"
+          },
+          "B": {
+            "meaning": "一个（元音前）",
+            "reason": "不能只因eighth首音为元音就选an，先判断特指。"
+          },
+          "C": {
+            "meaning": "不填",
+            "reason": "标准楼层表达on the eighth floor需要the。"
+          },
+          "D": {
+            "meaning": "定冠词",
+            "reason": "正确：序数词eighth前用the。"
+          }
+        },
+        "steps": [
+          "观察句中信息，确定考查序数词限定唯一顺序。",
+          "表示楼层顺序时，on the eighth floor中的序数词前使用the。",
+          "代入the，核对结构及中文意思。"
+        ],
+        "memoryTip": "先判特指泛指，再判a/an。",
+        "caveat": "本题为依据已导入知识点编写的原创练习，不是官方真题。",
+        "references": []
+      }
+    },
+    {
+      "id": "CQZSB-REFILL-20261029-ENG-050",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "可数与数量",
+      "topic": "名词与代词",
+      "point": "单个量词作主语",
+      "type": "单选题",
+      "stem": "One piece of the new equipment ____ already in use.",
+      "options": {
+        "A": "are",
+        "B": "is",
+        "C": "were",
+        "D": "be"
+      },
+      "verifiedAnswer": "B",
+      "analysis": "选B。one piece为主语中心，of the new equipment是修饰成分，故谓语用is。",
+      "englishLesson": {
+        "translation": "这批新设备中的一件已经投入使用。",
+        "answerExplanation": "one piece为主语中心，of the new equipment是修饰成分，故谓语用is。",
+        "optionAnalysis": {
+          "A": {
+            "meaning": "是（复数现在）",
+            "reason": "主语中心为one piece，不是复数。"
+          },
+          "B": {
+            "meaning": "是（单数现在）",
+            "reason": "正确：one piece为单数主语，谓语用is。"
+          },
+          "C": {
+            "meaning": "是（复数过去）",
+            "reason": "one piece不能使用复数谓语were。"
+          },
+          "D": {
+            "meaning": "be原形",
+            "reason": "陈述句需要限定形式is，不能直接用be。"
+          }
+        },
+        "steps": [
+          "观察句中信息，确定考查单个量词作主语。",
+          "one piece为主语中心，of the new equipment是修饰成分，故谓语用is。",
+          "代入is，核对结构及中文意思。"
+        ],
+        "memoryTip": "数量结构看量词的单复数。",
+        "caveat": "本题为依据已导入知识点编写的原创练习，不是官方真题。",
+        "references": []
+      }
+    },
+    {
+      "id": "CQZSB-REFILL-20261029-ENG-051",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "可数与数量",
+      "topic": "名词与代词",
+      "point": "辅音字母加y的复数",
+      "type": "填空题",
+      "stem": "用括号中名词的适当形式填空：The two _____ (baby) are asleep, so please be quiet.",
+      "options": {},
+      "verifiedAnswer": "babies",
+      "scoringPoints": [
+        "two后必须用复数。",
+        "baby以辅音字母加y结尾，变y为i再加es，写成babies。"
+      ],
+      "autoGradeDisabled": true,
+      "analysis": "two后必须用复数。；baby以辅音字母加y结尾，变y为i再加es，写成babies。",
+      "englishLesson": {
+        "translation": "那两个婴儿睡着了，所以请保持安静。",
+        "answerExplanation": "two后必须用复数。；baby以辅音字母加y结尾，变y为i再加es，写成babies。",
+        "optionAnalysis": {},
+        "steps": [
+          "辨认已学考点：辅音字母加y的复数。",
+          "two后必须用复数。",
+          "baby以辅音字母加y结尾，变y为i再加es，写成babies。"
+        ],
+        "memoryTip": "辅音加y，变y为ies。",
+        "caveat": "本题为原创练习；书面题按评分要点人工核对，合理同义表达可接受。",
+        "references": []
+      }
+    },
+    {
+      "id": "CQZSB-REFILL-20261029-ENG-052",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "可数与数量",
+      "topic": "名词与代词",
+      "point": "元音字母加y的复数",
+      "type": "填空题",
+      "stem": "用括号中名词的适当形式填空：There are three _____ (key) on the ring, one for each locker.",
+      "options": {},
+      "verifiedAnswer": "keys",
+      "scoringPoints": [
+        "three后需要可数名词复数。",
+        "key以元音字母加y结尾，直接加s，写成keys。"
+      ],
+      "autoGradeDisabled": true,
+      "analysis": "three后需要可数名词复数。；key以元音字母加y结尾，直接加s，写成keys。",
+      "englishLesson": {
+        "translation": "钥匙圈上有三把钥匙，每把对应一个储物柜。",
+        "answerExplanation": "three后需要可数名词复数。；key以元音字母加y结尾，直接加s，写成keys。",
+        "optionAnalysis": {},
+        "steps": [
+          "辨认已学考点：元音字母加y的复数。",
+          "three后需要可数名词复数。",
+          "key以元音字母加y结尾，直接加s，写成keys。"
+        ],
+        "memoryTip": "元音加y，直接加s。",
+        "caveat": "本题为原创练习；书面题按评分要点人工核对，合理同义表达可接受。",
+        "references": []
+      }
+    },
+    {
+      "id": "CQZSB-REFILL-20261029-ENG-053",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "可数与数量",
+      "topic": "名词与代词",
+      "point": "不规则复数teeth",
+      "type": "填空题",
+      "stem": "用括号中名词的适当形式填空：Brush all your _____ (tooth), not just the front ones.",
+      "options": {},
+      "verifiedAnswer": "teeth",
+      "scoringPoints": [
+        "all及front ones表明牙齿为复数。",
+        "tooth的不规则复数是teeth。"
+      ],
+      "autoGradeDisabled": true,
+      "analysis": "all及front ones表明牙齿为复数。；tooth的不规则复数是teeth。",
+      "englishLesson": {
+        "translation": "要刷所有的牙齿，而不只是前面的牙齿。",
+        "answerExplanation": "all及front ones表明牙齿为复数。；tooth的不规则复数是teeth。",
+        "optionAnalysis": {},
+        "steps": [
+          "辨认已学考点：不规则复数teeth。",
+          "all及front ones表明牙齿为复数。",
+          "tooth的不规则复数是teeth。"
+        ],
+        "memoryTip": "tooth→teeth，foot→feet。",
+        "caveat": "本题为原创练习；书面题按评分要点人工核对，合理同义表达可接受。",
+        "references": []
+      }
+    },
+    {
+      "id": "CQZSB-REFILL-20261029-ENG-054",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "可数与数量",
+      "topic": "名词与代词",
+      "point": "单复数同形deer",
+      "type": "填空题",
+      "stem": "用括号中名词的适当形式填空：A group of five _____ (deer) crossed the road.",
+      "options": {},
+      "verifiedAnswer": "deer",
+      "scoringPoints": [
+        "five后需要复数意义。",
+        "deer单复数同形，不能加s。"
+      ],
+      "autoGradeDisabled": true,
+      "analysis": "five后需要复数意义。；deer单复数同形，不能加s。",
+      "englishLesson": {
+        "translation": "一群五只鹿穿过了马路。",
+        "answerExplanation": "five后需要复数意义。；deer单复数同形，不能加s。",
+        "optionAnalysis": {},
+        "steps": [
+          "辨认已学考点：单复数同形deer。",
+          "five后需要复数意义。",
+          "deer单复数同形，不能加s。"
+        ],
+        "memoryTip": "鹿deer，羊sheep，单复数一样。",
+        "caveat": "本题为原创练习；书面题按评分要点人工核对，合理同义表达可接受。",
+        "references": []
+      }
+    },
+    {
+      "id": "CQZSB-REFILL-20261029-ENG-055",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "所有格",
+      "topic": "名词与代词",
+      "point": "复数parents的所有格",
+      "type": "填空题",
+      "stem": "按要求填空：The school invited both of my parents to the meeting. My _____ (parents，写所有格) seats were in the front row.",
+      "options": {},
+      "verifiedAnswer": "parents'",
+      "scoringPoints": [
+        "明确为父母两人，使用parents复数。",
+        "parents以s结尾，所有格只加撇号parents'；弯撇号parents’也正确。"
+      ],
+      "autoGradeDisabled": true,
+      "analysis": "明确为父母两人，使用parents复数。；parents以s结尾，所有格只加撇号parents'；弯撇号parents’也正确。",
+      "englishLesson": {
+        "translation": "学校邀请我的父母两人参加会议。我父母的座位在前排。",
+        "answerExplanation": "明确为父母两人，使用parents复数。；parents以s结尾，所有格只加撇号parents'；弯撇号parents’也正确。",
+        "optionAnalysis": {},
+        "steps": [
+          "辨认已学考点：复数parents的所有格。",
+          "明确为父母两人，使用parents复数。",
+          "parents以s结尾，所有格只加撇号parents'；弯撇号parents’也正确。"
+        ],
+        "memoryTip": "s结尾复数，撇号放最后。",
+        "caveat": "本题为原创练习；书面题按评分要点人工核对，合理同义表达可接受。",
+        "references": []
+      }
+    },
+    {
+      "id": "CQZSB-REFILL-20261029-ENG-056",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "所有格",
+      "topic": "名词与代词",
+      "point": "时间today的所有格",
+      "type": "填空题",
+      "stem": "用today的所有格填空：Do not use yesterday’s timetable; _____ timetable has changed.",
+      "options": {},
+      "verifiedAnswer": "today's",
+      "scoringPoints": [
+        "与yesterday’s对照，表达今天的。",
+        "today为时间名词，所有格为today's；弯撇号today’s也正确。"
+      ],
+      "autoGradeDisabled": true,
+      "analysis": "与yesterday’s对照，表达今天的。；today为时间名词，所有格为today's；弯撇号today’s也正确。",
+      "englishLesson": {
+        "translation": "不要用昨天的时间表；今天的时间表已经改变了。",
+        "answerExplanation": "与yesterday’s对照，表达今天的。；today为时间名词，所有格为today's；弯撇号today’s也正确。",
+        "optionAnalysis": {},
+        "steps": [
+          "辨认已学考点：时间today的所有格。",
+          "与yesterday’s对照，表达今天的。",
+          "today为时间名词，所有格为today's；弯撇号today’s也正确。"
+        ],
+        "memoryTip": "时间名词也能加’s。",
+        "caveat": "本题为原创练习；书面题按评分要点人工核对，合理同义表达可接受。",
+        "references": []
+      }
+    },
+    {
+      "id": "CQZSB-REFILL-20261029-ENG-057",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "代词",
+      "topic": "名词与代词",
+      "point": "反身代词help yourself",
+      "type": "填空题",
+      "stem": "用括号中代词的适当形式填空：“Help _____ (you) to some fruit, Lily,” said the host.",
+      "options": {},
+      "verifiedAnswer": "yourself",
+      "scoringPoints": [
+        "说话对象仅为Lily一人，使用单数you对应的反身代词。",
+        "help yourself to表示请自行取用、随便吃。"
+      ],
+      "autoGradeDisabled": true,
+      "analysis": "说话对象仅为Lily一人，使用单数you对应的反身代词。；help yourself to表示请自行取用、随便吃。",
+      "englishLesson": {
+        "translation": "主人说：“莉莉，请随便吃些水果。”",
+        "answerExplanation": "说话对象仅为Lily一人，使用单数you对应的反身代词。；help yourself to表示请自行取用、随便吃。",
+        "optionAnalysis": {},
+        "steps": [
+          "辨认已学考点：反身代词help yourself。",
+          "说话对象仅为Lily一人，使用单数you对应的反身代词。",
+          "help yourself to表示请自行取用、随便吃。"
+        ],
+        "memoryTip": "一个人yourself，多个人yourselves。",
+        "caveat": "本题为原创练习；书面题按评分要点人工核对，合理同义表达可接受。",
+        "references": []
+      }
+    },
+    {
+      "id": "CQZSB-REFILL-20261029-ENG-058",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "代词",
+      "topic": "名词与代词",
+      "point": "复数反身代词指向主语",
+      "type": "填空题",
+      "stem": "用括号中代词的适当形式填空：We should ask _____ (we) whether this plan is realistic.",
+      "options": {},
+      "verifiedAnswer": "ourselves",
+      "scoringPoints": [
+        "ask的主语和宾语都是我们，需要反身代词。",
+        "we对应的反身代词是ourselves。"
+      ],
+      "autoGradeDisabled": true,
+      "analysis": "ask的主语和宾语都是我们，需要反身代词。；we对应的反身代词是ourselves。",
+      "englishLesson": {
+        "translation": "我们应该问问自己，这个计划是否切合实际。",
+        "answerExplanation": "ask的主语和宾语都是我们，需要反身代词。；we对应的反身代词是ourselves。",
+        "optionAnalysis": {},
+        "steps": [
+          "辨认已学考点：复数反身代词指向主语。",
+          "ask的主语和宾语都是我们，需要反身代词。",
+          "we对应的反身代词是ourselves。"
+        ],
+        "memoryTip": "主宾同一人，反身代词来帮忙。",
+        "caveat": "本题为原创练习；书面题按评分要点人工核对，合理同义表达可接受。",
+        "references": []
+      }
+    },
+    {
+      "id": "CQZSB-REFILL-20261029-ENG-059",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "代词",
+      "topic": "名词与代词",
+      "point": "名词性物主代词hers",
+      "type": "填空题",
+      "stem": "用括号中代词的适当形式填空：My ticket is blue; _____ (she) is yellow.",
+      "options": {},
+      "verifiedAnswer": "hers",
+      "scoringPoints": [
+        "空格独立代替her ticket，不再接名词。",
+        "she对应名词性物主代词hers。"
+      ],
+      "autoGradeDisabled": true,
+      "analysis": "空格独立代替her ticket，不再接名词。；she对应名词性物主代词hers。",
+      "englishLesson": {
+        "translation": "我的票是蓝色的；她的票是黄色的。",
+        "answerExplanation": "空格独立代替her ticket，不再接名词。；she对应名词性物主代词hers。",
+        "optionAnalysis": {},
+        "steps": [
+          "辨认已学考点：名词性物主代词hers。",
+          "空格独立代替her ticket，不再接名词。",
+          "she对应名词性物主代词hers。"
+        ],
+        "memoryTip": "her ticket=hers。",
+        "caveat": "本题为原创练习；书面题按评分要点人工核对，合理同义表达可接受。",
+        "references": []
+      }
+    },
+    {
+      "id": "CQZSB-REFILL-20261029-ENG-060",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "冠词",
+      "topic": "冠词",
+      "point": "固定搭配in a hurry",
+      "type": "填空题",
+      "stem": "填入一个恰当的冠词：He left in _____ hurry and forgot his bag.",
+      "options": {},
+      "verifiedAnswer": "a",
+      "scoringPoints": [
+        "in a hurry为匆忙的固定搭配。",
+        "hurry首音是辅音，空格应为a。"
+      ],
+      "autoGradeDisabled": true,
+      "analysis": "in a hurry为匆忙的固定搭配。；hurry首音是辅音，空格应为a。",
+      "englishLesson": {
+        "translation": "他匆忙离开，忘记带包了。",
+        "answerExplanation": "in a hurry为匆忙的固定搭配。；hurry首音是辅音，空格应为a。",
+        "optionAnalysis": {},
+        "steps": [
+          "辨认已学考点：固定搭配in a hurry。",
+          "in a hurry为匆忙的固定搭配。",
+          "hurry首音是辅音，空格应为a。"
+        ],
+        "memoryTip": "匆忙in a hurry。",
+        "caveat": "本题为原创练习；书面题按评分要点人工核对，合理同义表达可接受。",
+        "references": []
+      }
+    },
+    {
+      "id": "CQZSB-REFILL-20261029-ENG-061",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "所有格",
+      "topic": "名词与代词",
+      "point": "分别所有的汉译英",
+      "type": "翻译题",
+      "stem": "将下列句子译成英语：我父亲的办公室和我母亲的办公室都在三楼。",
+      "options": {},
+      "verifiedAnswer": "My father's and my mother's offices are both on the third floor.",
+      "scoringPoints": [
+        "两个办公室分别属于父母，father和mother各自加所有格。",
+        "可合并写my father's and my mother's offices，也可完整写My father's office and my mother's office；两种表达均使用复数谓语are。",
+        "保留都及三楼信息，the third floor前有the。"
+      ],
+      "autoGradeDisabled": true,
+      "analysis": "两个办公室分别属于父母，father和mother各自加所有格。；可合并写my father's and my mother's offices，也可完整写My father's office and my mother's office；两种表达均使用复数谓语are。；保留都及三楼信息，the third floor前有the。",
+      "englishLesson": {
+        "translation": "My father's and my mother's offices are both on the third floor.",
+        "answerExplanation": "两个办公室分别属于父母，father和mother各自加所有格。；可合并写my father's and my mother's offices，也可完整写My father's office and my mother's office；两种表达均使用复数谓语are。；保留都及三楼信息，the third floor前有the。",
+        "optionAnalysis": {},
+        "steps": [
+          "辨认已学考点：分别所有的汉译英。",
+          "两个办公室分别属于父母，father和mother各自加所有格。",
+          "可合并写my father's and my mother's offices，也可完整写My father's office and my mother's office；两种表达均使用复数谓语are。",
+          "保留都及三楼信息，the third floor前有the。"
+        ],
+        "memoryTip": "各自有，各自加。",
+        "caveat": "本题为原创练习；书面题按评分要点人工核对，合理同义表达可接受。",
+        "references": []
+      }
+    },
+    {
+      "id": "CQZSB-REFILL-20261029-ENG-062",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "所有格",
+      "topic": "名词与代词",
+      "point": "双重所有格的汉译英",
+      "type": "翻译题",
+      "stem": "将下列句子译成英语：她的一位朋友借给我一本词典。",
+      "options": {},
+      "verifiedAnswer": "A friend of hers lent me a dictionary.",
+      "scoringPoints": [
+        "她的一位朋友可译为a friend of hers或one of her friends。",
+        "lent me a dictionary或lent a dictionary to me均可。",
+        "表达朋友借出、我借入，不可误写为borrowed me。"
+      ],
+      "autoGradeDisabled": true,
+      "analysis": "她的一位朋友可译为a friend of hers或one of her friends。；lent me a dictionary或lent a dictionary to me均可。；表达朋友借出、我借入，不可误写为borrowed me。",
+      "englishLesson": {
+        "translation": "A friend of hers lent me a dictionary.",
+        "answerExplanation": "她的一位朋友可译为a friend of hers或one of her friends。；lent me a dictionary或lent a dictionary to me均可。；表达朋友借出、我借入，不可误写为borrowed me。",
+        "optionAnalysis": {},
+        "steps": [
+          "辨认已学考点：双重所有格的汉译英。",
+          "她的一位朋友可译为a friend of hers或one of her friends。",
+          "lent me a dictionary或lent a dictionary to me均可。",
+          "表达朋友借出、我借入，不可误写为borrowed me。"
+        ],
+        "memoryTip": "她的朋友之一：a friend of hers。",
+        "caveat": "本题为原创练习；书面题按评分要点人工核对，合理同义表达可接受。",
+        "references": []
+      }
+    },
+    {
+      "id": "CQZSB-REFILL-20261029-ENG-063",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "可数与数量",
+      "topic": "名词与代词",
+      "point": "不可数advice的汉译英",
+      "type": "翻译题",
+      "stem": "将下列句子译成英语：请给我两条关于英语学习的建议。",
+      "options": {},
+      "verifiedAnswer": "Please give me two pieces of advice on learning English.",
+      "scoringPoints": [
+        "两条建议为two pieces of advice，也接受two suggestions。",
+        "advice不可写成advices。",
+        "保留请、给我及关于英语学习的信息，on/about learning English均可。"
+      ],
+      "autoGradeDisabled": true,
+      "analysis": "两条建议为two pieces of advice，也接受two suggestions。；advice不可写成advices。；保留请、给我及关于英语学习的信息，on/about learning English均可。",
+      "englishLesson": {
+        "translation": "Please give me two pieces of advice on learning English.",
+        "answerExplanation": "两条建议为two pieces of advice，也接受two suggestions。；advice不可写成advices。；保留请、给我及关于英语学习的信息，on/about learning English均可。",
+        "optionAnalysis": {},
+        "steps": [
+          "辨认已学考点：不可数advice的汉译英。",
+          "两条建议为two pieces of advice，也接受two suggestions。",
+          "advice不可写成advices。",
+          "保留请、给我及关于英语学习的信息，on/about learning English均可。"
+        ],
+        "memoryTip": "数advice，要数piece。",
+        "caveat": "本题为原创练习；书面题按评分要点人工核对，合理同义表达可接受。",
+        "references": []
+      }
+    },
+    {
+      "id": "CQZSB-REFILL-20261029-ENG-064",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "代词",
+      "topic": "名词与代词",
+      "point": "neither与单数主语的汉译英",
+      "type": "翻译题",
+      "stem": "将下列句子译成英语：这两扇门都没有锁上。",
+      "options": {},
+      "verifiedAnswer": "Neither of the two doors is locked.",
+      "scoringPoints": [
+        "表达“这两扇门都不”可使用neither of the two doors；也接受Neither door is locked。",
+        "neither作主语时本题规范表达用is；也接受Both doors are unlocked等准确同义表达。",
+        "locked表示锁上的状态，不能误译成两扇门都没有门锁。"
+      ],
+      "autoGradeDisabled": true,
+      "analysis": "这两扇门都不使用neither of the two doors，也接受Neither door is locked。；neither作主语时本题规范表达用is；也接受Both doors are unlocked等准确同义表达。；locked表示锁上的状态，不能误译成两扇门都没有门锁。",
+      "englishLesson": {
+        "translation": "Neither of the two doors is locked.",
+        "answerExplanation": "这两扇门都不使用neither of the two doors，也接受Neither door is locked。；neither作主语时本题规范表达用is；也接受Both doors are unlocked等准确同义表达。；locked表示锁上的状态，不能误译成两扇门都没有门锁。",
+        "optionAnalysis": {},
+        "steps": [
+          "辨认已学考点：neither与单数主语的汉译英。",
+          "这两扇门都不使用neither of the two doors，也接受Neither door is locked。",
+          "neither作主语时本题规范表达用is；也接受Both doors are unlocked等准确同义表达。",
+          "locked表示锁上的状态，不能误译成两扇门都没有门锁。"
+        ],
+        "memoryTip": "两者都不neither。",
+        "caveat": "本题为原创练习；书面题按评分要点人工核对，合理同义表达可接受。",
+        "references": []
+      }
+    },
+    {
+      "id": "CQZSB-REFILL-20261029-ENG-065",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "代词",
+      "topic": "名词与代词",
+      "point": "one与it的汉译英",
+      "type": "翻译题",
+      "stem": "将下列句子译成英语：我的雨伞坏了，我需要一把新的。",
+      "options": {},
+      "verifiedAnswer": "My umbrella is broken, and I need a new one.",
+      "scoringPoints": [
+        "保留我的雨伞坏了的信息，broken或does not work均可。",
+        "一把新的可用a new one或a new umbrella。",
+        "不能用a new it，one替代同类可数单数。"
+      ],
+      "autoGradeDisabled": true,
+      "analysis": "保留我的雨伞坏了的信息，broken或does not work均可。；一把新的可用a new one或a new umbrella。；不能用a new it，one替代同类可数单数。",
+      "englishLesson": {
+        "translation": "My umbrella is broken, and I need a new one.",
+        "answerExplanation": "保留我的雨伞坏了的信息，broken或does not work均可。；一把新的可用a new one或a new umbrella。；不能用a new it，one替代同类可数单数。",
+        "optionAnalysis": {},
+        "steps": [
+          "辨认已学考点：one与it的汉译英。",
+          "保留我的雨伞坏了的信息，broken或does not work均可。",
+          "一把新的可用a new one或a new umbrella。",
+          "不能用a new it，one替代同类可数单数。"
+        ],
+        "memoryTip": "同类另一个用one。",
+        "caveat": "本题为原创练习；书面题按评分要点人工核对，合理同义表达可接受。",
+        "references": []
+      }
+    },
+    {
+      "id": "CQZSB-REFILL-20261029-ENG-066",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "冠词",
+      "topic": "冠词",
+      "point": "球类与乐器的汉译英",
+      "type": "翻译题",
+      "stem": "将下列句子译成英语：我喜欢打网球，而我妹妹喜欢弹钢琴。",
+      "options": {},
+      "verifiedAnswer": "I like playing tennis, while my younger sister likes playing the piano.",
+      "scoringPoints": [
+        "常规教材表达为play tennis与play the piano；也接受自然语境中使用的play piano，不因省略the单独判错。",
+        "妹妹可译my younger sister或my little sister。",
+        "主语妹妹为单数，使用likes；like to play也可。"
+      ],
+      "autoGradeDisabled": true,
+      "analysis": "常规教材表达为play tennis与play the piano；也接受自然语境中使用的play piano，不因省略the单独判错。；妹妹可译my younger sister或my little sister。；主语妹妹为单数，使用likes；like to play也可。",
+      "englishLesson": {
+        "translation": "I like playing tennis, while my younger sister likes playing the piano.",
+        "answerExplanation": "常规教材表达为play tennis与play the piano；也接受自然语境中使用的play piano，不因省略the单独判错。；妹妹可译my younger sister或my little sister。；主语妹妹为单数，使用likes；like to play也可。",
+        "optionAnalysis": {},
+        "steps": [
+          "辨认已学考点：球类与乐器的汉译英。",
+          "常规教材表达为play tennis与play the piano；也接受自然语境中使用的play piano，不因省略the单独判错。",
+          "妹妹可译my younger sister或my little sister。",
+          "主语妹妹为单数，使用likes；like to play也可。"
+        ],
+        "memoryTip": "教材常用：play tennis，play the piano。",
+        "caveat": "本题为原创练习；书面题按评分要点人工核对，合理同义表达可接受。",
+        "references": []
+      }
+    },
+    {
+      "id": "CQZSB-REFILL-20261029-ENG-067",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "可数与数量",
+      "topic": "名词与代词",
+      "point": "不可数luggage的英译汉",
+      "type": "翻译题",
+      "stem": "将下列句子译成汉语：All the passengers must keep their luggage with them.",
+      "options": {},
+      "verifiedAnswer": "所有乘客都必须随身带好自己的行李。",
+      "scoringPoints": [
+        "all the passengers译出所有乘客。",
+        "must keep译出必须保管或带好。",
+        "their luggage with them译出自己的行李随身携带，不误译为留在车上。"
+      ],
+      "autoGradeDisabled": true,
+      "analysis": "all the passengers译出所有乘客。；must keep译出必须保管或带好。；their luggage with them译出自己的行李随身携带，不误译为留在车上。",
+      "englishLesson": {
+        "translation": "所有乘客都必须随身带好自己的行李。",
+        "answerExplanation": "all the passengers译出所有乘客。；must keep译出必须保管或带好。；their luggage with them译出自己的行李随身携带，不误译为留在车上。",
+        "optionAnalysis": {},
+        "steps": [
+          "辨认已学考点：不可数luggage的英译汉。",
+          "all the passengers译出所有乘客。",
+          "must keep译出必须保管或带好。",
+          "their luggage with them译出自己的行李随身携带，不误译为留在车上。"
+        ],
+        "memoryTip": "luggage不可数，中文可直接说行李。",
+        "caveat": "本题为原创练习；书面题按评分要点人工核对，合理同义表达可接受。",
+        "references": []
+      }
+    },
+    {
+      "id": "CQZSB-REFILL-20261029-ENG-068",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "所有格",
+      "topic": "名词与代词",
+      "point": "所属结构与省略的英译汉",
+      "type": "翻译题",
+      "stem": "将下列句子译成汉语：The students of Class Two study across from the library. Our classroom is next to the teachers' office, and theirs is opposite the library.",
+      "options": {},
+      "verifiedAnswer": "二班的学生在图书馆对面学习。我们的教室紧挨着教师办公室，而他们的教室在图书馆对面。",
+      "scoringPoints": [
+        "第一句译出二班学生在图书馆对面学习，第二句our classroom译为我们的教室。",
+        "teachers' office译为教师办公室；next to译为紧挨或在旁边。",
+        "theirs承接前文二班学生，代指他们的教室，opposite译为在对面。"
+      ],
+      "autoGradeDisabled": true,
+      "analysis": "第一句译出二班学生在图书馆对面学习，第二句our classroom译为我们的教室。；teachers' office译为教师办公室；next to译为紧挨或在旁边。；theirs承接前文二班学生，代指他们的教室，opposite译为在对面。",
+      "englishLesson": {
+        "translation": "二班的学生在图书馆对面学习。我们的教室紧挨着教师办公室，而他们的教室在图书馆对面。",
+        "answerExplanation": "第一句译出二班学生在图书馆对面学习，第二句our classroom译为我们的教室。；teachers' office译为教师办公室；next to译为紧挨或在旁边。；theirs承接前文二班学生，代指他们的教室，opposite译为在对面。",
+        "optionAnalysis": {},
+        "steps": [
+          "辨认已学考点：所属结构与省略的英译汉。",
+          "第一句译出二班学生在图书馆对面学习，第二句our classroom译为我们的教室。",
+          "teachers' office译为教师办公室；next to译为紧挨或在旁边。",
+          "theirs承接前文二班学生，代指他们的教室，opposite译为在对面。"
+        ],
+        "memoryTip": "theirs独立使用，补回前面的名词。",
+        "caveat": "本题为原创练习；书面题按评分要点人工核对，合理同义表达可接受。",
+        "references": []
+      }
+    },
+    {
+      "id": "CQZSB-REFILL-20261029-ENG-069",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "代词",
+      "topic": "名词与代词",
+      "point": "either与none的语义英译汉",
+      "type": "翻译题",
+      "stem": "将下列句子译成汉语：You may choose either of these two books, but none of the books on that shelf can be borrowed.",
+      "options": {},
+      "verifiedAnswer": "这两本书你可以任选一本，但那个书架上的书一本也不能借走。",
+      "scoringPoints": [
+        "either of these two books译为两本中任选一本。",
+        "none of the books译出一本也不；原文未给出书架上书的数量，不得凭空把它限定为两本。",
+        "on that shelf及can be borrowed译出那个书架和允许借走的含义。"
+      ],
+      "autoGradeDisabled": true,
+      "analysis": "either of these two books译为两本中任选一本。；none of the books译出一本也不；原文未给出书架上书的数量，不得凭空把它限定为两本。；on that shelf及can be borrowed译出那个书架和允许借走的含义。",
+      "englishLesson": {
+        "translation": "这两本书你可以任选一本，但那个书架上的书一本也不能借走。",
+        "answerExplanation": "either of these two books译为两本中任选一本。；none of the books译出一本也不；原文未给出书架上书的数量，不得凭空把它限定为两本。；on that shelf及can be borrowed译出那个书架和允许借走的含义。",
+        "optionAnalysis": {},
+        "steps": [
+          "辨认已学考点：either与none的语义英译汉。",
+          "either of these two books译为两本中任选一本。",
+          "none of the books译出一本也不；原文未给出书架上书的数量，不得凭空把它限定为两本。",
+          "on that shelf及can be borrowed译出那个书架和允许借走的含义。"
+        ],
+        "memoryTip": "either任一，none全无。",
+        "caveat": "本题为原创练习；书面题按评分要点人工核对，合理同义表达可接受。",
+        "references": []
+      }
+    },
+    {
+      "id": "CQZSB-REFILL-20261029-ENG-070",
+      "subject": "英语",
+      "section": "当前已学内容",
+      "skillTag": "冠词",
+      "topic": "冠词",
+      "point": "冠词特指与普通三餐英译汉",
+      "type": "翻译题",
+      "stem": "将下列句子译成汉语：We had breakfast before visiting the museum in the centre of the city.",
+      "options": {},
+      "verifiedAnswer": "我们吃过早饭后，参观了市中心的那家博物馆。",
+      "scoringPoints": [
+        "had breakfast译为吃早饭。",
+        "before visiting体现先吃饭后参观，不能颠倒顺序。",
+        "the museum in the centre of the city译为市中心的博物馆，不漏地点。"
+      ],
+      "autoGradeDisabled": true,
+      "analysis": "had breakfast译为吃早饭。；before visiting体现先吃饭后参观，不能颠倒顺序。；the museum in the centre of the city译为市中心的博物馆，不漏地点。",
+      "englishLesson": {
+        "translation": "我们吃过早饭后，参观了市中心的那家博物馆。",
+        "answerExplanation": "had breakfast译为吃早饭。；before visiting体现先吃饭后参观，不能颠倒顺序。；the museum in the centre of the city译为市中心的博物馆，不漏地点。",
+        "optionAnalysis": {},
+        "steps": [
+          "辨认已学考点：冠词特指与普通三餐英译汉。",
+          "had breakfast译为吃早饭。",
+          "before visiting体现先吃饭后参观，不能颠倒顺序。",
+          "the museum in the centre of the city译为市中心的博物馆，不漏地点。"
+        ],
+        "memoryTip": "早餐零冠词，限定的博物馆用the。",
+        "caveat": "本题为原创练习；书面题按评分要点人工核对，合理同义表达可接受。",
+        "references": []
+      }
+    },
+    {
+      "id": "CQZSB-REFILL-20261030-COM-001",
+      "subject": "计算机",
+      "section": "当前已学内容",
+      "skillTag": "计算机文化",
+      "topic": "计算机文化",
+      "point": "图灵测试主要关注哪种能力",
+      "type": "单选题",
+      "stem": "图灵测试主要关注哪种能力？",
+      "options": {
+        "A": "硬盘容量是否足够大",
+        "B": "机器能否表现出类似人的智能行为",
+        "C": "网络是否连接成功",
+        "D": "屏幕刷新率是否稳定"
+      },
+      "verifiedAnswer": "B",
+      "analysis": "图灵测试通过对话等行为考察机器智能，不是硬件性能测试。"
+    },
+    {
+      "id": "CQZSB-REFILL-20261030-COM-002",
+      "subject": "计算机",
+      "section": "当前已学内容",
+      "skillTag": "计算机文化",
+      "topic": "计算机文化",
+      "point": "把程序和数据存入存储器，再由机器执行，体现的是哪种思想",
+      "type": "单选题",
+      "stem": "把程序和数据存入存储器，再由机器执行，体现的是哪种思想？",
+      "options": {
+        "A": "存储程序",
+        "B": "仅存储结果",
+        "C": "人工逐条接线",
+        "D": "只读程序"
+      },
+      "verifiedAnswer": "A",
+      "analysis": "存储程序是冯·诺依曼体系结构的重要思想。"
+    },
+    {
+      "id": "CQZSB-REFILL-20261030-COM-003",
+      "subject": "计算机",
+      "section": "当前已学内容",
+      "skillTag": "计算机应用",
+      "topic": "计算机应用",
+      "point": "利用计算机预测天气、求解大量数值方程，主要属于什么应用",
+      "type": "单选题",
+      "stem": "利用计算机预测天气、求解大量数值方程，主要属于什么应用？",
+      "options": {
+        "A": "商业广告",
+        "B": "科学计算",
+        "C": "文件压缩",
+        "D": "办公排版"
+      },
+      "verifiedAnswer": "B",
+      "analysis": "科学计算处理科研和工程中的数值计算任务。"
+    },
+    {
+      "id": "CQZSB-REFILL-20261030-COM-004",
+      "subject": "计算机",
+      "section": "当前已学内容",
+      "skillTag": "计算机应用",
+      "topic": "计算机应用",
+      "point": "工厂利用计算机实时调节生产线温度，主要属于什么应用",
+      "type": "单选题",
+      "stem": "工厂利用计算机实时调节生产线温度，主要属于什么应用？",
+      "options": {
+        "A": "娱乐游戏",
+        "B": "过程控制",
+        "C": "文字处理",
+        "D": "电子出版"
+      },
+      "verifiedAnswer": "B",
+      "analysis": "过程控制通过监测和调节生产过程实现自动化。"
+    },
+    {
+      "id": "CQZSB-REFILL-20261030-COM-005",
+      "subject": "计算机",
+      "section": "当前已学内容",
+      "skillTag": "计算机应用",
+      "topic": "计算机应用",
+      "point": "CAD主要用于哪项工作",
+      "type": "单选题",
+      "stem": "CAD主要用于哪项工作？",
+      "options": {
+        "A": "计算机辅助设计",
+        "B": "计算机辅助测试",
+        "C": "计算机辅助教学",
+        "D": "计算机辅助制造"
+      },
+      "verifiedAnswer": "A",
+      "analysis": "CAD对应Computer Aided Design，指辅助设计；CAM是辅助制造。"
+    },
+    {
+      "id": "CQZSB-REFILL-20261030-COM-006",
+      "subject": "计算机",
+      "section": "当前已学内容",
+      "skillTag": "计算机分类",
+      "topic": "计算机分类",
+      "point": "电梯内用于特定控制任务的计算机系统，更接近哪种类型",
+      "type": "单选题",
+      "stem": "电梯内用于特定控制任务的计算机系统，更接近哪种类型？",
+      "options": {
+        "A": "嵌入式计算机",
+        "B": "通用办公电脑",
+        "C": "大型数据库服务器",
+        "D": "超级计算机"
+      },
+      "verifiedAnswer": "A",
+      "analysis": "嵌入式系统通常嵌入设备并承担特定控制或处理任务。"
+    },
+    {
+      "id": "CQZSB-REFILL-20261030-COM-007",
+      "subject": "计算机",
+      "section": "当前已学内容",
+      "skillTag": "计算思维",
+      "topic": "计算思维",
+      "point": "从复杂问题中提取主要特征，忽略无关细节，体现哪种思想",
+      "type": "单选题",
+      "stem": "从复杂问题中提取主要特征，忽略无关细节，体现哪种思想？",
+      "options": {
+        "A": "单纯增加输入",
+        "B": "抽象",
+        "C": "硬件升级",
+        "D": "随机猜测"
+      },
+      "verifiedAnswer": "B",
+      "analysis": "抽象保留与目标相关的本质特征，是计算思维的重要方法。"
+    },
+    {
+      "id": "CQZSB-REFILL-20261030-COM-008",
+      "subject": "计算机",
+      "section": "当前已学内容",
+      "skillTag": "信息单位",
+      "topic": "信息单位",
+      "point": "在常用计算机存储单位关系中，1字节包含多少位",
+      "type": "单选题",
+      "stem": "在常用计算机存储单位关系中，1字节包含多少位？",
+      "options": {
+        "A": "4位",
+        "B": "8位",
+        "C": "2位",
+        "D": "16位"
+      },
+      "verifiedAnswer": "B",
+      "analysis": "字节Byte与位bit不同，1B=8bit。"
+    },
+    {
+      "id": "CQZSB-REFILL-20261030-COM-009",
+      "subject": "计算机",
+      "section": "当前已学内容",
+      "skillTag": "信息单位",
+      "topic": "信息单位",
+      "point": "在采用二进制倍数的教材约定下，1KiB等于多少字节",
+      "type": "单选题",
+      "stem": "在采用二进制倍数的教材约定下，1KiB等于多少字节？",
+      "options": {
+        "A": "1024字节",
+        "B": "1024位",
+        "C": "8字节",
+        "D": "1000字节"
+      },
+      "verifiedAnswer": "A",
+      "analysis": "KiB明确表示1024字节，不能混同为1024位。"
+    },
+    {
+      "id": "CQZSB-REFILL-20261030-COM-010",
+      "subject": "计算机",
+      "section": "当前已学内容",
+      "skillTag": "进制",
+      "topic": "进制",
+      "point": "二进制数每向左增加一位，该位的位权如何变化",
+      "type": "单选题",
+      "stem": "二进制数每向左增加一位，该位的位权如何变化？",
+      "options": {
+        "A": "扩大为原来的2倍",
+        "B": "缩小为原来的2分之1",
+        "C": "保持不变",
+        "D": "扩大为原来的10倍"
+      },
+      "verifiedAnswer": "A",
+      "analysis": "二进制的基数是2，相邻位权相差2倍。"
+    },
+    {
+      "id": "CQZSB-REFILL-20261030-COM-011",
+      "subject": "计算机",
+      "section": "当前已学内容",
+      "skillTag": "进制",
+      "topic": "进制",
+      "point": "十六进制数字A代表的十进制数值是",
+      "type": "单选题",
+      "stem": "十六进制数字A代表的十进制数值是？",
+      "options": {
+        "A": "16",
+        "B": "11",
+        "C": "12",
+        "D": "10"
+      },
+      "verifiedAnswer": "D",
+      "analysis": "十六进制用A到F表示十进制10到15。"
+    },
+    {
+      "id": "CQZSB-REFILL-20261030-COM-012",
+      "subject": "计算机",
+      "section": "当前已学内容",
+      "skillTag": "信息编码",
+      "topic": "信息编码",
+      "point": "ASCII编码主要用于表示什么",
+      "type": "单选题",
+      "stem": "ASCII编码主要用于表示什么？",
+      "options": {
+        "A": "屏幕每个像素的颜色",
+        "B": "英文字母、数字和部分控制字符",
+        "C": "声音波形",
+        "D": "所有汉字的笔画"
+      },
+      "verifiedAnswer": "B",
+      "analysis": "ASCII是字符编码，不是声音或图像格式；基本ASCII不能覆盖全部汉字。"
+    },
+    {
+      "id": "CQZSB-REFILL-20261030-COM-013",
+      "subject": "计算机",
+      "section": "当前已学内容",
+      "skillTag": "系统组成",
+      "topic": "系统组成",
+      "point": "CPU通常包括哪两部分",
+      "type": "单选题",
+      "stem": "CPU通常包括哪两部分？",
+      "options": {
+        "A": "操作系统和数据库",
+        "B": "运算器和控制器",
+        "C": "硬盘和显示器",
+        "D": "键盘和鼠标"
+      },
+      "verifiedAnswer": "B",
+      "analysis": "运算器完成运算，控制器组织协调执行，二者是CPU的主要组成。"
+    },
+    {
+      "id": "CQZSB-REFILL-20261030-COM-014",
+      "subject": "计算机",
+      "section": "当前已学内容",
+      "skillTag": "系统组成",
+      "topic": "系统组成",
+      "point": "关闭电源后，普通RAM中的信息通常怎样",
+      "type": "单选题",
+      "stem": "关闭电源后，普通RAM中的信息通常怎样？",
+      "options": {
+        "A": "自动转为ROM",
+        "B": "永久保留",
+        "C": "丢失",
+        "D": "自动复制到全部硬盘"
+      },
+      "verifiedAnswer": "C",
+      "analysis": "普通RAM具有易失性，断电后信息通常不能保留。"
+    },
+    {
+      "id": "CQZSB-REFILL-20261030-COM-015",
+      "subject": "计算机",
+      "section": "当前已学内容",
+      "skillTag": "系统组成",
+      "topic": "系统组成",
+      "point": "下列哪项属于系统软件",
+      "type": "单选题",
+      "stem": "下列哪项属于系统软件？",
+      "options": {
+        "A": "操作系统",
+        "B": "演示文稿",
+        "C": "电子表格文档",
+        "D": "用户照片"
+      },
+      "verifiedAnswer": "A",
+      "analysis": "操作系统管理软硬件资源，属于系统软件；文档和照片是数据。"
+    },
+    {
+      "id": "CQZSB-REFILL-20261030-COM-016",
+      "subject": "计算机",
+      "section": "当前已学内容",
+      "skillTag": "操作系统",
+      "topic": "操作系统",
+      "point": "操作系统在用户与计算机硬件之间主要起什么作用",
+      "type": "单选题",
+      "stem": "操作系统在用户与计算机硬件之间主要起什么作用？",
+      "options": {
+        "A": "仅用于删除文件",
+        "B": "提供管理和使用资源的接口",
+        "C": "只负责输入汉字",
+        "D": "替代全部硬件"
+      },
+      "verifiedAnswer": "B",
+      "analysis": "操作系统管理资源并为用户和应用提供服务与接口。"
+    },
+    {
+      "id": "CQZSB-REFILL-20261030-COM-017",
+      "subject": "计算机",
+      "section": "当前已学内容",
+      "skillTag": "操作系统",
+      "topic": "操作系统",
+      "point": "为多个进程分配CPU运行机会，主要属于什么管理",
+      "type": "单选题",
+      "stem": "为多个进程分配CPU运行机会，主要属于什么管理？",
+      "options": {
+        "A": "显示器亮度管理",
+        "B": "处理器管理",
+        "C": "字体管理",
+        "D": "文件命名管理"
+      },
+      "verifiedAnswer": "B",
+      "analysis": "处理器管理包含进程调度等任务。"
+    },
+    {
+      "id": "CQZSB-REFILL-20261030-COM-018",
+      "subject": "计算机",
+      "section": "当前已学内容",
+      "skillTag": "操作系统",
+      "topic": "操作系统",
+      "point": "维护文件目录、组织文件访问，属于什么功能",
+      "type": "单选题",
+      "stem": "维护文件目录、组织文件访问，属于什么功能？",
+      "options": {
+        "A": "运算器管理",
+        "B": "文件管理",
+        "C": "电源制造",
+        "D": "网页配色"
+      },
+      "verifiedAnswer": "B",
+      "analysis": "文件管理负责文件的组织、存取及相关管理。"
+    },
+    {
+      "id": "CQZSB-REFILL-20261030-COM-019",
+      "subject": "计算机",
+      "section": "当前已学内容",
+      "skillTag": "操作系统",
+      "topic": "操作系统",
+      "point": "把打印任务暂存到队列，再依次交给打印机，主要体现什么",
+      "type": "单选题",
+      "stem": "把打印任务暂存到队列，再依次交给打印机，主要体现什么？",
+      "options": {
+        "A": "协调设备使用",
+        "B": "修改显示器分辨率",
+        "C": "增加CPU寄存器数量",
+        "D": "改变文件扩展名"
+      },
+      "verifiedAnswer": "A",
+      "analysis": "设备管理协调外设使用，打印队列使任务有序执行。"
+    },
+    {
+      "id": "CQZSB-REFILL-20261030-COM-020",
+      "subject": "计算机",
+      "section": "当前已学内容",
+      "skillTag": "Windows",
+      "topic": "Windows",
+      "point": "在Windows中，快捷方式被删除后，原目标文件通常怎样",
+      "type": "单选题",
+      "stem": "在Windows中，快捷方式被删除后，原目标文件通常怎样？",
+      "options": {
+        "A": "一定移入回收站",
+        "B": "自动改为隐藏文件",
+        "C": "仍然保留",
+        "D": "一定同时删除"
+      },
+      "verifiedAnswer": "C",
+      "analysis": "快捷方式是指向目标的链接，删除它通常不删除原文件。"
+    },
+    {
+      "id": "CQZSB-REFILL-20261030-COM-021",
+      "subject": "计算机",
+      "section": "当前已学内容",
+      "skillTag": "Windows",
+      "topic": "Windows",
+      "point": "要在打开的多个应用窗口之间切换，通常使用哪组快捷键",
+      "type": "单选题",
+      "stem": "要在打开的多个应用窗口之间切换，通常使用哪组快捷键？",
+      "options": {
+        "A": "Alt+Tab",
+        "B": "Ctrl+Z",
+        "C": "Ctrl+V",
+        "D": "Ctrl+C"
+      },
+      "verifiedAnswer": "A",
+      "analysis": "Alt+Tab切换应用窗口；Ctrl+C复制，Ctrl+V粘贴，Ctrl+Z撤销。"
+    },
+    {
+      "id": "CQZSB-REFILL-20261030-COM-022",
+      "subject": "计算机",
+      "section": "当前已学内容",
+      "skillTag": "Windows",
+      "topic": "Windows",
+      "point": "将选中的内容复制到剪贴板，通常使用哪组快捷键",
+      "type": "单选题",
+      "stem": "将选中的内容复制到剪贴板，通常使用哪组快捷键？",
+      "options": {
+        "A": "Alt+F4",
+        "B": "Ctrl+X",
+        "C": "Ctrl+C",
+        "D": "Ctrl+Z"
+      },
+      "verifiedAnswer": "C",
+      "analysis": "Ctrl+C复制；Ctrl+X剪切，Ctrl+Z撤销，Alt+F4关闭当前窗口。"
+    },
+    {
+      "id": "CQZSB-REFILL-20261030-COM-023",
+      "subject": "计算机",
+      "section": "当前已学内容",
+      "skillTag": "Windows",
+      "topic": "Windows",
+      "point": "把剪贴板内容放入当前位置，通常使用哪组快捷键",
+      "type": "单选题",
+      "stem": "把剪贴板内容放入当前位置，通常使用哪组快捷键？",
+      "options": {
+        "A": "Ctrl+P",
+        "B": "Ctrl+A",
+        "C": "Ctrl+S",
+        "D": "Ctrl+V"
+      },
+      "verifiedAnswer": "D",
+      "analysis": "Ctrl+V粘贴；Ctrl+A全选，Ctrl+S保存，Ctrl+P打印。"
+    },
+    {
+      "id": "CQZSB-REFILL-20261030-COM-024",
+      "subject": "计算机",
+      "section": "当前已学内容",
+      "skillTag": "Windows",
+      "topic": "Windows",
+      "point": "在Windows文件名通配规则中，问号通常匹配什么",
+      "type": "单选题",
+      "stem": "在Windows文件名通配规则中，问号通常匹配什么？",
+      "options": {
+        "A": "仅一个数字0",
+        "B": "任意一个字符",
+        "C": "所有文件扩展名",
+        "D": "任意多个目录"
+      },
+      "verifiedAnswer": "B",
+      "analysis": "问号匹配单个字符，星号匹配任意长度的字符序列。"
+    },
+    {
+      "id": "CQZSB-REFILL-20261030-COM-025",
+      "subject": "计算机",
+      "section": "当前已学内容",
+      "skillTag": "Windows",
+      "topic": "Windows",
+      "point": "在同一文件夹内，两个普通文件能否使用完全相同的文件名和扩展名",
+      "type": "单选题",
+      "stem": "在同一文件夹内，两个普通文件能否使用完全相同的文件名和扩展名？",
+      "options": {
+        "A": "一定可以",
+        "B": "只有图片可以",
+        "C": "不能",
+        "D": "只要容量不同就可以"
+      },
+      "verifiedAnswer": "C",
+      "analysis": "同一目录下文件名与扩展名共同标识文件，不能完全相同。"
+    },
+    {
+      "id": "CQZSB-REFILL-20261030-COM-026",
+      "subject": "计算机",
+      "section": "当前已学内容",
+      "skillTag": "Windows",
+      "topic": "Windows",
+      "point": "改变文件的扩展名，是否一定能真正转换文件格式",
+      "type": "单选题",
+      "stem": "改变文件的扩展名，是否一定能真正转换文件格式？",
+      "options": {
+        "A": "只要大写就一定能",
+        "B": "一定能",
+        "C": "只有改成txt才一定能",
+        "D": "不能保证"
+      },
+      "verifiedAnswer": "D",
+      "analysis": "扩展名是命名信息，修改名称不会自动改变文件内部编码结构。"
+    },
+    {
+      "id": "CQZSB-REFILL-20261030-COM-027",
+      "subject": "计算机",
+      "section": "当前已学内容",
+      "skillTag": "Windows",
+      "topic": "Windows",
+      "point": "回收站中尚未永久删除的文件，通常可以执行哪项操作",
+      "type": "单选题",
+      "stem": "回收站中尚未永久删除的文件，通常可以执行哪项操作？",
+      "options": {
+        "A": "直接变成快捷键",
+        "B": "更换CPU",
+        "C": "还原",
+        "D": "转换成内存"
+      },
+      "verifiedAnswer": "C",
+      "analysis": "还原通常把文件恢复到原位置；永久删除后不能据此保证可恢复。"
+    },
+    {
+      "id": "CQZSB-REFILL-20261030-COM-028",
+      "subject": "计算机",
+      "section": "当前已学内容",
+      "skillTag": "系统组成",
+      "topic": "系统组成",
+      "point": "下列哪项属于输入设备",
+      "type": "单选题",
+      "stem": "下列哪项属于输入设备？",
+      "options": {
+        "A": "音箱",
+        "B": "打印机",
+        "C": "显示器",
+        "D": "扫描仪"
+      },
+      "verifiedAnswer": "D",
+      "analysis": "扫描仪把外部图像信息输入计算机，后三项主要输出信息。"
+    },
+    {
+      "id": "CQZSB-REFILL-20261030-COM-029",
+      "subject": "计算机",
+      "section": "当前已学内容",
+      "skillTag": "系统组成",
+      "topic": "系统组成",
+      "point": "通常用于长期保存用户文件的是哪一项",
+      "type": "单选题",
+      "stem": "通常用于长期保存用户文件的是哪一项？",
+      "options": {
+        "A": "CPU寄存器",
+        "B": "CPU缓存",
+        "C": "普通RAM",
+        "D": "固态硬盘"
+      },
+      "verifiedAnswer": "D",
+      "analysis": "固态硬盘是非易失性外存，可长期保存文件；其余主要服务于运行过程。"
+    },
+    {
+      "id": "CQZSB-REFILL-20261030-COM-030",
+      "subject": "计算机",
+      "section": "当前已学内容",
+      "skillTag": "计算机文化",
+      "topic": "计算机文化",
+      "point": "计算机自动运行的前提通常是什么",
+      "type": "单选题",
+      "stem": "计算机自动运行的前提通常是什么？",
+      "options": {
+        "A": "必须断开电源",
+        "B": "无需任何指令",
+        "C": "只能使用鼠标",
+        "D": "事先提供程序和必要数据"
+      },
+      "verifiedAnswer": "D",
+      "analysis": "自动运行是按程序执行，并非完全没有指令和数据。"
+    },
+    {
+      "id": "CQZSB-REFILL-20261030-COM-031",
+      "subject": "计算机",
+      "section": "当前已学内容",
+      "skillTag": "信息安全",
+      "topic": "信息安全",
+      "point": "只安装杀毒软件能否保证计算机绝对安全",
+      "type": "单选题",
+      "stem": "只安装杀毒软件能否保证计算机绝对安全？",
+      "options": {
+        "A": "关闭更新后就能",
+        "B": "一定能",
+        "C": "不能",
+        "D": "只要图标绿色就能"
+      },
+      "verifiedAnswer": "C",
+      "analysis": "安全需要更新、访问控制、备份和谨慎操作等多项措施，不存在绝对保证。"
+    },
+    {
+      "id": "CQZSB-REFILL-20261030-COM-032",
+      "subject": "计算机",
+      "section": "当前已学内容",
+      "skillTag": "Windows",
+      "topic": "Windows",
+      "point": "Windows中的文件路径主要用来表示什么",
+      "type": "单选题",
+      "stem": "Windows中的文件路径主要用来表示什么？",
+      "options": {
+        "A": "显示器的物理长度",
+        "B": "CPU运行温度",
+        "C": "文件所在的位置",
+        "D": "鼠标移动速度"
+      },
+      "verifiedAnswer": "C",
+      "analysis": "路径描述目录层次与文件位置，不是硬件性能指标。"
+    },
+    {
+      "id": "CQZSB-REFILL-20261030-COM-033",
+      "subject": "计算机",
+      "section": "当前已学内容",
+      "skillTag": "Windows",
+      "topic": "Windows",
+      "point": "某程序无响应时，通常可用哪种工具查看和结束相关进程",
+      "type": "单选题",
+      "stem": "某程序无响应时，通常可用哪种工具查看和结束相关进程？",
+      "options": {
+        "A": "画图",
+        "B": "任务管理器",
+        "C": "计算器",
+        "D": "字体设置"
+      },
+      "verifiedAnswer": "B",
+      "analysis": "任务管理器能够查看进程并结束任务，应注意未保存内容可能丢失。"
+    },
+    {
+      "id": "CQZSB-REFILL-20261030-COM-034",
+      "subject": "计算机",
+      "section": "当前已学内容",
+      "skillTag": "系统组成",
+      "topic": "系统组成",
+      "point": "应用软件要使用硬件资源，通常需要哪类软件提供管理服务",
+      "type": "单选题",
+      "stem": "应用软件要使用硬件资源，通常需要哪类软件提供管理服务？",
+      "options": {
+        "A": "打印纸",
+        "B": "普通文本文件",
+        "C": "操作系统",
+        "D": "用户图片"
+      },
+      "verifiedAnswer": "C",
+      "analysis": "操作系统统一管理资源，并向应用提供服务。"
+    },
+    {
+      "id": "CQZSB-REFILL-20261030-COM-035",
+      "subject": "计算机",
+      "section": "当前已学内容",
+      "skillTag": "计算机应用",
+      "topic": "计算机应用",
+      "point": "用计算机整理学生成绩并统计平均分，主要体现什么应用",
+      "type": "单选题",
+      "stem": "用计算机整理学生成绩并统计平均分，主要体现什么应用？",
+      "options": {
+        "A": "数据处理",
+        "B": "过程温度控制",
+        "C": "机械加工制造",
+        "D": "图像传感器制造"
+      },
+      "verifiedAnswer": "A",
+      "analysis": "成绩整理和统计属于数据加工、组织与分析。"
     }
   ],
   "examTarget": "重庆普通高校专升本",
-  "description": "已学章节自编专项题；数学移除18道仅数字不同的模板变体，新增24道不同条件与任务的题。结构去重后不足时提示补题，不用换数字凑数。"
+  "description": "已学章节原创专项题；本次新增70道英语名词、数量、所有格、代词与冠词题，保留原题包，不以重复原题凑数。；新增35道计算机文化、系统组成与Windows基础原创情境单选题。",
+  "revision": "2026-10-30-computer-refill-35"
 }

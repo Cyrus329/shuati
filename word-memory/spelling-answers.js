@@ -1,9 +1,13 @@
 (function(root){
   'use strict';
-  const normalize = value => String(value || '').toLowerCase().replace(/[’‘`]/g,"'").replace(/[^a-z0-9'\s-]/g,' ').replace(/\s+/g,' ').trim();
+  const normalize = value => String(value || '').normalize('NFKC').toLowerCase()
+    .replace(/[’‘`\u02bc]/g,"'").replace(/[\u2010\u2011\ufe63\uff0d]/g,'-').replace(/‿/g,' ')
+    // Decimal points carry meaning; placeholder dots and ellipses do not.
+    .replace(/\./g,(dot,index,text)=>/\d/.test(text[index-1]||'')&&/\d/.test(text[index+1]||'')?dot:' ')
+    .replace(/[^\p{Script=Latin}\p{M}0-9'.\s-]/gu,' ').replace(/\s+/g,' ').trim();
   function variants(term) {
     // Dots belong to dictionary placeholders, not to their slash alternatives.
-    const text=String(term || '').replace(/[’‘`]/g,"'").replace(/\b(sb|sth|swh)\./gi,'$1');
+    const text=String(term || '').normalize('NFKC').replace(/[’‘`\u02bc]/g,"'").replace(/\b(sb|sth|swh)\./gi,'$1');
     let list=text.split(/\s+\/\s+/);
     const limit=512;
     if(list.length>limit) return [];
@@ -14,7 +18,7 @@
       if(list.length>limit) return [];
     }
     if(list.some(x=>optional.test(x))) return [];
-    const alternatives=/[a-zA-Z]+(?:\/[a-zA-Z]+)+/;
+    const alternatives=/[\p{Script=Latin}\p{M}]+(?:\/[\p{Script=Latin}\p{M}]+)+/u;
     for(let i=0;i<12 && list.some(x=>alternatives.test(x));i++) {
       list=list.flatMap(x=>{const m=x.match(alternatives);return m?m[0].split('/').map(v=>x.replace(m[0],v)):[x]});
       if(list.length>limit) return [];

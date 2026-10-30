@@ -5,7 +5,7 @@
  const sup={'⁰':'0','¹':'1','²':'2','³':'3','⁴':'4','⁵':'5','⁶':'6','⁷':'7','⁸':'8','⁹':'9','⁻':'-','⁺':'+','ˣ':'x'};
  const funcs=new Set(['arcsin','arccos','arctan','sin','cos','tan','cot','ln','lg','log','lim','max','min']);
  function tex(raw){
-  const s=raw.replace(/⁴√/g,'∜').replace(/[−–]/g,'-').replace(/[⁰¹²³⁴⁵⁶⁷⁸⁹⁻⁺ˣ]+/g,x=>'^{'+[...x].map(c=>sup[c]).join('')+'}').replace(/[₀₁₂₃₄₅₆₇₈₉]/g,c=>'_{'+'₀₁₂₃₄₅₆₇₈₉'.indexOf(c)+'}').replace(/¼/g,'(1/4)').replace(/½/g,'(1/2)').replace(/¾/g,'(3/4)');
+  const s=raw.replace(/⁴√/g,'∜').replace(/[−–]/g,'-').replace(/[⁰¹²³⁴⁵⁶⁷⁸⁹⁻⁺ˣ]+/g,x=>'^{'+[...x].map(c=>sup[c]).join('')+'}').replace(/[₀₁₂₃₄₅₆₇₈₉]+/g,x=>'_{'+[...x].map(c=>'₀₁₂₃₄₅₆₇₈₉'.indexOf(c)).join('')+'}').replace(/¼/g,'(1/4)').replace(/½/g,'(1/2)').replace(/¾/g,'(3/4)');
   const ts=s.match(/arcsin|arccos|arctan|sin|cos|tan|cot|ln|lg|log|lim|max|min|\d+(?:\.\d+)?|_+|[^\s]/g)||[];let i=0;
   const close={ '(':')','[':']','{':'}' },isClose=t=>[')',']','}'].includes(t);
   const plain=t=>t==='}'?'\\}':syms[t]||t;
@@ -54,6 +54,17 @@
   for(const match of s.matchAll(/\{([^{}]+)\}/g)){const block=casesTex(match[1]);if(!block)continue;result+=inlineHTML(s.slice(at,match.index))+'\\('+esc(block)+'\\)';at=match.index+match[0].length;}
   return result+inlineHTML(s.slice(at));
  }
- function html(subject,value){const text=String(value??'');if(!['数学','高等数学'].includes(subject))return esc(text);let result='',at=0;const re=/\\\([\s\S]*?\\\)|\\\[[\s\S]*?\\\]/g;for(const m of text.matchAll(re)){result+=rawHTML(text.slice(at,m.index))+esc(m[0]);at=m.index+m[0].length;}return result+rawHTML(text.slice(at));}
- const api={html,tex};if(typeof module!=='undefined'&&module.exports)module.exports=api;if(typeof window!=='undefined')window.MathNotation=api;
+ function html(subject,value){let text=String(value??'');if(!['数学','高等数学'].includes(subject))return esc(text);text=text.replace(/[\u{1D400}-\u{1D7FF}]/gu,c=>c.normalize('NFKC'));let result='',at=0;const re=/\\\([\s\S]*?\\\)|\\\[[\s\S]*?\\\]/g;for(const m of text.matchAll(re)){result+=rawHTML(text.slice(at,m.index))+esc(m[0]);at=m.index+m[0].length;}return result+rawHTML(text.slice(at));}
+ let pending=Promise.resolve();
+ function typeset(box){
+  if(!box)return Promise.resolve();
+  pending=pending.catch(()=>{}).then(async()=>{
+   if(!box.isConnected)return;
+   const m=window.MathJax;
+   if(m?.startup?.promise)await m.startup.promise;
+   if(box.isConnected && m?.typesetPromise)await m.typesetPromise([box]);
+  });
+  return pending.catch(error=>{console.warn('公式排版暂未完成',error);});
+ }
+ const api={html,tex,typeset};if(typeof module!=='undefined'&&module.exports)module.exports=api;if(typeof window!=='undefined')window.MathNotation=api;
 })();

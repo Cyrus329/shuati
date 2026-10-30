@@ -5,7 +5,7 @@
   const lib = window.ENGLISH_FOLDER_LIBRARY || [];
   const words = lib.flatMap(folder => (folder.children||[]).flatMap(group => (group.words||[]).map(w => ({...w, folder: folder.name, group: group.name}))));
   if(!words.length){ panel.hidden = true; return; }
-  let active = 'affix';
+  let active = 'synonym';
   let activeKey = '';
   let limit = 40;
   const esc = s => String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
@@ -53,23 +53,36 @@
       .sort((a,b)=>b.words.length-a.words.length)
       .slice(0,30);
   }
-  const synonymSeeds = [
-    {name:'重要 / 强调', keys:['重要','强调','重点','significant','important']},
-    {name:'帮助 / 支持', keys:['帮助','支持','assist','support','help']},
-    {name:'改变 / 转变', keys:['改变','转变','变化','change','convert','transform']},
-    {name:'完成 / 实现', keys:['完成','实现','达到','finish','complete','achieve']},
-    {name:'影响 / 作用', keys:['影响','作用','effect','affect','influence']},
-    {name:'提高 / 进步', keys:['提高','进步','改善','improve','progress']},
-    {name:'减少 / 降低', keys:['减少','降低','decrease','reduce']},
-    {name:'需要 / 要求', keys:['需要','要求','require','demand','need']},
-    {name:'普通 / 一般', keys:['普通','一般','ordinary','common','general']},
-    {name:'不同 / 区别', keys:['不同','区别','different','difference']},
+  // Match lexical entries, never arbitrary substrings in examples or notes.
+  const synonymSets = [
+    ['参加', 'take part in|participate in|join in', 'take part in / participate in 后接活动；join in 常指加入正在进行的活动。join sb. / a club 的结构不同。'],
+    ['导致', 'lead to|result in|cause|bring about', 'lead to / result in 后接名词或动名词；cause 可接 cause sb. to do sth.。result from 表示原因，不归入本组。'],
+    ['由……组成', 'consist of|be made up of|be composed of', 'consist of 用主动形式；be made up of / be composed of 为被动形式。不要写 be consisted of。'],
+    ['许多', 'a lot of|lots of|plenty of|many|much', 'a lot of / lots of 可接可数复数和不可数名词；many 接可数复数，much 接不可数名词；plenty of 还强调充足。'],
+    ['因为', 'because of|due to|owing to|on account of', '这些表达后接名词或动名词；because 后接完整句子。due to 作表语也很常见。'],
+    ['重要的', 'important|significant|essential|vital|crucial', 'important 表示重要；significant 可强调意义重大；essential 强调必不可少；vital / crucial 强调关键。'],
+    ['帮助', 'help|assist|aid', 'help sb. (to) do；assist sb. in doing / with sth.；aid 可用作名词。相近含义需要配合各自结构。'],
+    ['减少', 'reduce|decrease|cut down|cut down on', 'reduce / decrease 可表示数量减少；cut down on sth. 常指减少使用或消费。reduce to 与 reduce by 含义不同。'],
+    ['提高、改善', 'improve|enhance|raise|boost', 'improve 强调改善质量；enhance 强调增强；raise 常指提高水平或数量，不能代替所有 improve。'],
+    ['以……闻名', 'be famous for|be known for|be renowned for', 'for 后接闻名的原因或特色；be known as 后接身份，不与本组混用。'],
+    ['照顾', 'look after|take care of|care for', 'look after / take care of 表示照料；care for 还可表示喜欢，须看语境。'],
+    ['想要、渴望', 'want|wish|desire|be eager to do|be eager to', 'want to do；wish to do 较正式；be eager to do 强调迫切想做。wish 另有虚拟语气用法。'],
+    ['发生', 'happen|occur|take place', 'happen / occur 常指事件发生；take place 常用于有计划的活动。均不可直接套用被动语态。'],
+    ['提供', 'provide|offer|supply', 'provide sb. with sth. / provide sth. for sb.；offer sb. sth.；supply sb. with sth.。'],
+    ['代替', 'replace|take the place of|substitute', 'replace A with B：用 B 替换 A；substitute B for A：用 B 代替 A，留意顺序。'],
+    ['最后、终于', 'finally|eventually|at last|in the end', 'finally 可标记列举最后一点；eventually 强调一段过程后；at last 常带等待后的情绪。'],
+    ['尽管', 'despite|in spite of', '后接名词或动名词；although / though 后接句子。despite 后不加 of。'],
+    ['与……不同', 'be different from|differ from', 'be different from 是形容词结构；differ from 是动词结构，时态和主谓一致要相应变化。'],
+    ['对……有益', 'be good for|be beneficial to|benefit', 'be good for / be beneficial to 后接受益对象；benefit sb. 为及物结构，benefit from 表示从中受益。'],
+    ['关注', 'focus on|concentrate on|pay attention to', 'on / to 后接名词或动名词；pay attention to 中 to 是介词。']
   ];
+  const lexicalKey = value => String(value||'').normalize('NFKC').toLowerCase().replace(/[‐‑–—]/g,'-').replace(/\./g,'').replace(/\s+/g,' ').trim();
   function synonymGroups(){
-    return synonymSeeds.map(seed=>({
-      name:seed.name, tip:'意思接近，适合放一起辨析',
-      words: uniqueByTerm(words.filter(w=>seed.keys.some(k=>`${w.term} ${w.meaning} ${w.phrase} ${w.note}`.toLowerCase().includes(String(k).toLowerCase()))))
-    })).filter(g=>g.words.length>=2);
+    const live = window.WordMemoryApp?.getWords?.() || [];
+    return synonymSets.map(([name, terms, tip])=>{
+      const keys=new Set(terms.split('|').map(lexicalKey));
+      return {name,tip,words:live.filter(w=>keys.has(lexicalKey(w.term))).map(w=>({...w,folder:'我的词库',group:'近义表达'}))};
+    }).filter(g=>g.words.length>=2);
   }
   const familyRoots = [
     ['act', 'act / active / action 一组'], ['form', 'form / inform / perform 一组'], ['port', 'port / import / export 一组'],
@@ -114,18 +127,26 @@
       <div class="smart-layout">
         <div class="smart-group-list">${gs.map(item=>`<button class="smart-group-btn ${item.name===activeKey?'active':''}" data-smart-key="${esc(item.name)}"><b>${esc(item.name)}</b><span>${item.words.length} 个 · ${esc(item.tip)}</span></button>`).join('')}</div>
         <div class="smart-detail">
-          ${g?`<div class="smart-detail-head"><h3>${esc(g.name)}</h3><p>${esc(g.tip)}</p></div>`:'<p>暂无可归类内容</p>'}
-          <div class="smart-word-grid">${list.map(w=>`<article class="smart-word-card"><strong>${esc(w.term)}</strong><p>${esc(w.meaning)}</p>${w.phrase?`<details><summary>例句 / 搭配</summary><p>${esc(w.phrase)}</p></details>`:''}<span>${esc(w.folder)} / ${esc(w.group)}</span></article>`).join('')}</div>
+          ${g?`<div class="smart-detail-head"><h3>${esc(g.name)}</h3><p>${esc(g.tip)}</p></div>`:'<p>当前词库还没有同组的两个表达。已收录的近义词会在这里自动归组；只归纳词库里的词，各自进度保留。</p>'}
+          <div class="smart-word-grid">${list.map(w=>`<article class="smart-word-card"><strong>${esc(w.term)}</strong><p>${esc(w.meaning)}</p>${w.phrase?`<details><summary>例句 / 搭配</summary><p>${esc(w.phrase)}</p></details>`:''}<span>${esc(w.folder)} / ${esc(w.group)}</span>${active==='synonym'?`<button type="button" class="secondary-button" data-synonym-open="${esc(w.id)}">查看词卡</button>`:''}</article>`).join('')}</div>
           ${g && g.words.length>list.length?`<button class="secondary-button" data-smart-more type="button">再显示 40 个</button>`:''}
         </div>
       </div>`;
   }
   document.addEventListener('click', e=>{
+    const open=e.target.closest('[data-synonym-open]');
+    if(open){window.WordMemoryApp?.openWord?.(open.dataset.synonymOpen);return;}
+    if(e.target.closest('[data-module-target="smart"]') && active==='synonym')render();
     const tab=e.target.closest('[data-smart-tab]');
     if(tab){ active=tab.dataset.smartTab; activeKey=''; limit=40; document.querySelectorAll('[data-smart-tab]').forEach(b=>b.classList.toggle('active', b===tab)); render(); return; }
     const key=e.target.closest('[data-smart-key]');
     if(key){ activeKey=key.dataset.smartKey; limit=40; render(); return; }
     if(e.target.closest('[data-smart-more]')){ limit+=40; render(); return; }
   });
+  window.addEventListener('focus',()=>{if(active==='synonym')render();});
+  const entry=document.querySelector('[data-module-target="smart"]');
+  if(entry)entry.innerHTML='近义词归纳 <small>用法辨析 / 构词归类</small>';
+  document.querySelectorAll('[data-smart-tab]').forEach(b=>b.classList.toggle('active',b.dataset.smartTab===active));
+  const heading=panel.querySelector('h2');if(heading)heading.textContent='近义词归纳与用法辨析';
   render();
 })();
