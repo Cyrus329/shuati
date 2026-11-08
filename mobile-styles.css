@@ -357,3 +357,7 @@ body:is([data-section="english"],[data-section="reading"],[data-section="listeni
 .write-skeleton{line-height:2.1;padding:10px 0}.write-slot{display:inline-block;min-width:32px;border-bottom:2px solid var(--accent);text-align:center;color:var(--accent);font-weight:600;margin:0 4px}.write-fields{display:grid;gap:10px}.write-fields label{display:grid;grid-template-columns:24px minmax(0,1fr);align-items:center;gap:8px;line-height:1.6}.write-fields label>span{color:var(--accent);font-size:14px}.write-fields input{margin:0}
 
 @media(max-width:600px){mjx-container{max-width:100%;overflow-x:auto;overflow-y:hidden}mjx-container svg{max-width:none}.computer-speech select{max-width:100%}}
+.computer-mode{display:flex;align-items:center;gap:12px;margin:0 0 18px;color:var(--muted);font-size:13px}
+.computer-chapter-unit{border-top:1px solid var(--line);padding:22px 0 10px;scroll-margin-top:24px}
+.computer-chapter-unit>header{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px 14px;margin-bottom:14px}
+.computer-chapter-unit>header h4{margin:0;font:650 18px/1.5 var(--computer-reading-font)}

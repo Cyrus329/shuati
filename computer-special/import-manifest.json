@@ -179,6 +179,116 @@
       "chapter": 2,
       "page": 20,
       "image": "ch2-p20.png"
+    },
+    {
+      "chapter": 3,
+      "page": 1,
+      "image": "ch3-p01.png"
+    },
+    {
+      "chapter": 3,
+      "page": 2,
+      "image": "ch3-p02.png"
+    },
+    {
+      "chapter": 3,
+      "page": 3,
+      "image": "ch3-p03.png"
+    },
+    {
+      "chapter": 3,
+      "page": 4,
+      "image": "ch3-p04.png"
+    },
+    {
+      "chapter": 3,
+      "page": 5,
+      "image": "ch3-p05.png"
+    },
+    {
+      "chapter": 3,
+      "page": 6,
+      "image": "ch3-p06.png"
+    },
+    {
+      "chapter": 3,
+      "page": 7,
+      "image": "ch3-p07.png"
+    },
+    {
+      "chapter": 3,
+      "page": 8,
+      "image": "ch3-p08.png"
+    },
+    {
+      "chapter": 3,
+      "page": 9,
+      "image": "ch3-p09.png"
+    },
+    {
+      "chapter": 3,
+      "page": 10,
+      "image": "ch3-p10.png"
+    },
+    {
+      "chapter": 3,
+      "page": 11,
+      "image": "ch3-p11.png"
+    },
+    {
+      "chapter": 3,
+      "page": 12,
+      "image": "ch3-p12.png"
+    },
+    {
+      "chapter": 3,
+      "page": 13,
+      "image": "ch3-p13.png"
+    },
+    {
+      "chapter": 3,
+      "page": 14,
+      "image": "ch3-p14.png"
+    },
+    {
+      "chapter": 3,
+      "page": 15,
+      "image": "ch3-p15.png"
+    },
+    {
+      "chapter": 3,
+      "page": 16,
+      "image": "ch3-p16.png"
+    },
+    {
+      "chapter": 3,
+      "page": 17,
+      "image": "ch3-p17.png"
+    },
+    {
+      "chapter": 3,
+      "page": 18,
+      "image": "ch3-p18.png"
+    },
+    {
+      "chapter": 3,
+      "page": 19,
+      "image": "ch3-p19.png"
+    },
+    {
+      "chapter": 3,
+      "page": 20,
+      "image": "ch3-p20.png"
+    },
+    {
+      "chapter": 3,
+      "page": 21,
+      "image": "ch3-p21.png"
+    },
+    {
+      "chapter": 3,
+      "page": 22,
+      "image": "ch3-p22.png"
     }
   ],
   "chapters": [
@@ -193,6 +303,12 @@
       "pages": 20,
       "sections": 8,
       "pdfSha256": "b5a3d1bc44a84a40d7f4892e99ce2e1c2b6f96f0c494918344b8f5d78e1df8e6"
+    },
+    {
+      "id": "computer-ch3",
+      "pages": 22,
+      "sections": 12,
+      "pdfSha256": "588a9fdaebd9cf7f38545c23d3547a21eca6de8613880fd51f746b8e8bca52cd"
     }
   ]
 }
