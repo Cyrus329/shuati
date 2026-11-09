@@ -5,3 +5,9 @@ body[data-section="dashboard"] .summary-row,body[data-section="notebook"] .summa
 @media(prefers-reduced-motion:reduce){.learn-notebook-card{transition:none}.learn-focus:hover,.learn-notebook-card:hover{transform:none}}
 
 .learn-records .learn-section-title>select{width:auto;min-width:170px}.learn-records .learn-section-title>h3{flex:1;white-space:nowrap}.learn-point-heading button:disabled{opacity:.65;cursor:default}
+
+.learn-today-subjects{display:grid;gap:.5rem;margin-block:1rem 1.5rem}
+.learn-today-subject{display:grid;grid-template-columns:minmax(5rem,1fr) 1fr auto;align-items:center;gap:.5rem;padding:.55rem .85rem;border:1px solid var(--line);border-radius:12px}
+.learn-today-subject h3{margin:0;font-size:1rem}
+.learn-today-subject span{font-size:.9rem}
+@media(max-width:380px){.learn-today-subject{padding:.4rem}.learn-today-subject span{font-size:.8rem}.learn-today-subject .btn{padding-inline:.45rem}}

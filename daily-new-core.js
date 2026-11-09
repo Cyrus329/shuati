@@ -1,5 +1,6 @@
 'use strict';
 (() => {
+ const M=typeof window!=='undefined'?window.DailyMasteryCore:require('./daily-mastery-core.js');
  const subjects=['高等数学','英语','计算机'];
  const T=typeof window!=='undefined'?window.DailyTypePolicy:require('./daily-type-policy.js');
  const norm=s=>String(s??'').normalize('NFKC').toLowerCase().replace(/\s|\\[()[\]]/g,'');
@@ -20,43 +21,34 @@
    if(seen.has(q.id)){if(JSON.stringify(seen.get(q.id))!==JSON.stringify(q))throw Error('同编号内容冲突：'+q.id);continue;}seen.set(q.id,q);out.push(q);
   }return out;
  }
- function skill(q){if(q.skillTag)return q.skillTag;const t=[q.point,q.topic,q.stem].join(' ');
-  if(q.subject==='高等数学'){if(/恒非负|参数|值域|有界|最大|最小/.test(t))return '参数与值域';if(/反函数/.test(t))return '反函数';if(/定义域/.test(t))return '定义域';if(/奇偶|奇函数|偶函数|周期|单调|同一函数|相同函数|函数相等|性质/.test(t))return '奇偶与性质';return '解析式与复合';}
+ function skill(q){if(q.subject==='高等数学'){const specific=M.tag(q);if(specific)return specific;}if(q.skillTag)return q.skillTag;const t=[q.point,q.topic,q.stem].join(' ');
+  if(q.subject==='高等数学'){if(/恒非负|参数|值域|有界|最大|最小/.test(t))return '参数与值域';if(/反函数/.test(t))return '反函数';if(/定义域/.test(t))return '定义域';if(/奇偶|奇函数|偶函数|周期|单调|同一函数|相同函数|函数相等|性质/.test(t))return '奇偶与性质';if(/极限|连续|间断/.test(t))return q.point||'未分类';return /解析式|复合|表达式|代入|换元/.test(t)?'解析式与复合':'未分类';}
   if(q.subject==='英语'){if(/所有格|双重|所属/.test(t))return '所有格';if(/不可数|可数|复数|单复|many|much|few|little|数量/.test(t))return '可数与数量';if(/冠词/.test(q.point+' '+q.topic))return '冠词';if(/词义|搭配|辨析/.test(q.point||''))return '词义搭配';if(/代词|替代|宾格|主格|反身|one|those|that/.test(t))return '代词';return '词义搭配';}
   if(/数制|编码|进制|补码|字节|ASCII|汉字|字符/.test(t))return '数制与编码';if(/Windows|窗口|文件|文件夹|回收站|任务栏|快捷方式/.test(t))return 'Windows操作';if(/计算思维|算法|流程|程序设计/.test(t))return '计算思维';if(/系统组成|硬件|CPU|内存|总线|存储器|输入设备|输出设备|软件/.test(t))return '系统组成';return '计算机基础';
  }
- function profile(questions,subject,section){
+ function profile(questions,subject,section,{allSections=false}={}){
   const W=typeof window!=='undefined'?window.WeaknessCore:require('./weakness-core.js');
-  return Object.fromEntries(W.build(questions.filter(q=>q.subject===subject&&(q.section||'当前已学内容')===section),skill).map(g=>[g.tag,{weak:g.priority,good:g.good}]));
+  return W.build(questions.filter(q=>q.subject===subject&&(allSections||subject==='高等数学'||(q.section||'当前已学内容')===section)),skill).reduce((out,g)=>{const old=out[g.tag]||{weak:0,good:0};out[g.tag]={weak:old.weak+g.priority,good:old.good+g.good};return out;},{});
  }
- function createDay(bank,plan={},questions=[],date,{fillMissing=false}={}){if(!/^\d{4}-\d{2}-\d{2}$/.test(date||''))throw Error('日期无效。');const original=plan.days?.[date];if(original&&!fillMissing)return {day:original,records:[],existing:true,shortages:[]};const present=new Set((original?.groups||[]).map(g=>JSON.stringify([g.subject,g.section])));
+ function createDay(bank,plan={},questions=[],date,{fillMissing=false,sectionPractice=false,allowPartial=false}={}){if(!/^\d{4}-\d{2}-\d{2}$/.test(date||''))throw Error('日期无效。');const mastery=M.summarize(questions),mastered=mastery.masteredTags;const original=plan.days?.[date];if(original&&!fillMissing)return {day:original,records:[],existing:true,shortages:[],mastered,mastery};const present=new Set((original?.groups||[]).map(g=>JSON.stringify([g.subject,g.section])));
   const usedIds=new Set(questions.filter(q=>q.dailyNew).map(q=>q.id)),usedFingerprints=new Set(questions.map(fingerprint)),usedStructures=new Set(questions.filter(q=>q.dailyNew).map(structure));for(const day of Object.values(plan.days||{}))for(const g of day.groups||[])g.ids.forEach(id=>usedIds.add(id));
-  const groups=new Map();for(const q of bank){const key=JSON.stringify([q.subject,q.section]);if(!groups.has(key))groups.set(key,[]);groups.get(key).push(q);}
+  const groups=new Map();for(const q of bank){const key=JSON.stringify([q.subject,sectionPractice?q.section:q.subject==='高等数学'?'全章统筹':q.section]);if(!groups.has(key))groups.set(key,[]);groups.get(key).push(q);}
   const records=[],result=[],shortages=[];
-  for(const [key,candidates] of groups){if(present.has(key))continue;const [subject,section]=JSON.parse(key),available=[...new Map(candidates.filter(q=>!usedIds.has(q.id)&&!usedFingerprints.has(fingerprint(q))&&!usedStructures.has(structure(q))).map(q=>[structure(q),q])).values()];if(available.length<7){shortages.push({subject,section,remaining:available.length});continue;}
-   const scores=profile(questions,subject,section),chosen=[],selected=new Set(),tags={};
+  for(const [key,candidates] of groups){const [subject,section]=JSON.parse(key);if(present.has(key)||subject==='高等数学'&&original?.groups?.some(g=>g.subject==='高等数学'))continue;const available=[...new Map(candidates.filter(q=>!M.isMastered(q,mastery)&&!usedIds.has(q.id)&&!usedFingerprints.has(fingerprint(q))&&!usedStructures.has(structure(q))).map(q=>[structure(q),q])).values()];if(available.length<(sectionPractice?5:7)){shortages.push({subject,section,remaining:available.length,allMastered:subject==='高等数学'&&candidates.every(q=>M.isMastered(q,mastery))});if(!allowPartial||!available.length)continue;}
+   const scores=profile(questions,subject,section,{allSections:sectionPractice}),chosen=[],selected=new Set(),tags={};
    const take=(role,n,score)=>{const sorted=[...available].filter(q=>!selected.has(q.id)).sort((a,b)=>score(b)-score(a)||a.id.localeCompare(b.id)),roleTags={};for(const preferred of [true,false])for(const cap of [3,Infinity])for(const q of sorted){if(n===0)break;if(selected.has(q.id)||(preferred&&score(q)<=0)||(roleTags[q.skillTag]||0)>=cap||chosen.some(v=>fingerprint(v.q)===fingerprint(q)))continue;selected.add(q.id);roleTags[q.skillTag]=(roleTags[q.skillTag]||0)+1;chosen.push({q,role});n--;}};
-   take('weak',5,q=>scores[q.skillTag]?.weak||0);take('strong',2,q=>{const p=scores[q.skillTag]||{};return (p.good||0)*10/(1+(p.weak||0));});
+   take('weak',sectionPractice?Math.min(4,Math.max(0,available.length-1)):5,q=>scores[skill(q)]?.weak||0);take('strong',sectionPractice?1:2,q=>{const p=scores[skill(q)]||{};return (p.good||0)*10/(1+(p.weak||0));});
    T.balance(chosen,available,scores);
    const ids=[];for(const {q,role}of chosen){const item={...q,canonicalId:q.id,dailyNew:true,dailyDate:date,dailyRole:role,firstStatus:'未作答',ownAnswer:'',memo:'',custom:true,source:'每日新题·核对题库',sourceAnswer:q.verifiedAnswer,batch:date+' · 每日新题',archivedAt:date,answerQuality:'题包答案与解析已核对',difficulty:q.difficulty||'中',sourceImageRefs:[],needsReview:false,issue:false,guessed:false,autoGradeDisabled:T.written(q)||!!q.autoGradeDisabled};records.push(item);ids.push(item.id);usedIds.add(item.id);usedFingerprints.add(fingerprint(item));usedStructures.add(structure(item));}
-   result.push({key:subject+' / '+section,subject,section,ids,weak:5,strong:2,profile:scores});
-  }return {day:{...original,date,groups:[...(original?.groups||[]),...result],diversityVersion:original?.diversityVersion??1},records,existing:!!original,extended:!!original&&result.length>0,shortages};
+   result.push({key:subject+' / '+section,subject,section,ids,weak:chosen.filter(q=>q.role==='weak').length,strong:chosen.filter(q=>q.role==='strong').length,profile:scores});
+  }return {day:{...original,date,groups:[...(original?.groups||[]),...result],diversityVersion:original?.diversityVersion??1},records,existing:!!original,extended:!!original&&result.length>0,shortages,mastered,mastery};
  }
  function refreshDiversity(bank,value={},questions=[],date){
-  const plan=JSON.parse(JSON.stringify(value)),day=plan.days?.[date];if(!day||day.diversityVersion===1)return {plan,records:[],replaced:0,changed:false};
-  const byId=new Map(questions.map(q=>[q.id,q])),usedIds=new Set(questions.map(q=>q.id));for(const d of Object.values(plan.days||{}))for(const g of d.groups||[])for(const id of g.ids)usedIds.add(id);
-  const history=new Set(questions.filter(q=>q.dailyNew&&(q.events||[]).length).map(structure)),records=[];let replaced=0;
-  for(const group of day.groups||[]){if(group.subject!=='高等数学')continue;const seen=new Set(history),kept=[],replace=[];
-   // Keep every recorded attempt, even if old lessons repeated the same structure.
-   for(const id of group.ids){const q=byId.get(id);if(q&&(q.events||[]).length){kept.push(id);seen.add(structure(q));}}
-   for(const id of group.ids){const q=byId.get(id);if(q&&(q.events||[]).length)continue;const key=q&&structure(q);if(!q||seen.has(key)){replace.push(q);continue;}kept.push(id);seen.add(key);}
-   for(const old of replace){const candidates=bank.filter(q=>q.subject===group.subject&&q.section===group.section&&!usedIds.has(q.id)&&!seen.has(structure(q))).sort((a,b)=>Number(b.skillTag===old?.skillTag)-Number(a.skillTag===old?.skillTag)||a.id.localeCompare(b.id));const q=candidates[0];if(!q)continue;
-    const item={...q,canonicalId:q.id,dailyNew:true,dailyDate:date,dailyRole:old?.dailyRole||'weak',firstStatus:'未作答',ownAnswer:'',memo:'',custom:true,source:'每日新题·核对题库',sourceAnswer:q.verifiedAnswer,batch:date+' · 每日新题',archivedAt:date,answerQuality:'题包答案与解析已核对',difficulty:q.difficulty||'中',sourceImageRefs:[],needsReview:false,issue:false,guessed:false,autoGradeDisabled:T.written(q)||!!q.autoGradeDisabled};records.push(item);kept.push(item.id);usedIds.add(item.id);seen.add(structure(item));byId.set(item.id,item);
-   }
-   if(replace.length){group.replacedSimilarIds=[...(group.replacedSimilarIds||[]),...replace.filter(Boolean).map(q=>q.id)];replaced+=replace.length;group.ids=kept;group.weak=kept.filter(id=>byId.get(id)?.dailyRole!=='strong').length;group.strong=kept.length-group.weak;}
-  }
-  day.diversityVersion=1;return {plan,records,replaced,changed:true};
+  const plan=JSON.parse(JSON.stringify(value)),day=plan.days?.[date];
+  if(!day||day.diversityVersion===1)return {plan,records:[],replaced:0,changed:false};
+  // Existing assignments and drafts remain intact. New scheduling handles diversity and mastery.
+  day.diversityVersion=1;return {plan,records:[],replaced:0,changed:true};
  }
- function needsCompletion(bank,plan,date){const keys=new Set((plan.days?.[date]?.groups||[]).map(g=>JSON.stringify([g.subject,g.section])));return bank.some(q=>!keys.has(JSON.stringify([q.subject,q.section])));}
+ function needsCompletion(bank,plan,date){const groups=plan.days?.[date]?.groups||[],keys=new Set(groups.map(g=>JSON.stringify([g.subject,g.section])));return bank.some(q=>q.subject==='高等数学'?!groups.some(g=>g.subject==='高等数学'):!keys.has(JSON.stringify([q.subject,q.section])));}
  const api={validateBank,fingerprint,structure,skill,profile,createDay,refreshDiversity,needsCompletion};if(typeof module!=='undefined')module.exports=api;if(typeof window!=='undefined')window.DailyNewCore=api;
 })();

@@ -1,0 +1,40 @@
+/* Shared navigation and reading rhythm across the workspace. */
+.nav-tabs .nav-short { display: none; }
+body:not([data-v3-view="archive"]) #archiveSourceFilter { display: none; }
+#archiveSourceFilter { margin-top: .75rem; }
+#readingView .read-study-structures {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .5rem;
+}
+#readingView .read-study-structures h4 { flex-basis: 100%; margin: 0 0 .25rem; }
+#readingView .read-study-structures article { min-width: 0; max-width: 100%; padding: 0; border: 0; background: none; }
+#readingView .read-study-structures button { min-height: 44px; max-width: 100%; overflow-wrap: anywhere; }
+#readingView .read-study-translation p { margin: .75rem 0 0; }
+
+@media (min-width: 1251px) {
+  body { --rail: 208px; }
+  .app-shell > .nav-tabs { padding-inline: 12px; }
+  .app-shell > .nav-tabs .brand { padding-inline: 6px; gap: 10px; }
+  .app-shell > .nav-tabs .brand .eyebrow { display: none; }
+  .app-shell > .nav-tabs .brand h1 { font-size: 16px; }
+}
+@media (max-width: 760px) {
+  .app-shell > .nav-tabs > .nav-tab .nav-label,
+  .app-shell > .nav-tabs .nav-tools-label { display: none; }
+  .app-shell > .nav-tabs > .nav-tab .nav-short,
+  .app-shell > .nav-tabs .v3-tools .nav-short { display: block; font-size: 12px; }
+  .app-shell > .nav-tabs .v3-tools { flex: 1 1 0 !important; }
+  .app-shell > .nav-tabs .v3-tools > summary {
+    display: grid;
+    place-items: center;
+    gap: 3px;
+    min-height: 52px;
+    padding: 6px 2px;
+    border-radius: 10px;
+  }
+  .app-shell > .nav-tabs .v3-tools[open] > summary { background: #ffffff1a; }
+  .app-shell > .nav-tabs .v3-tools > summary:after { content: none; }
+  .app-shell > .nav-tabs .v3-tools > summary .nav-tools-symbol { font-size: 17px; line-height: 1; }
+}

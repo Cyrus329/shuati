@@ -3,7 +3,7 @@
   const esc=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const paragraphs=value=>String(value||'').split(/\n+/).filter(Boolean).map(v=>`<p>${esc(v)}</p>`).join('');
   function create(byId={}){
-    function get(q){if(q.subject!=='英语')return null;if(q.englishLesson)return q.englishLesson;for(const id of [q.id,q.canonicalId,...(q.aliases||[])])if(byId[id])return byId[id];return null;}
+    function get(q){if(q.contentRestored&&!q.englishLesson)return null;if(q.subject!=='英语')return null;if(q.englishLesson)return q.englishLesson;for(const id of [q.id,q.canonicalId,...(q.aliases||[])])if(byId[id])return byId[id];return null;}
     function render(q){
       const lesson=get(q);if(!lesson)return '';
       const read=typeof window!=='undefined'?window.LessonReader:null;

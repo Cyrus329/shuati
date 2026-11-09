@@ -2,17 +2,22 @@
 (() => {
  const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
  const syms={'∞':'\\infty','π':'\\pi','φ':'\\varphi','ξ':'\\xi','θ':'\\theta','α':'\\alpha','β':'\\beta','ℝ':'\\mathbb{R}','∪':'\\cup','∩':'\\cap','∈':'\\in','∉':'\\notin','∅':'\\varnothing','≤':'\\le','≥':'\\ge','≠':'\\ne','→':'\\to','↔':'\\leftrightarrow','⇒':'\\Rightarrow','⇔':'\\Leftrightarrow','±':'\\pm','·':'\\cdot','×':'\\times','÷':'\\div'};
- const sup={'⁰':'0','¹':'1','²':'2','³':'3','⁴':'4','⁵':'5','⁶':'6','⁷':'7','⁸':'8','⁹':'9','⁻':'-','⁺':'+','ˣ':'x'};
+ const sup={'⁰':'0','¹':'1','²':'2','³':'3','⁴':'4','⁵':'5','⁶':'6','⁷':'7','⁸':'8','⁹':'9','⁻':'-','⁺':'+','ˣ':'x','ʸ':'y','ᵗ':'t','ᵃ':'a','ᵇ':'b','ⁿ':'n'};
  const funcs=new Set(['arcsin','arccos','arctan','sin','cos','tan','cot','ln','lg','log','lim','max','min']);
  function tex(raw){
-  const s=raw.replace(/⁴√/g,'∜').replace(/[−–]/g,'-').replace(/[⁰¹²³⁴⁵⁶⁷⁸⁹⁻⁺ˣ]+/g,x=>'^{'+[...x].map(c=>sup[c]).join('')+'}').replace(/[₀₁₂₃₄₅₆₇₈₉]+/g,x=>'_{'+[...x].map(c=>'₀₁₂₃₄₅₆₇₈₉'.indexOf(c)).join('')+'}').replace(/¼/g,'(1/4)').replace(/½/g,'(1/2)').replace(/¾/g,'(3/4)');
+  const s=raw.replace(/⁴√/g,'∜').replace(/[−–]/g,'-').replace(/[⁰¹²³⁴⁵⁶⁷⁸⁹⁻⁺ˣʸᵗᵃᵇⁿ]+/g,x=>'^{'+[...x].map(c=>sup[c]).join('')+'}').replace(/[₀₁₂₃₄₅₆₇₈₉]+/g,x=>'_{'+[...x].map(c=>'₀₁₂₃₄₅₆₇₈₉'.indexOf(c)).join('')+'}').replace(/¼/g,'(1/4)').replace(/½/g,'(1/2)').replace(/¾/g,'(3/4)');
   const ts=s.match(/arcsin|arccos|arctan|sin|cos|tan|cot|ln|lg|log|lim|max|min|\d+(?:\.\d+)?|_+|[^\s]/g)||[];let i=0;
   const close={ '(':')','[':']','{':'}' },isClose=t=>[')',']','}'].includes(t);
   const plain=t=>t==='}'?'\\}':syms[t]||t;
   function atom(){
    if(i>=ts.length)return '';
    let t=ts[i++],a;
-   if(close[t]) {const inner=sequence(true);const end=isClose(ts[i])?ts[i++]:'';a=(t==='{'?'\\{':t)+inner+(end==='}'?'\\}':end);}
+   if(t==='|'&&ts.slice(i).includes('|')){
+    const inner=sequence(false,true);
+    i++;
+    a='\\left|'+inner+'\\right|';
+   }
+   else if(close[t]) {const inner=sequence(true);const end=isClose(ts[i])?ts[i++]:'';a=(t==='{'?'\\{':t)+inner+(end==='}'?'\\}':end);}
    else if(t==='√'||t==='∛'||t==='∜'){let v=atom();if(v.startsWith('(')&&v.endsWith(')'))v=v.slice(1,-1);else if(v.startsWith('[')&&v.endsWith(']'))v=v.slice(1,-1);a=(t==='∛'?'\\sqrt[3]':t==='∜'?'\\sqrt[4]':'\\sqrt')+'{'+v+'}';}
    else if(funcs.has(t)){
     a='\\'+t+' ';
@@ -23,15 +28,15 @@
    else if(/^_{2,}$/.test(t))a='\\underline{\\qquad}';
    else a=plain(t);
    while(ts[i]==='^'||ts[i]==='_'){const op=ts[i++];a+=op+'{'+powerArg()+'}';}
-   if(/^[A-Za-zφξθαβ]/.test(t)&&['(','['].includes(ts[i]))a+=atom();
+   if(t!=='lim'&&/^[A-Za-zφξθαβ]/.test(t)&&['(','['].includes(ts[i]))a+=atom();
    return a;
   }
   function powerArg(){if(ts[i]==='{'){i++;const v=sequence(true);if(ts[i]==='}')i++;return v;}return atom();}
-  function sequence(nested=false){const parts=[];while(i<ts.length&&!(nested&&isClose(ts[i]))){if(ts[i]==='/'){i++;const left=parts.pop()||'',right=atom();parts.push('\\frac{'+left+'}{'+right+'}');}else parts.push(atom());}return parts.join(' ');}
+  function sequence(nested=false,absolute=false){const parts=[];while(i<ts.length&&!(absolute&&ts[i]==='|')&&!(nested&&isClose(ts[i]))){if(ts[i]==='/'){i++;const left=parts.pop()||'',right=atom();parts.push('\\frac{'+left+'}{'+right+'}');}else parts.push(atom());}return parts.join(' ');}
   return sequence();
  }
  function inlineHTML(s){
-  const re=/[A-Za-z0-9πφξθαβℝ∞∪∩∈∉∅≤≥≠→↔⇒⇔±·×÷√∛∜⁴⁰¹²³⁵⁶⁷⁸⁹⁻⁺ˣ₀₁₂₃₄₅₆₇₈₉¼½¾=+\-−–/<>^_()\[\]{}|.,'′\s]+/g;
+  const re=/[A-Za-z0-9πφξθαβℝ∞∪∩∈∉∅≤≥≠→↔⇒⇔±·×÷√∛∜⁴⁰¹²³⁵⁶⁷⁸⁹⁻⁺ˣʸᵗᵃᵇⁿ₀₁₂₃₄₅₆₇₈₉¼½¾=+\-−–/<>^_()\[\]{}|.,'′\s]+/g;
   let result='',at=0;
   for(const m of s.matchAll(re)){
    result+=esc(s.slice(at,m.index));const run=m[0];

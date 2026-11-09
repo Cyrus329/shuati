@@ -3,7 +3,7 @@
   const object=v=>v&&typeof v==='object'&&!Array.isArray(v);
   const dayKey=(date=new Date())=>[date.getFullYear(),String(date.getMonth()+1).padStart(2,'0'),String(date.getDate()).padStart(2,'0')].join('-');
   function queue(questions,subject='',limit=20,all=false){
-    const pool=[...new Map(questions.filter(q=>(!subject||q.subject===subject)&&q.review).map(q=>[q.id,q])).values()];
+    const pool=[...new Map(questions.filter(q=>(!subject||q.subject===subject)&&q.review&&!q.unusableSource).map(q=>[q.id,q])).values()];
     const unseen=pool.filter(q=>!(q.events||[]).length);
     const lastTime=q=>Math.max(0,...(q.events||[]).map(a=>Number.isFinite(Date.parse(a.at))?Date.parse(a.at):0));
     // Finish unreviewed questions first; do not pad a short round with recent mistakes.
@@ -17,7 +17,7 @@
   }
   function restore(value,questions){
     if(!object(value)||!Array.isArray(value.ids))return null;
-    const known=new Set(questions.filter(q=>q.mistake!==false||q.dailyNew).map(q=>q.id)),original=[...new Set(value.ids.filter(id=>typeof id==='string'))];
+    const known=new Set(questions.filter(q=>!q.unusableSource&&(value.bookSection||q.mistake!==false||q.dailyNew)).map(q=>q.id)),original=[...new Set(value.ids.filter(id=>typeof id==='string'))];
     const ids=original.filter(id=>known.has(id));if(!ids.length)return null;
     const oldIndex=Math.max(0,Math.min(original.length,Number.isInteger(value.index)?value.index:0));
     const index=original.slice(0,oldIndex).filter(id=>known.has(id)).length;

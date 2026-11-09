@@ -62,3 +62,5 @@
  }
  const api={create,merge,normalize};if(typeof module!=='undefined'&&module.exports)module.exports=api;if(typeof window!=='undefined')window.JournalStorage=api;
 })();
+
+if(typeof window!=='undefined')window.JournalReleaseStatus?.register('storage','v4.0-workspace-20261108');

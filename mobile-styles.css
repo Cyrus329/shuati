@@ -361,3 +361,5 @@ body:is([data-section="english"],[data-section="reading"],[data-section="listeni
 .computer-chapter-unit{border-top:1px solid var(--line);padding:22px 0 10px;scroll-margin-top:24px}
 .computer-chapter-unit>header{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px 14px;margin-bottom:14px}
 .computer-chapter-unit>header h4{margin:0;font:650 18px/1.5 var(--computer-reading-font)}
+
+.computer-unit-actions{display:flex;align-items:center;flex-wrap:wrap;gap:10px}.computer-reviewed[aria-pressed=true]{color:var(--accent);background:var(--tint);border-color:var(--accent)}.computer-index .computer-section small{white-space:normal}

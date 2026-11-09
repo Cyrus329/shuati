@@ -1,0 +1,11 @@
+个人学习册 V4 完整独立版
+
+本地使用
+解压整个压缩包，打开解压目录中的 index.html。
+如需迁移个人学习记录，先在还能打开的旧页面点「备份」导出 JSON，再在目标页面用「更多工具 → 导入 JSON 备份」。
+
+更新原 GitHub Pages
+用 GitHub Desktop 打开原 shuati 仓库，点 Show in Explorer。
+把解压后的全部内容复制到原来 index.html 所在的发布目录。保持 index.html 和 images、reading、listening 等文件夹同级。
+在 GitHub Desktop 提交并 Push origin。等原仓库的 Pages 部署完成，重新打开原网址。
+本地文件和线上页面的浏览器学习记录分别保存。保持原网址、浏览器和浏览器个人资料可继续读取原线上记录。

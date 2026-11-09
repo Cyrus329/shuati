@@ -3,6 +3,7 @@
  const kind=r=>['不会','错误'].includes(r)?'wrong':['会了','正确'].includes(r)?'right':/蒙对|不确定/.test(r||'')?'uncertain':'';
  const timestamp=e=>Number.isFinite(Date.parse(e.at))?Date.parse(e.at):0;
  function build(questions,skill=q=>q.skillTag||q.point||'未分类'){
+  const M=typeof window!=='undefined'?window.DailyMasteryCore:require('./daily-mastery-core.js'), mastery=M?.summarize(questions);
   const groups=new Map(),seen=new Set();
   for(const q of questions){if(seen.has(q.id))continue;seen.add(q.id);const tag=skill(q),section=q.section||'当前已学内容',key=JSON.stringify([q.subject,section,tag]);if(!groups.has(key))groups.set(key,{key,subject:q.subject,section,tag,wrongCount:0,repeatedQuestions:0,repeatedErrors:0,good:0,questionCount:0,events:[],newAnswers:[],uncertain:0});const g=groups.get(key);g.questionCount++;
    const ids=new Set(),events=(typeof window!=='undefined'&&window.IndividualAudit?window.IndividualAudit.nativeEvents(q,q.events||[]):q.events||[]).filter(e=>{if(!kind(e.result))return false;const key=e.eventId||JSON.stringify([q.id,e.at,e.result,e.answer]);if(ids.has(key))return false;ids.add(key);return true;}).sort((a,b)=>timestamp(a)-timestamp(b));
@@ -22,6 +23,7 @@
    else if(kind(g.newAnswers.at(-1)?.result)==='wrong'){g.mode='换题仍易错';g.reason='最近一道同类新题仍答错，优先继续用新情境强化。';}
    else {g.mode=g.transfer.graded<3?'新题样本不足':'还需连续验证';g.reason='目前的连续作答证据不足以判断稳定掌握，继续观察不同题目的表现。';}
    if(!stable&&kind(latest?.result)==='wrong'){g.priority+=4;if(g.mode!=='换题仍易错')g.reason='最近一次仍答错，下一次优先安排这一类型的新题。';}
+   g.masteredTags=mastery?.masteredTags||[];if(g.subject==='高等数学'&&questions.filter(q=>q.subject===g.subject&&(q.section||'当前已学内容')===g.section&&skill(q)===g.tag).every(q=>M.isMastered(q,mastery))){g.mode='已掌握';g.reason='原题及同类每日新题均有独立答对证据，后续每日安排退出；历史保留。';g.priority=0;}
    return g;
   }).sort((a,b)=>b.priority-a.priority||a.subject.localeCompare(b.subject,'zh')||a.tag.localeCompare(b.tag,'zh'));
  }

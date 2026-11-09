@@ -2,13 +2,14 @@
 // Ordered, shared script promises keep classic-script globals and Pages subpaths intact.
 (()=>{
 const documentLoaderURL=document.currentScript.src,base=new URL('.',documentLoaderURL),scripts=new Map(),features=new Map();
+const computerReviewVersion='reviewed-20261109';
 const groups={
  reading:['reading-data.js','reading-sentence-data.js','reading-matching-20261108.js','reading-houseplants-20261101.js','reading-houseplants-lookup.js','reading-sentence-core.js','reading-sentence-ui.js','reading-core.js','reading.js'],
  listening:['listening-data.js','phonology-core.js','phonology-lexicon.js','phonology-ui.js','listening-speed.js','shadow-practice.js','listening-route-data.js','listening-route-ui.js','listening-phrases.js','listening-simple.js'],
  computer:['computer-special-data.js','computer-cloze-core.js','computer-special.js'],
  english:['reading-data.js','reading-sentence-data.js','reading-matching-20261108.js','reading-houseplants-20261101.js','reading-houseplants-lookup.js','listening-data.js','writing-practice-data.js','writing-practice-core.js','writing-practice-ui.js','english-study-ui.js']
 };
-function script(file){if(scripts.has(file))return scripts.get(file);const promise=new Promise((resolve,reject)=>{const el=document.createElement('script');const url=new URL(file,base);url.searchParams.set('v',new URL(documentLoaderURL).searchParams.get('v')||window.JournalRelease?.build||'');el.src=url.href;el.async=false;el.onload=()=>resolve();el.onerror=()=>{el.remove();scripts.delete(file);reject(Error('专题文件加载失败：'+file));};document.head.appendChild(el);});scripts.set(file,promise);return promise;}
+function script(file){if(scripts.has(file))return scripts.get(file);const promise=new Promise((resolve,reject)=>{const el=document.createElement('script');const url=new URL(file,base);url.searchParams.set('v',new URL(documentLoaderURL).searchParams.get('v')||window.JournalRelease?.build||'');if(file==='computer-special.js'||file==='computer-cloze-core.js')url.searchParams.set('computer',computerReviewVersion);el.src=url.href;el.async=false;el.onload=()=>resolve();el.onerror=()=>{el.remove();scripts.delete(file);reject(Error('专题文件加载失败：'+file));};document.head.appendChild(el);});scripts.set(file,promise);return promise;}
 function register(name,init){if(features.has(name))throw Error('重复专题注册：'+name);features.set(name,{init,ready:false,pending:null});}
 function ensure(name){const f=features.get(name);if(!f)return Promise.reject(Error('未知专题：'+name));if(f.ready)return Promise.resolve();if(f.pending)return f.pending;f.pending=(async()=>{for(const file of groups[name])await script(file);await f.init();f.ready=true;})().catch(error=>{f.pending=null;throw error;});return f.pending;}
 function ready(name){return !!features.get(name)?.ready;}

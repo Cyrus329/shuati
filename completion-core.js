@@ -18,6 +18,7 @@
   }
   function category(events){const last=events.at(-1);return !last?'未完成':last.result==='会了'?'已会':last.result==='不会'?'未掌握':'不确定';}
   function choiceKey(q){
+    if(q.contentRestored&&(q.autoGradeDisabled||q.sourceGradingDispute))return ''; 
     const checked=typeof window!=='undefined'&&window.IndividualAudit?.choices(q);if(checked)return checked.join('');
     if(q.autoGradeDisabled||q.sourceGradingDispute)return '';
     const raw=String(q.verifiedAnswer||(!(q.audit||q.issue)?q.sourceAnswer:'')||'').trim();

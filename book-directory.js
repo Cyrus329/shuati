@@ -21,17 +21,47 @@ function locate(q){
  const [ch,se]=code.split('.').map(Number),row=table[s]?.[ch-1],part=row?.[se];
  return {code,chapter:row?'第'+cn[ch]+'章 '+row[0]:'待对应目录',section:part?'第'+cn[se]+'节 '+part.split('|')[0]:'',page:part?Number(part.split('|')[1]):null,path:row?['第'+cn[ch]+'章 '+row[0],part?'第'+cn[se]+'节 '+part.split('|')[0]:''].filter(Boolean).join(' / '):'待对应目录'};
 }
-function mount(host,questions,openQuestion,subject,openSection,rememberedSection){
+function mount(host,questions,openQuestion,subject,openSection,rememberedSection,sectionProgress){
  const root=document.createElement('section');root.className='book-directory';const chapters=table[subject]||[];const qs=questions.filter(q=>q.subject===subject&&!q.dailyNew);
- root.innerHTML=`<details open><summary><strong>蓝色森林 · 原书目录</strong><span>按你提供的目录对应 · ${qs.length} 道收录原题</span></summary><p class="fine-note">原题源的章号另外保留；这里使用蓝色森林的章、节与书面页码。点击题目可看原图和自己的历史。</p><div class="book-tree">${chapters.map((row,i)=>{const chapter=qs.filter(q=>locate(q).code.split('.')[0]===String(i+1));return `<details ${chapter.length?'open':''}><summary>第${cn[i+1]}章 ${esc(row[0])}<small>${chapter.length} 题</small></summary>${row.slice(1).map((part,j)=>{const [name,page]=part.split('|'),items=chapter.filter(q=>locate(q).code===`${i+1}.${j+1}`);return `<button type="button" class="book-section-enter" data-directory-section="${i+1}.${j+1}"><strong>${i+1}.${j+1} ${esc(name)}</strong><small>p.${page} · ${items.length} 题</small><span>进入本节 →</span></button><details ${rememberedSection===`${i+1}.${j+1}`?'open':''}><summary>${i+1}.${j+1} ${esc(name)}<small>p.${page} · ${items.length} 题</small></summary>${items.length>12?'<p class="fine-note">仅预览前 12 道；进入本节可分页查看全部原题。</p>':''}${items.slice(0,12).map(q=>`<button type="button" data-directory-question="${esc(q.id)}"><span>${esc(q.sourceNo||q.seq||'原题')}</span> ${esc(q.subject==='高等数学'?q.point+' · '+q.type:String(q.stem).slice(0,90))}</button>`).join('')||'<p class="fine-note">尚未收录该节题目。</p>'}</details>`;}).join('')}${chapter.filter(q=>locate(q).code===String(i+1)).map(q=>`<button type="button" data-directory-question="${esc(q.id)}">${esc(q.sourceNo)} · 跨小节综合题</button>`).join('')}</details>`;}).join('')}</div></details><details class="book-import-pages"><summary>本批原图档案 <span>667 张 · 本批 161 张待核定原图已核完</span></summary><p class="fine-note">原图页数不等于题数。一页可能包含多道题；展开核定记录可查看逐题答案、解析与原稿更正。未作答不算做错。</p><label>查看范围 <select data-page-kind><option value="all">全部原图</option><option value="pending">尚未逐题核定</option><option value="paper">手写原页</option></select></label><div data-source-pages></div><button type="button" data-page-more>再显示 24 张</button></details>`;
+ const grouped=new Map();
+ for(const q of qs){
+  const code=locate(q).code;
+  if(!grouped.has(code))grouped.set(code,[]);
+  grouped.get(code).push(q);
+ }
+ const chapterCount=index=>[...grouped].filter(([code])=>code.split('.')[0]===String(index)).reduce((count,[,items])=>count+items.length,0);
+ const initialChapter=rememberedSection?.split('.')[0]||String(chapters.findIndex((_,index)=>chapterCount(index+1)>0)+1);
+ const chapterRows=chapters.map((row,i)=>{
+  const chapter=i+1,count=chapterCount(chapter);
+  const sections=row.slice(1).map((part,j)=>{
+   const [name,page]=part.split('|'),code=`${chapter}.${j+1}`,items=grouped.get(code)||[];
+   const ready=items.filter(practiceAllowed).length;
+   const progress=sectionProgress?.(code);
+   const label=progress?.remaining?'继续第 '+(progress.index+1)+' 题':progress?.done?'查看本轮结果':ready?'开始刷题':'暂不可练';
+   return `<div class="book-map-row"><div><strong>${code} ${esc(name)}</strong><small>p.${esc(page)} · ${ready} 道可练${progress?.total?' · 本轮 '+progress.done+'/'+progress.total:''}</small></div><button type="button" class="book-section-enter" data-directory-section="${code}" ${ready?'':'disabled'}>${esc(label)}</button>${items.length?`<details class="book-map-preview" data-directory-preview="${code}"><summary>预览原题</summary><div></div></details>`:''}</div>`;
+  }).join('');
+  const cross=(grouped.get(String(chapter))||[]).map(q=>`<button type="button" data-directory-question="${esc(q.id)}">${esc(q.sourceNo)} · 跨小节原题</button>`).join('');
+  return `<details ${String(chapter)===initialChapter?'open':''}><summary>第${cn[chapter]}章 ${esc(row[0])}<small>${count} 道原题</small></summary>${sections}${cross}</details>`;
+ }).join('');
+ root.innerHTML=`<details open><summary><strong>蓝色森林 · 原书目录</strong><span>${qs.length} 道收录原题</span></summary><p class="fine-note">选一节开始刷题。暂停后可从本节的原进度继续。</p><div class="book-tree">${chapterRows}</div></details><details class="book-import-pages"><summary>本批原图档案 <span>667 张 · 本批 161 张待核定原图已核完</span></summary><p class="fine-note">原图页数不等于题数。一页可能包含多道题；展开核定记录可查看逐题答案、解析与原稿更正。未作答不算做错。</p><label>查看范围 <select data-page-kind><option value="all">全部原图</option><option value="pending">尚未逐题核定</option><option value="paper">手写原页</option></select></label><div data-source-pages></div><button type="button" data-page-more>再显示 24 张</button></details>`;
  host.querySelector('.learn-book-toolbar')?.after(root);
  root.querySelectorAll('[data-directory-section]').forEach(b=>b.onclick=()=>openSection?.(b.dataset.directorySection));
  root.querySelectorAll('[data-directory-question]').forEach(b=>b.onclick=()=>openQuestion(b.dataset.directoryQuestion));
- let limit=24;const render=()=>{const kind=root.querySelector('[data-page-kind]').value;const pages=(window.CHAPTER_IMPORT?.pages||[]).filter(p=>p.doc===(subject==='高等数学'?'doc1':subject==='计算机'?'doc2':'none')).filter(p=>kind==='pending'?!p.appId:kind==='paper'?p.kind==='手写原页':true);root.querySelector('[data-source-pages]').innerHTML=pages.slice(0,limit).map(p=>`<article><a href="${esc(p.image)}" target="_blank" rel="noopener"><img src="${esc(p.image)}" loading="lazy" alt="${esc(p.kind)} ${p.number}"></a><strong>${esc(p.kind)} ${p.number}</strong><p>${esc(p.binding)}</p>${p.auditRows?.length?`<details class="page-audit"><summary>核定答案与解析 · ${p.auditRows.length} 题</summary>${p.auditRows.map(r=>`<section><strong>${esc(r.label)}${r.issue?' · 题源有疑点':''}</strong><p>答案：${esc(r.answer)}</p><p>${esc(r.analysis)}</p>${r.correction?`<p class="audit-correction">原稿更正：${esc(r.correction)}</p>`:''}<button type="button" data-page-question="${esc(r.questionId)}">打开本题与历史 →</button></section>`).join('')}</details>`:p.appId?`<button type="button" data-page-question="${esc(p.appId)}">查看对应题目 →</button>`:''}</article>`).join('')||'<p>这个范围没有原图。</p>';root.querySelector('[data-page-more]').hidden=limit>=pages.length;root.querySelectorAll('[data-page-question]').forEach(b=>b.onclick=()=>openQuestion(b.dataset.pageQuestion));};root.querySelector('[data-page-kind]').onchange=()=>{limit=24;render();};root.querySelector('[data-page-more]').onclick=()=>{limit+=24;render();};render();
+ root.querySelectorAll('[data-directory-preview]').forEach(panel=>{
+  panel.addEventListener('toggle',()=>{
+   const content=panel.querySelector('div');
+   if(!panel.open||content.childElementCount)return;
+   const items=grouped.get(panel.dataset.directoryPreview);
+   content.innerHTML=(items.length>12?'<p class="fine-note">预览前 12 道原题。</p>':'')+items.slice(0,12).map(q=>`<button type="button" data-directory-question="${esc(q.id)}">${esc(q.sourceNo||q.seq||'原题')} · ${esc(q.point||q.topic||q.type||'题目')}</button>`).join('');
+   content.querySelectorAll('button').forEach(button=>button.onclick=()=>openQuestion(button.dataset.directoryQuestion));
+  });
+ });
+ let limit=24;const render=()=>{const kind=root.querySelector('[data-page-kind]').value;const pages=(window.CHAPTER_IMPORT?.pages||[]).filter(p=>p.doc===(subject==='高等数学'?'doc1':subject==='计算机'?'doc2':'none')).filter(p=>kind==='pending'?!p.appId:kind==='paper'?p.kind==='手写原页':true);root.querySelector('[data-source-pages]').innerHTML=pages.slice(0,limit).map(p=>`<article><a href="${esc(p.image)}" target="_blank" rel="noopener"><img src="${esc(p.image)}" loading="lazy" alt="${esc(p.kind)} ${p.number}"></a><strong>${esc(p.kind)} ${p.number}</strong><p>${esc(p.binding)}</p>${p.auditRows?.length?`<details class="page-audit"><summary>核定答案与解析 · ${p.auditRows.length} 题</summary>${p.auditRows.map(r=>`<section><strong>${esc(r.label)}${r.issue?' · 题源有疑点':''}</strong><p>答案：${esc(r.answer)}</p><p>${esc(r.analysis)}</p>${r.correction?`<p class="audit-correction">原稿更正：${esc(r.correction)}</p>`:''}<button type="button" data-page-question="${esc(r.questionId)}">打开本题与历史 →</button></section>`).join('')}</details>`:p.appId?`<button type="button" data-page-question="${esc(p.appId)}">查看对应题目 →</button>`:''}</article>`).join('')||'<p>这个范围没有原图。</p>';root.querySelector('[data-page-more]').hidden=limit>=pages.length;root.querySelectorAll('[data-page-question]').forEach(b=>b.onclick=()=>openQuestion(b.dataset.pageQuestion));};root.querySelector('[data-page-kind]').onchange=()=>{limit=24;render();};root.querySelector('[data-page-more]').onclick=()=>{limit+=24;render();};root.querySelector('.book-import-pages').addEventListener('toggle',event=>{if(event.currentTarget.open&&!root.querySelector('[data-source-pages]').childElementCount)render();});
 }
+const practiceAllowed=q=>!q.unusableSource&&(!window.QuestionQuality||window.QuestionQuality.inspect(q).practiceAllowed);
 function sectionItems(questions,subject,code,options={}){
  const events=options.events||(()=>[]),search=String(options.search||'').trim().toLowerCase();
- return questions.filter(q=>q.subject===subject&&!q.dailyNew&&locate(q).code===code).filter(q=>!options.type||q.type===options.type).filter(q=>options.mode!=='needs'||['不会','不确定','蒙对'].includes(events(q).at(-1)?.result)).filter(q=>!search||[q.stem,q.point,q.topic,q.type,q.sourceNo,q.seq].join(' ').toLowerCase().includes(search));
+ return questions.filter(q=>q.subject===subject&&!q.dailyNew&&practiceAllowed(q)&&locate(q).code===code).filter(q=>!options.type||q.type===options.type).filter(q=>options.mode!=='needs'||['不会','不确定','蒙对'].includes(events(q).at(-1)?.result)).filter(q=>!search||[q.stem,q.point,q.topic,q.type,q.sourceNo,q.seq].join(' ').toLowerCase().includes(search));
 }
 function renderSection(host,questions,subject,code,options){
  const location=locate({subject,bookCode:code}),all=sectionItems(questions,subject,code),events=options.events||(()=>[]);let search='',mode='all',type='',page=0;const pageSize=30;

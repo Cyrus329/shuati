@@ -1,0 +1,96 @@
+.practice-v4 .practice-card {
+  margin-top: 16px;
+  padding: clamp(18px, 4vw, 42px);
+}
+.practice-v4 .practice-question-head {
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+.practice-v4 .practice-question-head .pathline {
+  margin: 0;
+}
+.practice-v4 .question-corner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: end;
+  gap: 6px;
+}
+.practice-v4 .practice-card > .stem {
+  margin-block: 0 18px;
+}
+.practice-v4 .grade-comparison {
+  margin-block: 18px 8px;
+}
+.practice-v4 .practice-toolbox {
+  margin-top: 16px;
+  border-block: 1px solid var(--line, currentColor);
+  padding-block: 10px;
+}
+.practice-v4 .practice-toolbox > summary {
+  cursor: pointer;
+  padding-block: 6px;
+}
+.practice-v4 .practice-submit:empty,
+.practice-v4 .study-self-grade[hidden] {
+  display: none;
+}
+.practice-v4 .practice-next-bar {
+  position: sticky;
+  bottom: 0;
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 12px;
+  border: 1px solid var(--line, currentColor);
+  border-radius: 12px 12px 0 0;
+  background: var(--paper, Canvas);
+  padding: 8px 12px max(8px, env(safe-area-inset-bottom));
+}
+.practice-v4 .practice-next-bar .btn {
+  min-height: 44px;
+}
+@media (max-width: 700px) {
+  .practice-v4 .practice-question-head {
+    align-items: flex-start;
+  }
+  .practice-v4 .practice-next-bar .btn {
+    flex: 1;
+  }
+}
+
+
+@media (max-width: 760px) {
+  .practice-v4:has(.practice-next-bar) {
+    padding-bottom: 66px;
+  }
+  .practice-v4 .practice-next-bar {
+    position: fixed;
+    inset: auto 8px calc(76px + env(safe-area-inset-bottom)) 8px;
+    z-index: 79;
+    margin: 0;
+    padding: 7px 9px;
+    border-radius: 12px;
+    box-shadow: 0 3px 16px #10251e25;
+  }
+  .practice-v4 .practice-next-bar > span {
+    font-size: .8rem;
+  }
+  .practice-v4 .practice-next-bar .btn {
+    position: static !important;
+    flex: 1;
+    width: auto !important;
+  }
+  .practice-v4 .grade-comparison-grid {
+    gap: 8px;
+  }
+  .practice-v4 .grade-comparison-grid > div {
+    min-height: 0;
+    padding: 10px 12px;
+  }
+  .practice-v4 .grade-comparison-grid p {
+    margin: 4px 0 0;
+  }
+}
