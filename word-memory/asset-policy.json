@@ -1,0 +1,13 @@
+{
+  "originalImageBytes": 204204738,
+  "compactImageBytes": 67392648,
+  "originalImageCount": 888,
+  "compactImageCount": 856,
+  "exactDuplicateFilesRemoved": 9,
+  "convertedFiles": 814,
+  "maxScreenshotSide": 2200,
+  "screenshotWebPQuality": 85,
+  "smallQuestionDiagrams": "保持原尺寸，无损压缩",
+  "futureImports": "新增题目先提取文字；必要图和作答证据压缩；完全相同图片仅存一份。新增资源后运行本脚本。",
+  "unreferencedSourceImagesRemoved": 23
+}

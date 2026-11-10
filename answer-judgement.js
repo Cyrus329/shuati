@@ -17,6 +17,7 @@
   }
   if(clean)return result('unanswered',{answer:ref,originalAnswer:'',reason:'学习记录已重新开始，本题尚未作答。'});
   if(initial)return result(initial.kind,{...initial,basis:'原始作答逐项核对'});
+  if(q.reviewUnanswered)return result('unanswered',{answer:ref,originalAnswer:'',reason:'本题尚未作答，已加入待练。'});
   if(q.dailyNew)return result('unanswered',{answer:'',originalAnswer:'',reason:'新题尚未作答。'});
   return result('uncertain',{originalAnswer:q.ownAnswer||'',answer:ref,reason:'尚未提供可对应的作答记录。'});
  }

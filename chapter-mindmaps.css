@@ -1,0 +1,52 @@
+#journalMindmaps {
+  --mm-line: #72998c;
+  margin: 1rem 0 1.5rem;
+  padding: .8rem;
+  border: 1px solid var(--mm-line);
+  border-radius: 1rem;
+  min-width: 0;
+}
+#journalMindmaps > summary { cursor: pointer; padding: .5rem; font-weight: 750; }
+#journalMindmaps .mm-tabs { display: flex; flex-wrap: wrap; gap: .4rem; }
+#journalMindmaps button { cursor: pointer; }
+#journalMindmaps .mm-tabs button {
+  color: inherit; background: transparent; border: 1px solid var(--mm-line);
+  border-radius: .45rem; padding: .45rem .6rem; text-align: left;
+}
+#journalMindmaps .mm-tabs [aria-pressed=true], #journalMindmaps .mm-level-0 {
+  background: #20644f; color: #fff;
+}
+#journalMindmaps .mm-guide { font-size: .9em; margin: .7rem .2rem; }
+#journalMindmaps .mm-canvas {
+  max-height: 65vh; min-height: 11rem; overflow: auto;
+  padding: .85rem; border: 1px solid var(--mm-line); border-radius: .6rem;
+  background-image: radial-gradient(#72998c45 1px, transparent 1px);
+  background-size: 15px 15px;
+}
+#journalMindmaps ul { list-style: none; margin: 0; padding: 0; }
+#journalMindmaps .mm-tree { width: max-content; }
+#journalMindmaps .mm-branch { display: flex; align-items: center; position: relative; padding: .22rem 0; }
+#journalMindmaps .mm-children { padding-left: 1.7rem; position: relative; }
+#journalMindmaps .mm-children[hidden] { display: none; }
+#journalMindmaps .mm-children::before,
+#journalMindmaps .mm-children > li::before {
+  content: ''; position: absolute; border-top: 1px solid var(--mm-line); width: .85rem; top: 50%;
+}
+#journalMindmaps .mm-children::before { left: 0; }
+#journalMindmaps .mm-children > li::before { right: 100%; }
+#journalMindmaps .mm-children > li::after {
+  content: ''; position: absolute; right: calc(100% + .85rem); height: 100%;
+  border-left: 1px solid var(--mm-line);
+}
+#journalMindmaps .mm-children > li:first-child::after { top: 50%; height: 50%; }
+#journalMindmaps .mm-children > li:last-child::after { top: 0; height: 50%; }
+#journalMindmaps .mm-children > li:only-child::after { display: none; }
+#journalMindmaps .mm-node {
+  display: inline-block; max-width: clamp(11rem, 36vw, 26rem);
+  text-align: left; white-space: normal; overflow-wrap: anywhere;
+  font: inherit; line-height: 1.5; border: 1px solid var(--mm-line); border-radius: .5rem;
+  padding: .42rem .65rem; color: inherit; background-color: var(--surface, Canvas);
+}
+#journalMindmaps .mm-level-0 { background-color: #20644f; color: #fff; }
+#journalMindmaps .mm-node[aria-expanded]::after { content: ' +'; font-weight: bold; }
+#journalMindmaps .mm-node[aria-expanded=true]::after { content: ' −'; }

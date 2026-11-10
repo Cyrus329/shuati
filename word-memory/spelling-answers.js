@@ -1,6 +1,7 @@
 (function(root){
   'use strict';
-  const normalize = value => String(value || '').normalize('NFKC').toLowerCase()
+  const G=typeof module==='object'&&module.exports?require('./grammar-labels.js'):root.GrammarLabels;
+  const normalize = value => (String(value || '').includes('+')?G.canonical(String(value || '')):String(value || '')).normalize('NFKC').toLowerCase()
     .replace(/[’‘`\u02bc]/g,"'").replace(/[\u2010\u2011\ufe63\uff0d]/g,'-').replace(/‿/g,' ')
     // Decimal points carry meaning; placeholder dots and ellipses do not.
     .replace(/\./g,(dot,index,text)=>/\d/.test(text[index-1]||'')&&/\d/.test(text[index+1]||'')?dot:' ')

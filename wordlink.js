@@ -4,6 +4,8 @@
 function normalizedAddress(value){try{const u=new URL(value,location.href);return decodeURI(u.href.split(/[?#]/)[0]).replaceAll('\\','/').toLowerCase();}catch{return '';}}
 const localRoute=location.protocol==='file:'?(window.WORDLINK_LOCATIONS||[]).find(route=>normalizedAddress(route.page)===normalizedAddress(location.href)):null;
 const bundledAddress=new URL('word-memory/index.html',location.href).href;let repairedTarget=false;
+if(location.protocol!=='file:'&&/^(?:file:|[a-z]:[\\/])/i.test(data.target||'')){data.target=bundledAddress;repairedTarget=true;}
+
 if(localRoute?.target&&(!data.target||normalizedAddress(data.target)===normalizedAddress(bundledAddress))){data.target=localRoute.target;repairedTarget=true;}
 
 const displayAddress=value=>{try{return decodeURI(value);}catch{return String(value||'');}};

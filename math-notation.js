@@ -1,7 +1,7 @@
 'use strict';
 (() => {
  const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
- const syms={'∞':'\\infty','π':'\\pi','φ':'\\varphi','ξ':'\\xi','θ':'\\theta','α':'\\alpha','β':'\\beta','ℝ':'\\mathbb{R}','∪':'\\cup','∩':'\\cap','∈':'\\in','∉':'\\notin','∅':'\\varnothing','≤':'\\le','≥':'\\ge','≠':'\\ne','→':'\\to','↔':'\\leftrightarrow','⇒':'\\Rightarrow','⇔':'\\Leftrightarrow','±':'\\pm','·':'\\cdot','×':'\\times','÷':'\\div'};
+ const syms={'∫':'\\int','Δ':'\\Delta','∼':'\\sim','∞':'\\infty','π':'\\pi','φ':'\\varphi','ξ':'\\xi','θ':'\\theta','α':'\\alpha','β':'\\beta','ℝ':'\\mathbb{R}','∪':'\\cup','∩':'\\cap','∈':'\\in','∉':'\\notin','∅':'\\varnothing','≤':'\\le','≥':'\\ge','≠':'\\ne','→':'\\to','↔':'\\leftrightarrow','⇒':'\\Rightarrow','⇔':'\\Leftrightarrow','±':'\\pm','·':'\\cdot','×':'\\times','÷':'\\div'};
  const sup={'⁰':'0','¹':'1','²':'2','³':'3','⁴':'4','⁵':'5','⁶':'6','⁷':'7','⁸':'8','⁹':'9','⁻':'-','⁺':'+','ˣ':'x','ʸ':'y','ᵗ':'t','ᵃ':'a','ᵇ':'b','ⁿ':'n'};
  const funcs=new Set(['arcsin','arccos','arctan','sin','cos','tan','cot','ln','lg','log','lim','max','min']);
  function tex(raw){
@@ -36,11 +36,11 @@
   return sequence();
  }
  function inlineHTML(s){
-  const re=/[A-Za-z0-9πφξθαβℝ∞∪∩∈∉∅≤≥≠→↔⇒⇔±·×÷√∛∜⁴⁰¹²³⁵⁶⁷⁸⁹⁻⁺ˣʸᵗᵃᵇⁿ₀₁₂₃₄₅₆₇₈₉¼½¾=+\-−–/<>^_()\[\]{}|.,'′\s]+/g;
+  const re=/[A-Za-z0-9πφξθαβΔ∫∼ℝ∞∪∩∈∉∅≤≥≠→↔⇒⇔±·×÷√∛∜⁴⁰¹²³⁵⁶⁷⁸⁹⁻⁺ˣʸᵗᵃᵇⁿ₀₁₂₃₄₅₆₇₈₉¼½¾=+\-−–/<>^_()\[\]{}|.,'′\s]+/g;
   let result='',at=0;
   for(const m of s.matchAll(re)){
    result+=esc(s.slice(at,m.index));const run=m[0];
-   if(!/[A-Za-z0-9πφξθαβℝ∞∪∩∈∉∅≤≥≠√∛∜]/.test(run))result+=esc(run);
+   if(!/[A-Za-z0-9πφξθαβΔ∫∼ℝ∞∪∩∈∉∅≤≥≠√∛∜]/.test(run))result+=esc(run);
    else {const left=run.match(/^\s*/)[0],right=run.match(/\s*$/)[0];result+=left+'\\('+esc(tex(run.trim()))+'\\)'+right;}
    at=m.index+run.length;
   }

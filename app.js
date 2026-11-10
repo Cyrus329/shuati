@@ -132,6 +132,7 @@
     const v=verdict(q);if(v.kind==='record_only')return ['原答未留存 · 已完成','warn'];if(v.correctionOnly)return ['原答曾错 · 已订正','good'];if(v.kind==='source_issue')return ['题源问题 · 已完成','warn'];if(v.kind==='correct')return [isMistake(q)?'已判对 · 历史保留':'已判对','good'];if(v.kind==='incorrect')return [hasRegression(q)?'先对后错':'已判错','bad'];
     if(hasRegression(q))return ['先对后错','bad'];
     if(isMistake(q))return [hasAuditIssue(q)?'错题 · 待核查':isGuessed(q)||currentState(q)==='不确定'?'错题 · 不确定':'错题','bad'];
+    if(q.reviewUnanswered&&v.kind==='unanswered')return ['未做·待练','warn'];
     const s=firstStatus(q);
     if(s==='正确')return ['正确','good'];
     if(s==='已完成')return ['已完成',''];
@@ -148,9 +149,9 @@
     const qs=all(),s=window.ReviewPolicy.summary(qs.map(q=>({...q,firstStatus:firstStatus(q),audit:hasAuditIssue(q)})),attempts);
     $('statTotal').textContent=s.total;$('statCorrect').textContent=s.correct;$('statWrong').textContent=s.mistake;$('statNeed').textContent=qs.filter(needReview).length;
     $('statUnscored').textContent=s.unscored;$('statRecorded').textContent=s.recorded;$('statDisputed').textContent=s.disputed||0;$('statRecordOnly').textContent=s.recordOnly||0;
-    const missingOriginal=qs.some(q=>!q.dailyNew&&reviewPolicy(q).unscored),unscoredTile=$('statUnscored').closest('.summary-tile');unscoredTile.querySelector('.tile-label').textContent=missingOriginal?'原题待确认 / 新题未作答':'尚未作答的新题';unscoredTile.querySelector('.tile-detail').textContent=missingOriginal?'不推定个人未提供的作答结果':'仅指未开始的每日新题，已完成原题不在此列';
+    const missingOriginal=qs.some(q=>!q.dailyNew&&reviewPolicy(q).unscored),unscoredTile=$('statUnscored').closest('.summary-tile');unscoredTile.querySelector('.tile-label').textContent=missingOriginal?'原题待练 / 新题未作答':'尚未作答的新题';unscoredTile.querySelector('.tile-detail').textContent=missingOriginal?'包括加入错题复习的未作答原题':'仅指未开始的每日新题，已完成原题不在此列';
     $('correctPercent').textContent='含原答正确和原稿订正；订正不计独立复练';
-    $('summaryCountNote').textContent=`全部 ${s.total} = 已判对/订正 ${s.correct} + 已判错/需巩固 ${s.mistake} + 已完成原答未留存 ${s.recordOnly||0} + 已完成题源问题 ${s.disputed||0} + 新题未作答 ${s.unscored}。历史曾错/不确定 ${s.historical||0} 题，其中当前已判对 ${s.recovered||0} 题；历史标记不代表尚未完成。`;
+    $('summaryCountNote').textContent=`全部 ${s.total} = 已判对/订正 ${s.correct} + 已判错/需巩固 ${s.mistake} + 已完成原答未留存 ${s.recordOnly||0} + 已完成题源问题 ${s.disputed||0} + 尚未作答 ${s.unscored}。历史曾错/不确定 ${s.historical||0} 题，其中当前已判对 ${s.recovered||0} 题；历史标记不代表尚未完成。`;
     $('reviewTabCount').textContent=qs.filter(needReview).length;if($('completedTabCount'))$('completedTabCount').textContent=s.recorded;
   }
   function populateFilters(){

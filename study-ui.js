@@ -80,7 +80,9 @@
     $('studyInspect')?.addEventListener('click',()=>{capture();if(!session.drafts[q.id].answer){api.toast('先选择答案，再核对选项。');return;}session.drafts[q.id].checked=true;persist(session);renderPractice();$('practiceView').querySelector('.marked-options')?.scrollIntoView({block:'center',behavior:'smooth'});});
     $('studyReveal').onclick=()=>{capture();session.drafts[q.id].revealed=!showLearning;session.drafts[q.id].lessonHidden=showLearning;persist(session);renderPractice();if(math&&!showLearning)$('studyMathSolution')?.scrollIntoView({block:'nearest'});};
     $('studySource').onclick=()=>{capture();session.drafts[q.id].source=!draft.source;persist(session);renderPractice();};
-    $('pauseSession').onclick=async()=>{capture();await persist(session);api.navigate(session.bookSection?'notebook':'dashboard');};
+    $('pauseSession').onclick=async()=>{if(busy)return;busy=true;
+      try{capture();if(await persist(session))api.navigate(session.bookSection?'notebook':'dashboard');else $('studySaveError')?.classList.remove('hidden');}
+      finally{busy=false;}};
     $('finishEarly').onclick=async()=>{if(busy)return;busy=true;capture();const next={...copy(session),index:session.ids.length,endedAt:new Date().toISOString()};const ok=await persist(next);busy=false;if(ok){session=next;renderPractice();}else $('studySaveError').classList.remove('hidden');};
     async function submit(mark){
       if(busy)return;capture();const answer=session.drafts[q.id].answer;

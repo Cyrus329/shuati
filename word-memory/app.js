@@ -88,7 +88,7 @@ function canonicalBuiltinAliasId(id = "") {
 // B117：只做“安全同词”归并：大小写/尾部标点、末尾 sb./sth. 占位写法，以及用户明确指出的 spend 模板。
 // 不把普通同义词、不同语法结构或四次听写合并。
 function builtinDedupeTermKey(term = "") {
-  let raw = normalizeText(term).normalize("NFKC").toLowerCase().replace(/[’‘`]/g, "'");
+  let raw = normalizeText(window.GrammarLabels.canonical(term)).normalize("NFKC").toLowerCase().replace(/[’‘`]/g, "'");
   raw = raw.replace(/\b(sb|sth)\s*\./g, "$1").replace(/[。．.]+$/g, "").replace(/\s+/g, " ").trim();
   const multiword = raw.split(/\s+/).filter(Boolean).length > 1;
   if (multiword) {
@@ -3938,7 +3938,7 @@ function normalizeWord(word) {
   ].map(normalizeText).filter(Boolean))];
   return {
     id: canonicalBuiltinAliasId(word.id || createId()),
-    term: word.term || "",
+    term: window.GrammarLabels.display(word.term || ""),
     kind: ["word", "phrase"].includes(word.kind) ? word.kind : undefined,
     meaning: word.meaning || "",
     coreMeaning: word.coreMeaning || "",

@@ -363,3 +363,12 @@ body:is([data-section="english"],[data-section="reading"],[data-section="listeni
 .computer-chapter-unit>header h4{margin:0;font:650 18px/1.5 var(--computer-reading-font)}
 
 .computer-unit-actions{display:flex;align-items:center;flex-wrap:wrap;gap:10px}.computer-reviewed[aria-pressed=true]{color:var(--accent);background:var(--tint);border-color:var(--accent)}.computer-index .computer-section small{white-space:normal}
+
+.study-stamp-row{display:flex;flex-wrap:wrap;gap:12px;margin:0 0 20px}
+.study-stamp{display:inline-flex;align-items:center;gap:10px;padding:8px 12px;border:1px solid var(--line);border-radius:12px;background:var(--paper);color:var(--ink);text-align:left;font:inherit}
+button.study-stamp{cursor:pointer}
+.study-stamp i{display:grid;place-items:center;flex:none;width:32px;height:32px;border:1px dashed currentColor;border-radius:50%;color:var(--accent);font-style:normal;font-weight:700}
+.study-stamp strong,.study-stamp small{display:block;line-height:1.45}
+.study-stamp small{font-size:.72rem;color:var(--muted)}
+.study-stamp[aria-pressed=true],.study-stamp[data-complete=true]{border-color:var(--accent);background:var(--tint)}
+.study-stamp[aria-pressed=true] i,.study-stamp[data-complete=true] i{background:var(--accent);color:var(--paper);border-style:solid}

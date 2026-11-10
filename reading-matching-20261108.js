@@ -160,4 +160,91 @@ add(10,'职业早期挫折与长期表现',[2061,2062],[
 ['Keeping working after minor failures may help people achieve better professional results.','在小失败后继续努力，可能帮助人取得更好的职业成果。'],
 ['Early small setbacks are not always deadly and may improve people’s work performance.','早期的小挫折未必是致命的，还可能改善工作表现。']
 ],'ADBCE','EDBCA');
+const studyNotes=[
+[
+['remotely control|远程控制','save time and energy~saves time and energy|节省时间和精力','先写智能家居改变生活，再讲手机远程控制，最后归纳省时省力。','making 引出结果，说明智能管理让家庭生活更便捷。'],
+['bring new vitality to~brought new vitality to|给……注入新活力','virtual tour systems|虚拟游览系统','先说数字旅游的作用，再分别看线上游览和旅行应用。','allowing 引出结果，说明虚拟系统让游客能在家游览。'],
+['wealth management|财富管理','mobile payment|移动支付','先总说金融科技，再分清移动支付和智能理财两个例子。','has replaced 是现在完成时，强调支付方式的变化及其现在的影响。'],
+['real-time traffic monitoring|实时交通监测','avoid congested roads|避开拥堵路段','先看缓解交通压力的总述，再看路况监测和导航如何发挥作用。','with big data analysis 修饰 navigation software，补充软件使用的技术。'],
+['record heart rate|记录心率','long-term fitness habits|长期健身习惯','先看智能设备记录什么，再看运动应用如何帮助坚持锻炼。','help ordinary people exercise 中 exercise 是省略 to 的不定式。']
+],
+[
+['lifelong habits|终身习惯','broaden students’ horizons|拓宽学生的视野','先交代阅读的价值，再说明它对眼界、知识和表达的作用。','one of the most + 形容词 + 复数名词，表示最……的……之一。'],
+['physical exercise|体育锻炼','improve immunity|提高免疫力','先看青少年所处的成长阶段，再看适量运动带来的好处。','such as 引出运动实例。'],
+['time management|时间管理','make full use of|充分利用','先说效率问题，再看怎样制定计划、区分任务并按时完成。','多个动名词短语并列，合起来作主语。'],
+['social interaction|社交互动','build self-confidence|建立自信','先说社交对心理健康的作用，再看沟通与集体活动的例子。','help 后接宾语和动词原形，说明活动能帮助青少年做什么。'],
+['independent living skills|独立生活技能','sense of responsibility|责任感','先说独立技能的重要性，再列举日常事务及其长远作用。','Learning to… 是动名词短语，在句中作主语。']
+],
+[
+['waste classification|垃圾分类','recyclable materials|可回收材料','先看分类原则，再看不同垃圾分别如何处理。','can be reused 是情态动词的被动结构。'],
+['low-carbon travel|低碳出行','traffic congestion|交通拥堵','先看出行方式的选择，再看减排和缓解拥堵两个结果。','not only…but also… 连接两个并列谓语。'],
+['green consumption|绿色消费','energy-saving|节能的','先说绿色消费，再看节能用品和拒绝过度包装的例子。','Choosing 和 Refusing 分别引出动名词主语。'],
+['urban greening|城市绿化','urban heat island effect|城市热岛效应','先写绿化措施，再写净化空气、降低热岛效应和改善空间。','Planting 和 building 引出的动作共同作主语。'],
+['ecological balance|生态平衡','domestic sewage|生活污水','先看保护水资源的目的，再理清节水、治污和保护水体的关系。','Saving、avoiding 和 protecting 引出三个并列措施。']
+],
+[
+['family reunion|家庭团聚','set off fireworks|燃放烟花','先说春节象征什么，再看具体习俗与寄托。','representing 引出的现在分词短语补充说明节日意义。'],
+['in memory of|为了纪念','dragon boat races|龙舟比赛','先交代纪念对象，再看赛龙舟和吃粽子分别承载什么。','while 对照两项习俗体现的不同内涵。'],
+['reunion and harmony|团圆与和谐','full moon|满月','先说中秋的寓意，再看赏月和分月饼怎样体现团圆。','On the full moon night 在句首交代时间。'],
+['ancestor worship|祭祖','sweep tombs|扫墓','先说清明的两类活动，再看对祖先与自然的情感。','to memorize their ancestors and show filial piety 说明扫墓的目的。'],
+['cultural identity|文化认同','cultural confidence|文化自信','先说节日传承的意义，再说明年轻人怎样了解并继承文化。','enable + 宾语 + to do 表示使某人能够做某事。']
+],
+[
+['extracurricular reading|课外阅读','make up for~makes up for|弥补','先说课外阅读补充课堂，再对比课本的范围和课外书的广度。','while 在这里表示对照。'],
+['accumulate rich vocabulary|积累丰富的词汇','sentence structures|句型结构','先说写作能力的提升，再拆成词汇、句型和技巧三项。','By reading 引出方式，表示通过阅读。'],
+['personality and values|个性和价值观','positive attitudes|积极的态度','先说课外书塑造价值观，再看故事和人物怎样产生影响。','learn…from… 表示从某个来源学到东西。'],
+['long-term focus|长时间专注','logical thinking|逻辑思维','先看碎片化信息与读书的对比，再看读书训练的能力。','Unlike 引出对比对象，提示后面讲读书的不同。'],
+['group reading activities|集体阅读活动','exchange different ideas|交流不同观点','先说集体阅读提升沟通，再看分享、讨论和合作的关系。','allow + 宾语 + to do 表示让某人能够做某事。']
+],
+[
+['public library systems|公共图书馆体系','set up|设立','先看图书馆提供什么资源，再看不同年龄读者的阅读需要。','meeting 引出结果，说明专设阅读区如何满足需求。'],
+['community medical services|社区医疗服务','physical examinations|体检','先看社区诊所服务，再看怎样缓解大医院压力。','solve 和 reduce 是并列谓语，列出两种结果。'],
+['sports facilities|体育设施','be open to the public~open to the public|向公众开放','先列举免费运动场地，再看开放后的便利与影响。','allow citizens to exercise 表示让市民可以锻炼。'],
+['bus routes|公交线路','dedicated bicycle lanes|自行车专用道','先看公共交通调整措施，再看出行成本和运行效率的变化。','optimizes、increases 和 sets up 是三个并列谓语。'],
+['participate in|参与','public welfare activities|公益活动','先说志愿服务的作用，再列举参与领域及带来的影响。','help 后的 solve 和 spread 并列。']
+],
+[
+['keep in touch with|与……保持联系','long-distance communication|远距离交流','先讲距离限制，再列举维持异地关系的沟通方式。','enable + 宾语 + to do 表示使某人能够做某事。'],
+['face-to-face communication|面对面交流','facial expressions|面部表情','先对比线上和当面交流，再看间接表达的便利与局限。','Different from 在句首引出比较对象。'],
+['social circles|社交圈','peers with the same hobbies|有相同爱好的同伴','先说社交圈扩大，再说明如何结识同好并获取新视角。','with the same hobbies 后置修饰 peers。'],
+['indulge in|沉迷于','real-life relationships|现实中的人际关系','先说过度社交导致疏离，再顺着使用手机、忽视当面沟通的因果链理解。','ignoring 补充说明沉迷虚拟社交时被忽略的行为。'],
+['social etiquette|社交礼仪','interpersonal relationships|人际关系','先说线上礼仪的重要性，再从回复、措辞和分享三个方面理解。','such as 引出网络交往规则的实例。']
+],
+[
+['bring pressure to~brings great pressure to|给……带来压力','marriage certificate|结婚证','先写婚前准备，再看为何姓氏选择成为额外压力。','Apart from 引出已有事项，主句继续补充新的事项。'],
+['maiden name|婚前姓氏','retain their original surnames|保留原姓','先对比传统要求与现代选择，再把握态度转变。','were required to do 是被动结构，表示被要求做某事。'],
+['shared surname|共同姓氏','combine the two surnames with a hyphen|用连字符连接两个姓氏','先说可选方案，再看连字符如何兼顾双方。','while legally using… 是省略主语的时间状语结构。'],
+['personal identity|个人身份','professional certifications|职业资格认证','先看个人身份，再看婚前姓氏与已有职业成就的联系。','gained under their maiden name 后置修饰前面的个人成就。'],
+['regardless of|不管；不论','mutual companionship|相互陪伴','先说姓氏选择的意义，再落到婚姻中更重要的感情与陪伴。','Although 引导让步状语从句，主句指出重点。']
+],
+[
+['in advance|提前','online booking fraud|线上预订诈骗','先看订房背景，再看预付款后发现骗局的意外结果。','only to find 表示出乎意料的结果。'],
+['fake websites|虚假网站','tell them apart|把它们区分开','先写欺骗手法，再说明为什么普通人很难分辨。','so…that… 表示程度导致的结果。'],
+['at a reasonable level|处在合理水平','keep people from feeling doubtful|让人不起疑心','先看目标地点，再看价格和搜索广告如何降低警觉。','keep + 宾语 + from doing 表示阻止某种行为发生。'],
+['check website reliability|核查网站可信度','bank transfer|银行转账','先整理核验方法，再看专家建议的付款方式。','advise people not to pay 使用 advise + 宾语 + not to do。'],
+['avoid being found|避免被发现','release warnings|发布警告','先说明为何难追查，再看官方提醒和个人防范的关系。','avoid 后接动名词，being found 同时表达被动。']
+],
+[
+['career setbacks|职业挫折','conflicting results|相互矛盾的结果','先提出争议，再分辨失败可能带来的正反影响。','whether 引导宾语从句，提出两种可能。'],
+['research funding|科研经费','professional titles|专业头衔','先看获得资助者的后续优势，再对比未获资助者。','who 引导定语从句，限定是哪一类研究者。'],
+['research grants|科研资助','narrow winners|险胜者','先说明新研究的样本，再比较两组人后来的成果。','Among those who… 先限定比较所涉及的人群。'],
+['fund distribution|经费分配','practical value|实际价值','先交代研究发现的应用意义，再理解更均衡的分配建议。','giving research funds… 是动名词短语，在 that 从句中作主语。'],
+['proof of poor ability|能力不足的证据','long-term career gains|长期职业收益','先说传统看法，再看小挫折可能怎样带来长期收益。','not always 表示部分否定，意为并非总是。']
+]];
+for(let i=0;i<studyNotes.length;i++){
+ const passage=root.READING_DATA.find(d=>d.id==='BF-MATCH-20261108-'+(i+1));
+ studyNotes[i].forEach(([first,second,order,grammar],index)=>{
+  const sentence=passage.sentences[index];
+  const phrases=[first,second].map(row=>{
+   const [expression,meaning]=row.split('|');
+   const [term,surface=term]=expression.split('~');
+   return {term,surface,meaning,usage:'可作为固定表达积累，结合上方原段理解。'};
+  });
+  root.READING_SENTENCE_DATA[passage.id+':'+index]={
+   phrases,chunks:[{role:'原段对照',en:sentence.text,zh:sentence.translation}],
+   order:[order],grammar:[{name:'本段重点结构',explanation:grammar}]
+  };
+ });
+}
+
 })(window);

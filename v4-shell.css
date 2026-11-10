@@ -38,3 +38,50 @@ body:not([data-v3-view="archive"]) #archiveSourceFilter { display: none; }
   .app-shell > .nav-tabs .v3-tools > summary:after { content: none; }
   .app-shell > .nav-tabs .v3-tools > summary .nav-tools-symbol { font-size: 17px; line-height: 1; }
 }
+
+#readingView .read-study-structures > details,
+#readingView .read-study-structures > .read-study-phrase-panel { flex-basis: 100%; }
+#readingView .read-study-extra { display: flex; flex-wrap: wrap; gap: .25rem 1rem; }
+#computerSpecialView .computer-paper { container-type: inline-size; }
+#computerSpecialView .computer-text { font-size: clamp(.96rem, 2.3cqi, 1.07rem); line-height: 1.85; }
+#computerSpecialView .cloze-paragraph { margin: 0 0 .85em; }
+#computerSpecialView .cloze-case,
+#computerSpecialView .computer-guide-heading { margin: 1.2rem 0 .65rem; }
+#computerSpecialView .computer-guide-heading { border-bottom: 1px solid var(--line); padding-bottom: .45rem; color: var(--accent); }
+#computerSpecialView .computer-numbered-item { margin: .75rem 0; }
+#computerSpecialView .computer-numbered-item h5 { margin: 0 0 .15rem; }
+#computerSpecialView .computer-numbered-item p { margin: 0; }
+#computerSpecialView .computer-blank-unit { display: inline-flex; align-items: baseline; gap: .05rem; max-width: 100%; vertical-align: baseline; }
+#computerSpecialView .computer-weak-toggle {
+  flex: none;
+  display: inline-grid;
+  place-items: center;
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--muted);
+  border-radius: .35rem;
+  padding: 0;
+  inline-size: 1.45rem;
+  min-block-size: 1.55rem;
+  font: 1rem/1 system-ui, sans-serif;
+}
+#computerSpecialView .computer-weak-toggle:is(:hover,:focus-visible) { border-color: var(--line); color: var(--accent); }
+#computerSpecialView .computer-weak-toggle.is-weak { color: var(--danger); background: var(--tint); }
+#computerSpecialView .computer-table-scroll { overflow-x: auto; max-width: 100%; margin: .85rem 0 1.15rem; }
+#computerSpecialView .computer-base-table { width: 100%; border-collapse: collapse; font-size: .88em; line-height: 1.55; font-variant-numeric: tabular-nums; }
+#computerSpecialView .computer-base-table caption { text-align: left; font-weight: 700; padding: 0 0 .55rem; color: var(--accent); }
+#computerSpecialView .computer-base-table th,
+#computerSpecialView .computer-base-table td { border: 1px solid var(--line); padding: .45rem .65rem; text-align: left; }
+#computerSpecialView .computer-base-table th { background: var(--tint); white-space: nowrap; }
+#computerSpecialView .computer-base-table tbody tr:nth-child(even) td { background: color-mix(in srgb, var(--tint) 35%, var(--paper)); }
+#computerSpecialView .computer-base-table .computer-blank-unit { white-space: nowrap; }
+#computerSpecialView .computer-base-table .blank-value { min-width: 2ch; }
+#computerSpecialView .computer-base-table .computer-blank:not(.is-revealed) .blank-value { min-width: 4ch; }
+@media (max-width: 500px) {
+  #computerSpecialView .computer-paper { padding-inline: .8rem; }
+  #computerSpecialView .computer-base-table th,
+  #computerSpecialView .computer-base-table td { padding: .4rem .5rem; }
+}
+
+#computerSpecialView .computer-guide-point { color: var(--accent); font-size: .96em; margin: 1rem 0 .3rem; }
+#computerSpecialView .computer-guide-bullet { margin: .2rem 0; }
