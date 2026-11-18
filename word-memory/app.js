@@ -1329,7 +1329,6 @@ function switchPracticeMode(mode) {
     return;
   }
   savePracticeSession();
-  state.linkedSpelling = false;
   state.practiceMode = mode;
   restorePracticeSession(mode, state.mode);
   state.answerVisible = false;
@@ -5849,7 +5848,7 @@ function undoLastReview() {
 }
 
 function quickSessionQuestionMode(session = state.quickSession) {
-  const modes = Array.isArray(session?.questionModes) ? session.questionModes.filter((mode) => ["recall", "choice", "spelling"].includes(mode)) : [];
+  const modes = Array.isArray(session?.questionModes) ? session.questionModes.filter((mode) => ["recall", "choice"].includes(mode)) : [];
   return modes.length ? modes[Math.max(0, Number(session.completed) || 0) % modes.length] : "choice";
 }
 
@@ -5899,7 +5898,7 @@ function startQuickSession(config = {}) {
     type: normalizeText(config.type || "rapid"),
     label: normalizeText(config.label || "快速复习"),
     queueIds: ids,
-    questionModes: (Array.isArray(config.questionModes) ? config.questionModes : [config.mode || "choice"]).filter((mode) => ["recall", "choice", "spelling"].includes(mode)),
+    questionModes: (Array.isArray(config.questionModes) ? config.questionModes : [config.mode || "choice"]).filter((mode) => ["recall", "choice"].includes(mode)),
     startedAt: now.toISOString(),
     endsAt: durationSeconds ? new Date(now.getTime() + durationSeconds * 1000).toISOString() : "",
     completed: 0,
@@ -6041,7 +6040,7 @@ function trackMiniRecap(word, result, options = {}) {
     type: "mini-recap",
     label: "每10词小复盘",
     ids: words.map((item) => item.id),
-    questionModes: ["choice", "spelling", "choice"],
+    questionModes: ["choice", "recall"],
   }), 420);
 }
 
@@ -6149,9 +6148,6 @@ function getQueue() {
     return state.quickSession.queueIds.map((id) => state.words.find((word) => word.id === id)).filter(Boolean);
   }
   const scopedWords = practiceEligibleWords(state.words.filter(wordMatchesActiveGroup)).filter((word) => !isRecentReviewCooldown(word));
-  if (state.practiceMode === "spell" && state.linkedSpelling) {
-    return window.WordMemoryLearningPolicy.spellingCandidates(scopedWords, nowDate().getTime());
-  }
   if (state.sprint.active) {
     return sprintQueue(scopedWords);
   }
@@ -8418,16 +8414,6 @@ function renderPlainListCard() {
     </div>`;
 }
 
-function renderLinkedSpellingControls() {
-  if (state.quickSession.active || state.sprint.active) return "";
-  if (state.practiceMode === "spell" && state.linkedSpelling) {
-    return '<p class="learning-coach">补拼已学词：只测已学且到期 / 未测的拼写。看过答案不算独立记住。 <button type="button" class="secondary-button" data-card-action="return-card">返回卡片</button></p>';
-  }
-  if (state.practiceMode !== "card") return "";
-  const count = window.WordMemoryLearningPolicy.spellingCandidates(state.words.filter(wordMatchesActiveGroup), nowDate().getTime()).length;
-  return `<p class="learning-coach">先回想词义 → 显示答案核对 → 按真实情况评分。刚看过的词至少隔5分钟再补拼。 <button type="button" class="secondary-button" data-card-action="linked-spelling">补拼已学词（${count}）</button></p>`;
-}
-
 function renderActiveCard() {
   const word = activeWord();
   renderTodaySceneMemory(word);
@@ -8440,7 +8426,6 @@ function renderActiveCard() {
         <div>
           <h3>${message}</h3>
           <p>${detail}</p>
-          ${renderLinkedSpellingControls()}
           <button class="primary-button" data-card-action="new-mode">新词记忆</button>
         </div>
       </div>`;
@@ -8486,7 +8471,6 @@ function renderActiveCard() {
   const spellingBox = state.practiceMode === "forms" ? renderVerbFormsBox(word) : renderSpellingBox(word);
   const undoDisabled = state.reviewUndo ? "" : "disabled";
   const quickActions = `
-    ${renderLinkedSpellingControls()}
     <div class="quick-review-actions action-grid-v59 action-grid-v61">
       <button class="primary-button" data-card-action="remember" type="button">${state.practiceMode === "card" ? (state.answerVisible ? "回想正确，下一词" : "回想好了，核对词义") : (state.practiceMode === "spell" ? (state.spellingResult ? (state.spellingHadError || state.spellingHintUsed ? "看过答案，稍后再测" : "确认并继续") : "检查拼写") : (progress.stage < 0 ? "记完" : "会了"))}</button>
       <button class="secondary-button" data-card-action="fuzzy" type="button">模糊</button>
@@ -8516,6 +8500,7 @@ function renderActiveCard() {
           ${contextCard}
           ${cet4CoreFamilyContext}
           ${quickActions}
+    <button class="secondary-button" data-card-action="remove-word" type="button">移除这个词</button>
     <div id="pronunciationStatus" class="pronunciation-status"><span data-pronunciation-message role="status" aria-live="polite"></span><button type="button" class="secondary-button" data-pronunciation-retry data-card-action="speak-system-us" hidden>重试系统语音</button></div>
           ${spellingBox}
           ${choiceBox}
@@ -8858,22 +8843,12 @@ function rememberSpellingHint(word) {
 
 function handleCardAction(action) {
   if (window.TranslationSpelling?.isOpen()) return false;
-  if (action === "linked-spelling") {
-    if (!guardEditable()) return;
-    switchPracticeMode("spell");
-    state.linkedSpelling = true;
-    setStudyMode("due");
-    resetTypingState();
-    render();
-    focusTypingInputSoon();
-    return;
-  }
-  if (action === "return-card") {
-    switchPracticeMode("card");
-    return;
-  }
   if (action === "new-mode") {
     setMode("new");
+    return;
+  }
+  if (action === "remove-word") {
+    void removeCardWord();
     return;
   }
   if (action === "undo-review") {
@@ -9147,7 +9122,6 @@ function handleCardAction(action) {
 }
 
 function setMode(mode) {
-  state.linkedSpelling = false;
   setStudyMode(mode);
   state.answerVisible = false;
   resetTypingState();
@@ -9162,6 +9136,7 @@ function startSprint() {
     return;
   }
   const now = nowDate();
+  if (["spell", "dictation", "forms", "spellingWeak", "dictationWeak"].includes(state.practiceMode)) switchPracticeMode("card");
   state.sprint = {
     active: true,
     startedAt: now.toISOString(),
@@ -9343,7 +9318,7 @@ async function importWords(event) {
       setBrowsePracticeSnapshot(parsed.browsePractice || {}, { merge: false, save: false, notify: true });
     }
 
-    const records = incoming.map(normalizeWord).filter((word) => word.term);
+    const records = incoming.map(word=>typeof validExerciseIncoming==="function"?validExerciseIncoming(word):word).filter(Boolean).map(normalizeWord).filter((word) => word.term);
     const byId = new Map(state.words.map((word) => [normalizeText(word.id), word]));
     const byTerm = new Map();
     const byDictation = new Map();
@@ -9841,7 +9816,10 @@ function wireEvents() {
   els.batchLearnButton.addEventListener("click", batchLearnNewWords);
   els.sprintButton.addEventListener("click", startSprint);
   els.weakOnlyButton?.addEventListener("click", () => setMode("weak"));
-  els.focusDueButton.addEventListener("click", () => setMode("due"));
+  els.focusDueButton.addEventListener("click", () => {
+    switchPracticeMode("card");
+    setMode("due");
+  });
   els.dueModeButton.addEventListener("click", () => setMode("due"));
   els.newModeButton.addEventListener("click", () => setMode("new"));
   els.allModeButton.addEventListener("click", () => setMode("all"));

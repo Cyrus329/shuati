@@ -14,6 +14,32 @@
   for(const id of new Set([...Object.keys(a.edits),...Object.keys(b.edits)])){const x=a.edits[id]||{},y=b.edits[id]||{};out.edits[id]=String(x.modifiedAt||'')>String(y.modifiedAt||'')?{...y,...x}:{...x,...y};}
   return out;
  }
+ function preserveExamRecords(previous,snapshot){
+  if(!previous||Number(previous._resetEpoch||0)!==Number(snapshot._resetEpoch||0))return snapshot;
+  const known=new Set(snapshot.custom.map(q=>q.id));
+  for(const q of previous.custom||[]){
+   if(!q?.id?.startsWith('MATH-EXAM-'))continue;
+   if(!known.has(q.id)){snapshot.custom.push(q);known.add(q.id);}
+   const current=snapshot.attempts[q.id]||[];
+   const events=new Map(current.map(e=>[e.eventId,e]));
+   for(const event of previous.attempts?.[q.id]||[]){
+    const existing=events.get(event.eventId);
+    if(!existing||Number(event.examStamp||0)>Number(existing.examStamp||0))events.set(event.eventId,event);
+   }
+   snapshot.attempts[q.id]=[...events.values()].sort((a,b)=>String(a.at).localeCompare(String(b.at)));
+   const previousEdit=previous.edits?.[q.id],currentEdit=snapshot.edits[q.id];
+   if(previousEdit&&String(previousEdit.modifiedAt||'')>String(currentEdit?.modifiedAt||''))snapshot.edits[q.id]=previousEdit;
+  }
+  return snapshot;
+ }
+ function mergeForWrite(previous,snapshot,examOnly){
+  if(!examOnly||!previous)return preserveExamRecords(previous,snapshot);
+  const current=normalize(previous);
+  if(Number(current._resetEpoch||0)!==Number(snapshot._resetEpoch||0))return current;
+  const merged=preserveExamRecords(snapshot,current);
+  merged._storageUpdatedAt=snapshot._storageUpdatedAt;
+  return merged;
+ }
  function create({key='cqzsb-personal-journal-v1',onStatus=()=>{},indexedDB:providedIDB,localStorage:providedLocal}={}){
   let db=null,mode='loading',lastError='',pending=0,dirty=false,tail=Promise.resolve(),recovery=[],lastSavedAt='',local,hasStoredRecord=false;
   let idb=providedIDB;try{if(idb===undefined)idb=globalThis.indexedDB;}catch(e){lastError=e.name;}
@@ -27,9 +53,18 @@
    req.onupgradeneeded=()=>{if(!req.result.objectStoreNames.contains('journal'))req.result.createObjectStore('journal');};
    req.onsuccess=()=>finish(null,req.result);req.onerror=()=>finish(req.error||new Error('IndexedDBOpenFailed'));req.onblocked=()=>finish(new Error('IndexedDBBlocked'));
   });}
-  function transaction(write,value){return new Promise((resolve,reject)=>{
-   let tx,req,result;try{tx=db.transaction('journal',write?'readwrite':'readonly');const store=tx.objectStore('journal');req=write?store.put(value,key):store.get(key);}catch(e){reject(e);return;}
-   req.onsuccess=()=>{result=req.result;};tx.oncomplete=()=>resolve(result);tx.onerror=()=>reject(tx.error||req.error||new Error('IndexedDBTransactionFailed'));tx.onabort=()=>reject(tx.error||new Error('IndexedDBAborted'));
+  function transaction(write,value,replace=false,examOnly=false){return new Promise((resolve,reject)=>{
+   let tx,req,result;try{
+    tx=db.transaction('journal',write?'readwrite':'readonly');
+    const store=tx.objectStore('journal');
+    if(write&&!replace){
+     req=store.get(key);
+     req.onsuccess=()=>store.put(mergeForWrite(req.result,value,examOnly),key);
+    }else{
+     req=write?store.put(value,key):store.get(key);
+     req.onsuccess=()=>{result=req.result;};
+    }
+   }catch(e){reject(e);return;}tx.oncomplete=()=>resolve(result);tx.onerror=()=>reject(tx.error||req.error||new Error('IndexedDBTransactionFailed'));tx.onabort=()=>reject(tx.error||new Error('IndexedDBAborted'));
   });}
   function decode(raw,label){if(!raw)return null;try{const value=typeof raw==='string'?JSON.parse(raw):raw;if(!object(value))throw new Error('InvalidState');return normalize(value);}catch(e){recovery.push({source:label,raw});lastError='UnreadablePreviousState';return null;}}
   async function load(){
@@ -45,14 +80,14 @@
    status(recovery.length?'检测到无法读取的旧存储，原内容已保留；请导出备份以便恢复。':mode==='memory'?'浏览器未开放持久存储，当前记录仅在本页；请导出备份。':'');
    return state;
   }
-  function save(state,{replace=false}={}){
+  function save(state,{replace=false,examOnly=false}={}){
    if(replace)recovery=[];
    let snapshot;try{snapshot=clone(normalize(state));snapshot._storageUpdatedAt=Date.now();if(recovery.length)snapshot._storageRecovery=clone(recovery);}catch(e){dirty=true;lastError=e.name;status('记录暂未写入，请立即导出备份。');return Promise.resolve(false);}
    pending++;dirty=true;status('正在保存学习记录…');
    const task=tail.then(async()=>{
     let okay=false;
-    if(db){try{await transaction(true,snapshot);mode='indexedDB';okay=true;}catch(e){lastError=e.name||e.message;}}
-    if((!okay||replace)&&local){try{local.setItem(key,JSON.stringify(snapshot));if(!okay)mode='localStorage';okay=true;}catch(e){lastError=e.name||e.message;}}
+    if(db){try{await transaction(true,snapshot,replace,examOnly);mode='indexedDB';okay=true;}catch(e){lastError=e.name||e.message;}}
+    if((!okay||replace)&&local){try{local.setItem(key,JSON.stringify(replace?snapshot:mergeForWrite(decode(local.getItem(key),'localStorage'),snapshot,examOnly)));if(!okay)mode='localStorage';okay=true;}catch(e){lastError=e.name||e.message;}}
     pending--;if(okay){hasStoredRecord=true;lastSavedAt=new Date().toISOString();dirty=pending>0;status(recovery.length?'旧存储有无法解析内容，请保留导出备份。':'');}
     else{mode='memory';dirty=true;status('未能保存到浏览器。新记录仍在当前页面，请立即导出备份，暂勿刷新或关闭。');}
     return okay;

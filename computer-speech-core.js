@@ -1,5 +1,29 @@
 'use strict';
-(()=>{function chunks(value){let text=String(value||''),out=[];while(text.length){let end=Math.min(140,text.length);if(end<text.length){const cut=Math.max(text.lastIndexOf('。',end-1),text.lastIndexOf('；',end-1),text.lastIndexOf('\n',end-1));if(cut>=40)end=cut+1;}out.push(text.slice(0,end));text=text.slice(end);}return out.filter(x=>x.trim());}
+(()=>{function chunks(value){
+ let text=String(value||''),out=[];
+ while(text.length){
+  let end=Math.min(140,text.length);
+  if(end<text.length){
+   const pauseAfter=pattern=>{
+    const matches=[...text.slice(0,end).matchAll(pattern)];
+    return matches.length ? matches.at(-1).index+matches.at(-1)[0].length : 0;
+   };
+   const sentence=pauseAfter(/[。！？；!?;\n]+[”’」』）)]*/g);
+   const clause=pauseAfter(/[，、：,:]+|\s+/g);
+   if(sentence>=45)end=sentence;
+   else if(clause>=45)end=clause;
+   else{
+    // Keep a short English term, acronym or number intact at a cut.
+    const token=text.slice(0,end).match(/[A-Za-z0-9]+$/)?.[0];
+    if(token && /[A-Za-z0-9]/.test(text[end]) && end-token.length>=45)end-=token.length;
+    if(/[\uD800-\uDBFF]/.test(text[end-1]))end--;
+   }
+  }
+  out.push(text.slice(0,end));
+  text=text.slice(end);
+ }
+ return out.filter(x=>x.trim());
+}
 function sequence(q,revealed=false){const out=[{kind:'stem',text:'题目。'+String(q.stem||'')}];for(const [key,text]of Object.entries(q.options||{}))out.push({kind:'option',text:'选项'+key+'。'+text});if(revealed){const answer=q.verifiedAnswer||q.sourceAnswer;if(answer)out.push({kind:'answer',text:'参考答案。'+answer});if(q.analysis)out.push({kind:'analysis',text:'解析。'+q.analysis});if(q.questionNote)out.push({kind:'analysis',text:'核查说明。'+q.questionNote});}return out;}
 function voiceKey(v){return String(v.voiceURI||v.name||'');}
 function isNatural(v){return /natural|neural|自然/i.test(v?.name||'');}

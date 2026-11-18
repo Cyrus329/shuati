@@ -11,3 +11,12 @@
 
 .cspeech-voice select{max-width:230px;min-width:165px;font-size:12px}.computer-speech .cspeech-voice-note{font-size:11px;color:var(--muted);line-height:1.7;margin:9px 0 0}.cspeech-buttons [data-cspeech-preview],.cspeech-buttons [data-cspeech-refresh]{font-size:12px;white-space:nowrap}@media(max-width:700px){.cspeech-voice{flex-basis:100%}.cspeech-voice select{max-width:calc(100% - 40px);min-width:0;flex:1}.computer-speech .cspeech-voice-note{font-size:10px}.cspeech-buttons [data-cspeech-preview],.cspeech-buttons [data-cspeech-refresh]{font-size:11px}}
 .computer-blank-unit{display:inline-flex;align-items:baseline;max-width:100%;vertical-align:baseline;gap:2px}.computer-weak-toggle{font:500 10px/1.5 var(--computer-reading-font);padding:1px 5px;border:1px solid var(--line);border-radius:10px;background:transparent;color:var(--muted);white-space:nowrap;cursor:pointer}.computer-weak-toggle.is-weak{border-color:var(--accent);color:var(--accent);background:var(--tint)}.computer-weak-toggle:focus-visible{outline:2px solid var(--accent);outline-offset:2px}.computer-weak-filter{display:flex;align-items:center;gap:5px;font:12px/1.5 var(--computer-reading-font);cursor:pointer}.computer-weak-filter input{width:15px;height:15px;margin:0}.computer-chapter-group{display:flex;align-items:center;gap:10px;flex-wrap:wrap}.computer-chapter-weak{font-size:12px;white-space:nowrap}.computer-chapter-weak:disabled{color:var(--muted);opacity:.6;cursor:default}.computer-filter-note,.computer-weak-empty{font-size:13px;color:var(--muted);line-height:1.8}.computer-weak-empty{padding:24px 16px;background:var(--soft);border-radius:10px}.computer-text sup{font-size:.72em;line-height:0;vertical-align:super}.computer-cloze-toolbar>div:last-child{flex-wrap:wrap}.computer-section>small{white-space:nowrap}@media(max-width:500px){.computer-weak-toggle{font-size:9px;padding:1px 4px}.computer-chapter-group{width:100%;gap:8px}.computer-chapters .computer-chapter-group .btn{flex:1}.computer-cloze-toolbar .computer-weak-filter{width:100%;margin-bottom:3px}.computer-blank-unit{gap:1px}.computer-section{min-width:155px}}
+
+.computer-inline-figure {
+  margin: 1rem 0; padding: .85rem;
+  border: 1px solid #bfcbb8; border-radius: .65rem;
+  background: #fff;
+}
+.computer-inline-figure img { display: block; max-width: 100%; max-height: 36rem; margin: auto; object-fit: contain; }
+.computer-inline-figure figcaption { margin-top: .55rem; text-align: center; color: #475746; font-size: .9em; }
+.computer-inline-answer { margin: .6rem 0; }

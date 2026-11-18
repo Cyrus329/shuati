@@ -28,6 +28,26 @@
  'can be avoided':'能够被避免；can + be + 过去分词构成含情态动词的被动语态',
  'contact with':'与……的接触；与……的联系'
 };
+const irregularForms = {
+ children:'child',women:'woman',men:'man',teeth:'tooth',feet:'foot',mice:'mouse',
+ books:'book',cities:'city',students:'student',teachers:'teacher',tourists:'tourist',
+ libraries:'library',countries:'country',classes:'class',boxes:'box',families:'family',
+ studied:'study',studying:'study',studies:'study',
+ geese:'goose',knives:'knife',leaves:'leaf',wives:'wife',lives:'life',wolves:'wolf',
+ went:'go',gone:'go',ran:'run',running:'run',written:'write',wrote:'write',took:'take',taken:'take',
+ bought:'buy',brought:'bring',caught:'catch',thought:'think',taught:'teach',studied:'study',
+ made:'make',gave:'give',given:'give',said:'say',seen:'see',ate:'eat',eaten:'eat',
+ did:'do',done:'do',does:'do',was:'be',were:'be',been:'be',being:'be',has:'have',had:'have',
+ 'e-books':'e-book','role-models':'role-model'
+};
+const fixedForms = new Set('news physics economics mathematics politics means series species glasses clothes thanks headquarters crossroads scissors trousers shorts pants earnings savings goods works saw found better best left rose lay read building meeting interesting boring tired used people lives leaves thought made said given being running writing reading training opening closing working parking shopping learning cooking swimming painting drawing meaning'.split(' '));
+function baseForm(value) {
+ const term = String(value || '').normalize('NFKC').toLowerCase().replace(/[’‘]/g,"'").trim();
+ if (!/^[a-z]+(?:-[a-z]+)*$/.test(term) || fixedForms.has(term)) return term;
+ if (Object.hasOwn(irregularForms,term)) return irregularForms[term];
+ const listed = D.forms[term];
+ return listed && !Object.hasOwn(D.words,term) && Object.hasOwn(D.words,listed) ? listed : term;
+}
 function dictionaryMeaning(key){return D.words[key]||(D.forms[key]?D.words[D.forms[key]]:'')||'';}
 function lookup(value){
  const key=String(value||'').normalize('NFKC').toLowerCase().replace(/[’‘`]/g,"'").replace(/‿/g,' ').replace(/[‐‑‒–−﹘﹣－]/g,'-').replace(/\s+/g,' ').trim();
@@ -42,4 +62,4 @@ function lookup(value){
  const possessive=key.endsWith("'s")?key.slice(0,-2):key.endsWith("s'")?key.slice(0,-1):'';
  const base=possessive&&dictionaryMeaning(possessive);return base?base+'（原句带所有格）':'';
 }
-function contextual(value,context={}){const k=String(value||'').toLowerCase().replace(/[‐‑‒–−﹘﹣－]/g,'-').trim(),sentence=String(context.text||'').replace(/[‐‑‒–−﹘﹣－]/g,'-');if(k==='blue-sky'&&/blue-sky\s+days/i.test(sentence))return {meaning:lookup(k),sense:'蓝天的；晴朗的',construction:'blue-sky days：蓝天晴朗的日子',reason:'blue-sky 在这里作形容词修饰 days，描述天气；此处不取金融或不切实际的引申义。'};return null;}window.WordDictionary={lookup,contextual};})();
+function contextual(value,context={}){const k=String(value||'').toLowerCase().replace(/[‐‑‒–−﹘﹣－]/g,'-').trim(),sentence=String(context.text||'').replace(/[‐‑‒–−﹘﹣－]/g,'-');if(k==='blue-sky'&&/blue-sky\s+days/i.test(sentence))return {meaning:lookup(k),sense:'蓝天的；晴朗的',construction:'blue-sky days：蓝天晴朗的日子',reason:'blue-sky 在这里作形容词修饰 days，描述天气；此处不取金融或不切实际的引申义。'};return null;}window.WordDictionary={lookup,contextual,baseForm};})();

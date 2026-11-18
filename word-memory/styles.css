@@ -3047,7 +3047,7 @@ textarea:focus {
 
 /* v68：主练习区精简，专项训练单独折叠，默认卡片 */
 .main-practice-switch {
-  grid-template-columns: repeat(6, minmax(120px, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   margin-bottom: 14px;
 }
 .special-practice-panel {
@@ -3092,7 +3092,6 @@ textarea:focus {
   opacity: .76;
 }
 @media (max-width: 980px) {
-  .main-practice-switch { grid-template-columns: repeat(3, minmax(110px, 1fr)); }
   .special-practice-switch { grid-template-columns: repeat(2, minmax(120px, 1fr)); }
 }
 @media (max-width: 640px) {

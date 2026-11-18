@@ -1042,7 +1042,7 @@ const supplement={
     ],
     [
       "teenagers and the elderly",
-      "青少年和老年人",
+      "老年人",
       "the elderly"
     ],
     [

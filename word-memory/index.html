@@ -8,7 +8,7 @@
   <link rel="dns-prefetch" href="//ssl.gstatic.com">
   <link rel="preconnect" href="https://dict.youdao.com" crossorigin>
   <link rel="preconnect" href="https://ssl.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="./styles.css?v=70b211">
+  <link rel="stylesheet" href="./styles.css?v=20261114-recall">
   <link rel="stylesheet" href="./ui-refresh.css?v=70b145">
   <link rel="preload" as="audio" href="./assets/pronunciation-primer.wav?v=70b060fullstart20260820" type="audio/wav">
   <link rel="stylesheet" href="./mobile-polish.css?v=70b150">
@@ -59,7 +59,7 @@
       <nav class="module-switcher" aria-label="大模块切换">
         <button class="module-button active" type="button" data-module-target="folder"><span>📁</span><strong>英语资料夹</strong><small>当前资料：蓝色森林 · 1050 单词 / 140 短语</small></button>
         <button class="module-button" type="button" data-module-target="spelling"><span>✍️</span><strong>拼写训练</strong><small>看中文写英文 · 专练主动拼写</small></button>
-        <button class="module-button" type="button" data-module-target="study"><span>🧠</span><strong>记忆训练</strong><small>复习 / 新词 / 听写 / 拼写</small></button>
+        <button class="module-button" type="button" data-module-target="study"><span>🧠</span><strong>记忆训练</strong><small>复习 / 新词 / 词义回想</small></button>
         <button class="module-button" type="button" data-module-target="smart"><span>🔎</span><strong>构词归类</strong><small>词根 / 形近 / 同义</small></button>
         <button class="module-button" type="button" data-module-target="review"><span>⚡</span><strong>快速复习</strong><small>错词回炉 / 极速 / 冲刺</small></button>
         <button class="module-button" type="button" data-module-target="browse"><span>☷</span><strong>全词浏览</strong><small id="browseTotalHint">词库快速查阅</small></button>
@@ -266,12 +266,17 @@
 
           <div class="practice-switch main-practice-switch" aria-label="常用练习方式">
             <button class="practice-button active" data-practice-mode="card" type="button">卡片</button>
-            <button class="practice-button" data-practice-mode="zhToEn" type="button">中译英</button>
             <button class="practice-button" data-practice-mode="choiceZhToEn" type="button">中文选英文</button>
+          </div>
+          <details class="special-practice-panel" id="extraPracticeModes">
+            <summary>更多练习</summary>
+            <div class="practice-switch special-practice-switch" aria-label="更多练习方式">
+            <button class="practice-button" data-practice-mode="zhToEn" type="button">中译英</button>
             <button class="practice-button" data-practice-mode="spell" type="button">拼写</button>
             <button class="practice-button" data-practice-mode="dictation" type="button">听写</button>
             <button class="practice-button" data-practice-mode="forms" type="button">变形</button>
-          </div>
+            </div>
+          </details>
           <details class="special-practice-panel pos-practice-panel">
             <summary>语法辨析训练</summary>
             <div class="special-practice-note">五个模式独立记录进度。先练五大词性，再分别突破名词可数性、动词及物性、易混词形和句子语境。</div>
@@ -283,7 +288,7 @@
               <button class="practice-button pos-practice-start" data-practice-mode="posContext" type="button"><b>句子语境</b><small>判断标记词在句中的词性</small></button>
             </div>
           </details>
-          <p class="mode-progress-note">默认进入卡片。五类语法训练独立计算正确率和复习进度；答题后自动进入下一题。</p>
+          <p class="mode-progress-note">日常复习用卡片回想词义，或做中文选英文。</p>
 
           <div class="dictation-tools" aria-label="听写设置">
             <label class="compact-select">
@@ -469,7 +474,7 @@
               <small id="browseQuizLauncherStats">跟随主存档：尚未作答</small>
             </div>
             <button class="browse-quiz-launch" type="button" data-browse-quiz-start>
-              <span>▦</span><strong>全词独立练习</strong><small>错词回卡；中→英 + 拼写双关都过才算过</small>
+              <span>▦</span><strong>全词独立练习</strong><small>看词回想 · 英汉选择 · 错词回练</small>
             </button>
           </div>
         </div>
@@ -480,7 +485,7 @@
         </div>
         <div class="quick-browser-tools">
           <label class="search-box"><span>⌕</span><input id="quickBrowseSearch" type="search" placeholder="搜索英文、中文、分组、例句"></label>
-          <select id="quickBrowseSource" aria-label="来源筛选"><option value="all">全部来源</option><option value="蓝色森林">蓝色森林</option><option value="四级">四级</option><option value="四级核心">四级核心</option><option value="短语练习">短语练习</option><option value="Word List">Word List</option><option value="全方位">全方位</option><option value="听写内容">听写内容</option></select>
+          <select id="quickBrowseSource" aria-label="来源筛选"><option value="all">全部来源</option><option value="练习题生词">手动收藏的题目生词</option><option value="已做英语题 · 重点短语">已做英语题 · 重点短语</option><option value="蓝色森林">蓝色森林</option><option value="四级">四级</option><option value="四级核心">四级核心</option><option value="短语练习">短语练习</option><option value="Word List">Word List</option><option value="全方位">全方位</option><option value="听写内容">听写内容</option></select>
           <select id="quickBrowseStatus" aria-label="掌握筛选"><option value="all">全部状态</option><option value="new">新词</option><option value="learning">学习中</option><option value="mature">稳定</option><option value="weak">薄弱词</option><option value="important">重点词</option></select>
           <select id="quickBrowseSort" aria-label="排序"><option value="original" selected>我的原始顺序</option><option value="az">A-Z</option><option value="za">Z-A</option><option value="weak">薄弱优先</option><option value="recent">最近学习</option><option value="source">按来源</option></select>
           <select id="quickBrowseMask" aria-label="遮挡"><option value="show">英文中文都显示</option><option value="hideChinese">遮住中文</option><option value="hideEnglish">遮住英文</option></select>
@@ -506,7 +511,7 @@
       <section class="entry-grid module-section" data-module-section="manage">
         <div class="panel-heading" style="grid-column:1/-1">
           <div><p class="eyebrow">Emergency recovery</p><h2>设备存档修复</h2><p class="folder-hint">如果曾被旧版共享基线覆盖，可恢复本设备上一份完整快照。</p></div>
-          
+          <a hidden class="secondary-button" href="./restore-previous-progress.html">恢复覆盖前存档</a>
         </div>
         <section class="panel" style="padding:20px;margin-bottom:16px">
           <h2>恢复学习时长</h2>
@@ -834,7 +839,6 @@
       <strong id="browseQuizProgress">0/0</strong>
       <span id="browseQuizStats">已练0词</span>
     </div>
-    <section class="browse-quiz-milestone" id="browseQuizMilestone" aria-live="polite" hidden></section>
     <main class="browse-quiz-stage" id="browseQuizStage">
       <article class="browse-quiz-card" id="browseQuizCard">
         <p class="browse-quiz-instruction" id="browseQuizInstruction">请选择正确的中文释义</p>
@@ -858,7 +862,7 @@
         <button id="browseQuizFamiliar" type="button" aria-pressed="false"><span>熟</span><strong>熟词</strong></button>
       </div>
       <div class="browse-quiz-session-actions">
-        <button id="browseQuizWrongOnly" type="button">错词双关通关</button>
+        <button id="browseQuizWrongOnly" type="button">错词回练</button>
         <button id="browseQuizRestart" type="button">按当前筛选重新开始</button>
       </div>
       <div class="browse-quiz-nav-actions">
@@ -873,9 +877,10 @@
 <script src="./speed-review-merge.js?v=164"></script>
 <script src="./storage-codec.js?v=163"></script>
 <script src="./grammar-labels.js"></script>
-<script src="./startup.js?v=b226p220"></script>
+<script src="./startup.js?v=20261115-gloss"></script>
 <script src="./restore-b223.js?v=b226p220"></script>
 <script src="./timer-recovery.js?v=b226p220"></script>
-<script src="wordlink-core.js"></script><script src="wordlink-receiver.js"></script>
+<script src="wordlink-core.js"></script><script src="exercise-vocabulary-dedupe.js?v=4"></script><script src="wordlink-receiver.js?v=20261115-manual-group"></script>
+<script src="noun-pronoun-phrases.js?v=1"></script>
 </body>
 </html>

@@ -31,18 +31,18 @@
 // v70 B113 2026-08-27：刷新四级听力2词库/分组/排序资源缓存。
 // v70 B112 2026-08-27：刷新全量缺失音标补齐资源缓存。
 // v70 B109 2026-08-27：仅刷新词库资源缓存版本；训练逻辑不变。
-const CACHE_NAME = "word-memory-phrases220-b225-shell-pages-1772cfe4f1a11e282d47";
+const CACHE_NAME = "word-memory-phrases220-b225-shell-20261114-recall";
 const SCENE_ASSETS_101_180 = [];
 const SCENE_ASSETS_181_260 = [];
 const SCENE_ASSETS_261_280 = [];
 const APP_ASSETS = [
   "./sense-learning.js?v=b226p220",
-  "./guided-learning.js?v=b226p220", "./guided-learning.css?v=b226p220",
+  "./guided-learning.js?v=20261114-recall", "./guided-learning.css?v=b226p220",
   "./phonetic-local-data.js?v=70b162",
   "./pronunciation-support.js?v=70b162",
   "./speed-review-merge.js?v=164",
   "./storage-codec.js?v=163",
-  "./styles.css?v=70b211",
+  "./styles.css?v=20261114-recall",
   "./learning-policy.js?v=b226p220",
   "./spelling-answers.js?v=b226p220",
   "./timer-recovery.js?v=b226p220",
@@ -51,7 +51,7 @@ const APP_ASSETS = [
   "./restore-previous-progress.html?v=70b183",
   "./phonetic-local-data.js",
   "./pronunciation-support.js",
-  "./startup.js?v=b226p220",
+  "./startup.js?v=20261114-recall",
   "./spelling-hub.js?v=70b226p220",
   "./spelling-hub.css?v=70b210",
   "./reset-local.js?v=70b151",
@@ -68,15 +68,15 @@ const APP_ASSETS = [
   "./context-id-data.js?v=70b056statsvocab20260820",
   "./context-presenter.js?v=70b038vocabimport20260809",
   "./context-study-engine.js?v=70b038vocabimport20260809",
-  "./mobile-focus.js?b226p220",
+  "./mobile-focus.js?v=20261114-recall",
   "./image-memory.js?v=70b071images280checkpoint20260821",
   "./assets/pronunciation-primer.wav?v=70b060fullstart20260820",
-  "./app.js?b226p220",
+  "./app.js?v=20261114-recall",
   "./peppa-content-b127.js?v=70b127peppatesting20260830",
   "./peppa-zone.js?v=70b151",
-  "./memory-lab.js?v=70b182",
+  "./memory-lab.js?v=20261114-recall",
   "./speed-review.js?v=70b183",
-  "./browse-quiz.js?v=70b151",
+  "./browse-quiz.js?v=20261114-recall",
   "./folder-view.js?v=70b143",
   "./ui-refresh.css?v=70b145",
   "./ui-refresh.js?v=70b144",

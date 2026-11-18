@@ -40,7 +40,6 @@
     stage: byId('browseQuizStage'),
     close: byId('browseQuizClose'),
     progress: byId('browseQuizProgress'),
-    milestone: byId('browseQuizMilestone'),
     scope: byId('browseQuizScope'),
     saveNote: byId('browseQuizSaveNote'),
     instruction: byId('browseQuizInstruction'),
@@ -663,7 +662,7 @@
   }
 
   function runtimeMode() {
-    return gateActive() ? (store.gateSession.stage === 'spelling' ? 'spelling' : 'zhToEn') : exerciseMode();
+    return gateActive() ? 'zhToEn' : exerciseMode();
   }
 
   function sessionFor(mode = exerciseMode()) {
@@ -758,19 +757,41 @@
     if (!store.recoveryQueue.includes(key)) store.recoveryQueue.push(key);
   }
 
-  function markGatePass(id, mode) {
+  function completeRecovery(id) {
     const key = String(id);
     const gate = gateRecordFor(key);
-    gate.pending = true;
-    if (mode === 'zhToEn') gate.zhToEn = true;
-    if (mode === 'spelling') gate.spelling = true;
-    if (gate.zhToEn && gate.spelling) {
-      gate.pending = false;
-      gate.completedAt = new Date().toISOString();
-      store.recoveryQueue = (store.recoveryQueue || []).filter((item) => String(item) !== key);
-    }
+    gate.zhToEn = true;
+    gate.pending = false;
+    gate.completedAt = new Date().toISOString();
+    store.recoveryQueue = (store.recoveryQueue || []).filter((item) => String(item) !== key);
     store.gateByWord[key] = gate;
     return gate;
+  }
+
+  function resumeRecognition() {
+    if (!gateActive()) {
+      if (exerciseMode() === 'spelling') store.currentMode = 'enToZh';
+      return;
+    }
+    const session = store.gateSession;
+    if (session.completed) return;
+    let changed = false;
+    if (session.stage === 'spelling') {
+      const id = session.ids[session.cursor];
+      if (id && gateRecordFor(id).zhToEn) completeRecovery(id);
+      session.stage = 'zhToEn';
+      changed = true;
+    }
+    while (session.cursor < session.ids.length && !gateRecordFor(session.ids[session.cursor]).pending) {
+      if (session.cursor === session.ids.length - 1) {
+        session.completed = true;
+        changed = true;
+        break;
+      }
+      session.cursor++;
+      changed = true;
+    }
+    if (changed) saveStore();
   }
 
   function resetMainProgress(word, reason) {
@@ -809,55 +830,6 @@
     return { correct, wrong, answeredWords };
   }
 
-  function wordListNumber(name) {
-    const match = String(name || '').match(/^Word List\s*(\d+)$/i);
-    return match ? Number(match[1]) : Number.POSITIVE_INFINITY;
-  }
-
-  function wordListGroupsFor(word) {
-    return (api.wordGroupNames?.(word) || []).map((name) => String(name || '').trim()).filter((name) => /^Word List\s*\d+$/i.test(name));
-  }
-
-  function groupMilestones() {
-    const groups = new Map();
-    for (const word of api.getWords?.() || []) {
-      for (const name of wordListGroupsFor(word)) {
-        if (!groups.has(name)) groups.set(name, []);
-        groups.get(name).push(word);
-      }
-    }
-    return [...groups.entries()].sort((a, b) => wordListNumber(a[0]) - wordListNumber(b[0])).map(([name, words]) => {
-      const uniqueWords = [...new Map(words.map((word) => [String(word.id), word])).values()];
-      const recognized = uniqueWords.filter((word) => {
-        const sourceStore = stores[kindOfWord(word)];
-        const record = sourceStore?.records?.[String(word.id)];
-        return sanitizeModeRecord(record?.modes?.enToZh).correct > 0 || sanitizeModeRecord(record?.modes?.zhToEn).correct > 0;
-      }).length;
-      const spelled = uniqueWords.filter((word) => sanitizeModeRecord(stores[kindOfWord(word)]?.records?.[String(word.id)]?.modes?.spelling).correct > 0).length;
-      return { name, words: uniqueWords, total: uniqueWords.length, recognized, spelled };
-    });
-  }
-
-  function pendingSpellingMilestone() {
-    return groupMilestones().find((item) => item.total > 0 && item.recognized === item.total && item.spelled < item.total) || null;
-  }
-
-  function renderMilestone() {
-    if (!els.milestone) return;
-    const item = pendingSpellingMilestone();
-    els.milestone.hidden = !item;
-    if (!item) { els.milestone.innerHTML = ''; return; }
-    els.milestone.innerHTML = `<div><section><strong>🎯 ${escapeHTML(item.name)} 的单词＋短语识义已完成</strong><p>识义 ${item.recognized}/${item.total}。请退出全词独立练习，回到“主要记单词”的拼写模式继续。</p></section><button type="button" data-browse-milestone-spelling="${escapeHTML(item.name)}">去主要记单词拼写 →</button></div>`;
-  }
-
-  function startMilestoneSpelling(groupName) {
-    close();
-    if (api.openMainSpelling?.(groupName)) return;
-    try { history.replaceState(null, '', '#study'); } catch { location.hash = 'study'; }
-    document.querySelector('[data-module-target="study"]')?.click?.();
-    document.querySelector('[data-practice-mode="spell"]')?.click?.();
-  }
-
   function pendingCountForStore(sourceStore) {
     return Object.values(sourceStore?.gateByWord || {}).filter((gate) => sanitizeGateRecord(gate).pending).length;
   }
@@ -874,7 +846,7 @@
     const phrasePracticed = practicedCountForStore(stores.phrase);
     const pending = pendingCountForStore(stores.word) + pendingCountForStore(stores.phrase);
     const hasAny = wordPracticed + phrasePracticed + pending > 0;
-    const pendingText = pending ? ` · 待双关${pending}` : '';
+    const pendingText = pending ? ` · 待回练${pending}` : '';
     const text = hasAny
       ? `跟随主存档：单词${wordPracticed} · 短语${phrasePracticed}${pendingText}`
       : '跟随主存档：单词 / 短语均尚未练习';
@@ -909,7 +881,7 @@
       button.classList.toggle('active', active);
       button.setAttribute('aria-pressed', String(active));
       button.disabled = false;
-      button.innerHTML = `<strong>${KIND_LABELS[kind]}</strong><small>${total}${kind === 'phrase' ? '条' : '词'} · 已练${practiced}${pending ? ` · 待双关${pending}` : ''}</small>`;
+      button.innerHTML = `<strong>${KIND_LABELS[kind]}</strong><small>${total}${kind === 'phrase' ? '条' : '词'} · 已练${practiced}${pending ? ` · 待回练${pending}` : ''}</small>`;
     });
   }
 
@@ -941,7 +913,7 @@
       button.classList.toggle('active', active);
       button.setAttribute('aria-pressed', String(active));
       button.disabled = linked;
-      const suffix = linked && active ? ' · 双关' : '';
+      const suffix = linked && active ? ' · 错词回练' : '';
       button.innerHTML = `<span>${MODE_LABELS[buttonMode]}${suffix}</span><small>${current}/${total || requestedIds.length || 0}</small>`;
     });
   }
@@ -998,31 +970,28 @@
     const distinctPracticed = practicedCountForStore(store);
     const session = currentSession();
     renderModeButtons();
-    renderMilestone();
     if (els.overlay) els.overlay.dataset.exerciseMode = mode;
     if (els.card) els.card.dataset.exerciseMode = mode;
 
     if (els.scope) {
       if (linked) {
-        const gate = word ? gateRecordFor(word.id) : emptyGateRecord();
-        const gateState = word ? ` · 中英${gate.zhToEn ? '✓' : '○'} · 拼写${gate.spelling ? '✓' : '○'}` : '';
-        els.scope.textContent = `错词回卡 · 双关通关${gateState}`;
+        els.scope.textContent = '错词回练 · 看中文选英文';
       } else {
         els.scope.textContent = `${KIND_LABELS[activeKind]} · ${session.mode === 'wrong' ? '浏览错词重做' : session.label} · ${MODE_LABELS[mode]}`;
       }
     }
     if (els.saveNote) {
       els.saveNote.textContent = linked
-        ? '双关通关：错词回到卡片后，必须“看中文选英文”和“看中文拼英文”两关都通过才算真正过关。拼写错误不会重置主复习阶段。'
-        : `${KIND_LABELS[activeKind]}和短语/单词另一分区都跟随主存档、JSON备份、手机大容量存档和云同步；三种练习各有题序和进度，同一词跨三种模式只计一次“已练”。除拼写外可开启自动英音；任何模式答错都会进入当前区域的“待双关”回卡池。`;
+        ? '看中文选出英文，答对后继续下一词。'
+        : `${KIND_LABELS[activeKind]}和短语/单词另一分区都跟随主存档、JSON备份、手机大容量存档和云同步；三种练习各有题序和进度，同一词跨三种模式只计一次“已练”。除拼写外可开启自动英音；任何模式答错都会进入当前区域的“待回练”回卡池。`;
     }
     const pendingCount = pendingGateIds().length;
-    if (els.stats) els.stats.textContent = `已练${distinctPracticed}词（跨三模式去重） · 本模式对${summary.correct}次 · 错${summary.wrong}次 · 待双关${pendingCount}词 · 收藏${store.favorites.length}词`;
-    if (els.wrongOnly) els.wrongOnly.textContent = `错词双关通关${pendingCount ? `（${pendingCount}）` : ''}`;
+    if (els.stats) els.stats.textContent = `已练${distinctPracticed}词（跨三模式去重） · 本模式对${summary.correct}次 · 错${summary.wrong}次 · 待回练${pendingCount}词 · 收藏${store.favorites.length}词`;
+    if (els.wrongOnly) els.wrongOnly.textContent = `错词回练${pendingCount ? `（${pendingCount}）` : ''}`;
 
     if (!word || !ids.length) {
       if (linked && session.completed) {
-        renderEmpty('本轮待回卡已经全部完成：每个词都通过了“看中文选英文 + 拼写”两关。');
+        renderEmpty('本轮错词已完成回练。');
         if (els.progress) els.progress.textContent = `${ids.length}/${ids.length}`;
       } else {
         renderEmpty();
@@ -1042,7 +1011,7 @@
       if (optionsRevealed) renderOptions(word, meaningChoices(word));
       else renderRecallFirst(word, mode);
     } else if (mode === 'zhToEn') {
-      const gateHint = linked ? ' · 双关第1关' : '';
+      const gateHint = linked ? ' · 错词回练' : '';
       if (els.instruction) els.instruction.textContent = optionsRevealed ? `请选择正确的英文 · 必须选对才能过${gateHint}` : `先回想英文，再显示四个选项${gateHint}`;
       if (els.term) els.term.textContent = meaningOf(word);
       if (els.phonetic) els.phonetic.textContent = answerState?.solved ? phoneticOf(word) : '';
@@ -1050,7 +1019,7 @@
       if (optionsRevealed) renderOptions(word, termChoices(word));
       else renderRecallFirst(word, mode);
     } else {
-      if (els.instruction) els.instruction.textContent = linked ? '双关第2关：看中文，必须拼写正确才能真正过关' : '看中文，拼写正确的英文';
+      if (els.instruction) els.instruction.textContent = '看中文，拼写正确的英文';
       if (els.term) els.term.textContent = meaningOf(word);
       if (els.phonetic) els.phonetic.textContent = '';
       if (els.options) { els.options.hidden = true; els.options.innerHTML = ''; }
@@ -1070,10 +1039,10 @@
 
     if (els.unknown) {
       const detail = linked
-        ? `仍留在双关卡片；必须最终${mode === 'spelling' ? '拼对' : '选对'}，且两关都过才算完成`
+        ? '本词留在待回练，选对后继续'
         : (mode === 'spelling'
-          ? '会进入待双关；拼错本身不会重置主复习阶段'
-          : '会进入待双关并按原规则重置该词主学习进度');
+          ? '会进入待回练；拼错本身不会重置主复习阶段'
+          : '会进入待回练并按原规则重置该词主学习进度');
       els.unknown.innerHTML = `不认识？<small>${detail}</small>`;
     }
     if (els.favorite) {
@@ -1128,7 +1097,7 @@
             solved: true,
             message: runtimeMode() === 'spelling'
               ? '本轮拼写完成。顶部进度条已更新；若同组还有另一分区未拼，会继续提醒。'
-              : '本轮识义完成。完成同一 Word List 的单词区和短语区后，会提醒你回到主要记单词页面刷拼写。',
+              : '本轮词义练习已完成。',
           };
           saveStore();
           render();
@@ -1137,20 +1106,6 @@
       return;
     }
     advanceTimer = window.setTimeout(() => move(1), delay);
-  }
-
-  function switchGateToSpelling(delay = 520) {
-    clearAdvanceTimer();
-    advanceTimer = window.setTimeout(() => {
-      if (!gateActive()) return;
-      store.gateSession.stage = 'spelling';
-      answerState = null;
-      optionsRevealed = false;
-      if (els.spellingInput) { els.spellingInput.value = ''; els.spellingInput.dataset.wordId = ''; }
-      saveStore();
-      render();
-      resetStageScroll();
-    }, delay);
   }
 
   function advanceGateWord(delay = 620) {
@@ -1194,17 +1149,17 @@
     if (correct) {
       updateRecord(word.id, 'correct', mode);
       if (linked && mode === 'zhToEn') {
-        const gate = markGatePass(word.id, 'zhToEn');
+        completeRecovery(word.id);
         answerState = {
           selected: selectedValue,
           correct: true,
           solved: true,
           wrongSelections: previousWrong,
-          message: `第1关通过：看中文选英文 ✓。${gate.spelling ? '两关已完成。' : '接着进入拼写关。'}`,
+          message: '选对了，已移出待回练。',
         };
         saveStore();
         render();
-        switchGateToSpelling();
+        advanceGateWord();
         return;
       }
       answerState = {
@@ -1212,7 +1167,7 @@
         correct: true,
         solved: true,
         wrongSelections: previousWrong,
-        message: previousWrong.length ? '最终选对了。当前模式通过；如果此前答错，该词仍在待双关池。' : '回答正确。主学习进度不变。',
+        message: previousWrong.length ? '最终选对了。当前模式通过；如果此前答错，该词仍在待回练。' : '回答正确。主学习进度不变。',
       };
       saveStore();
       render();
@@ -1241,8 +1196,8 @@
       solved: false,
       wrongSelections: previousWrong,
       message: linked
-        ? '选错了，仍停留在这张回卡。必须先选对，再完成拼写关。'
-        : '选错了，已进入待双关回卡池。当前词仍不会跳过，必须选对才能继续。',
+        ? '选错了。再想一想，选对后继续。'
+        : '选错了，已进入待回练。当前词仍不会跳过，必须选对才能继续。',
     };
     saveStore();
     render();
@@ -1252,7 +1207,6 @@
     if (answerState?.solved || runtimeMode() !== 'spelling') return;
     const word = currentWord();
     if (!word) return;
-    const linked = gateActive();
     const typed = String(els.spellingInput?.value || '').trim();
     if (!typed) {
       if (els.feedback) els.feedback.textContent = '先输入英文，再按 Enter 或“检查”。';
@@ -1263,22 +1217,6 @@
     const correct = normalize(typed) === normalize(correctValue);
     if (correct) {
       updateRecord(word.id, 'correct', 'spelling');
-      if (linked) {
-        const gate = markGatePass(word.id, 'spelling');
-        answerState = {
-          selected: typed,
-          correct: true,
-          solved: true,
-          wrongSelections: Array.isArray(answerState?.wrongSelections) ? answerState.wrongSelections : [],
-          message: gate.zhToEn && gate.spelling
-            ? '第2关拼写 ✓。两关全部通过，这个词正式过关并移出待回卡池。'
-            : '拼写正确，但还缺少看中文选英文关。',
-        };
-        saveStore();
-        render();
-        if (gate.zhToEn && gate.spelling) advanceGateWord();
-        return;
-      }
       answerState = {
         selected: typed,
         correct: true,
@@ -1296,9 +1234,7 @@
     const unknownList = store.unknownByMode.spelling || (store.unknownByMode.spelling = []);
     if (!hasId(unknownList, word.id)) unknownList.push(String(word.id));
     store.familiar = store.familiar.filter((id) => String(id) !== String(word.id));
-    if (linked) markRecoveryNeeded(word.id, { resetPasses: false });
-    else markRecoveryNeeded(word.id, { resetPasses: true });
-    // 关键规则：普通拼写错误和双关回卡里的拼写错误都不重置主复习阶段。
+    markRecoveryNeeded(word.id, { resetPasses: true });
     const wrongSelections = Array.isArray(answerState?.wrongSelections) ? answerState.wrongSelections.slice() : [];
     wrongSelections.push(typed);
     answerState = {
@@ -1306,9 +1242,7 @@
       correct: false,
       solved: false,
       wrongSelections,
-      message: linked
-        ? '拼写不对，但不会重置主复习阶段。继续修改，必须拼对才能完成双关。'
-        : '拼写不对，不会重置主复习阶段；该词已进入待双关回卡池。请继续修改，必须拼对才能进入下一个。',
+      message: '拼写不对。这个词已加入待回练，你也可以切换到选择练习。',
     };
     saveStore();
     render();
@@ -1338,8 +1272,8 @@
       solved: false,
       wrongSelections: previousWrong,
       message: linked
-        ? `已记为不认识。${wrongMainResetMessage(resetOk)} 仍停留在双关卡片，必须最终${mode === 'spelling' ? '拼对' : '选对'}。`
-        : `已记为不认识并进入待双关。${wrongMainResetMessage(resetOk)} 当前词仍需最终${mode === 'spelling' ? '拼对' : '选对'}。`,
+        ? '已记为不认识。选出对应英文后继续。'
+        : `已记为不认识并进入待回练。${wrongMainResetMessage(resetOk)} 当前词仍需最终${mode === 'spelling' ? '拼对' : '选对'}。`,
     };
     if (mode !== 'spelling') optionsRevealed = true;
     saveStore();
@@ -1355,6 +1289,7 @@
     requestedIds = uniqueValidIds(requestedIdsByKind[activeKind], activeKind);
     if (!requestedIds.length) requestedIds = uniqueValidIds((api.getWords?.() || []).map((word) => word.id), activeKind);
     requestedLabel = String(requestedLabelsByKind[activeKind] || `${KIND_LABELS[activeKind]} · 当前全词浏览范围`);
+    resumeRecognition();
     const mode = exerciseMode();
     if (!sessionFor(mode).ids.length && requestedIds.length) {
       newSession(requestedIds, requestedLabel, 'all', mode);
@@ -1406,6 +1341,7 @@
     store = stores[activeKind];
     requestedIds = uniqueValidIds(requestedIdsByKind[activeKind], activeKind);
     requestedLabel = requestedLabelsByKind[activeKind];
+    resumeRecognition();
     try { localStorage.setItem(ACTIVE_KIND_KEY, activeKind); } catch {}
     if (!gateActive()) {
       const mode = exerciseMode();
@@ -1442,7 +1378,7 @@
     if (gateActive()) {
       const ids = pendingGateIds();
       if (!ids.length) return;
-      if (!window.confirm('重新开始当前“错词双关通关”吗？每个待回卡仍需重新完成中英选择和拼写两关。')) return;
+      if (!window.confirm('重新开始当前错词回练吗？本轮只做中文选英文。')) return;
       store.gateSession = { ids, cursor: 0, stage: 'zhToEn', active: true, completed: false, startedAt: new Date().toISOString() };
       answerState = null;
       optionsRevealed = false;
@@ -1461,7 +1397,7 @@
     clearAdvanceTimer();
     const ids = pendingGateIds();
     if (!ids.length) {
-      window.alert('目前没有待双关的错词。只有在全词独立练习里答错或点“不认识”的词，才会进入回卡池。');
+      window.alert('目前没有待回练的错词。只有在全词独立练习里答错或点“不认识”的词，才会进入回卡池。');
       return;
     }
     store.gateSession = {
@@ -1524,7 +1460,7 @@
   }
 
   function resetStore() {
-    if (!window.confirm(`确定只清空“${KIND_LABELS[activeKind]}”的三套题序、对错、双关池、收藏和熟词标记吗？另一分区进度不会受影响，但两区都属于同一份主存档。`)) return;
+    if (!window.confirm(`确定只清空“${KIND_LABELS[activeKind]}”的三套题序、对错、错词回练、收藏和熟词标记吗？另一分区进度不会受影响，但两区都属于同一份主存档。`)) return;
     store = emptyStore();
     store.resetAt = new Date().toISOString();
     store.updatedAt = store.resetAt;
@@ -1617,10 +1553,6 @@
   els.unknown?.addEventListener('click', markUnknown);
   els.restart?.addEventListener('click', restartCurrent);
   els.wrongOnly?.addEventListener('click', startWrongOnly);
-  els.milestone?.addEventListener('click', (event) => {
-    const button = event.target.closest('[data-browse-milestone-spelling]');
-    if (button) startMilestoneSpelling(button.dataset.browseMilestoneSpelling || '');
-  });
   els.exportButton?.addEventListener('click', exportStore);
   els.importButton?.addEventListener('click', () => els.importInput?.click());
   els.importInput?.addEventListener('change', () => importStore(els.importInput.files?.[0]));

@@ -9,27 +9,22 @@
   function plan(words,now,newIds=[],limit=20){
     const due=[],fresh=[];
     for(const word of words){
-      const card=word.progress?.card||{},spell=word.progress?.spell||{};
-      const choices=[];
-      const tracked=S.tracked(word),senseNext=tracked?S.next(word,now):null,all=S.units(word);
-      if(senseNext?.kind==='review')choices.push({id:word.id,term:word.term,mode:'card',kind:'review',attempt:0,score:senseNext.score,senseKey:senseNext.unit.key,trackSense:true});
-      for(const mode of ['card','spell']){
-        if(mode==='card'&&tracked)continue;
-        const p=mode==='card'?card:spell;
-        const at=Date.parse(p.nextReviewAt||'');
-        if(p.stage>=6||p.status==='mature'||!Number.isFinite(at)||at>now)continue;
-        if(mode==='spell' && (!(card.stage>=0||Object.values(card.senses||{}).some(p=>p.successCount>0))||now-S.latest(word)<5*minute))continue;
-        const last=(p.history||[]).filter(h=>gradeNames.has(h.result)).at(-1);
-        const weak=last&&['forgot','fuzzy'].includes(last.result);
-        const target=all.find(u=>S.read(word,u).successCount>0)||all[0];
-        choices.push({id:word.id,term:word.term,mode,kind:'review',attempt:0,score:(weak?3*day:0)+Math.min(30*day,now-at),senseKey:target.key});
-      }
-      if(choices.length)due.push(choices.sort((a,b)=>b.score-a.score)[0]);
-      else if(senseNext?.kind==='study')fresh.push({id:word.id,term:word.term,mode:'card',kind:'study',attempt:0,senseKey:senseNext.unit.key,trackSense:true});
-      else if(!tracked&&!(card.stage>=0)&&card.status!=='learning'&&!card.nextReviewAt&&!newIds.includes(word.id))fresh.push({id:word.id,term:word.term,mode:'card',kind:'study',attempt:0,senseKey:all[0].key});
-      else if((card.stage>=0||Object.values(card.senses||{}).some(p=>p.successCount>0)) && now-S.latest(word)>=5*minute && !(spell.stage>=0) && !spell.nextReviewAt){
-        const last=(card.history||[]).filter(h=>gradeNames.has(h.result)).at(-1);
-        if(!last||!['forgot','fuzzy'].includes(last.result))due.push({id:word.id,term:word.term,mode:'spell',kind:'review',attempt:0,score:-1,senseKey:(all.find(u=>S.read(word,u).successCount>0)||all[0]).key});
+      const card=word.progress?.card||{},tracked=S.tracked(word);
+      const all=S.units(word),senseNext=tracked?S.next(word,now):null;
+      if(senseNext?.kind==='review'){
+        due.push({id:word.id,term:word.term,mode:'card',kind:'review',attempt:0,score:senseNext.score,senseKey:senseNext.unit.key,trackSense:true});
+      }else if(senseNext?.kind==='study'){
+        fresh.push({id:word.id,term:word.term,mode:'card',kind:'study',attempt:0,senseKey:senseNext.unit.key,trackSense:true});
+      }else if(!tracked){
+        const at=Date.parse(card.nextReviewAt||'');
+        if(!(card.stage>=6)&&card.status!=='mature'&&Number.isFinite(at)&&at<=now){
+          const last=(card.history||[]).filter(h=>gradeNames.has(h.result)).at(-1);
+          const weak=last&&['forgot','fuzzy'].includes(last.result);
+          const target=all.find(u=>S.read(word,u).successCount>0)||all[0];
+          due.push({id:word.id,term:word.term,mode:'card',kind:'review',attempt:0,score:(weak?3*day:0)+Math.min(30*day,now-at),senseKey:target.key});
+        }else if(!(card.stage>=0)&&card.status!=='learning'&&!card.nextReviewAt&&!newIds.includes(word.id)){
+          fresh.push({id:word.id,term:word.term,mode:'card',kind:'study',attempt:0,senseKey:all[0].key});
+        }
       }
     }
     due.sort((a,b)=>b.score-a.score);
@@ -80,7 +75,7 @@
   function quizNeeded(task=current()){const word=wordFor(task),unit=unitFor(task);if(!word||!unit||task.mode!=='card')return false;const all=S.units(word);return S.quiz(unit,all)&&Boolean(unit.example||all.every(u=>u.pos===unit.pos));}
   function nextReady(){
     const s=data.session;
-    s.queue=s.queue.filter(t=>wordFor(t)&&unitFor(t));
+    s.queue=s.queue.filter(t=>t.mode==='card'&&wordFor(t)&&unitFor(t));
     const index=s.queue.findIndex(t=>ready(t,s.results.length,Date.now()));
     if(index<0)return false;
     if(index>0)s.queue.unshift(s.queue.splice(index,1)[0]);
@@ -91,7 +86,7 @@
     const host=document.querySelector('.hero-workbench[data-module-section="study"]');
     if(!host||document.getElementById('guidedEntry'))return;
     const panel=document.createElement('div');panel.id='guidedEntry';panel.className='guided-entry';
-    panel.innerHTML='<div><h2>一次记一项，软件带着练</h2><p>多义词按词性和释义分项；短语按用法分项。先记当前一项，再逐步补充。每轮最多15分钟 / 20次练习，每天最多5个新学习目标。</p><small>认识、词性和拼写不混算；已会的释义少练，薄弱项稍后再来。</small></div><div><button type="button" class="primary-button" data-guided-launch>开始本轮学习</button><button type="button" class="secondary-button" data-guided-fresh>另开一轮</button></div>';
+    panel.innerHTML='<div><h2>一次记一项，软件带着练</h2><p>多义词按词性和释义分项；短语按用法分项。先记当前一项，再逐步补充。每轮最多15分钟 / 20次练习，每天最多5个新学习目标。</p><small>先回想意思，再核对释义和词性。</small></div><div><button type="button" class="primary-button" data-guided-launch>开始本轮学习</button><button type="button" class="secondary-button" data-guided-fresh>另开一轮</button></div>';
     host.prepend(panel);
     panel.querySelector('[data-guided-launch]').onclick=()=>start(false);
     panel.querySelector('[data-guided-fresh]').onclick=()=>start(true);
@@ -105,6 +100,14 @@
     if(!guardEditable())return;
     load();
     if(data.session&&!data.session.senseVersion){data.previousSession=data.session;data.session=null;showToast('已升级分项学习。原来的学习记录保留，从新一轮开始。');}
+    if(data.session&&!data.session.ended&&data.session.queue.some(t=>t.mode==='spell')){
+      const s=data.session;
+      if(current()?.mode==='spell'){
+        if(s.phase==='feedback'&&s.feedback&&!s.results.some(result=>result.actionId&&result.actionId===s.feedback.actionId))s.results.push(s.feedback);
+        s.feedback=null;s.phase='between';s.draft='';
+      }
+      s.queue=s.queue.filter(t=>t.mode!=='spell');
+    }
     if(data.session){
       for(const task of data.session.queue){const word=wordFor(task);if(word)task.id=word.id;}
       if(data.session.phase==='feedback'&&wordFor(current()))data.session.feedback.id=wordFor(current()).id;
@@ -123,10 +126,10 @@
       overlay.addEventListener('click',event=>{const button=event.target.closest('[data-guided-action]');if(button&&!busy)action(button.dataset.guidedAction);});
       overlay.addEventListener('input',event=>{if(event.target.matches('[data-guided-input]')){data.session.draft=event.target.value;persist();}});
       overlay.addEventListener('toggle',event=>{if(event.target.matches('[data-sense-original]')&&event.target.open&&data.session.phase==='question'){data.session.senseHintUsed=true;persist();}},true);
-      overlay.addEventListener('keydown',event=>{if(event.key==='Escape'){event.preventDefault();close();}else if(event.key==='Enter'&&!event.isComposing&&event.target.matches('[data-guided-input]')){event.preventDefault();if(!busy)action(data.session.phase==='feedback'?'next':'check');}});
+      overlay.addEventListener('keydown',event=>{if(event.key==='Escape'){event.preventDefault();close();}else if(event.key==='Enter'&&!event.isComposing&&event.target.matches('[data-guided-input]')){event.preventDefault();if(!busy)action('reveal');}});
       timer=setInterval(()=>{const clock=document.getElementById('guidedClock');if(clock)clock.textContent=remaining();if(!busy&&data.session&&!data.session.ended&&Date.now()>=data.session.deadline){finish('时间到了，这轮先到这里。');}},1000);
     }
-    if(data.session.phase!=='feedback'&&(created||!current()||!ready(current(),data.session.results.length,Date.now()))&&!nextReady())finish(state.words.length?'当前可练的词已完成，不需要空等错词。':'先添加或导入你的词库，再开始学习。');
+    if(data.session.phase!=='feedback'&&(created||data.session.phase==='between'||!current()||!ready(current(),data.session.results.length,Date.now()))&&!nextReady())finish(state.words.length?'当前可练的词已完成，不需要空等错词。':'先添加或导入你的词库，再开始学习。');
     draw();refreshEntry();
   }
   function close(){
@@ -165,16 +168,15 @@
       const f=s.feedback;
       body=`<p class="guided-tag">${f.rehearsal?'本轮巩固':f.result==='remember'?'本项独立回想正确':f.kind==='study'?'一次先学这一项':'这一项需要再巩固'}</p><h2 lang="en">${esc(word.term)}</h2>${sensePanel(word,task,true)}<p class="guided-meaning" data-sense-gloss>${esc(unit.gloss)}</p>${f.input?'<p>你的拼写：<span lang="en">'+esc(f.input)+'</span></p>':''}<p>${esc(f.message)}</p><button type="button" class="primary-button" data-guided-action="next">下一个</button><button type="button" class="secondary-button" data-guided-action="speak">听读音</button>${originalMeanings(word)}`;
     }else{
-      const study=task.kind==='study',spell=task.mode==='spell';
-      const prompt=study?'先学当前一项':task.kind==='rehearsal'?'隔开后再回想 · 只算巩固':spell?'看这一项中文，拼英文':'回想当前这一项意思';
-      body=`<p class="guided-tag">${prompt} · 已完成 ${s.results.length}/20</p><h2 ${!spell?'lang="en"':''}>${esc(spell?unit.gloss:word.term)}</h2>${sensePanel(word,task,study||s.shown)}`;
+      const study=task.kind==='study';
+      const prompt=study?'先学当前一项':task.kind==='rehearsal'?'隔开后再回想 · 只算巩固':'回想当前这一项意思';
+      body=`<p class="guided-tag">${prompt} · 已完成 ${s.results.length}/20</p><h2 lang="en">${esc(word.term)}</h2>${sensePanel(word,task,study||s.shown)}`;
       if(study)body+=`<p class="guided-meaning" data-sense-gloss>${esc(unit.gloss)}</p><p>只记这一项的意思和标注。其他意思之后再逐步加入。</p><button type="button" class="primary-button" data-guided-action="study">这一项看好了，盖住稍后测</button><button type="button" class="secondary-button" data-guided-action="speak">听读音</button>`;
-      else if(spell)body+=`<label>不看答案，输入英文<input data-guided-input lang="en" autocomplete="off" autocapitalize="none" spellcheck="false" value="${esc(s.draft)}"></label><button type="button" class="primary-button" data-guided-action="check">检查拼写</button><button type="button" class="secondary-button" data-guided-action="forgot">不会，先看答案</button>`;
       else if(s.shown)body+=`<p class="guided-meaning" data-sense-gloss>${esc(unit.gloss)}</p>${posButtons(task)}<p>按看答案之前的回想情况评分。想起其他意思，不代表当前这一项也掌握了。</p><button type="button" class="primary-button" data-guided-action="remember" ${quizNeeded(task)&&s.posAnswer===null?'disabled':''}>${s.posWrong?'词义会了，词性需巩固':'这一项回想正确'}</button><button type="button" class="secondary-button" data-guided-action="fuzzy">意思或词性有遗漏</button><button type="button" class="danger-button" data-guided-action="forgot">没想起来</button>`;
       else body+=`<p>先回想这一项的意思，或写在下面；词性有标注时一起记。</p><label>可以写下核心意思<input data-guided-input value="${esc(s.draft)}" placeholder="先回想，不要求输入"></label><button type="button" class="primary-button" data-guided-action="reveal">核对这一项</button>`;
       body+=originalMeanings(word);
     }
-    overlay.innerHTML='<main class="guided-panel">'+heading+'<section>'+body+'</section><footer>分项记录 · 拼写单独记录 <button type="button" data-guided-action="finish">结束本轮</button></footer><p id="guidedStatus" role="status"></p></main>';
+    overlay.innerHTML='<main class="guided-panel">'+heading+'<section>'+body+'</section><footer>分项学习记录 <button type="button" data-guided-action="finish">结束本轮</button></footer><p id="guidedStatus" role="status"></p></main>';
     if(s.phase==='question'&&!s.ended)overlay.querySelector('[data-guided-input]')?.focus({preventScroll:true});
     else overlay.querySelector('[data-guided-action="next"], [data-guided-action="close"]')?.focus({preventScroll:true});
   }
@@ -197,7 +199,6 @@
       if(!saved){
         let actual=result;
         if(task.mode==='card'&&result==='remember'&&(s.posWrong||s.senseHintUsed))actual='fuzzy';
-        if(task.mode==='spell'&&result==='remember'&&root.WordMemoryLearningPolicy.spellingEvidence(p,now))actual='fuzzy';
         const rehearsal=task.kind==='rehearsal';
         const planned=rehearsal?null:schedule(perSense?senseProgress:p,actual,now,now-s.questionAt);
         if(planned&&perSense){
@@ -207,7 +208,7 @@
         const due=perSense?p.senses?.[unit.key]?.nextReviewAt:p.nextReviewAt;
         saved={time:new Date(now).toISOString(),result:rehearsal?'guided-rehearsal':perSense?'sense-'+actual:actual==='study'?'guided-study':actual,guidedOutcome:actual,guidedActionId:actionId,senseKey:unit.key,sensePos:unit.pos,senseGloss:unit.gloss,guidedIntervalMs:planned?.delay||null,nextReviewAt:due||'',responseMs:now-s.questionAt};
         recordModeHistory(word,saved,task.mode);
-        if(!rehearsal&&actual!=='study'){recordMemoryMetric(word,task.mode==='spell'?'spelling':'recognition',actual==='remember');markDailyCompleted(word,new Date(now));}
+        if(!rehearsal&&actual!=='study'){recordMemoryMetric(word,'recognition',actual==='remember');markDailyCompleted(word,new Date(now));}
         if(task.mode==='card'&&!perSense)for(const field of ['status','stage','nextReviewAt','lastStudiedAt'])word[field]=p[field];
         word.updatedAt=new Date(now).toISOString();
         if(actual==='forgot'||actual==='fuzzy')word.important=true;
@@ -218,12 +219,9 @@
       if(task.kind==='study'&&!data.daily.newIds.includes(word.id))data.daily.newIds.push(word.id);
       const nextDate=perSense?p.senses?.[unit.key]?.nextReviewAt:p.nextReviewAt;
       const message=rehearsal?'这是隔开后的巩固，只检查当前一项，不提升长期进度。':actual==='study'?'先盖住，隔几个词再回想。当前这一项10分钟后正式复习；其他项不算已会。':actual==='remember'?'只记录当前这一项。下次复习：'+formatDateTime(nextDate):s.posWrong?'词性需要再巩固，本次没有算成独立通过。':s.senseHintUsed?'看过完整释义，本次只作巩固，稍后重新回想。':'这一项稍后再练，其他已会的意思不会被清零。';
-      s.feedback={id:word.id,term:word.term,mode:task.mode,kind:task.kind,result:actual,rehearsal,senseKey:unit.key,senseGloss:unit.gloss,input:task.mode==='spell'?s.draft:'',message,actionId};
+      s.feedback={id:word.id,term:word.term,mode:task.mode,kind:task.kind,result:actual,rehearsal,senseKey:unit.key,senseGloss:unit.gloss,message,actionId};
       s.phase='feedback';persist();draw();
       render();
-      if(actual==='remember'&&task.mode==='spell'&&!rehearsal){
-        setTimeout(()=>{if(overlay&&!busy&&!s.ended&&data.session===s&&s.phase==='feedback'&&s.feedback?.actionId===actionId)advance();},900);
-      }
     }catch(error){const status=document.getElementById('guidedStatus');if(status)status.textContent=error.message;}
     finally{busy=false;}
   }
@@ -247,12 +245,7 @@
     else if(name==='speak'){const word=wordFor(current());if(word)speakTerm(word.term,{accent:'uk'});}
     else if(name==='reveal'){data.session.shown=true;persist();draw();}
     else if(name.startsWith('pos:')){const code=name.slice(4);data.session.posAnswer=code;data.session.posWrong=data.session.posWrong||code!==unitFor().pos;persist();draw();}
-    else if(name==='check'){
-      if(current()?.mode==='spell'){
-        if(!data.session.draft.trim()){showToast('先尝试输入；不会可以点“不会，先看答案”。');return;}
-        grade(isSpellingCorrect(data.session.draft,wordFor(current()))?'remember':'forgot');
-      }else{data.session.shown=true;persist();draw();}
-    }else if(name==='study')grade('study');
+    else if(name==='study')grade('study');
     else if(['remember','fuzzy','forgot'].includes(name)){if(name==='remember'&&quizNeeded()&&data.session.posAnswer===null){showToast('先回想并选择词性；不确定也可以选择。');return;}grade(name);}
   }
   function init(){load();entry();}

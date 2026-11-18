@@ -1,0 +1,48 @@
+#englishChunks {
+ width: min(91vw, 60rem); max-height: 90dvh; padding: clamp(1rem, 3vw, 2rem);
+ border: 1px solid var(--line, #bac7b8); border-radius: 1rem;
+ background: var(--paper, #f1f0e8); color: var(--ink, #28362d);
+}
+#englishChunks::backdrop { background: #13271f80; }
+#englishChunks header, .english-chunk-actions { display:flex; justify-content:space-between; align-items:center; gap:.65rem; }
+#englishChunks header h2 { margin:0 0 .5rem; }
+#englishChunks textarea { width:100%; box-sizing:border-box; padding:.75rem; margin:.35rem 0 .6rem; resize:vertical; }
+.english-chunk-actions { justify-content:flex-start; flex-wrap:wrap; }
+.english-chunk-row { display:flex; flex-wrap:wrap; gap:.55rem; padding:.85rem 0; border-top:1px solid var(--line, #bac7b8); }
+.english-chunk { display:inline-flex; flex-direction:column; max-width:100%; padding:.4rem .65rem; border-radius:.5rem; background:#e0e9df; color:#233e2c; overflow-wrap:anywhere; }
+.english-chunk small { font-size:.75em; margin-bottom:.15rem; }
+.english-chunk-clause { background:#e1e9f1; color:#233e55; }
+.english-chunk-adverbial { background:#efe4c9; color:#533e20; }
+
+.english-chunk-context {
+ display:inline-block; margin:.15rem 0 .7rem; padding:.2rem .55rem;
+ border:1px solid var(--line, #bac7b8); border-radius:.4rem;
+ background:var(--paper, #f1f0e8); color:var(--accent, #365c43);
+ font-size:.82rem; cursor:pointer;
+}
+
+
+.english-inline-chunk[data-open]::before { content:attr(data-open); }
+.english-inline-chunk[data-close]::after { content:attr(data-close); }
+#englishChunks .english-chunk {
+ background:transparent;
+ color:inherit;
+}
+#englishChunks .english-chunk > span::before { content:'（'; }
+#englishChunks .english-chunk > span::after { content:'）'; }
+
+.english-inline-chunk.english-inline-chunk { background:transparent; color:inherit; }
+
+.read-study-structures article:has(>.read-inline-meaning) {
+ display:flex; flex-direction:column; align-items:flex-start; gap:.12rem;
+}
+.read-study-structures .read-inline-meaning { margin:0; line-height:1.5; }
+
+.read-study-structures article > .read-study-phrase-panel {
+ background:transparent; border:0; padding:0; margin:.12rem 0 0;
+}
+
+.english-chunk-hint { margin-inline-start:.55rem; color:var(--muted); font-size:.8rem; }
+
+.english-chunk-explanation ul { margin:0 0 .8rem; padding-inline-start:1.2rem; line-height:1.65; }
+.english-chunk-explanation strong { font-weight:650; }

@@ -37,27 +37,32 @@
       session=next;lastFeedback='';if(!await persist(next))return;api.navigate('practice');
     }finally{busy=false;}
   }
+  function currentResult(q,result){
+    return result&&q.choiceReview?window.IndividualAudit.reconcileEvents(q,[result])[0]:result;
+  }
   function renderPractice(){
     const qs=api.questions();session=C.restore(session||api.getSession(),qs);
     if(!session){$('practiceView').innerHTML='<div class="report-card empty-state"><h2>准备好开始了吗？</h2><p>去每日复习台，安排一轮适合自己的练习。</p><button id="practiceHome" class="btn primary">前往复习台</button></div>';$('practiceHome').onclick=()=>api.navigate('home');return;}
     if(session.index>=session.ids.length){renderSummary(qs);return;}
-    const q=qs.find(q=>q.id===session.ids[session.index]),draft=session.drafts[q.id]||{answer:'',note:''},key=C.answerKey(q),result=session.results[q.id];
+    const q=qs.find(q=>q.id===session.ids[session.index]),draft=session.drafts[q.id]||{answer:'',note:''},key=C.answerKey(q),result=currentResult(q,session.results[q.id]),referenceKey=window.OptionUI.reference(q,key);
     const marks=window.OptionCore.normalize(api.getOptionMarks(q.id),Object.keys(q.options||{}));
     const optionText=value=>[...String(value||'')].map(k=>q.options?.[k]?k+' · '+q.options[k]:k).join('；');
     const rubric=Array.isArray(q.scoringPoints)&&q.scoringPoints.length?`<section class="written-rubric"><h4>核对要点</h4><ol>${q.scoringPoints.map(p=>`<li>${esc(p)}</li>`).join('')}</ol><p class="fine-note">参考答案允许合理同义表达；按内容和步骤核对，不按文字完全一致判错。</p></section>`:'';
-    const comparison=result?`<section class="grade-comparison ${result.result==='会了'?'grade-right':'grade-wrong'}" role="status"><div class="grade-comparison-heading"><strong>${key?(result.result==='会了'?'✓ 答对了':result.result==='不会'?'× 答错了':'? 不确定'):'已记录：'+result.result}</strong><span>${writeError?'本次结果尚未保存，请导出备份':'本次结果已保存'}</span></div><div class="grade-comparison-grid"><div><span>你的答案</span><p>${html(q,key?optionText(result.answer):(result.answer||'本次未填写文字答案'))}</p></div><div><span>${key?'正确答案':'参考答案'}</span><p>${html(q,key?optionText(key):(q.verifiedAnswer||q.sourceAnswer||'暂未提供'))}</p></div></div>${!key?rubric:''}${window.LearningBookUI?.insight(q,result)||''}${window.EnglishPhraseUI?.render(q,{answered:true})||''}</section>`:'';
+    const comparison=result?`<section class="grade-comparison ${result.result==='会了'?'grade-right':'grade-wrong'}" role="status"><div class="grade-comparison-heading"><strong>${key?(result.result==='会了'?'✓ 答对了':result.result==='不会'?'× 答错了':'? 不确定'):'已记录：'+result.result}</strong><span>${writeError?'本次结果尚未保存，请导出备份':'本次结果已保存'}</span></div><div class="grade-comparison-grid"><div><span>你的答案</span><p>${html(q,key?optionText(result.answer):(result.answer||'本次未填写文字答案'))}</p></div><div><span>${key&&q.type!=='多选题'&&key.length>1?'原题参考答案':key?'正确答案':'参考答案'}</span><p>${html(q,referenceKey?optionText(referenceKey):key?'本题有多种可接受选项，详见解析':(q.verifiedAnswer||q.sourceAnswer||'暂未提供'))}</p></div></div>${!key?rubric:''}${window.LearningBookUI?.insight(q,result)||''}${window.EnglishPhraseUI?.render(q,{answered:true})||''}</section>`:'';
 
     const nextBar=result?`<div class="practice-next-bar"><span>本题已记录</span><button class="btn primary" type="button" id="studyNext">${session.index+1===session.ids.length?'查看本轮汇总 →':'下一题 →'}</button></div>`: '';
     const sectionGuide=session.bookSection?window.LearningGuides?.get(window.KnowledgeCore.classify(q)):null;
     const sectionMethod=sectionGuide?`<details class="section-practice-method"><summary>本题方法 · 需要时展开</summary><p>${esc(sectionGuide.rule)}</p><ol>${sectionGuide.steps.map(s=>`<li>${esc(s)}</li>`).join('')}</ol></details>`:'';
     const options=Object.entries(q.options||{}),answer=q.verifiedAnswer||q.sourceAnswer||'暂无可靠参考答案';
     const math=q.subject==='高等数学';
+    const figure=q.questionImage||(/(?:如下图|下图为|如图所示|左图|右图)/.test(q.stem)?q.stemImage||q.image:'');
     const showLearning=!!draft.revealed||((math||['英语','计算机'].includes(q.subject))&&!!result&&draft.lessonHidden!==true);
     const mathSolution=showLearning&&math?`<div class="answer-content guided-math" id="studyMathSolution">${window.MathLesson.render(q)}${!result?rubric:''}</div>`:'';
     const tools=sectionMethod+(window.QuestionAssist?.render(q,qs)||'')+(window.QuestionCompare?.entry(q)||'')+(window.ExerciseVocabUI?.entry(q)||'');
     $('practiceView').innerHTML=`<div class="practice-shell practice-v4"><div class="practice-top"><button type="button" class="mini-link" id="pauseSession">${session.bookSection?'← 暂停，返回本节目录':'← 暂停，回到今日学习'}</button><span>${session.bookSection?esc(session.bookSection.code)+' · 本节':'本轮'} ${session.index+1} / ${session.ids.length} 题</span></div><div class="session-progress" role="progressbar" aria-label="本轮已完成" aria-valuenow="${progress(session)}" aria-valuemin="0" aria-valuemax="${session.ids.length}"><span style="width:${progress(session)/session.ids.length*100}%"></span></div>
-      <article class="practice-card"><div class="practice-question-head"><div><p class="pathline">${esc(q.subject)} / ${esc(q.topic)} · ${esc(q.type)}</p></div><div class="question-corner"><span class="wrong-count" data-wrong-count="${q.wrongCount||0}">累计错了 ${q.wrongCount||0} 次</span><span class="pill">${esc(q.difficulty||'未分级')}</span></div></div><div class="stem">${html(q,q.stem)}</div>
-      ${q.questionImage&&/^images\/[\w.-]+$/.test(q.questionImage)?`<figure class="screen-figure"><img src="${esc(q.questionImage)}" alt="题目配图"></figure>`:''}
+      <article class="practice-card"><div class="practice-question-head"><div><p class="pathline">${esc(q.subject)} / ${esc(q.topic)} · ${esc(q.type)}</p></div><div class="question-corner"><span class="wrong-count" data-wrong-count="${q.wrongCount||0}">累计错了 ${q.wrongCount||0} 次</span><span class="pill">${esc(q.difficulty||'未分级')}</span></div></div><div class="stem">${html(q,q.stem)}</div>${window.JournalMindmaps?.questionEntry(q)||''}
+      ${q.stemImage!==figure&&q.stemImage?.startsWith('images/qb201/')&&!q.stemImage.includes('..')?`<figure class="screen-figure"><img src="${esc(q.stemImage)}" alt="题目原图"></figure>`:''}
+      ${figure&&/^images\/[\w./-]+$/.test(figure)&&!figure.includes('..')?`<figure class="screen-figure"><img src="${esc(figure)}" alt="题目配图"></figure>`:''}
       ${options.length?window.OptionUI.render(q,{answer:draft.answer||'',marks,revealed:!!result||!!draft.checked||!!draft.revealed,key,scope:'practice',format:text=>html(q,text)})+`<p class="fine-note">${q.type==='多选题'?'可选择多个选项，选完后点“核对并记录”。':q.type==='判断题'?'选择正确或错误后自动记录；不会把未选择当成错误。':'选择答案后立即自动判分、保存，本题下方显示答案与解析。'}</p>${draft.checked?'<p class="option-check-message" role="status">选项已核对；本次核对不记录作答，也不跳题。</p>':''}`:'<label class="input-row practice-written"><span>本次答案或解题步骤 · 对照参考答案和核对要点记录</span><textarea id="studyWritten" rows="2" placeholder="写下本次答案或关键步骤"></textarea></label>'}
       ${comparison}
       <div class="practice-utilities"><button type="button" class="mini-link" id="studyReveal" aria-expanded="${showLearning}">${showLearning?(q.subject==='英语'?'收起翻译与详细解析':'收起答案与解析'):(q.subject==='英语'?'查看题目翻译与逐项解析':math?'查看完整解答':'先看看答案与解析')}</button><button type="button" class="mini-link" id="studySource" aria-expanded="${!!draft.source}">${draft.source?'收起原图':'查看原始截图'}</button></div>
@@ -68,6 +73,7 @@
       <div class="study-self-grade" ${result?'hidden':''}>${!key?'<button class="mark-btn good" type="button" data-study-mark="会了">本次会了</button><button class="mark-btn bad" type="button" data-study-mark="不会">仍然不会</button>':''}<button class="mark-btn warn" type="button" data-study-mark="蒙对">蒙对 / 不确定</button></div>
       <p class="fine-note session-save-error ${writeError?'':'hidden'}" id="studySaveError">刚才未能保存，请重试；也可用页面顶部“导出备份”保留进度。</p>
       <div class="practice-bottom"><span>${esc(q.sourceNo||'')} · ${esc(q.id)}</span><button type="button" class="mini-link" id="finishEarly">结束本轮并汇总</button></div></article>${nextBar}</div>`;
+    window.JournalMindmaps?.bindQuestion($('practiceView'),q);
     window.ComputerSpeech?.attachQuestion(q,showLearning,$('practiceView').querySelector('.practice-card'));
     $('studyNote').value=draft.note||'';
     if($('studyWritten'))$('studyWritten').value=draft.answer||'';
@@ -88,7 +94,8 @@
       if(busy)return;capture();const answer=session.drafts[q.id].answer;
       if(mark==='auto'&&!answer){api.toast('先选一个答案，再核对。');return;}
       busy=true;document.querySelectorAll('[data-study-mark],#studyCheck,#studyInspect,#finishEarly,#pauseSession,#practiceView .opt-button,#practiceView .option-mark-button,#practiceView [data-clear-option-marks]').forEach(el=>el.disabled=true);
-      const outcome=mark==='auto'?(answer===key?'会了':'不会'):mark;
+      const outcome=mark==='auto'?(q.type==='多选题'?(answer===key?'会了':'不会'):window.CompletionCore.autoResult(q,answer)):mark;
+      if(!outcome){busy=false;renderPractice();return;}
       const event={eventId:session.id+'-'+q.id,at:new Date().toISOString(),result:outcome,answer,note:session.drafts[q.id].note,optionMarks:marks,sessionId:session.id};
       const next=copy(session);next.results[q.id]=event;
       if(math||['英语','计算机'].includes(q.subject))Object.assign(next.drafts[q.id],{revealed:true,lessonHidden:false});
@@ -103,7 +110,7 @@
   }
   function renderSummary(qs){
     window.ComputerSpeech?.cancel();
-    const entries=session.ids.filter(id=>session.results[id]).map(id=>({q:qs.find(q=>q.id===id),a:session.results[id]}));
+    const entries=session.ids.filter(id=>session.results[id]).map(id=>{const q=qs.find(q=>q.id===id);return {q,a:currentResult(q,session.results[id])};});
     const good=entries.filter(x=>x.a.result==='会了').length,bad=entries.filter(x=>x.a.result==='不会'),unsure=entries.filter(x=>x.a.result==='蒙对');
     const sectionPoints=new Map();
     if(session.bookSection){
@@ -118,20 +125,22 @@
     const chapterSummary=session.dailyMode==='comprehensive'&&entries.length===session.ids.length
       ? `<section class="report-card"><h3>本轮考点总结</h3><ul>${entries.map(({q,a})=>`<li>${esc(q?.point||q?.topic||'考点')} · ${a.result==='会了'?'已答对':'需巩固'}</li>`).join('')}</ul>${session.missingChapterPoints?.length?`<details><summary>尚未覆盖 ${session.missingChapterPoints.length} 个考点</summary><ul>${session.missingChapterPoints.map(point=>`<li>${esc(point)}</li>`).join('')}</ul></details>`: ''}</section>`
       : '';
-    $('practiceView').innerHTML=`<div class="session-summary"><p class="eyebrow">EVERY EFFORT COUNTS</p><div class="summary-medal" aria-hidden="true">✓</div><h2>${entries.length===session.ids.length?'这一轮，认真完成了。':'先歇一歇，进度已记录。'}</h2><p class="description">已完成 ${entries.length} / ${session.ids.length} 题。${session.ids.length-entries.length?'尚未作答的题目没有新增复练记录。':'每一次练习，都在为下一次积累把握。'}</p><div class="session-results"><div><strong>${good}</strong><span>本次会了</span></div><div><strong>${bad.length}</strong><span>仍然不会</span></div><div><strong>${unsure.length}</strong><span>蒙对 / 不确定</span></div></div>${chapterSummary}${sectionSummary}${session.dailyMode!=='comprehensive'?window.LearningBookUI?.summary(entries)||'':''}<div class="summary-buttons">${session.bookSection?'<button type="button" class="btn neutral" id="replaySection">再练本节</button>':''}<button class="btn primary" id="summaryHome">${session.bookSection?'返回本节目录':'回到今日学习'}</button>${!session.dailyNew&&bad.length+unsure.length?'<button class="btn neutral" id="retrySession">再练本轮未掌握题</button>':''}</div><div class="session-result-list"><h3>本轮作答回看</h3>${entries.map(({q,a})=>`<details class="session-result"><summary><span class="status-chip ${a.result==='会了'?'good':a.result==='不会'?'bad':'warn'}">${esc(a.result)}</span><span>${esc(q.subject)} · ${esc(q.stem.slice(0,80))}</span></summary><div class="answer-content"><p>${html(q,q.stem)}</p><p>本次作答：${esc(a.answer||'未填写')}</p><p>参考答案：${html(q,q.verifiedAnswer||q.sourceAnswer||'未提供')}</p>${a.note?`<p>本次笔记：${esc(a.note)}</p>`:''}${q.analysis?`<p>${html(q,q.analysis)}</p>`:''}${window.OptionUI.render(q,{answer:a.answer||'',marks:a.optionMarks||{},revealed:true,key:C.answerKey(q),format:text=>html(q,text),scope:'practice',readonly:true})}${window.EnglishLesson?.render(q)||''}${window.MathLesson?.render(q)||''}</div></details>`).join('')||'<p class="fine-note">本轮还未提交题目，你可以回到复习台重新开始。</p>'}</div></div>`;
+    $('practiceView').innerHTML=`<div class="session-summary"><p class="eyebrow">EVERY EFFORT COUNTS</p><div class="summary-medal" aria-hidden="true">✓</div><h2>${entries.length===session.ids.length?'这一轮，认真完成了。':'先歇一歇，进度已记录。'}</h2><p class="description">已完成 ${entries.length} / ${session.ids.length} 题。${session.ids.length-entries.length?'尚未作答的题目没有新增复练记录。':'每一次练习，都在为下一次积累把握。'}</p><div class="session-results"><div><strong>${good}</strong><span>本次会了</span></div><div><strong>${bad.length}</strong><span>仍然不会</span></div><div><strong>${unsure.length}</strong><span>蒙对 / 不确定</span></div></div>${chapterSummary}${sectionSummary}${window.LearningBookUI?.mistakeSummary(entries)||''}${session.dailyMode!=='comprehensive'?window.LearningBookUI?.summary(entries)||'':''}<div class="summary-buttons">${session.bookSection?'<button type="button" class="btn neutral" id="replaySection">续刷新题</button>':''}<button class="btn primary" id="summaryHome">${session.bookSection?'返回本节目录':'回到今日学习'}</button>${!session.dailyNew&&bad.length+unsure.length?'<button class="btn neutral" id="retrySession">再练本轮未掌握题</button>':''}</div><div class="session-result-list"><h3>本轮作答回看</h3>${entries.map(({q,a})=>`<details class="session-result"><summary><span class="status-chip ${a.result==='会了'?'good':a.result==='不会'?'bad':'warn'}">${esc(a.result)}</span><span>${esc(q.subject)} · ${esc(q.stem.slice(0,80))}</span></summary><div class="answer-content"><p>${html(q,q.stem)}</p><p>本次作答：${esc(a.answer||'未填写')}</p><p>参考答案：${html(q,q.verifiedAnswer||q.sourceAnswer||'未提供')}</p>${a.note?`<p>本次笔记：${esc(a.note)}</p>`:''}${q.analysis?`<p>${html(q,q.analysis)}</p>`:''}${window.OptionUI.render(q,{answer:a.answer||'',marks:a.optionMarks||{},revealed:true,key:C.answerKey(q),format:text=>html(q,text),scope:'practice',readonly:true})}${window.EnglishLesson?.render(q)||''}${window.MathLesson?.render(q)||''}</div></details>`).join('')||'<p class="fine-note">本轮还未提交题目，你可以回到复习台重新开始。</p>'}</div></div>`;
     window.LearningBookUI?.bindSummary($('practiceView'));
     $('summaryHome').onclick=()=>{const target=session.bookSection?'notebook':'dashboard';session=null;api.navigate(target);};$('retrySession')?.addEventListener('click',()=>start('',20,[...bad,...unsure].map(x=>x.q.id)));
     $('replaySection')?.addEventListener('click',()=>{
       const {subject,code}=session.bookSection;
-      const ids=window.BookDirectory.sectionItems(api.questions(),subject,code).map(q=>q.id);
-      return start(subject,ids.length,ids,{bookSection:{subject,code}});
+      const next=savedSection(subject,code);
+      if(!next||next.index>=next.ids.length){api.toast('本节暂无新增待刷题');return;}
+      window.StudyUI.startSection(subject,code);
     });
     typeset();
   }
   function savedSection(subject,code){
     const saved=api.getSectionSession?.(subject,code)||api.getSession();
     if(saved?.bookSection?.subject!==subject||saved.bookSection.code!==code)return null;
-    return C.restore(saved,api.questions());
+    const questions=api.questions(),restored=C.restore(saved,questions);
+    return restored?C.sectionQueue(window.BookDirectory.sectionItems(questions,subject,code),restored):null;
   }
   window.StudyUI={
     sectionProgress(subject,code){
@@ -150,8 +159,8 @@
         }finally{busy=false;}
         return;
       }
-      const ids=window.BookDirectory.sectionItems(api.questions(),subject,code).map(q=>q.id);
-      if(!ids.length){api.toast('本节尚未收录可练题目');return;}
+      const ids=C.sectionQueue(window.BookDirectory.sectionItems(api.questions(),subject,code));
+      if(!ids.length){api.toast('本节暂无待刷题');return;}
       return start(subject,ids.length,ids,{bookSection:{subject,code}});
     },
     init(value){api=value;},

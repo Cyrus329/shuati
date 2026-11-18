@@ -324,9 +324,9 @@
         } else if (session.mode === 'recall') {
           copy = { title:`本组 ${session.ids.length} 条已看完`, text:'现在做一次英文选中文，检查是否真的记住；也可以先跳过，继续下一组。', first:'开始英文选中文', firstAction:'choice', second:'先不测，下一组', secondAction:'next' };
         } else if (session.mode === 'choice') {
-          copy = { title:'英文选中文完成', text:'接着做同一组的中文选英文，再决定要不要拼写。', first:'开始中文选英文', firstAction:'choiceReverse', second:'先不测，下一组', secondAction:'next' };
+          copy = { title:'英文选中文完成', text:'接着做同一组的中文选英文，或继续下一组。', first:'开始中文选英文', firstAction:'choiceReverse', second:'先不测，下一组', secondAction:'next' };
         } else if (session.mode === 'choiceReverse') {
-          copy = { title:'本组中英文选择完成', text:'中文选英文已写入艾宾浩斯复习。要不要再拼写这一组？', first:'继续拼写这一组', firstAction:'spelling', second:'不拼写，下一组', secondAction:'next' };
+          copy = { title:'本组中英文选择完成', text:'本组已记入专注复习，可以继续学习。', first:'下一组', firstAction:'next', second:'自选拼写这一组', secondAction:'spelling' };
         } else {
           copy = { title:'本组拼写完成', text:'这一组的拼写练习已结束。可以继续下一组，或退出休息。', first:'下一组', firstAction:'next', second:'退出专注模式', secondAction:'close' };
         }

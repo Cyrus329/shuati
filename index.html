@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="theme-color" content="#24775f" />
-  <link rel="stylesheet" href="mobile-styles.css?v=43174ad5d5" />
+  <link rel="stylesheet" href="mobile-styles.css?v=original-photos-1" />
   <link rel="stylesheet" href="question-quality.css?v=d3731f05ac" />
 <link rel="stylesheet" href="release-status.css?v=1a6b91bca9" />
 <link rel="stylesheet" href="v3-shell.css?v=4e9ff7a936" />
@@ -47,13 +47,13 @@
 
 
 
-  <link rel="stylesheet" href="chapter-mindmaps.css?v=mindmap-tree-2">
+  <link rel="stylesheet" href="chapter-mindmaps.css?v=20261113-review">
 </head>
 <body>
 <div class="app-shell">
   <header class="topbar">
     <div class="workspace-identity"><p class="eyebrow">PERSONAL WORKSPACE</p><span data-space-title>个人刷题记录中心</span><p id="currentSectionName">每日复习台</p></div>
-    <div class="top-actions"><button type="button" id="openCommand" class="command-trigger" aria-label="搜索题目、考点或操作" aria-haspopup="dialog"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><span>搜索题目、考点或操作</span><kbd id="platformShortcut">Ctrl K</kbd></button>
+    <div class="top-actions"><button type="button" class="btn neutral" id="openEnglishChunks" aria-haspopup="dialog">划分意群</button><button type="button" id="openCommand" class="command-trigger" aria-label="搜索题目、考点或操作" aria-haspopup="dialog"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><span>搜索题目、考点或操作</span><kbd id="platformShortcut">Ctrl K</kbd></button>
       <button class="btn neutral header-backup" type="button" id="exportButton"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v11m-4-4 4 4 4-4M4 15v5h16v-5"/></svg><span>备份</span></button>
       <button type="button" class="btn neutral" data-wordlink-open>我的单词程序</button><button class="btn primary" type="button" id="addButton">＋ 添加题目</button>
       <details class="utility-menu"><summary aria-label="更多工具"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><circle cx="5" cy="12" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="19" cy="12" r="1.5"/></svg></summary><div class="utility-popover"><span class="eyebrow">WORKSPACE TOOLS</span><button class="btn neutral" id="resetLearningButton" type="button">清空个人学习记录</button><button class="btn neutral" id="importButton" type="button">导入 JSON 备份</button><a class="btn neutral" href="学习册使用说明.txt" target="_blank">新版使用说明 ↗</a></div></details>
@@ -69,8 +69,10 @@
     <button type="button" class="nav-tab selected" data-view="dashboard"><span class="nav-icon" aria-hidden="true">⌂</span><span class="nav-label">今天练什么</span><span class="nav-short">今天</span></button>
     <button type="button" class="nav-tab" data-view="notebook"><span class="nav-icon" aria-hidden="true">册</span><span class="nav-label">按章节刷题</span><span class="nav-short">章节</span></button>
     <button type="button" class="nav-tab" data-view="english"><span class="nav-icon" aria-hidden="true">Aa</span><span class="nav-label">英语专题</span><span class="nav-short">英语</span></button>
+<a class="nav-tab" href="lingyun/index.html"><span class="nav-icon" aria-hidden="true">凌</span><span class="nav-label">凌云班专区</span><span class="nav-short">凌云</span></a>
+<a class="nav-tab" href="math-exams/index.html" target="_blank" rel="noopener"><span class="nav-icon" aria-hidden="true">卷</span><span class="nav-label">数学套卷</span><span class="nav-short">套卷</span></a>
+<a class="nav-tab" href="english-exams/index.html" target="_blank" rel="noopener"><span class="nav-icon" aria-hidden="true">卷</span><span class="nav-label">英语套卷</span><span class="nav-short">英语卷</span></a>
 <details class="v3-tools"><summary><span class="nav-tools-label">记录与工具</span><span class="nav-tools-symbol" aria-hidden="true">＋</span><span class="nav-short">记录</span></summary><div class="v3-tools-items">
-    <button type="button" class="nav-tab" data-view="daily"><span class="nav-icon" aria-hidden="true">＋</span><span class="nav-label">每日新题</span></button>
     <button type="button" class="nav-tab" data-view="computer"><span class="nav-icon" aria-hidden="true">▣</span><span class="nav-label">计算机专项</span></button>
     <button type="button" class="nav-tab" data-view="home"><span class="nav-icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1z"/></svg></span><span class="nav-label">原题复习</span></button>
     <button type="button" class="nav-tab" data-view="archive"><span class="nav-icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="3"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></span><span class="nav-label">题目档案</span></button>
@@ -87,7 +89,7 @@
         <label for="fontSize">题目字号 <select id="fontSize"><option value="16">标准</option><option value="18">舒适</option><option value="20">大字</option><option value="22">特大</option></select></label>
 </div></details><button type="button" class="btn neutral" id="focusToggle" aria-pressed="false">进入专注</button></div>
     <section class="summary-row" aria-label="学习记录概览">
-      <div class="summary-tile"><span class="tile-label">全部收录题目</span><strong id="statTotal">—</strong><span class="tile-detail">包含原题与每日新题，按独立题统计</span></div>
+      <div class="summary-tile"><span class="tile-label">全部收录题目</span><strong id="statTotal">—</strong><span class="tile-detail">按独立题统计</span></div>
       <div class="summary-tile"><span class="tile-label">已判对 / 已订正</span><strong id="statCorrect">—</strong><span class="tile-detail" id="correctPercent">—</span></div>
       <div class="summary-tile"><span class="tile-label">当前已判错 / 需巩固</span><strong id="statWrong">—</strong><span class="tile-detail">按对应原答判定，做过的题保留完成记录</span></div>
       <div class="summary-tile"><span class="tile-label">已完成 · 原答未留存</span><strong id="statRecordOnly">—</strong><span class="tile-detail">有做过记录，不假称已验出原答错误</span></div>
@@ -181,48 +183,47 @@
 <script defer src="comfort.js?v=54cc84c6ee"></script>
 <script>window.MathJax={tex:{inlineMath:[["\\(","\\)"]],displayMath:[["\\[","\\]"]]},svg:{fontCache:'local'},options:{enableMenu:false}};</script>
 <script defer src="mathjax/tex-svg.js?v=0383da4c22"></script>
-<script defer src="data.js?v=b6e1c7dea7"></script>
+<script defer src="data.js?v=commitment-single-answer-1"></script>
 <script defer src="chapter-import-data.js?v=fbf84ac6ec"></script>
 <script defer src="supplement-20261028.js?v=6bd801cb73"></script>
-<script defer src="book-directory.js?v=c66aed9b2f"></script>
+<script defer src="book-directory.js?v=math-paper-unattempted-1"></script>
 <script defer src="english-lessons.js?v=61700442a3"></script>
 <script defer src="lesson-reader.js?v=73d1cf6892"></script>
-<script defer src="english-lesson.js?v=cd3824b02a"></script>
+<script defer src="english-lesson.js?v=20261113-review"></script>
 <script defer src="families.js?v=f52d022e37"></script>
 <script defer src="math-notation.js?v=math-formulas-1"></script>
 <script defer src="math-lessons.js?v=5e7bd4ea84"></script>
 <script defer src="math-lesson.js?v=7b2216008d"></script>
 <script defer src="fresh-start-config.js?v=0549ebee00"></script>
 <script defer src="fresh-start-core.js?v=41930da7f3"></script>
-<script defer src="journal-storage.js?v=5e127db121"></script>
+<script defer src="journal-storage.js?v=math-journal-sync-1"></script>
 <script defer src="answer-judgement-data.js?v=64ae1826a9"></script>
 <script defer src="individual-audit-data.js?v=66061c6c6b"></script>
 <script defer src="question-content-fixes.js?v=mindmap-tree-2"></script>
-<script defer src="individual-audit.js?v=mindmap-tree-2"></script>
+<script defer src="question-review-links.js?v=20261113"></script>
+<script defer src="individual-audit.js?v=20261113-review"></script>
 <script defer src="math-chapter1-20261104.js?v=9022f1c427"></script>
-<script defer src="answer-judgement.js?v=3f7d06d065"></script>
-<script defer src="review-policy.js?v=4778e1287e"></script>
+<script defer src="answer-judgement.js?v=20261115-history-queue"></script>
+<script defer src="review-policy.js?v=review-restart-1"></script>
 <script defer src="correct-methods.js?v=f6c910a36c"></script>
 <script defer src="wrong-count.js?v=aea8f1e886"></script>
-<script defer src="study-core.js?v=c85d3a312d"></script>
+<script defer src="study-core.js?v=20261115-section-all"></script>
 <script defer src="option-core.js?v=e4e8f1505e"></script>
-<script defer src="option-ui.js?v=a5fd3b3d5a"></script>
+<script defer src="option-ui.js?v=20261113-review"></script>
 <script defer src="question-assist.js?v=3bf5f61683"></script>
 <script defer src="compare-core.js?v=7bb97f333d"></script>
 <script defer src="question-compare.js?v=ce3e5b381f"></script>
-<script defer src="study-ui.js?v=9fef56b683"></script>
+<script defer src="study-ui.js?v=20261114-bank-source"></script>
 <script defer src="library.js?v=ab2977238c"></script>
 <script defer src="personalize.js?v=265ce4c459"></script>
 <script defer src="desk-core.js?v=8b4e681bce"></script>
 <script defer src="desk.js?v=7576438a50"></script>
-<script defer src="completion-core.js?v=351326bb01"></script>
+<script defer src="completion-core.js?v=20261113-review"></script>
 <script defer src="confirmed-progress.js?v=83ce3e680c"></script>
 <script defer src="chapter-import-progress.js?v=7614f2db81"></script>
 <script defer src="chapter-audit-data.js?v=86f8bd6e51"></script>
 <script defer src="source-results.js?v=3eb8cd0e51"></script>
-<script defer src="daily-question-bank.js?v=0422d750c8"></script>
 <script defer src="daily-mastery-core.js?v=92a9efb0a4"></script>
-<script defer src="daily-math-ch1-20261104.js?v=3a56f5148b"></script>
 <script defer src="weakness-core.js?v=c39f8af588"></script>
 <script defer src="daily-type-policy.js?v=ed1f5e9dcb"></script>
 <script defer src="daily-new-core.js?v=59ee24dda3"></script>
@@ -232,38 +233,53 @@
 <script defer src="daily-new-ui.js?v=88be9c7d53"></script>
 <script defer src="listening-core.js?v=ed0366dc82"></script>
 <script defer src="listening-vocab-data.js?v=97ecda7d89"></script>
-<script defer src="listening-vocab-core.js?v=100bcff206"></script>
-<script defer src="wordlink-core.js?v=0a6ed4cb76"></script><script defer src="wordlink-locations.js?v=a50852099c"></script><script defer src="wordlink.js?v=7cf0503b44"></script>
+<script defer src="listening-vocab-core.js?v=manual-group"></script>
+<script defer src="wordlink-core.js?v=vocab-base-1"></script><script defer src="wordlink-locations.js?v=a50852099c"></script><script defer src="exercise-vocabulary-dedupe.js?v=4"></script><script defer src="wordlink.js?v=20261115-manual-receipts"></script>
+<script defer src="submitted-phrases.js?v=20261115-vocab-audit"></script>
 <script defer src="word-dictionary-data.js?v=5344c1b3fb"></script>
-<script defer src="word-dictionary.js?v=89b4c1f883"></script>
-<script defer src="listening-vocab-ui.js?v=ad04a8b86a"></script>
+<script defer src="word-dictionary.js?v=vocab-context-safe-2"></script>
+<script defer src="listening-vocab-ui.js?v=20261114-exercise-only"></script>
 <script defer src="exercise-phrase-core.js?v=ca7f52c415"></script>
 <script defer src="exercise-phrase-data.js?v=db8321afa3"></script>
 <script defer src="exercise-vocab-v254.js?v=6e426abf10"></script>
 <script defer src="listening-route-core.js?v=3af005d1d4"></script>
-<script defer src="computer-speech-core.js?v=6ae96ad1a1"></script>
+<script defer src="computer-speech-core.js?v=steady-voice-1"></script>
 <script defer src="computer-audio-manifest.js?v=26f70e6962"></script>
-<script defer src="computer-speech.js?v=0c43e5f325"></script>
+<script defer src="computer-speech.js?v=steady-voice-1"></script>
 <script defer src="knowledge-core.js?v=f9d13912bc"></script>
 <script defer src="knowledge-ui.js?v=d5e61808f8"></script>
 <script defer src="learning-book-core.js?v=bd1898952c"></script>
 <script defer src="learning-guides.js?v=ce8e27bfc6"></script>
-<script defer src="chapter-mindmaps-data.js?v=math-formulas-1"></script>
-<script defer src="chapter-mindmaps-ui.js?v=math-formulas-1"></script>
-<script defer src="learning-book-ui.js?v=chapter-mindmaps-1"></script>
+<script defer src="chapter-mindmaps-data.js?v=all-subject-topics-2"></script>
+<script defer src="chapter-mindmaps-ui.js?v=all-subject-topics-2"></script>
+<script defer src="learning-book-ui.js?v=comparison-review-1"></script>
 <script defer src="english-phrase-core.js?v=f77b8233df"></script>
 <script defer src="english-phrase-ui.js?v=8c0f35b2ab"></script>
 <script defer src="english-study-data.js?v=0eba437bb8"></script>
 <script defer src="reading-houseplants-cards.js?v=64a0801a54"></script>
 <script defer src="english-study-core.js?v=a738ef046f"></script>
-<script defer src="feature-loader.js?v=1940c0ad71"></script>
+<script defer src="feature-loader.js?v=20261117-intensive-ch67"></script>
 <script defer src="question-quality-core.js?v=67a35f4338"></script>
 <script defer src="question-quality-ui.js?v=mindmap-tree-2"></script>
 <script defer src="v3-shell.js?v=8a8c037132"></script>
 <script defer src="paper-20261108.js?v=5a276fb110"></script>
 <script defer src="math-paper-audit-20261108.js?v=1c7e279c93"></script>
 <script defer src="math-audit-20261108.js?v=b7337c659b"></script>
+<script defer src="qb201-computer-ch3-20261113.js?v=dedup-3"></script>
+<script defer src="word-review-20261113.js?v=chapter-3"></script>
 <script defer src="english-adjective-audit-20261110.js?v=d0123db932"></script>
 <script defer src="english-adjective-rest-20261110.js?v=5bdca82c7e"></script>
-<script defer src="app.js?v=c185581dfc"></script>
+<script defer src="question-bank-source-fixes.js?v=qb202-os-1"></script>
+<script defer src="app.js?v=qb202-os-1"></script>
+<dialog id="englishChunks" aria-labelledby="englishChunksTitle">
+<header><h2 id="englishChunksTitle">划分意群</h2><form method="dialog"><button class="btn neutral">关闭</button></form></header>
+<label for="englishChunksInput">英文原句</label>
+<textarea id="englishChunksInput" rows="4" maxlength="6000" placeholder="选中页面上的英文再打开，或粘贴到这里"></textarea>
+<div class="english-chunk-actions"><button type="button" class="btn primary" data-chunk-run>划分句子</button></div>
+<p class="fine-note">任意文本使用本地规则辅助划分。复杂句请结合上下文核对。</p>
+<div class="english-chunk-results" aria-live="polite"></div>
+</dialog>
+<link rel="stylesheet" href="english-chunks.css?v=english-context-explanations-2">
+<script defer src="english-chunks.js?v=structure-audit-2"></script>
 </body></html>
+

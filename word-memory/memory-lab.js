@@ -141,7 +141,7 @@
       type: `exam-sprint-${count}`,
       label: `${count}词临考冲刺`,
       ids: words.map((word) => word.id),
-      questionModes: ['choice', 'spelling', 'recall'],
+      questionModes: ['choice', 'recall'],
       emptyMessage: '当前范围没有可冲刺的词条',
     });
   }
@@ -152,7 +152,7 @@
       type: 'today-errors',
       label: '今日错词回炉',
       ids,
-      questionModes: ['choice', 'spelling'],
+      questionModes: ['choice', 'recall'],
       emptyMessage: '今天暂时没有错词或模糊词',
     });
   }
@@ -164,7 +164,7 @@
       type: 'recent-ten',
       label: '最近10词复盘',
       ids,
-      questionModes: ['choice', 'spelling', 'choice'],
+      questionModes: ['choice', 'recall'],
       emptyMessage: '还没有足够的最近学习记录',
     });
   }
@@ -467,7 +467,7 @@
         type: family ? 'word-family' : 'confusion',
         label: family ? '词族连续复习' : '易混词对比复习',
         ids,
-        questionModes: family ? ['choice', 'spelling', 'choice'] : ['choice', 'choice', 'spelling'],
+        questionModes: family ? ['choice', 'recall'] : ['choice'],
       });
       return;
     }

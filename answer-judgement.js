@@ -4,7 +4,7 @@
  function source(q){if(window.PersonalHistory?.isCleanStart(q))return null;const audited=window.IndividualAudit?.lookup(q);if(audited)return audited;const saved=data[q.id];if(saved)return saved;if(q.firstStatus==='正确')return {kind:'correct',completed:true,historicalWrong:false,originalAnswer:q.ownAnswer||'',answer:q.verifiedAnswer||q.sourceAnswer||'',reason:'原始记录明确标为做对。',confidenceUncertain:!!q.guessed};if(q.firstStatus==='错误')return {kind:'incorrect',completed:true,historicalWrong:true,originalAnswer:q.ownAnswer||'',answer:q.verifiedAnswer||q.sourceAnswer||'',reason:'本人在原记录明确标为做错；本人历史记录保留。'};return null;}
  function result(kind,fields={}){return {kind,completed:kind!=='unanswered',...fields};}
  function current(q,events=q.events||[]){
-  const clean=window.PersonalHistory?.isCleanStart(q);if(clean)events=events.filter(e=>!e.importedEvidence&&!e.originalTimeUnknown&&!e.viewOnly);
+  const clean=window.PersonalHistory?.isCleanStart(q);if(clean)events=events.filter(e=>e.historyRestored||!e.importedEvidence&&!e.originalTimeUnknown&&!e.viewOnly);
   const audit=window.IndividualAudit?.lookup(q),last=events.at(-1),sources=q.occurrences?.length?q.occurrences:[q],originals=sources.map(source).filter(Boolean),initial=audit||originals.at(-1)||source(q),ref=audit?.answer||q.verifiedAnswer||q.sourceAnswer||'';
   if(!clean&&audit&&(!last||last.importedEvidence))return result(audit.kind,{...audit});
   if(last){

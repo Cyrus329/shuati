@@ -24,7 +24,8 @@
     const raw=String(q.verifiedAnswer||(!(q.audit||q.issue)?q.sourceAnswer:'')||'').trim();
     const text=raw.replace(/^(?:参考答案|正确答案|答案)\s*[:：]?\s*/,'');
     const match=text.match(/^([A-Z]+)\s*[:：]/),key=match?match[1]:text;
-    return /^[A-Z]+$/.test(key)&&new Set(key).size===key.length&&[...key].every(k=>Object.hasOwn(q.options||{},k))?[...key].sort().join(''):'';
+    const valid=/^[A-Z]+$/.test(key)&&new Set(key).size===key.length&&[...key].every(k=>Object.hasOwn(q.options||{},k));
+    return valid&&(key.length===1||q.type==='多选题')?[...key].sort().join(''):'';
   }
   function autoResult(q,answer){
     const checked=typeof window!=='undefined'&&window.IndividualAudit?.gradeChoice(q,answer);if(checked)return checked;

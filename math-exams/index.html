@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>数学套卷 · 个人学习册</title>
+<link rel="stylesheet" href="exam.css?v=exam-regrade-1">
+<link rel="stylesheet" href="../exam-layout.css?v=1">
+<script>window.MathJax={tex:{inlineMath:[["\\(","\\)"]]},svg:{fontCache:"local"},options:{enableMenu:false}};</script>
+<script defer src="../mathjax/tex-svg.js"></script>
+<script defer src="papers.js?v=shaanxi-math-1"></script>
+<script defer src="exam-fractions.js?v=1"></script>
+<script defer src="exam.js?v=exam-journal-sync-1"></script>
+</head>
+<body>
+<aside class="exam-sidebar"><a class="brand" href="../index.html">个人学习册</a>
+<nav aria-label="学习册导航">
+<a href="../index.html">今天练什么</a>
+<a href="../lingyun/index.html">凌云班专区</a>
+<a href="../english-exams/index.html">英语套卷</a>
+<a href="index.html" aria-current="page">数学套卷</a>
+</nav></aside>
+<header><a href="../index.html">返回个人学习册</a><h1>数学套卷</h1></header>
+<main>
+<p class="journal-mistake-link"><a href="../index.html?view=review">打开个人学习册错题记录</a> <span id="journalSyncStatus" role="status"></span></p><section id="catalog"><label>找试卷 <input id="search" type="search" placeholder="输入卷号或原卷名"></label><div class="shelves"><nav id="seriesNav" aria-label="难度筛选"></nav><div id="papers"></div></div></section>
+<section id="exam" hidden>
+<div class="actions"><button id="back">返回卷库</button><a id="original" target="_blank" rel="noopener">打开原试卷 PDF</a></div>
+<h2 id="title"></h2>
+<div id="controls" class="actions"><button id="start">开始考试</button><output id="clock">02:00:00</output><button id="finish" hidden>交卷</button><span id="status" role="status"></span></div>
+<p id="info"></p>
+<div class="work">
+<div class="exam-paper"><div id="singleQuestion" hidden><aside class="question-index"><h3>题号</h3><nav id="questionNav" aria-label="题号"></nav></aside><div class="question-content"><article id="questionBody"></article><section id="questionGrade" hidden></section></div><div class="actions"><button id="prevQuestion">上一题</button><button id="markQuestion" type="button" hidden>标记本题</button><button id="nextQuestion">下一题</button></div></div><iframe id="viewer" title="试卷 PDF"></iframe></div>
+<section id="response" hidden>
+<h3>答题区</h3>
+<label>题号 <input id="number" value="1" maxlength="24"></label>
+<label>作答 <textarea id="answer" rows="8" aria-label="作答"></textarea></label>
+<button id="saveAnswer">保存本题</button>
+<div id="saved"></div>
+<p id="feedback" role="status"></p>
+</section>
+</div>
+<section id="review" hidden><h3>答案与解析</h3><a id="solutions" target="_blank" rel="noopener">打开原参考资料 PDF</a><p id="pending" hidden>暂无单独配对的参考资料，逐题解析待补。</p><p id="scoreSummary" role="status" hidden></p><div id="questionSolutions"></div></section>
+</section>
+</main>
+</body>
+</html>
+
